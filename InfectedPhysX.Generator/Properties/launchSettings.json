@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "InfectedPhysX.Generator": {
+      "commandName": "Project",
+      "commandLineArgs": "\"$(ProjectDir)../external/PhysX/\" \"$(ProjectDir)../InfectedPhysX/#Generated/\""
+    }
+  }
+}
