@@ -1,373 +1,372 @@
 ==============================================================================
-Parsing Diagnostics
-==============================================================================
-==============================================================================
 Translation Diagnostics
 ==============================================================================
---------------- TranslatedParameter aQ ---------------
+--------------------------- TranslatedParameter aQ ---------------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter scaling ---------------
+------------------------ TranslatedParameter scaling -------------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter flags ---------------
+------------------------- TranslatedParameter flags --------------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter scaling ---------------
+------------------------ TranslatedParameter scaling -------------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter flags ---------------
+------------------------- TranslatedParameter flags --------------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter distance ---------------
+------------------------ TranslatedParameter distance ------------------------
 Warning: Dropped default parameter value '3.40282347E+38' because parameter comes before non-defaulted parameter 'filterData'.
---------------- TranslatedParameter maxTouchHits ---------------
+---------------------- TranslatedParameter maxTouchHits ----------------------
 Warning: Dropped default parameter value '0' because parameter comes before non-defaulted parameter 'filterData'.
---------------- TranslatedParameter hitFlags ---------------
+------------------------ TranslatedParameter hitFlags ------------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter filterData ---------------
+----------------------- TranslatedParameter filterData -----------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter maxTouchHits ---------------
+---------------------- TranslatedParameter maxTouchHits ----------------------
 Warning: Dropped default parameter value '0' because parameter comes before non-defaulted parameter 'filterData'.
---------------- TranslatedParameter filterData ---------------
+----------------------- TranslatedParameter filterData -----------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter maxTouchHits ---------------
+---------------------- TranslatedParameter maxTouchHits ----------------------
 Warning: Dropped default parameter value '0' because parameter comes before non-defaulted parameter 'filterData'.
---------------- TranslatedParameter hitFlags ---------------
+------------------------ TranslatedParameter hitFlags ------------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter filterData ---------------
+----------------------- TranslatedParameter filterData -----------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter isExclusive ---------------
+---------------------- TranslatedParameter isExclusive -----------------------
 Warning: Dropped default parameter value '0' because parameter comes before non-defaulted parameter 'shapeFlags'.
---------------- TranslatedParameter shapeFlags ---------------
+----------------------- TranslatedParameter shapeFlags -----------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter isExclusive ---------------
+---------------------- TranslatedParameter isExclusive -----------------------
 Warning: Dropped default parameter value '0' because parameter comes before non-defaulted parameter 'shapeFlags'.
---------------- TranslatedParameter shapeFlags ---------------
+----------------------- TranslatedParameter shapeFlags -----------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter <>UnnamedTranslatedParameter_0 ---------------
+------------- TranslatedParameter <>UnnamedTranslatedParameter_0 -------------
 Warning: Renamed duplicate Biohazrd.TranslatedParameter declaration '<>UnnamedTranslatedParameter' -> '<>UnnamedTranslatedParameter_0'
---------------- TranslatedParameter <>UnnamedTranslatedParameter_1 ---------------
+------------- TranslatedParameter <>UnnamedTranslatedParameter_1 -------------
 Warning: Renamed duplicate Biohazrd.TranslatedParameter declaration '<>UnnamedTranslatedParameter' -> '<>UnnamedTranslatedParameter_1'
---------------- TranslatedParameter <>UnnamedTranslatedParameter_0 ---------------
+------------- TranslatedParameter <>UnnamedTranslatedParameter_0 -------------
 Warning: Renamed duplicate Biohazrd.TranslatedParameter declaration '<>UnnamedTranslatedParameter' -> '<>UnnamedTranslatedParameter_0'
---------------- TranslatedParameter <>UnnamedTranslatedParameter_1 ---------------
+------------- TranslatedParameter <>UnnamedTranslatedParameter_1 -------------
 Warning: Renamed duplicate Biohazrd.TranslatedParameter declaration '<>UnnamedTranslatedParameter' -> '<>UnnamedTranslatedParameter_1'
---------------- TranslatedParameter <>UnnamedTranslatedParameter_0 ---------------
+------------- TranslatedParameter <>UnnamedTranslatedParameter_0 -------------
 Warning: Renamed duplicate Biohazrd.TranslatedParameter declaration '<>UnnamedTranslatedParameter' -> '<>UnnamedTranslatedParameter_0'
---------------- TranslatedParameter <>UnnamedTranslatedParameter_1 ---------------
+------------- TranslatedParameter <>UnnamedTranslatedParameter_1 -------------
 Warning: Renamed duplicate Biohazrd.TranslatedParameter declaration '<>UnnamedTranslatedParameter' -> '<>UnnamedTranslatedParameter_1'
---------------- TranslatedParameter flags ---------------
+------------------------- TranslatedParameter flags --------------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter flags ---------------
+------------------------- TranslatedParameter flags --------------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter hitFlags ---------------
+------------------------ TranslatedParameter hitFlags ------------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter hitFlags ---------------
+------------------------ TranslatedParameter hitFlags ------------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter hitFlags ---------------
+------------------------ TranslatedParameter hitFlags ------------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter filterData ---------------
+----------------------- TranslatedParameter filterData -----------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter hitFlags ---------------
+------------------------ TranslatedParameter hitFlags ------------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter filterData ---------------
+----------------------- TranslatedParameter filterData -----------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter filterData ---------------
+----------------------- TranslatedParameter filterData -----------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter allocator ---------------
+----------------------- TranslatedParameter allocator ------------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter <>UnnamedTranslatedParameter_0 ---------------
+------------- TranslatedParameter <>UnnamedTranslatedParameter_0 -------------
 Warning: Renamed duplicate Biohazrd.TranslatedParameter declaration '<>UnnamedTranslatedParameter' -> '<>UnnamedTranslatedParameter_0'
---------------- TranslatedParameter <>UnnamedTranslatedParameter_1 ---------------
+------------- TranslatedParameter <>UnnamedTranslatedParameter_1 -------------
 Warning: Renamed duplicate Biohazrd.TranslatedParameter declaration '<>UnnamedTranslatedParameter' -> '<>UnnamedTranslatedParameter_1'
---------------- TranslatedParameter <>UnnamedTranslatedParameter_2 ---------------
+------------- TranslatedParameter <>UnnamedTranslatedParameter_2 -------------
 Warning: Renamed duplicate Biohazrd.TranslatedParameter declaration '<>UnnamedTranslatedParameter' -> '<>UnnamedTranslatedParameter_2'
---------------- TranslatedParameter shapeFlags ---------------
+----------------------- TranslatedParameter shapeFlags -----------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter shapeFlags ---------------
+----------------------- TranslatedParameter shapeFlags -----------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter filterData ---------------
+----------------------- TranslatedParameter filterData -----------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter filterData ---------------
+----------------------- TranslatedParameter filterData -----------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter filterData ---------------
+----------------------- TranslatedParameter filterData -----------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter filterData ---------------
+----------------------- TranslatedParameter filterData -----------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter filterData ---------------
+----------------------- TranslatedParameter filterData -----------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter filterData ---------------
+----------------------- TranslatedParameter filterData -----------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter filterData ---------------
+----------------------- TranslatedParameter filterData -----------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter filterData ---------------
+----------------------- TranslatedParameter filterData -----------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter filterData ---------------
+----------------------- TranslatedParameter filterData -----------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter filterData ---------------
+----------------------- TranslatedParameter filterData -----------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter inTypeName ---------------
+----------------------- TranslatedParameter inTypeName -----------------------
 Warning: String constants are not supported as default parameter values.
---------------- TranslatedEnum <>UnnamedTranslatedEnum_0 ---------------
+------------------ TranslatedEnum <>UnnamedTranslatedEnum_0 ------------------
 Warning: Renamed duplicate Biohazrd.TranslatedEnum declaration '<>UnnamedTranslatedEnum' -> '<>UnnamedTranslatedEnum_0'
---------------- TranslatedEnum <>UnnamedTranslatedEnum_1 ---------------
+------------------ TranslatedEnum <>UnnamedTranslatedEnum_1 ------------------
 Warning: Renamed duplicate Biohazrd.TranslatedEnum declaration '<>UnnamedTranslatedEnum' -> '<>UnnamedTranslatedEnum_1'
---------------- TranslatedEnum <>UnnamedTranslatedEnum_2 ---------------
+------------------ TranslatedEnum <>UnnamedTranslatedEnum_2 ------------------
 Warning: Renamed duplicate Biohazrd.TranslatedEnum declaration '<>UnnamedTranslatedEnum' -> '<>UnnamedTranslatedEnum_2'
---------------- TranslatedFunction operator_Pipe ---------------
+---------------------- TranslatedFunction operator_Pipe ----------------------
 Warning: Type '`PxFlags<PxArticulationAxis::Enum, physx::PxU8>`' could not be transformed and was kludged into a System.Byte.
---------------- TranslatedFunction operator_Amp ---------------
+---------------------- TranslatedFunction operator_Amp -----------------------
 Warning: Type '`PxFlags<PxArticulationAxis::Enum, physx::PxU8>`' could not be transformed and was kludged into a System.Byte.
---------------- TranslatedFunction operator_Tilde ---------------
+--------------------- TranslatedFunction operator_Tilde ----------------------
 Warning: Type '`PxFlags<PxArticulationAxis::Enum, physx::PxU8>`' could not be transformed and was kludged into a System.Byte.
---------------- TranslatedFunction PxDefaultSimulationFilterShader__ ---------------
+------------ TranslatedFunction PxDefaultSimulationFilterShader__ ------------
 Warning: Function PxDefaultSimulationFilterShader automatically renamed to avoid collision with containing type.
---------------- TranslatedParameter shapeOffset ---------------
+---------------------- TranslatedParameter shapeOffset -----------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter shapeOffset ---------------
+---------------------- TranslatedParameter shapeOffset -----------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter shapeOffset ---------------
+---------------------- TranslatedParameter shapeOffset -----------------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter steerVsForwardSpeedTable ---------------
+---------------- TranslatedParameter steerVsForwardSpeedTable ----------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter steerVsForwardSpeedTable ---------------
+---------------- TranslatedParameter steerVsForwardSpeedTable ----------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter steerVsForwardSpeedTable ---------------
+---------------- TranslatedParameter steerVsForwardSpeedTable ----------------
 Warning: Non-constant default parameter values are not supported.
---------------- TranslatedParameter steerVsForwardSpeedTable ---------------
+---------------- TranslatedParameter steerVsForwardSpeedTable ----------------
 Warning: Non-constant default parameter values are not supported.
+
 ==============================================================================
 Broken Declarations
 ==============================================================================
-=============== TranslatedNormalField mTorqueCurve ===============
+--------------------- TranslatedNormalField mTorqueCurve ---------------------
 Error: Kludge failure: '`PxFixedSizeLookupTable<eMAX_NB_ENGINE_TORQUE_CURVE_ENTRIES>`' of size 80 could not be kludged into any C# built-in types.
-=============== TranslatedUnsupportedDeclaration PxCreateRepXObject_1 ===============
+----------- TranslatedUnsupportedDeclaration PxCreateRepXObject_1 ------------
 Warning at PxRepXSerializer.h:128: Templates are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxCreateRepXObject' -> 'PxCreateRepXObject_1'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxCreateRepXObject_0 ===============
+----------- TranslatedUnsupportedDeclaration PxCreateRepXObject_0 ------------
 Warning at PxRepXSerializer.h:110: Templates are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxCreateRepXObject' -> 'PxCreateRepXObject_0'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_29 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_29 ---------------
 Warning at PxJoint.h:78: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_29'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_28 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_28 ---------------
 Warning at PxJoint.h:77: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_28'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_27 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_27 ---------------
 Warning at PxJoint.h:76: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_27'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_26 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_26 ---------------
 Warning at PxJoint.h:75: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_26'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_25 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_25 ---------------
 Warning at PxJoint.h:74: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_25'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_24 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_24 ---------------
 Warning at PxJoint.h:73: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_24'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_23 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_23 ---------------
 Warning at PxJoint.h:72: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_23'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_22 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_22 ---------------
 Warning at PxJoint.h:71: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_22'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedNormalField materialIndices ===============
+------------------- TranslatedNormalField materialIndices --------------------
 Error: Kludge failure: '`PxTypedStridedData<physx::PxMaterialTableIndex>`' of size 16 could not be kludged into any C# built-in types.
-=============== TranslatedUnsupportedDeclaration PxSerializerDefaultAdapter ===============
+-------- TranslatedUnsupportedDeclaration PxSerializerDefaultAdapter ---------
 Warning at PxSerializer.h:150: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxMakeIterator_1 ===============
+------------- TranslatedUnsupportedDeclaration PxMakeIterator_1 --------------
 Warning at PxStrideIterator.h:342: Templates are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxMakeIterator' -> 'PxMakeIterator_1'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxMakeIterator_0 ===============
+------------- TranslatedUnsupportedDeclaration PxMakeIterator_0 --------------
 Warning at PxStrideIterator.h:333: Templates are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxMakeIterator' -> 'PxMakeIterator_0'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration operator+ ===============
+----------------- TranslatedUnsupportedDeclaration operator+ -----------------
 Warning at PxStrideIterator.h:323: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxStrideIterator ===============
+------------- TranslatedUnsupportedDeclaration PxStrideIterator --------------
 Warning at PxStrideIterator.h:80: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxBitAndDataT ===============
+--------------- TranslatedUnsupportedDeclaration PxBitAndDataT ---------------
 Warning at PxBitAndData.h:43: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxBatchQueryResult ===============
+------------ TranslatedUnsupportedDeclaration PxBatchQueryResult -------------
 Warning at PxBatchQueryDesc.h:81: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxSweepBufferN ===============
+-------------- TranslatedUnsupportedDeclaration PxSweepBufferN ---------------
 Warning at PxQueryReport.h:379: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxOverlapBufferN ===============
+------------- TranslatedUnsupportedDeclaration PxOverlapBufferN --------------
 Warning at PxQueryReport.h:371: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxRaycastBufferN ===============
+------------- TranslatedUnsupportedDeclaration PxRaycastBufferN --------------
 Warning at PxQueryReport.h:363: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxHitBuffer ===============
+---------------- TranslatedUnsupportedDeclaration PxHitBuffer ----------------
 Warning at PxQueryReport.h:310: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxHitCallback ===============
+--------------- TranslatedUnsupportedDeclaration PxHitCallback ---------------
 Warning at PxQueryReport.h:232: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration get_1 ===============
+------------------- TranslatedUnsupportedDeclaration get_1 -------------------
 Warning at PxGeometryHelpers.h:187: Templates are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'get' -> 'get_1'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration get_0 ===============
+------------------- TranslatedUnsupportedDeclaration get_0 -------------------
 Warning at PxGeometryHelpers.h:181: Templates are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'get' -> 'get_0'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration put ===============
+-------------------- TranslatedUnsupportedDeclaration put --------------------
 Warning at PxGeometryHelpers.h:176: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxFixedSizeLookupTable ===============
+---------- TranslatedUnsupportedDeclaration PxFixedSizeLookupTable -----------
 Warning at PxCoreUtilityTypes.h:100: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxPadding ===============
+----------------- TranslatedUnsupportedDeclaration PxPadding -----------------
 Warning at PxCoreUtilityTypes.h:89: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypedStridedData ===============
+------------ TranslatedUnsupportedDeclaration PxTypedStridedData -------------
 Warning at PxCoreUtilityTypes.h:69: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration at ===============
+-------------------- TranslatedUnsupportedDeclaration at ---------------------
 Warning at PxCoreUtilityTypes.h:58: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxUnionCast ===============
+---------------- TranslatedUnsupportedDeclaration PxUnionCast ----------------
 Warning at PxUnionCast.h:51: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration typeMatch ===============
+----------------- TranslatedUnsupportedDeclaration typeMatch -----------------
 Warning at PxBase.h:180: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration is_1 ===============
+------------------- TranslatedUnsupportedDeclaration is_1 --------------------
 Warning at PxBase.h:111: Templates are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'is' -> 'is_1'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration is_0 ===============
+------------------- TranslatedUnsupportedDeclaration is_0 --------------------
 Warning at PxBase.h:101: Templates are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'is' -> 'is_0'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_21 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_21 ---------------
 Warning at PxTypeInfo.h:121: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_21'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_20 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_20 ---------------
 Warning at PxTypeInfo.h:120: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_20'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_19 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_19 ---------------
 Warning at PxTypeInfo.h:119: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_19'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_18 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_18 ---------------
 Warning at PxTypeInfo.h:118: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_18'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_17 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_17 ---------------
 Warning at PxTypeInfo.h:117: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_17'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_16 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_16 ---------------
 Warning at PxTypeInfo.h:116: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_16'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_15 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_15 ---------------
 Warning at PxTypeInfo.h:115: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_15'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_14 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_14 ---------------
 Warning at PxTypeInfo.h:114: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_14'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_13 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_13 ---------------
 Warning at PxTypeInfo.h:113: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_13'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_12 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_12 ---------------
 Warning at PxTypeInfo.h:112: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_12'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_11 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_11 ---------------
 Warning at PxTypeInfo.h:111: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_11'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_10 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_10 ---------------
 Warning at PxTypeInfo.h:110: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_10'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_9 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_9 ----------------
 Warning at PxTypeInfo.h:109: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_9'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_8 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_8 ----------------
 Warning at PxTypeInfo.h:108: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_8'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_7 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_7 ----------------
 Warning at PxTypeInfo.h:107: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_7'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_6 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_6 ----------------
 Warning at PxTypeInfo.h:106: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_6'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_5 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_5 ----------------
 Warning at PxTypeInfo.h:105: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_5'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_4 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_4 ----------------
 Warning at PxTypeInfo.h:104: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_4'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_3 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_3 ----------------
 Warning at PxTypeInfo.h:103: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_3'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_2 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_2 ----------------
 Warning at PxTypeInfo.h:102: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_2'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_1 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_1 ----------------
 Warning at PxTypeInfo.h:101: Templates specializations are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_1'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxTypeInfo_0 ===============
+--------------- TranslatedUnsupportedDeclaration PxTypeInfo_0 ----------------
 Warning at PxTypeInfo.h:91: Templates are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_0'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration readExtraData_1 ===============
+-------------- TranslatedUnsupportedDeclaration readExtraData_1 --------------
 Warning at PxSerialFramework.h:243: Templates are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'readExtraData' -> 'readExtraData_1'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration readExtraData_0 ===============
+-------------- TranslatedUnsupportedDeclaration readExtraData_0 --------------
 Warning at PxSerialFramework.h:228: Templates are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'readExtraData' -> 'readExtraData_0'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration translatePxBase ===============
+-------------- TranslatedUnsupportedDeclaration translatePxBase --------------
 Warning at PxSerialFramework.h:203: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxFlags ===============
+------------------ TranslatedUnsupportedDeclaration PxFlags ------------------
 Warning at PxFlags.h:74: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxClamp ===============
+------------------ TranslatedUnsupportedDeclaration PxClamp ------------------
 Warning at PxMath.h:136: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxMin ===============
+------------------- TranslatedUnsupportedDeclaration PxMin -------------------
 Warning at PxMath.h:85: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PxMax ===============
+------------------- TranslatedUnsupportedDeclaration PxMax -------------------
 Warning at PxMath.h:69: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
-=============== TranslatedUnsupportedDeclaration PX_UNUSED ===============
+----------------- TranslatedUnsupportedDeclaration PX_UNUSED -----------------
 Warning at PxPreprocessor.h:460: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
+
 ==============================================================================
 Generation Diagnostics
 ==============================================================================
