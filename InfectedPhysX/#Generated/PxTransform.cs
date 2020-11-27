@@ -72,6 +72,7 @@ public unsafe partial struct PxTransform
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??8PxTransform@physx@@QEBA_NAEBV01@@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool operator_EqualEqual_PInvoke(PxTransform* @this, PxTransform* t);
 
     public unsafe bool operator_EqualEqual(PxTransform* t)
@@ -181,6 +182,7 @@ public unsafe partial struct PxTransform
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxTransform@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxTransform* @this);
 
     public unsafe bool isValid()
@@ -190,6 +192,7 @@ public unsafe partial struct PxTransform
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isSane@PxTransform@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isSane_PInvoke(PxTransform* @this);
 
     public unsafe bool isSane()
@@ -199,6 +202,7 @@ public unsafe partial struct PxTransform
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isFinite@PxTransform@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isFinite_PInvoke(PxTransform* @this);
 
     public unsafe bool isFinite()

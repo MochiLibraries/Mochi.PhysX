@@ -47,11 +47,11 @@ public unsafe partial struct PxBVH34TriangleMesh
         /// <summary>Virtual method pointer for `getConcreteTypeName`</summary>
         public delegate* unmanaged[Cdecl]<PxBase*, byte*> getConcreteTypeName;
         /// <summary>Virtual method pointer for `isReleasable`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, bool> isReleasable;
+        public delegate* unmanaged[Cdecl]<PxBase*, NativeBoolean> isReleasable;
         /// <summary>Virtual method pointer for `~PxBVH34TriangleMesh`</summary>
         public delegate* unmanaged[Cdecl]<PxBVH34TriangleMesh*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isKindOf`</summary>
-        public delegate* unmanaged[Cdecl]<PxBVH34TriangleMesh*, byte*, bool> isKindOf;
+        public delegate* unmanaged[Cdecl]<PxBVH34TriangleMesh*, byte*, NativeBoolean> isKindOf;
         /// <summary>Virtual method pointer for `getNbVertices`</summary>
         public delegate* unmanaged[Cdecl]<PxTriangleMesh*, uint> getNbVertices;
         /// <summary>Virtual method pointer for `getVertices`</summary>

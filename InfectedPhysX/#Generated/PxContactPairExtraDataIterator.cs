@@ -14,6 +14,7 @@ public unsafe partial struct PxContactPairExtraDataIterator
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?nextItemSet@PxContactPairExtraDataIterator@physx@@QEAA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool nextItemSet_PInvoke(PxContactPairExtraDataIterator* @this);
 
     public unsafe bool nextItemSet()

@@ -33,6 +33,7 @@ public unsafe partial struct PxJointLimitParameters
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxJointLimitParameters@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxJointLimitParameters* @this);
 
     public unsafe bool isValid()
@@ -42,6 +43,7 @@ public unsafe partial struct PxJointLimitParameters
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isSoft@PxJointLimitParameters@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isSoft_PInvoke(PxJointLimitParameters* @this);
 
     public unsafe bool isSoft()

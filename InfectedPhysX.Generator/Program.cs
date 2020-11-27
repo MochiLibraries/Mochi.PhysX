@@ -33,7 +33,7 @@ foreach (string includeDirectory in includeDirectories)
 {
     if (!Directory.Exists(includeDirectory))
     {
-        Console.Error.WriteLine($"PhysX source directory '{includeDirectory}' not found.");
+        Console.Error.WriteLine($"PhysX include directory '{includeDirectory}' not found.");
         return;
     }
 }
@@ -100,6 +100,7 @@ Console.WriteLine($"Finished reducing types in {iterations} iterations.");
 library = new LiftAnonymousUnionFieldsTransformation().Transform(library);
 library = new CSharpBuiltinTypeTransformation().Transform(library);
 library = new KludgeUnknownClangTypesIntoBuiltinTypesTransformation(emitErrorOnFail: true).Transform(library);
+library = new WrapNonBlittableTypesWhereNecessaryTransformation().Transform(library);
 library = new DeduplicateNamesTransformation().Transform(library);
 library = new MoveLooseDeclarationsIntoTypesTransformation().Transform(library);
 

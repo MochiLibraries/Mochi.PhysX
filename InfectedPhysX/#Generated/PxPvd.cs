@@ -60,15 +60,15 @@ public unsafe partial struct PxPvd
         /// <summary>Virtual method pointer for `~PxPvd`</summary>
         public delegate* unmanaged[Cdecl]<PxPvd*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `zoneStart`</summary>
-        public delegate* unmanaged[Cdecl]<PxProfilerCallback*, byte*, bool, ulong, void*> zoneStart;
+        public delegate* unmanaged[Cdecl]<PxProfilerCallback*, byte*, NativeBoolean, ulong, void*> zoneStart;
         /// <summary>Virtual method pointer for `zoneEnd`</summary>
-        public delegate* unmanaged[Cdecl]<PxProfilerCallback*, void*, byte*, bool, ulong, void> zoneEnd;
+        public delegate* unmanaged[Cdecl]<PxProfilerCallback*, void*, byte*, NativeBoolean, ulong, void> zoneEnd;
         /// <summary>Virtual method pointer for `connect`</summary>
-        public delegate* unmanaged[Cdecl]<PxPvd*, PxPvdTransport*, PxPvdInstrumentationFlags, bool> connect;
+        public delegate* unmanaged[Cdecl]<PxPvd*, PxPvdTransport*, PxPvdInstrumentationFlags, NativeBoolean> connect;
         /// <summary>Virtual method pointer for `disconnect`</summary>
         public delegate* unmanaged[Cdecl]<PxPvd*, void> disconnect;
         /// <summary>Virtual method pointer for `isConnected`</summary>
-        public delegate* unmanaged[Cdecl]<PxPvd*, bool, bool> isConnected;
+        public delegate* unmanaged[Cdecl]<PxPvd*, NativeBoolean, NativeBoolean> isConnected;
         /// <summary>Virtual method pointer for `getTransport`</summary>
         public delegate* unmanaged[Cdecl]<PxPvd*, PxPvdTransport*> getTransport;
         /// <summary>Virtual method pointer for `getInstrumentationFlags`</summary>

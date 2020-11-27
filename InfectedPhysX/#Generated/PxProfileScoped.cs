@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 public unsafe partial struct PxProfileScoped
 {
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxProfileScoped@physx@@QEAA@PEAVPxProfilerCallback@1@PEBD_N_K@Z", ExactSpelling = true)]
-    private static extern void Constructor_PInvoke(PxProfileScoped* @this, PxProfilerCallback* callback, byte* eventName, bool detached, ulong contextId);
+    private static extern void Constructor_PInvoke(PxProfileScoped* @this, PxProfilerCallback* callback, byte* eventName, [MarshalAs(UnmanagedType.I1)] bool detached, ulong contextId);
 
     public unsafe void Constructor(PxProfilerCallback* callback, byte* eventName, bool detached, ulong contextId)
     {
@@ -30,5 +30,5 @@ public unsafe partial struct PxProfileScoped
 
     [FieldOffset(24)] public ulong mContextId;
 
-    [FieldOffset(32)] public bool mDetached;
+    [FieldOffset(32)] [MarshalAs(UnmanagedType.I1)] public bool mDetached;
 }

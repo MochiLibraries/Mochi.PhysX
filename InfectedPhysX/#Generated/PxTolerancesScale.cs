@@ -18,6 +18,7 @@ public unsafe partial struct PxTolerancesScale
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxTolerancesScale@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxTolerancesScale* @this);
 
     public unsafe bool isValid()

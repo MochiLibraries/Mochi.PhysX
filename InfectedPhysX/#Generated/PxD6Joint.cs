@@ -259,11 +259,11 @@ public unsafe partial struct PxD6Joint
         /// <summary>Virtual method pointer for `getConcreteTypeName`</summary>
         public delegate* unmanaged[Cdecl]<PxD6Joint*, byte*> getConcreteTypeName;
         /// <summary>Virtual method pointer for `isReleasable`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, bool> isReleasable;
+        public delegate* unmanaged[Cdecl]<PxBase*, NativeBoolean> isReleasable;
         /// <summary>Virtual method pointer for `~PxD6Joint`</summary>
         public delegate* unmanaged[Cdecl]<PxD6Joint*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isKindOf`</summary>
-        public delegate* unmanaged[Cdecl]<PxD6Joint*, byte*, bool> isKindOf;
+        public delegate* unmanaged[Cdecl]<PxD6Joint*, byte*, NativeBoolean> isKindOf;
         /// <summary>Virtual method pointer for `setActors`</summary>
         public delegate* unmanaged[Cdecl]<PxJoint*, PxRigidActor*, PxRigidActor*, void> setActors;
         /// <summary>Virtual method pointer for `getActors`</summary>
@@ -285,7 +285,7 @@ public unsafe partial struct PxD6Joint
         /// <summary>Virtual method pointer for `setConstraintFlags`</summary>
         public delegate* unmanaged[Cdecl]<PxJoint*, PxConstraintFlags, void> setConstraintFlags;
         /// <summary>Virtual method pointer for `setConstraintFlag`</summary>
-        public delegate* unmanaged[Cdecl]<PxJoint*, PxConstraintFlags, bool, void> setConstraintFlag;
+        public delegate* unmanaged[Cdecl]<PxJoint*, PxConstraintFlags, NativeBoolean, void> setConstraintFlag;
         /// <summary>Virtual method pointer for `getConstraintFlags`</summary>
         public delegate* unmanaged[Cdecl]<PxJoint*, PxConstraintFlags> getConstraintFlags;
         /// <summary>Virtual method pointer for `setInvMassScale0`</summary>
@@ -347,11 +347,11 @@ public unsafe partial struct PxD6Joint
         /// <summary>Virtual method pointer for `getDrive`</summary>
         public delegate* unmanaged[Cdecl]<PxD6Joint*, out PxD6JointDrive, PxD6Drive, void> getDrive;
         /// <summary>Virtual method pointer for `setDrivePosition`</summary>
-        public delegate* unmanaged[Cdecl]<PxD6Joint*, PxTransform*, bool, void> setDrivePosition;
+        public delegate* unmanaged[Cdecl]<PxD6Joint*, PxTransform*, NativeBoolean, void> setDrivePosition;
         /// <summary>Virtual method pointer for `getDrivePosition`</summary>
         public delegate* unmanaged[Cdecl]<PxD6Joint*, out PxTransform, void> getDrivePosition;
         /// <summary>Virtual method pointer for `setDriveVelocity`</summary>
-        public delegate* unmanaged[Cdecl]<PxD6Joint*, PxVec3*, PxVec3*, bool, void> setDriveVelocity;
+        public delegate* unmanaged[Cdecl]<PxD6Joint*, PxVec3*, PxVec3*, NativeBoolean, void> setDriveVelocity;
         /// <summary>Virtual method pointer for `getDriveVelocity`</summary>
         public delegate* unmanaged[Cdecl]<PxD6Joint*, PxVec3*, PxVec3*, void> getDriveVelocity;
         /// <summary>Virtual method pointer for `setProjectionLinearTolerance`</summary>

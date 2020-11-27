@@ -22,6 +22,7 @@ public unsafe partial struct PxVehicleAckermannGeometryData
     [FieldOffset(12)] public float mAxleSeparation;
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleAckermannGeometryData@physx@@AEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxVehicleAckermannGeometryData* @this);
 
     public unsafe bool isValid()

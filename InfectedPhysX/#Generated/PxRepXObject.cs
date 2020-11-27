@@ -20,6 +20,7 @@ public unsafe partial struct PxRepXObject
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxRepXObject@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxRepXObject* @this);
 
     public unsafe bool isValid()

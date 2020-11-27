@@ -102,6 +102,7 @@ public unsafe partial struct PxVehicleNoDrive
     [FieldOffset(216)] public ConstantArray_physx__UNICODE_003A____UNICODE_003A__PxU32_2 mPad;
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleNoDrive@physx@@AEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxVehicleNoDrive* @this);
 
     public unsafe bool isValid()
@@ -205,11 +206,11 @@ public unsafe partial struct PxVehicleNoDrive
         /// <summary>Virtual method pointer for `getConcreteTypeName`</summary>
         public delegate* unmanaged[Cdecl]<PxVehicleNoDrive*, byte*> getConcreteTypeName;
         /// <summary>Virtual method pointer for `isReleasable`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, bool> isReleasable;
+        public delegate* unmanaged[Cdecl]<PxBase*, NativeBoolean> isReleasable;
         /// <summary>Virtual method pointer for `~PxVehicleNoDrive`</summary>
         public delegate* unmanaged[Cdecl]<PxVehicleNoDrive*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isKindOf`</summary>
-        public delegate* unmanaged[Cdecl]<PxVehicleNoDrive*, byte*, bool> isKindOf;
+        public delegate* unmanaged[Cdecl]<PxVehicleNoDrive*, byte*, NativeBoolean> isKindOf;
         /// <summary>Virtual method pointer for `init`</summary>
         public delegate* unmanaged[Cdecl]<PxVehicleWheels*, uint, void> init;
         /// <summary>Virtual method pointer for `requiresObjects`</summary>

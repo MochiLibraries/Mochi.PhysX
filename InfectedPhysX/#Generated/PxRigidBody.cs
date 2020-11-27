@@ -277,11 +277,11 @@ public unsafe partial struct PxRigidBody
         /// <summary>Virtual method pointer for `getConcreteTypeName`</summary>
         public delegate* unmanaged[Cdecl]<PxBase*, byte*> getConcreteTypeName;
         /// <summary>Virtual method pointer for `isReleasable`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, bool> isReleasable;
+        public delegate* unmanaged[Cdecl]<PxBase*, NativeBoolean> isReleasable;
         /// <summary>Virtual method pointer for `~PxRigidBody`</summary>
         public delegate* unmanaged[Cdecl]<PxRigidBody*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isKindOf`</summary>
-        public delegate* unmanaged[Cdecl]<PxRigidBody*, byte*, bool> isKindOf;
+        public delegate* unmanaged[Cdecl]<PxRigidBody*, byte*, NativeBoolean> isKindOf;
         /// <summary>Virtual method pointer for `getType`</summary>
         public delegate* unmanaged[Cdecl]<PxActor*, PxActorType> getType;
         /// <summary>Virtual method pointer for `getScene`</summary>
@@ -293,7 +293,7 @@ public unsafe partial struct PxRigidBody
         /// <summary>Virtual method pointer for `getWorldBounds`</summary>
         public delegate* unmanaged[Cdecl]<PxActor*, out PxBounds3, float, void> getWorldBounds;
         /// <summary>Virtual method pointer for `setActorFlag`</summary>
-        public delegate* unmanaged[Cdecl]<PxActor*, PxActorFlags, bool, void> setActorFlag;
+        public delegate* unmanaged[Cdecl]<PxActor*, PxActorFlags, NativeBoolean, void> setActorFlag;
         /// <summary>Virtual method pointer for `setActorFlags`</summary>
         public delegate* unmanaged[Cdecl]<PxActor*, PxActorFlags, void> setActorFlags;
         /// <summary>Virtual method pointer for `getActorFlags`</summary>
@@ -311,11 +311,11 @@ public unsafe partial struct PxRigidBody
         /// <summary>Virtual method pointer for `getGlobalPose`</summary>
         public delegate* unmanaged[Cdecl]<PxRigidActor*, out PxTransform, void> getGlobalPose;
         /// <summary>Virtual method pointer for `setGlobalPose`</summary>
-        public delegate* unmanaged[Cdecl]<PxRigidActor*, PxTransform*, bool, void> setGlobalPose;
+        public delegate* unmanaged[Cdecl]<PxRigidActor*, PxTransform*, NativeBoolean, void> setGlobalPose;
         /// <summary>Virtual method pointer for `attachShape`</summary>
-        public delegate* unmanaged[Cdecl]<PxRigidActor*, PxShape*, bool> attachShape;
+        public delegate* unmanaged[Cdecl]<PxRigidActor*, PxShape*, NativeBoolean> attachShape;
         /// <summary>Virtual method pointer for `detachShape`</summary>
-        public delegate* unmanaged[Cdecl]<PxRigidActor*, PxShape*, bool, void> detachShape;
+        public delegate* unmanaged[Cdecl]<PxRigidActor*, PxShape*, NativeBoolean, void> detachShape;
         /// <summary>Virtual method pointer for `getNbShapes`</summary>
         public delegate* unmanaged[Cdecl]<PxRigidActor*, uint> getNbShapes;
         /// <summary>Virtual method pointer for `getShapes`</summary>
@@ -351,11 +351,11 @@ public unsafe partial struct PxRigidBody
         /// <summary>Virtual method pointer for `getLinearVelocity`</summary>
         public delegate* unmanaged[Cdecl]<PxRigidBody*, out PxVec3, void> getLinearVelocity;
         /// <summary>Virtual method pointer for `setLinearVelocity`</summary>
-        public delegate* unmanaged[Cdecl]<PxRigidBody*, PxVec3*, bool, void> setLinearVelocity;
+        public delegate* unmanaged[Cdecl]<PxRigidBody*, PxVec3*, NativeBoolean, void> setLinearVelocity;
         /// <summary>Virtual method pointer for `getAngularVelocity`</summary>
         public delegate* unmanaged[Cdecl]<PxRigidBody*, out PxVec3, void> getAngularVelocity;
         /// <summary>Virtual method pointer for `setAngularVelocity`</summary>
-        public delegate* unmanaged[Cdecl]<PxRigidBody*, PxVec3*, bool, void> setAngularVelocity;
+        public delegate* unmanaged[Cdecl]<PxRigidBody*, PxVec3*, NativeBoolean, void> setAngularVelocity;
         /// <summary>Virtual method pointer for `setMaxAngularVelocity`</summary>
         public delegate* unmanaged[Cdecl]<PxRigidBody*, float, void> setMaxAngularVelocity;
         /// <summary>Virtual method pointer for `getMaxAngularVelocity`</summary>
@@ -365,9 +365,9 @@ public unsafe partial struct PxRigidBody
         /// <summary>Virtual method pointer for `getMaxLinearVelocity`</summary>
         public delegate* unmanaged[Cdecl]<PxRigidBody*, float> getMaxLinearVelocity;
         /// <summary>Virtual method pointer for `addForce`</summary>
-        public delegate* unmanaged[Cdecl]<PxRigidBody*, PxVec3*, PxForceMode, bool, void> addForce;
+        public delegate* unmanaged[Cdecl]<PxRigidBody*, PxVec3*, PxForceMode, NativeBoolean, void> addForce;
         /// <summary>Virtual method pointer for `addTorque`</summary>
-        public delegate* unmanaged[Cdecl]<PxRigidBody*, PxVec3*, PxForceMode, bool, void> addTorque;
+        public delegate* unmanaged[Cdecl]<PxRigidBody*, PxVec3*, PxForceMode, NativeBoolean, void> addTorque;
         /// <summary>Virtual method pointer for `clearForce`</summary>
         public delegate* unmanaged[Cdecl]<PxRigidBody*, PxForceMode, void> clearForce;
         /// <summary>Virtual method pointer for `clearTorque`</summary>
@@ -375,7 +375,7 @@ public unsafe partial struct PxRigidBody
         /// <summary>Virtual method pointer for `setForceAndTorque`</summary>
         public delegate* unmanaged[Cdecl]<PxRigidBody*, PxVec3*, PxVec3*, PxForceMode, void> setForceAndTorque;
         /// <summary>Virtual method pointer for `setRigidBodyFlag`</summary>
-        public delegate* unmanaged[Cdecl]<PxRigidBody*, PxRigidBodyFlags, bool, void> setRigidBodyFlag;
+        public delegate* unmanaged[Cdecl]<PxRigidBody*, PxRigidBodyFlags, NativeBoolean, void> setRigidBodyFlag;
         /// <summary>Virtual method pointer for `setRigidBodyFlags`</summary>
         public delegate* unmanaged[Cdecl]<PxRigidBody*, PxRigidBodyFlags, void> setRigidBodyFlags;
         /// <summary>Virtual method pointer for `getRigidBodyFlags`</summary>

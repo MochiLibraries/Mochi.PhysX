@@ -22,7 +22,7 @@ public unsafe partial struct PxTGSSolverBodyVel
 
     [FieldOffset(60)] public ushort lockFlags;
 
-    [FieldOffset(62)] public bool isKinematic;
+    [FieldOffset(62)] [MarshalAs(UnmanagedType.I1)] public bool isKinematic;
 
     [FieldOffset(63)] public byte pad;
 

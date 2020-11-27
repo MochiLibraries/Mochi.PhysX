@@ -4,5 +4,6 @@ using System.Runtime.InteropServices;
 public unsafe static partial class PxSmoothNormals
 {
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-    public static extern bool PxBuildSmoothNormals(uint nbTris, uint nbVerts, PxVec3* verts, uint* dFaces, ushort* wFaces, PxVec3* normals, bool flip);
+    [return: MarshalAs(UnmanagedType.I1)]
+    public static extern bool PxBuildSmoothNormals(uint nbTris, uint nbVerts, PxVec3* verts, uint* dFaces, ushort* wFaces, PxVec3* normals, [MarshalAs(UnmanagedType.I1)] bool flip);
 }

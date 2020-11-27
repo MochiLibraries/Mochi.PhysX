@@ -113,19 +113,19 @@ public unsafe partial struct PxAggregate
         /// <summary>Virtual method pointer for `getConcreteTypeName`</summary>
         public delegate* unmanaged[Cdecl]<PxAggregate*, byte*> getConcreteTypeName;
         /// <summary>Virtual method pointer for `isReleasable`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, bool> isReleasable;
+        public delegate* unmanaged[Cdecl]<PxBase*, NativeBoolean> isReleasable;
         /// <summary>Virtual method pointer for `~PxAggregate`</summary>
         public delegate* unmanaged[Cdecl]<PxAggregate*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isKindOf`</summary>
-        public delegate* unmanaged[Cdecl]<PxAggregate*, byte*, bool> isKindOf;
+        public delegate* unmanaged[Cdecl]<PxAggregate*, byte*, NativeBoolean> isKindOf;
         /// <summary>Virtual method pointer for `addActor`</summary>
-        public delegate* unmanaged[Cdecl]<PxAggregate*, PxActor*, PxBVHStructure*, bool> addActor;
+        public delegate* unmanaged[Cdecl]<PxAggregate*, PxActor*, PxBVHStructure*, NativeBoolean> addActor;
         /// <summary>Virtual method pointer for `removeActor`</summary>
-        public delegate* unmanaged[Cdecl]<PxAggregate*, PxActor*, bool> removeActor;
+        public delegate* unmanaged[Cdecl]<PxAggregate*, PxActor*, NativeBoolean> removeActor;
         /// <summary>Virtual method pointer for `addArticulation`</summary>
-        public delegate* unmanaged[Cdecl]<PxAggregate*, PxArticulationBase*, bool> addArticulation;
+        public delegate* unmanaged[Cdecl]<PxAggregate*, PxArticulationBase*, NativeBoolean> addArticulation;
         /// <summary>Virtual method pointer for `removeArticulation`</summary>
-        public delegate* unmanaged[Cdecl]<PxAggregate*, PxArticulationBase*, bool> removeArticulation;
+        public delegate* unmanaged[Cdecl]<PxAggregate*, PxArticulationBase*, NativeBoolean> removeArticulation;
         /// <summary>Virtual method pointer for `getNbActors`</summary>
         public delegate* unmanaged[Cdecl]<PxAggregate*, uint> getNbActors;
         /// <summary>Virtual method pointer for `getMaxNbActors`</summary>
@@ -135,6 +135,6 @@ public unsafe partial struct PxAggregate
         /// <summary>Virtual method pointer for `getScene`</summary>
         public delegate* unmanaged[Cdecl]<PxAggregate*, PxScene*> getScene;
         /// <summary>Virtual method pointer for `getSelfCollision`</summary>
-        public delegate* unmanaged[Cdecl]<PxAggregate*, bool> getSelfCollision;
+        public delegate* unmanaged[Cdecl]<PxAggregate*, NativeBoolean> getSelfCollision;
     }
 }

@@ -73,7 +73,7 @@ public unsafe partial struct PxCapsuleControllerDesc
     public unsafe struct VirtualMethodTable
     {
         /// <summary>Virtual method pointer for `isValid`</summary>
-        public delegate* unmanaged[Cdecl]<PxCapsuleControllerDesc*, bool> isValid;
+        public delegate* unmanaged[Cdecl]<PxCapsuleControllerDesc*, NativeBoolean> isValid;
         /// <summary>Virtual method pointer for `~PxCapsuleControllerDesc`</summary>
         public delegate* unmanaged[Cdecl]<PxCapsuleControllerDesc*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `setToDefault`</summary>

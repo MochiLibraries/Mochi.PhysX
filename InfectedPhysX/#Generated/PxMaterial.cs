@@ -151,11 +151,11 @@ public unsafe partial struct PxMaterial
         /// <summary>Virtual method pointer for `getConcreteTypeName`</summary>
         public delegate* unmanaged[Cdecl]<PxMaterial*, byte*> getConcreteTypeName;
         /// <summary>Virtual method pointer for `isReleasable`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, bool> isReleasable;
+        public delegate* unmanaged[Cdecl]<PxBase*, NativeBoolean> isReleasable;
         /// <summary>Virtual method pointer for `~PxMaterial`</summary>
         public delegate* unmanaged[Cdecl]<PxMaterial*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isKindOf`</summary>
-        public delegate* unmanaged[Cdecl]<PxMaterial*, byte*, bool> isKindOf;
+        public delegate* unmanaged[Cdecl]<PxMaterial*, byte*, NativeBoolean> isKindOf;
         /// <summary>Virtual method pointer for `getReferenceCount`</summary>
         public delegate* unmanaged[Cdecl]<PxMaterial*, uint> getReferenceCount;
         /// <summary>Virtual method pointer for `acquireReference`</summary>
@@ -173,7 +173,7 @@ public unsafe partial struct PxMaterial
         /// <summary>Virtual method pointer for `getRestitution`</summary>
         public delegate* unmanaged[Cdecl]<PxMaterial*, float> getRestitution;
         /// <summary>Virtual method pointer for `setFlag`</summary>
-        public delegate* unmanaged[Cdecl]<PxMaterial*, PxMaterialFlags, bool, void> setFlag;
+        public delegate* unmanaged[Cdecl]<PxMaterial*, PxMaterialFlags, NativeBoolean, void> setFlag;
         /// <summary>Virtual method pointer for `setFlags`</summary>
         public delegate* unmanaged[Cdecl]<PxMaterial*, PxMaterialFlags, void> setFlags;
         /// <summary>Virtual method pointer for `getFlags`</summary>

@@ -299,11 +299,11 @@ public unsafe partial struct PxShape
         /// <summary>Virtual method pointer for `getConcreteTypeName`</summary>
         public delegate* unmanaged[Cdecl]<PxShape*, byte*> getConcreteTypeName;
         /// <summary>Virtual method pointer for `isReleasable`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, bool> isReleasable;
+        public delegate* unmanaged[Cdecl]<PxBase*, NativeBoolean> isReleasable;
         /// <summary>Virtual method pointer for `~PxShape`</summary>
         public delegate* unmanaged[Cdecl]<PxShape*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isKindOf`</summary>
-        public delegate* unmanaged[Cdecl]<PxShape*, byte*, bool> isKindOf;
+        public delegate* unmanaged[Cdecl]<PxShape*, byte*, NativeBoolean> isKindOf;
         /// <summary>Virtual method pointer for `getReferenceCount`</summary>
         public delegate* unmanaged[Cdecl]<PxShape*, uint> getReferenceCount;
         /// <summary>Virtual method pointer for `acquireReference`</summary>
@@ -315,19 +315,19 @@ public unsafe partial struct PxShape
         /// <summary>Virtual method pointer for `getGeometry`</summary>
         public delegate* unmanaged[Cdecl]<PxShape*, out PxGeometryHolder, void> getGeometry;
         /// <summary>Virtual method pointer for `getBoxGeometry`</summary>
-        public delegate* unmanaged[Cdecl]<PxShape*, PxBoxGeometry*, bool> getBoxGeometry;
+        public delegate* unmanaged[Cdecl]<PxShape*, PxBoxGeometry*, NativeBoolean> getBoxGeometry;
         /// <summary>Virtual method pointer for `getSphereGeometry`</summary>
-        public delegate* unmanaged[Cdecl]<PxShape*, PxSphereGeometry*, bool> getSphereGeometry;
+        public delegate* unmanaged[Cdecl]<PxShape*, PxSphereGeometry*, NativeBoolean> getSphereGeometry;
         /// <summary>Virtual method pointer for `getCapsuleGeometry`</summary>
-        public delegate* unmanaged[Cdecl]<PxShape*, PxCapsuleGeometry*, bool> getCapsuleGeometry;
+        public delegate* unmanaged[Cdecl]<PxShape*, PxCapsuleGeometry*, NativeBoolean> getCapsuleGeometry;
         /// <summary>Virtual method pointer for `getPlaneGeometry`</summary>
-        public delegate* unmanaged[Cdecl]<PxShape*, PxPlaneGeometry*, bool> getPlaneGeometry;
+        public delegate* unmanaged[Cdecl]<PxShape*, PxPlaneGeometry*, NativeBoolean> getPlaneGeometry;
         /// <summary>Virtual method pointer for `getConvexMeshGeometry`</summary>
-        public delegate* unmanaged[Cdecl]<PxShape*, PxConvexMeshGeometry*, bool> getConvexMeshGeometry;
+        public delegate* unmanaged[Cdecl]<PxShape*, PxConvexMeshGeometry*, NativeBoolean> getConvexMeshGeometry;
         /// <summary>Virtual method pointer for `getTriangleMeshGeometry`</summary>
-        public delegate* unmanaged[Cdecl]<PxShape*, PxTriangleMeshGeometry*, bool> getTriangleMeshGeometry;
+        public delegate* unmanaged[Cdecl]<PxShape*, PxTriangleMeshGeometry*, NativeBoolean> getTriangleMeshGeometry;
         /// <summary>Virtual method pointer for `getHeightFieldGeometry`</summary>
-        public delegate* unmanaged[Cdecl]<PxShape*, PxHeightFieldGeometry*, bool> getHeightFieldGeometry;
+        public delegate* unmanaged[Cdecl]<PxShape*, PxHeightFieldGeometry*, NativeBoolean> getHeightFieldGeometry;
         /// <summary>Virtual method pointer for `getActor`</summary>
         public delegate* unmanaged[Cdecl]<PxShape*, PxRigidActor*> getActor;
         /// <summary>Virtual method pointer for `setLocalPose`</summary>
@@ -367,13 +367,13 @@ public unsafe partial struct PxShape
         /// <summary>Virtual method pointer for `getMinTorsionalPatchRadius`</summary>
         public delegate* unmanaged[Cdecl]<PxShape*, float> getMinTorsionalPatchRadius;
         /// <summary>Virtual method pointer for `setFlag`</summary>
-        public delegate* unmanaged[Cdecl]<PxShape*, PxShapeFlags, bool, void> setFlag;
+        public delegate* unmanaged[Cdecl]<PxShape*, PxShapeFlags, NativeBoolean, void> setFlag;
         /// <summary>Virtual method pointer for `setFlags`</summary>
         public delegate* unmanaged[Cdecl]<PxShape*, PxShapeFlags, void> setFlags;
         /// <summary>Virtual method pointer for `getFlags`</summary>
         public delegate* unmanaged[Cdecl]<PxShape*, PxShapeFlags> getFlags;
         /// <summary>Virtual method pointer for `isExclusive`</summary>
-        public delegate* unmanaged[Cdecl]<PxShape*, bool> isExclusive;
+        public delegate* unmanaged[Cdecl]<PxShape*, NativeBoolean> isExclusive;
         /// <summary>Virtual method pointer for `setName`</summary>
         public delegate* unmanaged[Cdecl]<PxShape*, byte*, void> setName;
         /// <summary>Virtual method pointer for `getName`</summary>

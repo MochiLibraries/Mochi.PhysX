@@ -31,8 +31,8 @@ public unsafe partial struct PxProfilerCallback
         /// <summary>Virtual method pointer for `~PxProfilerCallback`</summary>
         public delegate* unmanaged[Cdecl]<PxProfilerCallback*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `zoneStart`</summary>
-        public delegate* unmanaged[Cdecl]<PxProfilerCallback*, byte*, bool, ulong, void*> zoneStart;
+        public delegate* unmanaged[Cdecl]<PxProfilerCallback*, byte*, NativeBoolean, ulong, void*> zoneStart;
         /// <summary>Virtual method pointer for `zoneEnd`</summary>
-        public delegate* unmanaged[Cdecl]<PxProfilerCallback*, void*, byte*, bool, ulong, void> zoneEnd;
+        public delegate* unmanaged[Cdecl]<PxProfilerCallback*, void*, byte*, NativeBoolean, ulong, void> zoneEnd;
     }
 }

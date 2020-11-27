@@ -17,5 +17,6 @@ public unsafe partial struct PxMeshQuery
     public static extern uint findOverlapHeightField(PxGeometry* geom, PxTransform* geomPose, PxHeightFieldGeometry* hfGeom, PxTransform* hfPose, uint* results, uint maxResults, uint startIndex, bool* overflow);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?sweep@PxMeshQuery@physx@@SA_NAEBVPxVec3@2@MAEBVPxGeometry@2@AEBVPxTransform@2@IPEBVPxTriangle@2@AEAUPxSweepHit@2@V?$PxFlags@W4Enum@PxHitFlag@physx@@G@2@PEBIM_N@Z", ExactSpelling = true)]
-    public static extern bool sweep(PxVec3* unitDir, float distance, PxGeometry* geom, PxTransform* pose, uint triangleCount, PxTriangle* triangles, PxSweepHit* sweepHit, PxHitFlags hitFlags, uint* cachedIndex = null, float inflation = 0f, bool doubleSided = false);
+    [return: MarshalAs(UnmanagedType.I1)]
+    public static extern bool sweep(PxVec3* unitDir, float distance, PxGeometry* geom, PxTransform* pose, uint triangleCount, PxTriangle* triangles, PxSweepHit* sweepHit, PxHitFlags hitFlags, uint* cachedIndex = null, float inflation = 0f, [MarshalAs(UnmanagedType.I1)] bool doubleSided = false);
 }

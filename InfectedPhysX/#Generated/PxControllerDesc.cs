@@ -47,7 +47,7 @@ public unsafe partial struct PxControllerDesc
 
     [FieldOffset(104)] public PxMaterial* material;
 
-    [FieldOffset(112)] public bool registerDeletionListener;
+    [FieldOffset(112)] [MarshalAs(UnmanagedType.I1)] public bool registerDeletionListener;
 
     [FieldOffset(120)] public void* userData;
 
@@ -102,7 +102,7 @@ public unsafe partial struct PxControllerDesc
     public unsafe struct VirtualMethodTable
     {
         /// <summary>Virtual method pointer for `isValid`</summary>
-        public delegate* unmanaged[Cdecl]<PxControllerDesc*, bool> isValid;
+        public delegate* unmanaged[Cdecl]<PxControllerDesc*, NativeBoolean> isValid;
         /// <summary>Virtual method pointer for `~PxControllerDesc`</summary>
         public delegate* unmanaged[Cdecl]<PxControllerDesc*, void> __DeletingDestructorPointer;
     }

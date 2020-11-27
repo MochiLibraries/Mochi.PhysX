@@ -40,9 +40,11 @@ public unsafe static partial class PxWindowsIntrinsics
     public static extern float selectMax(float a, float b);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isFinite@intrinsics@physx@@YA_NM@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool isFinite(float a);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isFinite@intrinsics@physx@@YA_NN@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool isFinite(double a);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?memZero@intrinsics@physx@@YAPEAXPEAXI@Z", ExactSpelling = true)]

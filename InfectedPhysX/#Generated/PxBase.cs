@@ -26,7 +26,7 @@ public unsafe partial struct PxBase
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setBaseFlag@PxBase@physx@@QEAAXW4Enum@PxBaseFlag@2@_N@Z", ExactSpelling = true)]
-    private static extern void setBaseFlag_PInvoke(PxBase* @this, PxBaseFlags flag, bool value);
+    private static extern void setBaseFlag_PInvoke(PxBase* @this, PxBaseFlags flag, [MarshalAs(UnmanagedType.I1)] bool value);
 
     public unsafe void setBaseFlag(PxBaseFlags flag, bool value)
     {
@@ -103,10 +103,10 @@ public unsafe partial struct PxBase
         /// <summary>Virtual method pointer for `getConcreteTypeName`</summary>
         public delegate* unmanaged[Cdecl]<PxBase*, byte*> getConcreteTypeName;
         /// <summary>Virtual method pointer for `isReleasable`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, bool> isReleasable;
+        public delegate* unmanaged[Cdecl]<PxBase*, NativeBoolean> isReleasable;
         /// <summary>Virtual method pointer for `~PxBase`</summary>
         public delegate* unmanaged[Cdecl]<PxBase*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isKindOf`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, byte*, bool> isKindOf;
+        public delegate* unmanaged[Cdecl]<PxBase*, byte*, NativeBoolean> isKindOf;
     }
 }

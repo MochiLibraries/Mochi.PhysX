@@ -74,11 +74,11 @@ public unsafe partial struct PxFixedJoint
         /// <summary>Virtual method pointer for `getConcreteTypeName`</summary>
         public delegate* unmanaged[Cdecl]<PxFixedJoint*, byte*> getConcreteTypeName;
         /// <summary>Virtual method pointer for `isReleasable`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, bool> isReleasable;
+        public delegate* unmanaged[Cdecl]<PxBase*, NativeBoolean> isReleasable;
         /// <summary>Virtual method pointer for `~PxFixedJoint`</summary>
         public delegate* unmanaged[Cdecl]<PxFixedJoint*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isKindOf`</summary>
-        public delegate* unmanaged[Cdecl]<PxFixedJoint*, byte*, bool> isKindOf;
+        public delegate* unmanaged[Cdecl]<PxFixedJoint*, byte*, NativeBoolean> isKindOf;
         /// <summary>Virtual method pointer for `setActors`</summary>
         public delegate* unmanaged[Cdecl]<PxJoint*, PxRigidActor*, PxRigidActor*, void> setActors;
         /// <summary>Virtual method pointer for `getActors`</summary>
@@ -100,7 +100,7 @@ public unsafe partial struct PxFixedJoint
         /// <summary>Virtual method pointer for `setConstraintFlags`</summary>
         public delegate* unmanaged[Cdecl]<PxJoint*, PxConstraintFlags, void> setConstraintFlags;
         /// <summary>Virtual method pointer for `setConstraintFlag`</summary>
-        public delegate* unmanaged[Cdecl]<PxJoint*, PxConstraintFlags, bool, void> setConstraintFlag;
+        public delegate* unmanaged[Cdecl]<PxJoint*, PxConstraintFlags, NativeBoolean, void> setConstraintFlag;
         /// <summary>Virtual method pointer for `getConstraintFlags`</summary>
         public delegate* unmanaged[Cdecl]<PxJoint*, PxConstraintFlags> getConstraintFlags;
         /// <summary>Virtual method pointer for `setInvMassScale0`</summary>

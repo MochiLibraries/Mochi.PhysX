@@ -60,11 +60,11 @@ public unsafe partial struct PxBinaryConverter
         /// <summary>Virtual method pointer for `setReportMode`</summary>
         public delegate* unmanaged[Cdecl]<PxBinaryConverter*, PxConverterReportMode, void> setReportMode;
         /// <summary>Virtual method pointer for `setMetaData`</summary>
-        public delegate* unmanaged[Cdecl]<PxBinaryConverter*, PxInputStream*, PxInputStream*, bool> setMetaData;
+        public delegate* unmanaged[Cdecl]<PxBinaryConverter*, PxInputStream*, PxInputStream*, NativeBoolean> setMetaData;
         /// <summary>Virtual method pointer for `compareMetaData`</summary>
-        public delegate* unmanaged[Cdecl]<PxBinaryConverter*, bool> compareMetaData;
+        public delegate* unmanaged[Cdecl]<PxBinaryConverter*, NativeBoolean> compareMetaData;
         /// <summary>Virtual method pointer for `convert`</summary>
-        public delegate* unmanaged[Cdecl]<PxBinaryConverter*, PxInputStream*, uint, PxOutputStream*, bool> convert;
+        public delegate* unmanaged[Cdecl]<PxBinaryConverter*, PxInputStream*, uint, PxOutputStream*, NativeBoolean> convert;
         /// <summary>Virtual method pointer for `~PxBinaryConverter`</summary>
         public delegate* unmanaged[Cdecl]<PxBinaryConverter*, void> __DeletingDestructorPointer;
     }

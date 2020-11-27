@@ -107,6 +107,7 @@ public unsafe partial struct PxSceneDesc
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxSceneDesc@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxSceneDesc* @this);
 
     public unsafe bool isValid()

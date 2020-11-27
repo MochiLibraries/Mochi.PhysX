@@ -10,7 +10,7 @@ public unsafe partial struct PxBroadPhaseRegionInfo
 
     [FieldOffset(36)] public uint nbDynamicObjects;
 
-    [FieldOffset(40)] public bool active;
+    [FieldOffset(40)] [MarshalAs(UnmanagedType.I1)] public bool active;
 
-    [FieldOffset(41)] public bool overlap;
+    [FieldOffset(41)] [MarshalAs(UnmanagedType.I1)] public bool overlap;
 }

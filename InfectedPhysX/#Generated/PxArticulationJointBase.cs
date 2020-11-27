@@ -105,11 +105,11 @@ public unsafe partial struct PxArticulationJointBase
         /// <summary>Virtual method pointer for `getConcreteTypeName`</summary>
         public delegate* unmanaged[Cdecl]<PxBase*, byte*> getConcreteTypeName;
         /// <summary>Virtual method pointer for `isReleasable`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, bool> isReleasable;
+        public delegate* unmanaged[Cdecl]<PxBase*, NativeBoolean> isReleasable;
         /// <summary>Virtual method pointer for `~PxArticulationJointBase`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationJointBase*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isKindOf`</summary>
-        public delegate* unmanaged[Cdecl]<PxArticulationJointBase*, byte*, bool> isKindOf;
+        public delegate* unmanaged[Cdecl]<PxArticulationJointBase*, byte*, NativeBoolean> isKindOf;
         /// <summary>Virtual method pointer for `getParentArticulationLink`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationJointBase*, PxArticulationLink*> getParentArticulationLink;
         /// <summary>Virtual method pointer for `setParentPose`</summary>

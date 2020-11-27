@@ -56,6 +56,7 @@ public unsafe partial struct PxVehicleDriveSimData4W
     [FieldOffset(560)] public PxVehicleAckermannGeometryData mAckermannGeometry;
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleDriveSimData4W@physx@@AEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxVehicleDriveSimData4W* @this);
 
     public unsafe bool isValid()

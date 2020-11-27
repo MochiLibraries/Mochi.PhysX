@@ -63,6 +63,7 @@ public unsafe partial struct PxVehicleSuspensionData
     [FieldOffset(40)] public ConstantArray_physx__UNICODE_003A____UNICODE_003A__PxReal_2 mPad;
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleSuspensionData@physx@@AEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxVehicleSuspensionData* @this);
 
     public unsafe bool isValid()

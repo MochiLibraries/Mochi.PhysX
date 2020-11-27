@@ -12,11 +12,11 @@ public unsafe partial struct PxTGSSolverContactDesc
 
     [FieldOffset(160)] public uint numContacts;
 
-    [FieldOffset(164)] public bool hasMaxImpulse;
+    [FieldOffset(164)] [MarshalAs(UnmanagedType.I1)] public bool hasMaxImpulse;
 
-    [FieldOffset(165)] public bool disableStrongFriction;
+    [FieldOffset(165)] [MarshalAs(UnmanagedType.I1)] public bool disableStrongFriction;
 
-    [FieldOffset(166)] public bool hasForceThresholds;
+    [FieldOffset(166)] [MarshalAs(UnmanagedType.I1)] public bool hasForceThresholds;
 
     [FieldOffset(168)] public float restDistance;
 

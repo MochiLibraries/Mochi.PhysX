@@ -127,7 +127,7 @@ public unsafe partial struct PxCollection
         /// <summary>Virtual method pointer for `remove`</summary>
         public delegate* unmanaged[Cdecl]<PxCollection*, PxBase*, void> remove_1;
         /// <summary>Virtual method pointer for `contains`</summary>
-        public delegate* unmanaged[Cdecl]<PxCollection*, PxBase*, bool> contains;
+        public delegate* unmanaged[Cdecl]<PxCollection*, PxBase*, NativeBoolean> contains;
         /// <summary>Virtual method pointer for `addId`</summary>
         public delegate* unmanaged[Cdecl]<PxCollection*, PxBase*, ulong, void> addId;
         /// <summary>Virtual method pointer for `removeId`</summary>

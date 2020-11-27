@@ -29,6 +29,7 @@ public unsafe partial struct PxJointLinearLimitPair
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxJointLinearLimitPair@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxJointLinearLimitPair* @this);
 
     public unsafe bool isValid()

@@ -16,6 +16,7 @@ public unsafe partial struct PxLocationHit
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?hadInitialOverlap@PxLocationHit@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool hadInitialOverlap_PInvoke(PxLocationHit* @this);
 
     public unsafe bool hadInitialOverlap()

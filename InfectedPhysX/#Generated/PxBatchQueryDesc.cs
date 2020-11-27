@@ -25,6 +25,7 @@ public unsafe partial struct PxBatchQueryDesc
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxBatchQueryDesc@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxBatchQueryDesc* @this);
 
     public unsafe bool isValid()

@@ -25,6 +25,6 @@ public unsafe partial struct PxControllerFilterCallback
         /// <summary>Virtual method pointer for `~PxControllerFilterCallback`</summary>
         public delegate* unmanaged[Cdecl]<PxControllerFilterCallback*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `filter`</summary>
-        public delegate* unmanaged[Cdecl]<PxControllerFilterCallback*, PxController*, PxController*, bool> filter;
+        public delegate* unmanaged[Cdecl]<PxControllerFilterCallback*, PxController*, PxController*, NativeBoolean> filter;
     }
 }

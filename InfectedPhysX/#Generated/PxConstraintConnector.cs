@@ -46,7 +46,7 @@ public unsafe partial struct PxConstraintConnector
         { return VirtualMethodTablePointer->getSerializable(@this); }
     }
 
-    public unsafe delegate* unmanaged[Cdecl]<Px1DConstraint*, PxVec3*, uint, PxConstraintInvMassScale*, void*, PxTransform*, PxTransform*, bool, PxVec3*, PxVec3*, uint>* getPrep()
+    public unsafe delegate* unmanaged[Cdecl]<Px1DConstraint*, PxVec3*, uint, PxConstraintInvMassScale*, void*, PxTransform*, PxTransform*, NativeBoolean, PxVec3*, PxVec3*, uint>* getPrep()
     {
         fixed (PxConstraintConnector* @this = &this)
         { return VirtualMethodTablePointer->getPrep(@this); }
@@ -73,7 +73,7 @@ public unsafe partial struct PxConstraintConnector
         /// <summary>Virtual method pointer for `prepareData`</summary>
         public delegate* unmanaged[Cdecl]<PxConstraintConnector*, void*> prepareData;
         /// <summary>Virtual method pointer for `updatePvdProperties`</summary>
-        public delegate* unmanaged[Cdecl]<PxConstraintConnector*, PvdDataStream*, PxConstraint*, PxPvdUpdateType, bool> updatePvdProperties;
+        public delegate* unmanaged[Cdecl]<PxConstraintConnector*, PvdDataStream*, PxConstraint*, PxPvdUpdateType, NativeBoolean> updatePvdProperties;
         /// <summary>Virtual method pointer for `onConstraintRelease`</summary>
         public delegate* unmanaged[Cdecl]<PxConstraintConnector*, void> onConstraintRelease;
         /// <summary>Virtual method pointer for `onComShift`</summary>
@@ -85,7 +85,7 @@ public unsafe partial struct PxConstraintConnector
         /// <summary>Virtual method pointer for `getSerializable`</summary>
         public delegate* unmanaged[Cdecl]<PxConstraintConnector*, PxBase*> getSerializable;
         /// <summary>Virtual method pointer for `getPrep`</summary>
-        public delegate* unmanaged[Cdecl]<PxConstraintConnector*, delegate* unmanaged[Cdecl]<Px1DConstraint*, PxVec3*, uint, PxConstraintInvMassScale*, void*, PxTransform*, PxTransform*, bool, PxVec3*, PxVec3*, uint>*> getPrep;
+        public delegate* unmanaged[Cdecl]<PxConstraintConnector*, delegate* unmanaged[Cdecl]<Px1DConstraint*, PxVec3*, uint, PxConstraintInvMassScale*, void*, PxTransform*, PxTransform*, NativeBoolean, PxVec3*, PxVec3*, uint>*> getPrep;
         /// <summary>Virtual method pointer for `getConstantBlock`</summary>
         public delegate* unmanaged[Cdecl]<PxConstraintConnector*, void*> getConstantBlock;
         /// <summary>Virtual method pointer for `~PxConstraintConnector`</summary>

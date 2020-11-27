@@ -22,6 +22,7 @@ public unsafe partial struct PxVehicleAntiRollBarData
     [FieldOffset(12)] public ConstantArray_physx__UNICODE_003A____UNICODE_003A__PxF32_1 mPad;
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleAntiRollBarData@physx@@AEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxVehicleAntiRollBarData* @this);
 
     public unsafe bool isValid()

@@ -5,31 +5,35 @@ using System.Runtime.InteropServices;
 public unsafe partial struct PxRigidBodyExt
 {
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?updateMassAndInertia@PxRigidBodyExt@physx@@SA_NAEAVPxRigidBody@2@PEBMIPEBVPxVec3@2@_N@Z", ExactSpelling = true)]
-    public static extern bool updateMassAndInertia(PxRigidBody* body, float* shapeDensities, uint shapeDensityCount, PxVec3* massLocalPose = null, bool includeNonSimShapes = false);
+    [return: MarshalAs(UnmanagedType.I1)]
+    public static extern bool updateMassAndInertia(PxRigidBody* body, float* shapeDensities, uint shapeDensityCount, PxVec3* massLocalPose = null, [MarshalAs(UnmanagedType.I1)] bool includeNonSimShapes = false);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?updateMassAndInertia@PxRigidBodyExt@physx@@SA_NAEAVPxRigidBody@2@MPEBVPxVec3@2@_N@Z", ExactSpelling = true)]
-    public static extern bool updateMassAndInertia(PxRigidBody* body, float density, PxVec3* massLocalPose = null, bool includeNonSimShapes = false);
+    [return: MarshalAs(UnmanagedType.I1)]
+    public static extern bool updateMassAndInertia(PxRigidBody* body, float density, PxVec3* massLocalPose = null, [MarshalAs(UnmanagedType.I1)] bool includeNonSimShapes = false);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setMassAndUpdateInertia@PxRigidBodyExt@physx@@SA_NAEAVPxRigidBody@2@PEBMIPEBVPxVec3@2@_N@Z", ExactSpelling = true)]
-    public static extern bool setMassAndUpdateInertia(PxRigidBody* body, float* shapeMasses, uint shapeMassCount, PxVec3* massLocalPose = null, bool includeNonSimShapes = false);
+    [return: MarshalAs(UnmanagedType.I1)]
+    public static extern bool setMassAndUpdateInertia(PxRigidBody* body, float* shapeMasses, uint shapeMassCount, PxVec3* massLocalPose = null, [MarshalAs(UnmanagedType.I1)] bool includeNonSimShapes = false);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setMassAndUpdateInertia@PxRigidBodyExt@physx@@SA_NAEAVPxRigidBody@2@MPEBVPxVec3@2@_N@Z", ExactSpelling = true)]
-    public static extern bool setMassAndUpdateInertia(PxRigidBody* body, float mass, PxVec3* massLocalPose = null, bool includeNonSimShapes = false);
+    [return: MarshalAs(UnmanagedType.I1)]
+    public static extern bool setMassAndUpdateInertia(PxRigidBody* body, float mass, PxVec3* massLocalPose = null, [MarshalAs(UnmanagedType.I1)] bool includeNonSimShapes = false);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?computeMassPropertiesFromShapes@PxRigidBodyExt@physx@@SA?AVPxMassProperties@2@PEBQEBVPxShape@2@I@Z", ExactSpelling = true)]
     public static extern void computeMassPropertiesFromShapes(out PxMassProperties __returnBuffer, PxShape** shapes, uint shapeCount);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?addForceAtPos@PxRigidBodyExt@physx@@SAXAEAVPxRigidBody@2@AEBVPxVec3@2@1W4Enum@PxForceMode@2@_N@Z", ExactSpelling = true)]
-    public static extern void addForceAtPos(PxRigidBody* body, PxVec3* force, PxVec3* pos, PxForceMode mode = PxForceMode.eFORCE, bool wakeup = true);
+    public static extern void addForceAtPos(PxRigidBody* body, PxVec3* force, PxVec3* pos, PxForceMode mode = PxForceMode.eFORCE, [MarshalAs(UnmanagedType.I1)] bool wakeup = true);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?addForceAtLocalPos@PxRigidBodyExt@physx@@SAXAEAVPxRigidBody@2@AEBVPxVec3@2@1W4Enum@PxForceMode@2@_N@Z", ExactSpelling = true)]
-    public static extern void addForceAtLocalPos(PxRigidBody* body, PxVec3* force, PxVec3* pos, PxForceMode mode = PxForceMode.eFORCE, bool wakeup = true);
+    public static extern void addForceAtLocalPos(PxRigidBody* body, PxVec3* force, PxVec3* pos, PxForceMode mode = PxForceMode.eFORCE, [MarshalAs(UnmanagedType.I1)] bool wakeup = true);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?addLocalForceAtPos@PxRigidBodyExt@physx@@SAXAEAVPxRigidBody@2@AEBVPxVec3@2@1W4Enum@PxForceMode@2@_N@Z", ExactSpelling = true)]
-    public static extern void addLocalForceAtPos(PxRigidBody* body, PxVec3* force, PxVec3* pos, PxForceMode mode = PxForceMode.eFORCE, bool wakeup = true);
+    public static extern void addLocalForceAtPos(PxRigidBody* body, PxVec3* force, PxVec3* pos, PxForceMode mode = PxForceMode.eFORCE, [MarshalAs(UnmanagedType.I1)] bool wakeup = true);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?addLocalForceAtLocalPos@PxRigidBodyExt@physx@@SAXAEAVPxRigidBody@2@AEBVPxVec3@2@1W4Enum@PxForceMode@2@_N@Z", ExactSpelling = true)]
-    public static extern void addLocalForceAtLocalPos(PxRigidBody* body, PxVec3* force, PxVec3* pos, PxForceMode mode = PxForceMode.eFORCE, bool wakeup = true);
+    public static extern void addLocalForceAtLocalPos(PxRigidBody* body, PxVec3* force, PxVec3* pos, PxForceMode mode = PxForceMode.eFORCE, [MarshalAs(UnmanagedType.I1)] bool wakeup = true);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getVelocityAtPos@PxRigidBodyExt@physx@@SA?AVPxVec3@2@AEBVPxRigidBody@2@AEBV32@@Z", ExactSpelling = true)]
     public static extern void getVelocityAtPos(out PxVec3 __returnBuffer, PxRigidBody* body, PxVec3* pos);
@@ -41,6 +45,7 @@ public unsafe partial struct PxRigidBodyExt
     public static extern void getVelocityAtOffset(out PxVec3 __returnBuffer, PxRigidBody* body, PxVec3* pos);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?linearSweepSingle@PxRigidBodyExt@physx@@SA_NAEAVPxRigidBody@2@AEAVPxScene@2@AEBVPxVec3@2@MV?$PxFlags@W4Enum@PxHitFlag@physx@@G@2@AEAUPxSweepHit@2@AEAIAEBUPxQueryFilterData@2@PEAVPxQueryFilterCallback@2@PEBUPxQueryCache@2@M@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool linearSweepSingle(PxRigidBody* body, PxScene* scene, PxVec3* unitDir, float distance, PxHitFlags outputFlags, PxSweepHit* closestHit, uint* shapeIndex, PxQueryFilterData* filterData, PxQueryFilterCallback* filterCall = null, PxQueryCache* cache = null, float inflation = 0f);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?linearSweepMultiple@PxRigidBodyExt@physx@@SAIAEAVPxRigidBody@2@AEAVPxScene@2@AEBVPxVec3@2@MV?$PxFlags@W4Enum@PxHitFlag@physx@@G@2@PEAUPxSweepHit@2@PEAIIAEAU72@AEAHAEA_NAEBUPxQueryFilterData@2@PEAVPxQueryFilterCallback@2@PEBUPxQueryCache@2@M@Z", ExactSpelling = true)]

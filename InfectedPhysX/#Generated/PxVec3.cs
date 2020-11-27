@@ -79,6 +79,7 @@ public unsafe partial struct PxVec3
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??8PxVec3@physx@@QEBA_NAEBV01@@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool operator_EqualEqual_PInvoke(PxVec3* @this, PxVec3* v);
 
     public unsafe bool operator_EqualEqual(PxVec3* v)
@@ -88,6 +89,7 @@ public unsafe partial struct PxVec3
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??9PxVec3@physx@@QEBA_NAEBV01@@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool operator_ExclaimEqual_PInvoke(PxVec3* @this, PxVec3* v);
 
     public unsafe bool operator_ExclaimEqual(PxVec3* v)
@@ -97,6 +99,7 @@ public unsafe partial struct PxVec3
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isZero@PxVec3@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isZero_PInvoke(PxVec3* @this);
 
     public unsafe bool isZero()
@@ -106,6 +109,7 @@ public unsafe partial struct PxVec3
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isFinite@PxVec3@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isFinite_PInvoke(PxVec3* @this);
 
     public unsafe bool isFinite()
@@ -115,6 +119,7 @@ public unsafe partial struct PxVec3
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isNormalized@PxVec3@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isNormalized_PInvoke(PxVec3* @this);
 
     public unsafe bool isNormalized()

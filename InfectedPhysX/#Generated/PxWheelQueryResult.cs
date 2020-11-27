@@ -19,7 +19,7 @@ public unsafe partial struct PxWheelQueryResult
 
     [FieldOffset(24)] public float suspLineLength;
 
-    [FieldOffset(28)] public bool isInAir;
+    [FieldOffset(28)] [MarshalAs(UnmanagedType.I1)] public bool isInAir;
 
     [FieldOffset(32)] public PxActor* tireContactActor;
 

@@ -61,6 +61,7 @@ public unsafe partial struct PxVehicleGearsData
     [FieldOffset(140)] public float mPad;
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleGearsData@physx@@AEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxVehicleGearsData* @this);
 
     public unsafe bool isValid()

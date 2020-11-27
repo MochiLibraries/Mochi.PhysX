@@ -123,11 +123,11 @@ public unsafe partial struct PxConvexMesh
         /// <summary>Virtual method pointer for `getConcreteTypeName`</summary>
         public delegate* unmanaged[Cdecl]<PxConvexMesh*, byte*> getConcreteTypeName;
         /// <summary>Virtual method pointer for `isReleasable`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, bool> isReleasable;
+        public delegate* unmanaged[Cdecl]<PxBase*, NativeBoolean> isReleasable;
         /// <summary>Virtual method pointer for `~PxConvexMesh`</summary>
         public delegate* unmanaged[Cdecl]<PxConvexMesh*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isKindOf`</summary>
-        public delegate* unmanaged[Cdecl]<PxConvexMesh*, byte*, bool> isKindOf;
+        public delegate* unmanaged[Cdecl]<PxConvexMesh*, byte*, NativeBoolean> isKindOf;
         /// <summary>Virtual method pointer for `getNbVertices`</summary>
         public delegate* unmanaged[Cdecl]<PxConvexMesh*, uint> getNbVertices;
         /// <summary>Virtual method pointer for `getVertices`</summary>
@@ -137,7 +137,7 @@ public unsafe partial struct PxConvexMesh
         /// <summary>Virtual method pointer for `getNbPolygons`</summary>
         public delegate* unmanaged[Cdecl]<PxConvexMesh*, uint> getNbPolygons;
         /// <summary>Virtual method pointer for `getPolygonData`</summary>
-        public delegate* unmanaged[Cdecl]<PxConvexMesh*, uint, PxHullPolygon*, bool> getPolygonData;
+        public delegate* unmanaged[Cdecl]<PxConvexMesh*, uint, PxHullPolygon*, NativeBoolean> getPolygonData;
         /// <summary>Virtual method pointer for `getReferenceCount`</summary>
         public delegate* unmanaged[Cdecl]<PxConvexMesh*, uint> getReferenceCount;
         /// <summary>Virtual method pointer for `acquireReference`</summary>
@@ -147,6 +147,6 @@ public unsafe partial struct PxConvexMesh
         /// <summary>Virtual method pointer for `getLocalBounds`</summary>
         public delegate* unmanaged[Cdecl]<PxConvexMesh*, out PxBounds3, void> getLocalBounds;
         /// <summary>Virtual method pointer for `isGpuCompatible`</summary>
-        public delegate* unmanaged[Cdecl]<PxConvexMesh*, bool> isGpuCompatible;
+        public delegate* unmanaged[Cdecl]<PxConvexMesh*, NativeBoolean> isGpuCompatible;
     }
 }

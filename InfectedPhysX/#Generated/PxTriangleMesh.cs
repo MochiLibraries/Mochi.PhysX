@@ -133,11 +133,11 @@ public unsafe partial struct PxTriangleMesh
         /// <summary>Virtual method pointer for `getConcreteTypeName`</summary>
         public delegate* unmanaged[Cdecl]<PxBase*, byte*> getConcreteTypeName;
         /// <summary>Virtual method pointer for `isReleasable`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, bool> isReleasable;
+        public delegate* unmanaged[Cdecl]<PxBase*, NativeBoolean> isReleasable;
         /// <summary>Virtual method pointer for `~PxTriangleMesh`</summary>
         public delegate* unmanaged[Cdecl]<PxTriangleMesh*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isKindOf`</summary>
-        public delegate* unmanaged[Cdecl]<PxTriangleMesh*, byte*, bool> isKindOf;
+        public delegate* unmanaged[Cdecl]<PxTriangleMesh*, byte*, NativeBoolean> isKindOf;
         /// <summary>Virtual method pointer for `getNbVertices`</summary>
         public delegate* unmanaged[Cdecl]<PxTriangleMesh*, uint> getNbVertices;
         /// <summary>Virtual method pointer for `getVertices`</summary>

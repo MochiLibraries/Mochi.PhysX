@@ -25,6 +25,7 @@ public unsafe partial struct PxBVHStructureDesc
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxBVHStructureDesc@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxBVHStructureDesc* @this);
 
     public unsafe bool isValid()

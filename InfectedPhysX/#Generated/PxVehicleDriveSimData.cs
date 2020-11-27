@@ -85,6 +85,7 @@ public unsafe partial struct PxVehicleDriveSimData
     [FieldOffset(272)] public PxVehicleAutoBoxData mAutoBox;
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleDriveSimData@physx@@IEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxVehicleDriveSimData* @this);
 
     public unsafe bool isValid()

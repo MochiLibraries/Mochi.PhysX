@@ -83,11 +83,11 @@ public unsafe partial struct PxBVHStructure
         /// <summary>Virtual method pointer for `getConcreteTypeName`</summary>
         public delegate* unmanaged[Cdecl]<PxBVHStructure*, byte*> getConcreteTypeName;
         /// <summary>Virtual method pointer for `isReleasable`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, bool> isReleasable;
+        public delegate* unmanaged[Cdecl]<PxBase*, NativeBoolean> isReleasable;
         /// <summary>Virtual method pointer for `~PxBVHStructure`</summary>
         public delegate* unmanaged[Cdecl]<PxBVHStructure*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isKindOf`</summary>
-        public delegate* unmanaged[Cdecl]<PxBVHStructure*, byte*, bool> isKindOf;
+        public delegate* unmanaged[Cdecl]<PxBVHStructure*, byte*, NativeBoolean> isKindOf;
         /// <summary>Virtual method pointer for `raycast`</summary>
         public delegate* unmanaged[Cdecl]<PxBVHStructure*, PxVec3*, PxVec3*, float, uint, uint*, uint> raycast;
         /// <summary>Virtual method pointer for `sweep`</summary>

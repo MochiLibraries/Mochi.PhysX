@@ -68,6 +68,7 @@ public unsafe partial struct PxQuat
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isIdentity@PxQuat@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isIdentity_PInvoke(PxQuat* @this);
 
     public unsafe bool isIdentity()
@@ -77,6 +78,7 @@ public unsafe partial struct PxQuat
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isFinite@PxQuat@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isFinite_PInvoke(PxQuat* @this);
 
     public unsafe bool isFinite()
@@ -86,6 +88,7 @@ public unsafe partial struct PxQuat
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isUnit@PxQuat@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isUnit_PInvoke(PxQuat* @this);
 
     public unsafe bool isUnit()
@@ -95,6 +98,7 @@ public unsafe partial struct PxQuat
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isSane@PxQuat@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isSane_PInvoke(PxQuat* @this);
 
     public unsafe bool isSane()
@@ -104,6 +108,7 @@ public unsafe partial struct PxQuat
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??8PxQuat@physx@@QEBA_NAEBV01@@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool operator_EqualEqual_PInvoke(PxQuat* @this, PxQuat* q);
 
     public unsafe bool operator_EqualEqual(PxQuat* q)

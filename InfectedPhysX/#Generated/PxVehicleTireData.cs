@@ -61,6 +61,7 @@ public unsafe partial struct PxVehicleTireData
     [FieldOffset(56)] public ConstantArray_physx__UNICODE_003A____UNICODE_003A__PxReal_2 mPad;
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleTireData@physx@@AEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxVehicleTireData* @this);
 
     public unsafe bool isValid()

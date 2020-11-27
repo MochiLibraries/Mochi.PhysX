@@ -14,6 +14,7 @@ public unsafe static partial class PxMath
     public static extern float PxAbs(float a);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxEquals@physx@@YA_NMMM@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxEquals(float a, float b, float eps);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxAbs@physx@@YANN@Z", ExactSpelling = true)]
@@ -77,9 +78,11 @@ public unsafe static partial class PxMath
     public static extern double PxAtan2(double x, double y);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxIsFinite@physx@@YA_NM@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxIsFinite(float f);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxIsFinite@physx@@YA_NN@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxIsFinite(double f);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxFloor@physx@@YAMM@Z", ExactSpelling = true)]

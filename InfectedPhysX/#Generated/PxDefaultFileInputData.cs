@@ -46,6 +46,7 @@ public unsafe partial struct PxDefaultFileInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxDefaultFileInputData@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxDefaultFileInputData* @this);
 
     public unsafe bool isValid()

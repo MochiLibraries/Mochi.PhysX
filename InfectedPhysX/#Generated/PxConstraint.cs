@@ -149,11 +149,11 @@ public unsafe partial struct PxConstraint
         /// <summary>Virtual method pointer for `getConcreteTypeName`</summary>
         public delegate* unmanaged[Cdecl]<PxConstraint*, byte*> getConcreteTypeName;
         /// <summary>Virtual method pointer for `isReleasable`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, bool> isReleasable;
+        public delegate* unmanaged[Cdecl]<PxBase*, NativeBoolean> isReleasable;
         /// <summary>Virtual method pointer for `~PxConstraint`</summary>
         public delegate* unmanaged[Cdecl]<PxConstraint*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isKindOf`</summary>
-        public delegate* unmanaged[Cdecl]<PxConstraint*, byte*, bool> isKindOf;
+        public delegate* unmanaged[Cdecl]<PxConstraint*, byte*, NativeBoolean> isKindOf;
         /// <summary>Virtual method pointer for `getScene`</summary>
         public delegate* unmanaged[Cdecl]<PxConstraint*, PxScene*> getScene;
         /// <summary>Virtual method pointer for `getActors`</summary>
@@ -167,11 +167,11 @@ public unsafe partial struct PxConstraint
         /// <summary>Virtual method pointer for `getFlags`</summary>
         public delegate* unmanaged[Cdecl]<PxConstraint*, PxConstraintFlags> getFlags;
         /// <summary>Virtual method pointer for `setFlag`</summary>
-        public delegate* unmanaged[Cdecl]<PxConstraint*, PxConstraintFlags, bool, void> setFlag;
+        public delegate* unmanaged[Cdecl]<PxConstraint*, PxConstraintFlags, NativeBoolean, void> setFlag;
         /// <summary>Virtual method pointer for `getForce`</summary>
         public delegate* unmanaged[Cdecl]<PxConstraint*, PxVec3*, PxVec3*, void> getForce;
         /// <summary>Virtual method pointer for `isValid`</summary>
-        public delegate* unmanaged[Cdecl]<PxConstraint*, bool> isValid;
+        public delegate* unmanaged[Cdecl]<PxConstraint*, NativeBoolean> isValid;
         /// <summary>Virtual method pointer for `setBreakForce`</summary>
         public delegate* unmanaged[Cdecl]<PxConstraint*, float, float, void> setBreakForce;
         /// <summary>Virtual method pointer for `getBreakForce`</summary>

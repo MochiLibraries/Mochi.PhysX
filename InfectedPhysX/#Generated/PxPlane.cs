@@ -50,6 +50,7 @@ public unsafe partial struct PxPlane
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??8PxPlane@physx@@QEBA_NAEBV01@@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool operator_EqualEqual_PInvoke(PxPlane* @this, PxPlane* p);
 
     public unsafe bool operator_EqualEqual(PxPlane* p)
@@ -68,6 +69,7 @@ public unsafe partial struct PxPlane
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?contains@PxPlane@physx@@QEBA_NAEBVPxVec3@2@@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool contains_PInvoke(PxPlane* @this, PxVec3* p);
 
     public unsafe bool contains(PxVec3* p)

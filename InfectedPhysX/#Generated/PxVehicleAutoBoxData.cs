@@ -36,6 +36,7 @@ public unsafe partial struct PxVehicleAutoBoxData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleAutoBoxData@physx@@AEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxVehicleAutoBoxData* @this);
 
     public unsafe bool isValid()

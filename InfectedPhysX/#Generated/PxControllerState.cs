@@ -14,9 +14,9 @@ public unsafe partial struct PxControllerState
 
     [FieldOffset(36)] public uint collisionFlags;
 
-    [FieldOffset(40)] public bool standOnAnotherCCT;
+    [FieldOffset(40)] [MarshalAs(UnmanagedType.I1)] public bool standOnAnotherCCT;
 
-    [FieldOffset(41)] public bool standOnObstacle;
+    [FieldOffset(41)] [MarshalAs(UnmanagedType.I1)] public bool standOnObstacle;
 
-    [FieldOffset(42)] public bool isMovingUp;
+    [FieldOffset(42)] [MarshalAs(UnmanagedType.I1)] public bool isMovingUp;
 }

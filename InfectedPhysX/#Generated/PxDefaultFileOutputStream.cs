@@ -47,6 +47,6 @@ public unsafe partial struct PxDefaultFileOutputStream
         /// <summary>Virtual method pointer for `~PxDefaultFileOutputStream`</summary>
         public delegate* unmanaged[Cdecl]<PxDefaultFileOutputStream*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isValid`</summary>
-        public delegate* unmanaged[Cdecl]<PxDefaultFileOutputStream*, bool> isValid;
+        public delegate* unmanaged[Cdecl]<PxDefaultFileOutputStream*, NativeBoolean> isValid;
     }
 }

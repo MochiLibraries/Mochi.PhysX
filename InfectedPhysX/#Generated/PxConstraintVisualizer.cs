@@ -57,13 +57,13 @@ public unsafe partial struct PxConstraintVisualizer
         /// <summary>Virtual method pointer for `visualizeJointFrames`</summary>
         public delegate* unmanaged[Cdecl]<PxConstraintVisualizer*, PxTransform*, PxTransform*, void> visualizeJointFrames;
         /// <summary>Virtual method pointer for `visualizeLinearLimit`</summary>
-        public delegate* unmanaged[Cdecl]<PxConstraintVisualizer*, PxTransform*, PxTransform*, float, bool, void> visualizeLinearLimit;
+        public delegate* unmanaged[Cdecl]<PxConstraintVisualizer*, PxTransform*, PxTransform*, float, NativeBoolean, void> visualizeLinearLimit;
         /// <summary>Virtual method pointer for `visualizeAngularLimit`</summary>
-        public delegate* unmanaged[Cdecl]<PxConstraintVisualizer*, PxTransform*, float, float, bool, void> visualizeAngularLimit;
+        public delegate* unmanaged[Cdecl]<PxConstraintVisualizer*, PxTransform*, float, float, NativeBoolean, void> visualizeAngularLimit;
         /// <summary>Virtual method pointer for `visualizeLimitCone`</summary>
-        public delegate* unmanaged[Cdecl]<PxConstraintVisualizer*, PxTransform*, float, float, bool, void> visualizeLimitCone;
+        public delegate* unmanaged[Cdecl]<PxConstraintVisualizer*, PxTransform*, float, float, NativeBoolean, void> visualizeLimitCone;
         /// <summary>Virtual method pointer for `visualizeDoubleCone`</summary>
-        public delegate* unmanaged[Cdecl]<PxConstraintVisualizer*, PxTransform*, float, bool, void> visualizeDoubleCone;
+        public delegate* unmanaged[Cdecl]<PxConstraintVisualizer*, PxTransform*, float, NativeBoolean, void> visualizeDoubleCone;
         /// <summary>Virtual method pointer for `visualizeLine`</summary>
         public delegate* unmanaged[Cdecl]<PxConstraintVisualizer*, PxVec3*, PxVec3*, uint, void> visualizeLine;
     }

@@ -82,9 +82,9 @@ public unsafe partial struct PxObstacleContext
         /// <summary>Virtual method pointer for `addObstacle`</summary>
         public delegate* unmanaged[Cdecl]<PxObstacleContext*, PxObstacle*, uint> addObstacle;
         /// <summary>Virtual method pointer for `removeObstacle`</summary>
-        public delegate* unmanaged[Cdecl]<PxObstacleContext*, uint, bool> removeObstacle;
+        public delegate* unmanaged[Cdecl]<PxObstacleContext*, uint, NativeBoolean> removeObstacle;
         /// <summary>Virtual method pointer for `updateObstacle`</summary>
-        public delegate* unmanaged[Cdecl]<PxObstacleContext*, uint, PxObstacle*, bool> updateObstacle;
+        public delegate* unmanaged[Cdecl]<PxObstacleContext*, uint, PxObstacle*, NativeBoolean> updateObstacle;
         /// <summary>Virtual method pointer for `getNbObstacles`</summary>
         public delegate* unmanaged[Cdecl]<PxObstacleContext*, uint> getNbObstacles;
         /// <summary>Virtual method pointer for `getObstacle`</summary>

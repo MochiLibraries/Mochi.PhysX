@@ -13,15 +13,19 @@ public unsafe static partial class PxImmediateMode
     public static extern uint PxBatchConstraints(PxSolverConstraintDesc* solverConstraintDescs, uint nbConstraints, PxSolverBody* solverBodies, uint nbBodies, PxConstraintBatchHeader* outBatchHeaders, PxSolverConstraintDesc* outOrderedConstraintDescs, ArticulationV** articulations = null, uint nbArticulations = 0);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxCreateContactConstraints(PxConstraintBatchHeader* batchHeaders, uint nbHeaders, PxSolverContactDesc* contactDescs, PxConstraintAllocator* allocator, float invDt, float bounceThreshold, float frictionOffsetThreshold, float correlationDistance);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxCreateJointConstraints(PxConstraintBatchHeader* batchHeaders, uint nbHeaders, PxSolverConstraintPrepDesc* jointDescs, PxConstraintAllocator* allocator, float dt, float invDt);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxCreateJointConstraintsWithShaders(PxConstraintBatchHeader* batchHeaders, uint nbBatchHeaders, PxConstraint** constraints, PxSolverConstraintPrepDesc* jointDescs, PxConstraintAllocator* allocator, float dt, float invDt);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxCreateJointConstraintsWithImmediateShaders(PxConstraintBatchHeader* batchHeaders, uint nbBatchHeaders, PxImmediateConstraint* constraints, PxSolverConstraintPrepDesc* jointDescs, PxConstraintAllocator* allocator, float dt, float invDt);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
@@ -31,6 +35,7 @@ public unsafe static partial class PxImmediateMode
     public static extern void PxIntegrateSolverBodies(PxSolverBodyData* solverBodyData, PxSolverBody* solverBody, PxVec3* linearMotionVelocity, PxVec3* angularMotionState, uint nbBodiesToIntegrate, float dt);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxGenerateContacts(PxGeometry** geom0, PxGeometry** geom1, PxTransform* pose0, PxTransform* pose1, PxCache* contactCache, uint nbPairs, PxContactRecorder* contactRecorder, float contactDistance, float meshContactMargin, float toleranceLength, PxCacheAllocator* allocator);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
@@ -55,7 +60,7 @@ public unsafe static partial class PxImmediateMode
     public static extern void PxReleaseArticulationCache(PxArticulationCache* cache);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-    public static extern ulong PxAddArticulationLink(ArticulationV* articulation, PxFeatherstoneArticulationLinkData* data, bool isLastLink = false);
+    public static extern ulong PxAddArticulationLink(ArticulationV* articulation, PxFeatherstoneArticulationLinkData* data, [MarshalAs(UnmanagedType.I1)] bool isLastLink = false);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
     public static extern ArticulationV* PxGetLinkArticulation(ulong link);
@@ -64,21 +69,26 @@ public unsafe static partial class PxImmediateMode
     public static extern uint PxGetLinkIndex(ulong link);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxGetLinkData(ulong link, PxLinkData* data);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
     public static extern uint PxGetAllLinkData(ArticulationV* articulation, PxLinkData* data);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxGetMutableLinkData(ulong link, PxMutableLinkData* data);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxSetMutableLinkData(ulong link, PxMutableLinkData* data);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxGetJointData(ulong link, PxFeatherstoneArticulationJointData* data);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxSetJointData(ulong link, PxFeatherstoneArticulationJointData* data);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
@@ -103,15 +113,19 @@ public unsafe static partial class PxImmediateMode
     public static extern uint PxBatchConstraintsTGS(PxSolverConstraintDesc* solverConstraintDescs, uint nbConstraints, PxTGSSolverBodyVel* solverBodies, uint nbBodies, PxConstraintBatchHeader* outBatchHeaders, PxSolverConstraintDesc* outOrderedConstraintDescs, ArticulationV** articulations = null, uint nbArticulations = 0);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxCreateContactConstraintsTGS(PxConstraintBatchHeader* batchHeaders, uint nbHeaders, PxTGSSolverContactDesc* contactDescs, PxConstraintAllocator* allocator, float invDt, float invTotalDt, float bounceThreshold, float frictionOffsetThreshold, float correlationDistance);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxCreateJointConstraintsTGS(PxConstraintBatchHeader* batchHeaders, uint nbHeaders, PxTGSSolverConstraintPrepDesc* jointDescs, PxConstraintAllocator* allocator, float dt, float totalDt, float invDt, float invTotalDt, float lengthScale);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxCreateJointConstraintsWithShadersTGS(PxConstraintBatchHeader* batchHeaders, uint nbBatchHeaders, PxConstraint** constraints, PxTGSSolverConstraintPrepDesc* jointDescs, PxConstraintAllocator* allocator, float dt, float totalDt, float invDt, float invTotalDt, float lengthScale);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxCreateJointConstraintsWithImmediateShadersTGS(PxConstraintBatchHeader* batchHeaders, uint nbBatchHeaders, PxImmediateConstraint* constraints, PxTGSSolverConstraintPrepDesc* jointDescs, PxConstraintAllocator* allocator, float dt, float totalDt, float invDt, float invTotalDt, float lengthScale);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]

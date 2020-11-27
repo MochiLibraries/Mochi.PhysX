@@ -34,7 +34,7 @@ public unsafe partial struct PxVehicleDriveDynData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setGearUp@PxVehicleDriveDynData@physx@@QEAAX_N@Z", ExactSpelling = true)]
-    private static extern void setGearUp_PInvoke(PxVehicleDriveDynData* @this, bool digitalVal);
+    private static extern void setGearUp_PInvoke(PxVehicleDriveDynData* @this, [MarshalAs(UnmanagedType.I1)] bool digitalVal);
 
     public unsafe void setGearUp(bool digitalVal)
     {
@@ -43,7 +43,7 @@ public unsafe partial struct PxVehicleDriveDynData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setGearDown@PxVehicleDriveDynData@physx@@QEAAX_N@Z", ExactSpelling = true)]
-    private static extern void setGearDown_PInvoke(PxVehicleDriveDynData* @this, bool digitalVal);
+    private static extern void setGearDown_PInvoke(PxVehicleDriveDynData* @this, [MarshalAs(UnmanagedType.I1)] bool digitalVal);
 
     public unsafe void setGearDown(bool digitalVal)
     {
@@ -52,6 +52,7 @@ public unsafe partial struct PxVehicleDriveDynData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getGearUp@PxVehicleDriveDynData@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool getGearUp_PInvoke(PxVehicleDriveDynData* @this);
 
     public unsafe bool getGearUp()
@@ -61,6 +62,7 @@ public unsafe partial struct PxVehicleDriveDynData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getGearDown@PxVehicleDriveDynData@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool getGearDown_PInvoke(PxVehicleDriveDynData* @this);
 
     public unsafe bool getGearDown()
@@ -70,7 +72,7 @@ public unsafe partial struct PxVehicleDriveDynData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setUseAutoGears@PxVehicleDriveDynData@physx@@QEAAX_N@Z", ExactSpelling = true)]
-    private static extern void setUseAutoGears_PInvoke(PxVehicleDriveDynData* @this, bool useAutoGears);
+    private static extern void setUseAutoGears_PInvoke(PxVehicleDriveDynData* @this, [MarshalAs(UnmanagedType.I1)] bool useAutoGears);
 
     public unsafe void setUseAutoGears(bool useAutoGears)
     {
@@ -79,6 +81,7 @@ public unsafe partial struct PxVehicleDriveDynData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getUseAutoGears@PxVehicleDriveDynData@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool getUseAutoGears_PInvoke(PxVehicleDriveDynData* @this);
 
     public unsafe bool getUseAutoGears()
@@ -188,11 +191,11 @@ public unsafe partial struct PxVehicleDriveDynData
 
     [FieldOffset(0)] public ConstantArray_physx__UNICODE_003A____UNICODE_003A__PxReal_16 mControlAnalogVals;
 
-    [FieldOffset(64)] public bool mUseAutoGears;
+    [FieldOffset(64)] [MarshalAs(UnmanagedType.I1)] public bool mUseAutoGears;
 
-    [FieldOffset(65)] public bool mGearUpPressed;
+    [FieldOffset(65)] [MarshalAs(UnmanagedType.I1)] public bool mGearUpPressed;
 
-    [FieldOffset(66)] public bool mGearDownPressed;
+    [FieldOffset(66)] [MarshalAs(UnmanagedType.I1)] public bool mGearDownPressed;
 
     [FieldOffset(68)] public uint mCurrentGear;
 
@@ -207,6 +210,7 @@ public unsafe partial struct PxVehicleDriveDynData
     [FieldOffset(88)] public ConstantArray_physx__UNICODE_003A____UNICODE_003A__PxU32_2 mPad;
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleDriveDynData@physx@@AEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxVehicleDriveDynData* @this);
 
     public unsafe bool isValid()

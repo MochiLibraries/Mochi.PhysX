@@ -50,6 +50,7 @@ public unsafe partial struct PxVehicleEngineData
     [FieldOffset(108)] public float mRecipMaxOmega;
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleEngineData@physx@@AEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxVehicleEngineData* @this);
 
     public unsafe bool isValid()

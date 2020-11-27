@@ -23,7 +23,7 @@ public unsafe partial struct PxContactRecorder
     public unsafe struct VirtualMethodTable
     {
         /// <summary>Virtual method pointer for `recordContacts`</summary>
-        public delegate* unmanaged[Cdecl]<PxContactRecorder*, ContactPoint*, uint, uint, bool> recordContacts;
+        public delegate* unmanaged[Cdecl]<PxContactRecorder*, ContactPoint*, uint, uint, NativeBoolean> recordContacts;
         /// <summary>Virtual method pointer for `~PxContactRecorder`</summary>
         public delegate* unmanaged[Cdecl]<PxContactRecorder*, void> __DeletingDestructorPointer;
     }

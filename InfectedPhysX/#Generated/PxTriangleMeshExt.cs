@@ -4,8 +4,10 @@ using System.Runtime.InteropServices;
 public unsafe static partial class PxTriangleMeshExt
 {
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxComputeTriangleMeshPenetration@physx@@YA_NAEAVPxVec3@1@AEAMAEBVPxGeometry@1@AEBVPxTransform@1@AEBVPxTriangleMeshGeometry@1@3IPEAI@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxComputeTriangleMeshPenetration(PxVec3* direction, float* depth, PxGeometry* geom, PxTransform* geomPose, PxTriangleMeshGeometry* meshGeom, PxTransform* meshPose, uint maxIter, uint* usedIter = null);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxComputeHeightFieldPenetration@physx@@YA_NAEAVPxVec3@1@AEAMAEBVPxGeometry@1@AEBVPxTransform@1@AEBVPxHeightFieldGeometry@1@3IPEAI@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxComputeHeightFieldPenetration(PxVec3* direction, float* depth, PxGeometry* geom, PxTransform* geomPose, PxHeightFieldGeometry* heightFieldGeom, PxTransform* heightFieldPose, uint maxIter, uint* usedIter = null);
 }

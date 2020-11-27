@@ -29,6 +29,7 @@ public unsafe partial struct PxSimpleTriangleMesh
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxSimpleTriangleMesh@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxSimpleTriangleMesh* @this);
 
     public unsafe bool isValid()

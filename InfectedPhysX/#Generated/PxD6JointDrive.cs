@@ -20,7 +20,7 @@ public unsafe partial struct PxD6JointDrive
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxD6JointDrive@physx@@QEAA@MMM_N@Z", ExactSpelling = true)]
-    private static extern void Constructor_PInvoke(PxD6JointDrive* @this, float driveStiffness, float driveDamping, float driveForceLimit, bool isAcceleration);
+    private static extern void Constructor_PInvoke(PxD6JointDrive* @this, float driveStiffness, float driveDamping, float driveForceLimit, [MarshalAs(UnmanagedType.I1)] bool isAcceleration);
 
     public unsafe void Constructor(float driveStiffness, float driveDamping, float driveForceLimit, bool isAcceleration = false)
     {
@@ -29,6 +29,7 @@ public unsafe partial struct PxD6JointDrive
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxD6JointDrive@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxD6JointDrive* @this);
 
     public unsafe bool isValid()

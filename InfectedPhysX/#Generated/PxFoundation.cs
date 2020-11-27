@@ -81,9 +81,9 @@ public unsafe partial struct PxFoundation
         /// <summary>Virtual method pointer for `getAllocatorCallback`</summary>
         public delegate* unmanaged[Cdecl]<PxFoundation*, PxAllocatorCallback*> getAllocatorCallback;
         /// <summary>Virtual method pointer for `getReportAllocationNames`</summary>
-        public delegate* unmanaged[Cdecl]<PxFoundation*, bool> getReportAllocationNames;
+        public delegate* unmanaged[Cdecl]<PxFoundation*, NativeBoolean> getReportAllocationNames;
         /// <summary>Virtual method pointer for `setReportAllocationNames`</summary>
-        public delegate* unmanaged[Cdecl]<PxFoundation*, bool, void> setReportAllocationNames;
+        public delegate* unmanaged[Cdecl]<PxFoundation*, NativeBoolean, void> setReportAllocationNames;
         /// <summary>Virtual method pointer for `~PxFoundation`</summary>
         public delegate* unmanaged[Cdecl]<PxFoundation*, void> __DeletingDestructorPointer;
     }

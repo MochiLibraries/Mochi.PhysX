@@ -22,7 +22,7 @@ public unsafe static partial class PxSimpleFactory
     public static extern PxRigidStatic* PxCreateStatic(PxPhysics* sdk, PxTransform* transform, PxShape* shape);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxCloneShape@physx@@YAPEAVPxShape@1@AEAVPxPhysics@1@AEBV21@_N@Z", ExactSpelling = true)]
-    public static extern PxShape* PxCloneShape(PxPhysics* physicsSDK, PxShape* shape, bool isExclusive);
+    public static extern PxShape* PxCloneShape(PxPhysics* physicsSDK, PxShape* shape, [MarshalAs(UnmanagedType.I1)] bool isExclusive);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxCloneStatic@physx@@YAPEAVPxRigidStatic@1@AEAVPxPhysics@1@AEBVPxTransform@1@AEBVPxRigidActor@1@@Z", ExactSpelling = true)]
     public static extern PxRigidStatic* PxCloneStatic(PxPhysics* physicsSDK, PxTransform* transform, PxRigidActor* actor);
@@ -34,5 +34,5 @@ public unsafe static partial class PxSimpleFactory
     public static extern PxRigidStatic* PxCreatePlane(PxPhysics* sdk, PxPlane* plane, PxMaterial* material);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxScaleRigidActor@physx@@YAXAEAVPxRigidActor@1@M_N@Z", ExactSpelling = true)]
-    public static extern void PxScaleRigidActor(PxRigidActor* actor, float scale, bool scaleMassProps = true);
+    public static extern void PxScaleRigidActor(PxRigidActor* actor, float scale, [MarshalAs(UnmanagedType.I1)] bool scaleMassProps = true);
 }

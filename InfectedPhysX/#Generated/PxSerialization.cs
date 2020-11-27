@@ -31,10 +31,11 @@ public unsafe partial struct PxSerialization
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isSerializable@PxSerialization@physx@@SA_NAEAVPxCollection@2@AEAVPxSerializationRegistry@2@PEBV32@@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool isSerializable(PxCollection* collection, PxSerializationRegistry* sr, PxCollection* externalReferences = null);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?complete@PxSerialization@physx@@SAXAEAVPxCollection@2@AEAVPxSerializationRegistry@2@PEBV32@_N@Z", ExactSpelling = true)]
-    public static extern void complete(PxCollection* collection, PxSerializationRegistry* sr, PxCollection* exceptFor = null, bool followJoints = false);
+    public static extern void complete(PxCollection* collection, PxSerializationRegistry* sr, PxCollection* exceptFor = null, [MarshalAs(UnmanagedType.I1)] bool followJoints = false);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?createSerialObjectIds@PxSerialization@physx@@SAXAEAVPxCollection@2@_K@Z", ExactSpelling = true)]
     public static extern void createSerialObjectIds(PxCollection* collection, ulong @base);
@@ -46,13 +47,16 @@ public unsafe partial struct PxSerialization
     public static extern PxCollection* createCollectionFromBinary(void* memBlock, PxSerializationRegistry* sr, PxCollection* externalRefs = null);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?serializeCollectionToXml@PxSerialization@physx@@SA_NAEAVPxOutputStream@2@AEAVPxCollection@2@AEAVPxSerializationRegistry@2@PEAVPxCooking@2@PEBV42@PEAUPxXmlMiscParameter@12@@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool serializeCollectionToXml(PxOutputStream* outputStream, PxCollection* collection, PxSerializationRegistry* sr, PxCooking* cooking = null, PxCollection* externalRefs = null, PxXmlMiscParameter* inArgs = null);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?serializeCollectionToBinary@PxSerialization@physx@@SA_NAEAVPxOutputStream@2@AEAVPxCollection@2@AEAVPxSerializationRegistry@2@PEBV42@_N@Z", ExactSpelling = true)]
-    public static extern bool serializeCollectionToBinary(PxOutputStream* outputStream, PxCollection* collection, PxSerializationRegistry* sr, PxCollection* externalRefs = null, bool exportNames = false);
+    [return: MarshalAs(UnmanagedType.I1)]
+    public static extern bool serializeCollectionToBinary(PxOutputStream* outputStream, PxCollection* collection, PxSerializationRegistry* sr, PxCollection* externalRefs = null, [MarshalAs(UnmanagedType.I1)] bool exportNames = false);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?serializeCollectionToBinaryDeterministic@PxSerialization@physx@@SA_NAEAVPxOutputStream@2@AEAVPxCollection@2@AEAVPxSerializationRegistry@2@PEBV42@_N@Z", ExactSpelling = true)]
-    public static extern bool serializeCollectionToBinaryDeterministic(PxOutputStream* outputStream, PxCollection* collection, PxSerializationRegistry* sr, PxCollection* externalRefs = null, bool exportNames = false);
+    [return: MarshalAs(UnmanagedType.I1)]
+    public static extern bool serializeCollectionToBinaryDeterministic(PxOutputStream* outputStream, PxCollection* collection, PxSerializationRegistry* sr, PxCollection* externalRefs = null, [MarshalAs(UnmanagedType.I1)] bool exportNames = false);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?dumpBinaryMetaData@PxSerialization@physx@@SAXAEAVPxOutputStream@2@AEAVPxSerializationRegistry@2@@Z", ExactSpelling = true)]
     public static extern void dumpBinaryMetaData(PxOutputStream* outputStream, PxSerializationRegistry* sr);

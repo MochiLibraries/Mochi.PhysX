@@ -7,10 +7,11 @@ public unsafe static partial class PxDefaultSimulationFilterShader
     public static extern PxFilterFlags PxDefaultSimulationFilterShader__(uint attributes0, PxFilterData* filterData0, uint attributes1, PxFilterData* filterData1, PxPairFlags* pairFlags, void* constantBlock, uint constantBlockSize);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxGetGroupCollisionFlag@physx@@YA_NGG@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxGetGroupCollisionFlag(ushort group1, ushort group2);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxSetGroupCollisionFlag@physx@@YAXGG_N@Z", ExactSpelling = true)]
-    public static extern void PxSetGroupCollisionFlag(ushort group1, ushort group2, bool enable);
+    public static extern void PxSetGroupCollisionFlag(ushort group1, ushort group2, [MarshalAs(UnmanagedType.I1)] bool enable);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxGetGroup@physx@@YAGAEBVPxActor@1@@Z", ExactSpelling = true)]
     public static extern ushort PxGetGroup(PxActor* actor);
@@ -25,10 +26,11 @@ public unsafe static partial class PxDefaultSimulationFilterShader
     public static extern void PxSetFilterOps(PxFilterOp* op0, PxFilterOp* op1, PxFilterOp* op2);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxGetFilterBool@physx@@YA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxGetFilterBool();
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxSetFilterBool@physx@@YAX_N@Z", ExactSpelling = true)]
-    public static extern void PxSetFilterBool(bool enable);
+    public static extern void PxSetFilterBool([MarshalAs(UnmanagedType.I1)] bool enable);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxGetFilterConstants@physx@@YAXAEAVPxGroupsMask@1@0@Z", ExactSpelling = true)]
     public static extern void PxGetFilterConstants(PxGroupsMask* c0, PxGroupsMask* c1);

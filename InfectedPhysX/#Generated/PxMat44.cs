@@ -105,6 +105,7 @@ public unsafe partial struct PxMat44
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??8PxMat44@physx@@QEBA_NAEBV01@@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool operator_EqualEqual_PInvoke(PxMat44* @this, PxMat44* m);
 
     public unsafe bool operator_EqualEqual(PxMat44* m)
@@ -402,6 +403,7 @@ public unsafe partial struct PxMat44
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isFinite@PxMat44@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isFinite_PInvoke(PxMat44* @this);
 
     public unsafe bool isFinite()

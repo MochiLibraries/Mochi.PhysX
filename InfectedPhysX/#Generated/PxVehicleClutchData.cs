@@ -22,6 +22,7 @@ public unsafe partial struct PxVehicleClutchData
     [FieldOffset(12)] public ConstantArray_physx__UNICODE_003A____UNICODE_003A__PxU8_4 mPad;
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleClutchData@physx@@AEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxVehicleClutchData* @this);
 
     public unsafe bool isValid()

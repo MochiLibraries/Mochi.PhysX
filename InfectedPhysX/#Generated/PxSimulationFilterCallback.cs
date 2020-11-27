@@ -37,9 +37,9 @@ public unsafe partial struct PxSimulationFilterCallback
         /// <summary>Virtual method pointer for `pairFound`</summary>
         public delegate* unmanaged[Cdecl]<PxSimulationFilterCallback*, uint, uint, PxFilterData*, PxActor*, PxShape*, uint, PxFilterData*, PxActor*, PxShape*, PxPairFlags*, PxFilterFlags> pairFound;
         /// <summary>Virtual method pointer for `pairLost`</summary>
-        public delegate* unmanaged[Cdecl]<PxSimulationFilterCallback*, uint, uint, PxFilterData*, uint, PxFilterData*, bool, void> pairLost;
+        public delegate* unmanaged[Cdecl]<PxSimulationFilterCallback*, uint, uint, PxFilterData*, uint, PxFilterData*, NativeBoolean, void> pairLost;
         /// <summary>Virtual method pointer for `statusChange`</summary>
-        public delegate* unmanaged[Cdecl]<PxSimulationFilterCallback*, uint*, PxPairFlags*, PxFilterFlags*, bool> statusChange;
+        public delegate* unmanaged[Cdecl]<PxSimulationFilterCallback*, uint*, PxPairFlags*, PxFilterFlags*, NativeBoolean> statusChange;
         /// <summary>Virtual method pointer for `~PxSimulationFilterCallback`</summary>
         public delegate* unmanaged[Cdecl]<PxSimulationFilterCallback*, void> __DeletingDestructorPointer;
     }

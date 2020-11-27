@@ -71,7 +71,7 @@ public unsafe partial struct PxPvdSceneClient
     public unsafe struct VirtualMethodTable
     {
         /// <summary>Virtual method pointer for `setScenePvdFlag`</summary>
-        public delegate* unmanaged[Cdecl]<PxPvdSceneClient*, PxPvdSceneFlags, bool, void> setScenePvdFlag;
+        public delegate* unmanaged[Cdecl]<PxPvdSceneClient*, PxPvdSceneFlags, NativeBoolean, void> setScenePvdFlag;
         /// <summary>Virtual method pointer for `setScenePvdFlags`</summary>
         public delegate* unmanaged[Cdecl]<PxPvdSceneClient*, PxPvdSceneFlags, void> setScenePvdFlags;
         /// <summary>Virtual method pointer for `getScenePvdFlags`</summary>

@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 public unsafe partial struct PxCollectionExt
 {
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?releaseObjects@PxCollectionExt@physx@@SAXAEAVPxCollection@2@_N@Z", ExactSpelling = true)]
-    public static extern void releaseObjects(PxCollection* collection, bool releaseExclusiveShapes = true);
+    public static extern void releaseObjects(PxCollection* collection, [MarshalAs(UnmanagedType.I1)] bool releaseExclusiveShapes = true);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?remove@PxCollectionExt@physx@@SAXAEAVPxCollection@2@GPEAV32@@Z", ExactSpelling = true)]
     public static extern void remove(PxCollection* collection, ushort concreteType, PxCollection* to = null);

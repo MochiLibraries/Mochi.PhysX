@@ -10,11 +10,11 @@ public unsafe partial struct PxCookingParams
 
     [FieldOffset(8)] public PxConvexMeshCookingType convexMeshCookingType;
 
-    [FieldOffset(12)] public bool suppressTriangleMeshRemapTable;
+    [FieldOffset(12)] [MarshalAs(UnmanagedType.I1)] public bool suppressTriangleMeshRemapTable;
 
-    [FieldOffset(13)] public bool buildTriangleAdjacencies;
+    [FieldOffset(13)] [MarshalAs(UnmanagedType.I1)] public bool buildTriangleAdjacencies;
 
-    [FieldOffset(14)] public bool buildGPUData;
+    [FieldOffset(14)] [MarshalAs(UnmanagedType.I1)] public bool buildGPUData;
 
     [FieldOffset(16)] public PxTolerancesScale scale;
 

@@ -42,6 +42,7 @@ public unsafe partial struct PxVehicleDrive4W
     [FieldOffset(288)] public PxVehicleDriveSimData4W mDriveSimData;
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleDrive4W@physx@@AEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxVehicleDrive4W* @this);
 
     public unsafe bool isValid()
@@ -103,11 +104,11 @@ public unsafe partial struct PxVehicleDrive4W
         /// <summary>Virtual method pointer for `getConcreteTypeName`</summary>
         public delegate* unmanaged[Cdecl]<PxVehicleDrive4W*, byte*> getConcreteTypeName;
         /// <summary>Virtual method pointer for `isReleasable`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, bool> isReleasable;
+        public delegate* unmanaged[Cdecl]<PxBase*, NativeBoolean> isReleasable;
         /// <summary>Virtual method pointer for `~PxVehicleDrive4W`</summary>
         public delegate* unmanaged[Cdecl]<PxVehicleDrive4W*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isKindOf`</summary>
-        public delegate* unmanaged[Cdecl]<PxVehicleDrive4W*, byte*, bool> isKindOf;
+        public delegate* unmanaged[Cdecl]<PxVehicleDrive4W*, byte*, NativeBoolean> isKindOf;
         /// <summary>Virtual method pointer for `init`</summary>
         public delegate* unmanaged[Cdecl]<PxVehicleDrive*, uint, void> init;
         /// <summary>Virtual method pointer for `requiresObjects`</summary>

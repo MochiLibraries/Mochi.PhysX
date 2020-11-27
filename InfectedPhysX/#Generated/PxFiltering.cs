@@ -8,8 +8,10 @@ public unsafe static partial class PxFiltering
     public static extern PxFilterObjectType PxGetFilterObjectType(uint attr);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxFilterObjectIsKinematic@physx@@YA_NI@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxFilterObjectIsKinematic(uint attr);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxFilterObjectIsTrigger@physx@@YA_NI@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxFilterObjectIsTrigger(uint attr);
 }

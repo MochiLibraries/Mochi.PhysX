@@ -59,6 +59,7 @@ public unsafe partial struct PxFilterData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??8PxFilterData@physx@@QEBA_NAEBU01@@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool operator_EqualEqual_PInvoke(PxFilterData* @this, PxFilterData* a);
 
     public unsafe bool operator_EqualEqual(PxFilterData* a)
@@ -68,6 +69,7 @@ public unsafe partial struct PxFilterData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??9PxFilterData@physx@@QEBA_NAEBU01@@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool operator_ExclaimEqual_PInvoke(PxFilterData* @this, PxFilterData* a);
 
     public unsafe bool operator_ExclaimEqual(PxFilterData* a)

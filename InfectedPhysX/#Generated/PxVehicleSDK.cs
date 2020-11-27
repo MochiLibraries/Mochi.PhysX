@@ -4,6 +4,7 @@ using System.Runtime.InteropServices;
 public unsafe static partial class PxVehicleSDK
 {
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxInitVehicleSDK(PxPhysics* physics, PxSerializationRegistry* serializationRegistry = null);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]

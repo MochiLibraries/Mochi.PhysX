@@ -23,6 +23,7 @@ public unsafe partial struct RaycastCCDManager
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?registerRaycastCCDObject@RaycastCCDManager@physx@@QEAA_NPEAVPxRigidDynamic@2@PEAVPxShape@2@@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool registerRaycastCCDObject_PInvoke(RaycastCCDManager* @this, PxRigidDynamic* actor, PxShape* shape);
 
     public unsafe bool registerRaycastCCDObject(PxRigidDynamic* actor, PxShape* shape)
@@ -32,7 +33,7 @@ public unsafe partial struct RaycastCCDManager
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?doRaycastCCD@RaycastCCDManager@physx@@QEAAX_N@Z", ExactSpelling = true)]
-    private static extern void doRaycastCCD_PInvoke(RaycastCCDManager* @this, bool doDynamicDynamicCCD);
+    private static extern void doRaycastCCD_PInvoke(RaycastCCDManager* @this, [MarshalAs(UnmanagedType.I1)] bool doDynamicDynamicCCD);
 
     public unsafe void doRaycastCCD(bool doDynamicDynamicCCD)
     {

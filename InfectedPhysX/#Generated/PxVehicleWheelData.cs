@@ -56,6 +56,7 @@ public unsafe partial struct PxVehicleWheelData
     [FieldOffset(44)] public ConstantArray_physx__UNICODE_003A____UNICODE_003A__PxReal_1 mPad;
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleWheelData@physx@@AEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxVehicleWheelData* @this);
 
     public unsafe bool isValid()

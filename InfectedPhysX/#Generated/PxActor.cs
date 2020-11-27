@@ -137,11 +137,11 @@ public unsafe partial struct PxActor
         /// <summary>Virtual method pointer for `getConcreteTypeName`</summary>
         public delegate* unmanaged[Cdecl]<PxBase*, byte*> getConcreteTypeName;
         /// <summary>Virtual method pointer for `isReleasable`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, bool> isReleasable;
+        public delegate* unmanaged[Cdecl]<PxBase*, NativeBoolean> isReleasable;
         /// <summary>Virtual method pointer for `~PxActor`</summary>
         public delegate* unmanaged[Cdecl]<PxActor*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isKindOf`</summary>
-        public delegate* unmanaged[Cdecl]<PxActor*, byte*, bool> isKindOf;
+        public delegate* unmanaged[Cdecl]<PxActor*, byte*, NativeBoolean> isKindOf;
         /// <summary>Virtual method pointer for `getType`</summary>
         public delegate* unmanaged[Cdecl]<PxActor*, PxActorType> getType;
         /// <summary>Virtual method pointer for `getScene`</summary>
@@ -153,7 +153,7 @@ public unsafe partial struct PxActor
         /// <summary>Virtual method pointer for `getWorldBounds`</summary>
         public delegate* unmanaged[Cdecl]<PxActor*, out PxBounds3, float, void> getWorldBounds;
         /// <summary>Virtual method pointer for `setActorFlag`</summary>
-        public delegate* unmanaged[Cdecl]<PxActor*, PxActorFlags, bool, void> setActorFlag;
+        public delegate* unmanaged[Cdecl]<PxActor*, PxActorFlags, NativeBoolean, void> setActorFlag;
         /// <summary>Virtual method pointer for `setActorFlags`</summary>
         public delegate* unmanaged[Cdecl]<PxActor*, PxActorFlags, void> setActorFlags;
         /// <summary>Virtual method pointer for `getActorFlags`</summary>

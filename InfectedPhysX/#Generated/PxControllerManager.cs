@@ -122,7 +122,7 @@ public unsafe partial struct PxControllerManager
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-    public static extern PxControllerManager* PxCreateControllerManager(PxScene* scene, bool lockingEnabled = false);
+    public static extern PxControllerManager* PxCreateControllerManager(PxScene* scene, [MarshalAs(UnmanagedType.I1)] bool lockingEnabled = false);
 
 
     [FieldOffset(0)] public VirtualMethodTable* VirtualMethodTablePointer;
@@ -155,13 +155,13 @@ public unsafe partial struct PxControllerManager
         /// <summary>Virtual method pointer for `computeInteractions`</summary>
         public delegate* unmanaged[Cdecl]<PxControllerManager*, float, PxControllerFilterCallback*, void> computeInteractions;
         /// <summary>Virtual method pointer for `setTessellation`</summary>
-        public delegate* unmanaged[Cdecl]<PxControllerManager*, bool, float, void> setTessellation;
+        public delegate* unmanaged[Cdecl]<PxControllerManager*, NativeBoolean, float, void> setTessellation;
         /// <summary>Virtual method pointer for `setOverlapRecoveryModule`</summary>
-        public delegate* unmanaged[Cdecl]<PxControllerManager*, bool, void> setOverlapRecoveryModule;
+        public delegate* unmanaged[Cdecl]<PxControllerManager*, NativeBoolean, void> setOverlapRecoveryModule;
         /// <summary>Virtual method pointer for `setPreciseSweeps`</summary>
-        public delegate* unmanaged[Cdecl]<PxControllerManager*, bool, void> setPreciseSweeps;
+        public delegate* unmanaged[Cdecl]<PxControllerManager*, NativeBoolean, void> setPreciseSweeps;
         /// <summary>Virtual method pointer for `setPreventVerticalSlidingAgainstCeiling`</summary>
-        public delegate* unmanaged[Cdecl]<PxControllerManager*, bool, void> setPreventVerticalSlidingAgainstCeiling;
+        public delegate* unmanaged[Cdecl]<PxControllerManager*, NativeBoolean, void> setPreventVerticalSlidingAgainstCeiling;
         /// <summary>Virtual method pointer for `shiftOrigin`</summary>
         public delegate* unmanaged[Cdecl]<PxControllerManager*, PxVec3*, void> shiftOrigin;
         /// <summary>Virtual method pointer for `~PxControllerManager`</summary>

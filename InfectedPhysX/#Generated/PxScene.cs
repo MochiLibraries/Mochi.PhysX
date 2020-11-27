@@ -715,7 +715,7 @@ public unsafe partial struct PxScene
         /// <summary>Virtual method pointer for `release`</summary>
         public delegate* unmanaged[Cdecl]<PxScene*, void> release;
         /// <summary>Virtual method pointer for `setFlag`</summary>
-        public delegate* unmanaged[Cdecl]<PxScene*, PxSceneFlags, bool, void> setFlag;
+        public delegate* unmanaged[Cdecl]<PxScene*, PxSceneFlags, NativeBoolean, void> setFlag;
         /// <summary>Virtual method pointer for `getFlags`</summary>
         public delegate* unmanaged[Cdecl]<PxScene*, PxSceneFlags> getFlags;
         /// <summary>Virtual method pointer for `setLimits`</summary>
@@ -729,7 +729,7 @@ public unsafe partial struct PxScene
         /// <summary>Virtual method pointer for `addArticulation`</summary>
         public delegate* unmanaged[Cdecl]<PxScene*, PxArticulationBase*, void> addArticulation;
         /// <summary>Virtual method pointer for `removeArticulation`</summary>
-        public delegate* unmanaged[Cdecl]<PxScene*, PxArticulationBase*, bool, void> removeArticulation;
+        public delegate* unmanaged[Cdecl]<PxScene*, PxArticulationBase*, NativeBoolean, void> removeArticulation;
         /// <summary>Virtual method pointer for `addActor`</summary>
         public delegate* unmanaged[Cdecl]<PxScene*, PxActor*, PxBVHStructure*, void> addActor;
         /// <summary>Virtual method pointer for `addActors`</summary>
@@ -737,13 +737,13 @@ public unsafe partial struct PxScene
         /// <summary>Virtual method pointer for `addActors`</summary>
         public delegate* unmanaged[Cdecl]<PxScene*, PxActor**, uint, void> addActors_1;
         /// <summary>Virtual method pointer for `removeActor`</summary>
-        public delegate* unmanaged[Cdecl]<PxScene*, PxActor*, bool, void> removeActor;
+        public delegate* unmanaged[Cdecl]<PxScene*, PxActor*, NativeBoolean, void> removeActor;
         /// <summary>Virtual method pointer for `removeActors`</summary>
-        public delegate* unmanaged[Cdecl]<PxScene*, PxActor**, uint, bool, void> removeActors;
+        public delegate* unmanaged[Cdecl]<PxScene*, PxActor**, uint, NativeBoolean, void> removeActors;
         /// <summary>Virtual method pointer for `addAggregate`</summary>
         public delegate* unmanaged[Cdecl]<PxScene*, PxAggregate*, void> addAggregate;
         /// <summary>Virtual method pointer for `removeAggregate`</summary>
-        public delegate* unmanaged[Cdecl]<PxScene*, PxAggregate*, bool, void> removeAggregate;
+        public delegate* unmanaged[Cdecl]<PxScene*, PxAggregate*, NativeBoolean, void> removeAggregate;
         /// <summary>Virtual method pointer for `addCollection`</summary>
         public delegate* unmanaged[Cdecl]<PxScene*, PxCollection*, void> addCollection;
         /// <summary>Virtual method pointer for `getNbActors`</summary>
@@ -811,25 +811,25 @@ public unsafe partial struct PxScene
         /// <summary>Virtual method pointer for `getStaticKinematicFilteringMode`</summary>
         public delegate* unmanaged[Cdecl]<PxScene*, PxPairFilteringMode> getStaticKinematicFilteringMode;
         /// <summary>Virtual method pointer for `simulate`</summary>
-        public delegate* unmanaged[Cdecl]<PxScene*, float, PxBaseTask*, void*, uint, bool, void> simulate;
+        public delegate* unmanaged[Cdecl]<PxScene*, float, PxBaseTask*, void*, uint, NativeBoolean, void> simulate;
         /// <summary>Virtual method pointer for `advance`</summary>
         public delegate* unmanaged[Cdecl]<PxScene*, PxBaseTask*, void> advance;
         /// <summary>Virtual method pointer for `collide`</summary>
-        public delegate* unmanaged[Cdecl]<PxScene*, float, PxBaseTask*, void*, uint, bool, void> collide;
+        public delegate* unmanaged[Cdecl]<PxScene*, float, PxBaseTask*, void*, uint, NativeBoolean, void> collide;
         /// <summary>Virtual method pointer for `checkResults`</summary>
-        public delegate* unmanaged[Cdecl]<PxScene*, bool, bool> checkResults;
+        public delegate* unmanaged[Cdecl]<PxScene*, NativeBoolean, NativeBoolean> checkResults;
         /// <summary>Virtual method pointer for `fetchCollision`</summary>
-        public delegate* unmanaged[Cdecl]<PxScene*, bool, bool> fetchCollision;
+        public delegate* unmanaged[Cdecl]<PxScene*, NativeBoolean, NativeBoolean> fetchCollision;
         /// <summary>Virtual method pointer for `fetchResults`</summary>
-        public delegate* unmanaged[Cdecl]<PxScene*, bool, uint*, bool> fetchResults;
+        public delegate* unmanaged[Cdecl]<PxScene*, NativeBoolean, uint*, NativeBoolean> fetchResults;
         /// <summary>Virtual method pointer for `fetchResultsStart`</summary>
-        public delegate* unmanaged[Cdecl]<PxScene*, PxContactPairHeader**, uint*, bool, bool> fetchResultsStart;
+        public delegate* unmanaged[Cdecl]<PxScene*, PxContactPairHeader**, uint*, NativeBoolean, NativeBoolean> fetchResultsStart;
         /// <summary>Virtual method pointer for `processCallbacks`</summary>
         public delegate* unmanaged[Cdecl]<PxScene*, PxBaseTask*, void> processCallbacks;
         /// <summary>Virtual method pointer for `fetchResultsFinish`</summary>
         public delegate* unmanaged[Cdecl]<PxScene*, uint*, void> fetchResultsFinish;
         /// <summary>Virtual method pointer for `flushSimulation`</summary>
-        public delegate* unmanaged[Cdecl]<PxScene*, bool, void> flushSimulation;
+        public delegate* unmanaged[Cdecl]<PxScene*, NativeBoolean, void> flushSimulation;
         /// <summary>Virtual method pointer for `setGravity`</summary>
         public delegate* unmanaged[Cdecl]<PxScene*, PxVec3*, void> setGravity;
         /// <summary>Virtual method pointer for `getGravity`</summary>
@@ -849,7 +849,7 @@ public unsafe partial struct PxScene
         /// <summary>Virtual method pointer for `getFrictionType`</summary>
         public delegate* unmanaged[Cdecl]<PxScene*, PxFrictionType> getFrictionType;
         /// <summary>Virtual method pointer for `setVisualizationParameter`</summary>
-        public delegate* unmanaged[Cdecl]<PxScene*, PxVisualizationParameter, float, bool> setVisualizationParameter;
+        public delegate* unmanaged[Cdecl]<PxScene*, PxVisualizationParameter, float, NativeBoolean> setVisualizationParameter;
         /// <summary>Virtual method pointer for `getVisualizationParameter`</summary>
         public delegate* unmanaged[Cdecl]<PxScene*, PxVisualizationParameter, float> getVisualizationParameter;
         /// <summary>Virtual method pointer for `setVisualizationCullingBox`</summary>
@@ -873,40 +873,40 @@ public unsafe partial struct PxScene
         /// <summary>Virtual method pointer for `getDynamicTreeRebuildRateHint`</summary>
         public delegate* unmanaged[Cdecl]<PxScene*, uint> getDynamicTreeRebuildRateHint;
         /// <summary>Virtual method pointer for `forceDynamicTreeRebuild`</summary>
-        public delegate* unmanaged[Cdecl]<PxScene*, bool, bool, void> forceDynamicTreeRebuild;
+        public delegate* unmanaged[Cdecl]<PxScene*, NativeBoolean, NativeBoolean, void> forceDynamicTreeRebuild;
         /// <summary>Virtual method pointer for `setSceneQueryUpdateMode`</summary>
         public delegate* unmanaged[Cdecl]<PxScene*, PxSceneQueryUpdateMode, void> setSceneQueryUpdateMode;
         /// <summary>Virtual method pointer for `getSceneQueryUpdateMode`</summary>
         public delegate* unmanaged[Cdecl]<PxScene*, PxSceneQueryUpdateMode> getSceneQueryUpdateMode;
         /// <summary>Virtual method pointer for `sceneQueriesUpdate`</summary>
-        public delegate* unmanaged[Cdecl]<PxScene*, PxBaseTask*, bool, void> sceneQueriesUpdate;
+        public delegate* unmanaged[Cdecl]<PxScene*, PxBaseTask*, NativeBoolean, void> sceneQueriesUpdate;
         /// <summary>Virtual method pointer for `checkQueries`</summary>
-        public delegate* unmanaged[Cdecl]<PxScene*, bool, bool> checkQueries;
+        public delegate* unmanaged[Cdecl]<PxScene*, NativeBoolean, NativeBoolean> checkQueries;
         /// <summary>Virtual method pointer for `fetchQueries`</summary>
-        public delegate* unmanaged[Cdecl]<PxScene*, bool, bool> fetchQueries;
+        public delegate* unmanaged[Cdecl]<PxScene*, NativeBoolean, NativeBoolean> fetchQueries;
         /// <summary>Virtual method pointer for `raycast`</summary>
         public /* Failed to emit TranslatedVTableEntry raycast: Failed to resolve `Ref resolved by PxHitCallback` during emit time. */
-        delegate* unmanaged[Cdecl]<PxScene*, PxVec3*, PxVec3*, float, int*, PxHitFlags, PxQueryFilterData*, PxQueryFilterCallback*, PxQueryCache*, bool> raycast;
+        delegate* unmanaged[Cdecl]<PxScene*, PxVec3*, PxVec3*, float, int*, PxHitFlags, PxQueryFilterData*, PxQueryFilterCallback*, PxQueryCache*, NativeBoolean> raycast;
         /// <summary>Virtual method pointer for `sweep`</summary>
         public /* Failed to emit TranslatedVTableEntry sweep: Failed to resolve `Ref resolved by PxHitCallback` during emit time. */
-        delegate* unmanaged[Cdecl]<PxScene*, PxGeometry*, PxTransform*, PxVec3*, float, int*, PxHitFlags, PxQueryFilterData*, PxQueryFilterCallback*, PxQueryCache*, float, bool> sweep;
+        delegate* unmanaged[Cdecl]<PxScene*, PxGeometry*, PxTransform*, PxVec3*, float, int*, PxHitFlags, PxQueryFilterData*, PxQueryFilterCallback*, PxQueryCache*, float, NativeBoolean> sweep;
         /// <summary>Virtual method pointer for `overlap`</summary>
         public /* Failed to emit TranslatedVTableEntry overlap: Failed to resolve `Ref resolved by PxHitCallback` during emit time. */
-        delegate* unmanaged[Cdecl]<PxScene*, PxGeometry*, PxTransform*, int*, PxQueryFilterData*, PxQueryFilterCallback*, bool> overlap;
+        delegate* unmanaged[Cdecl]<PxScene*, PxGeometry*, PxTransform*, int*, PxQueryFilterData*, PxQueryFilterCallback*, NativeBoolean> overlap;
         /// <summary>Virtual method pointer for `getSceneQueryStaticTimestamp`</summary>
         public delegate* unmanaged[Cdecl]<PxScene*, uint> getSceneQueryStaticTimestamp;
         /// <summary>Virtual method pointer for `getBroadPhaseType`</summary>
         public delegate* unmanaged[Cdecl]<PxScene*, PxBroadPhaseType> getBroadPhaseType;
         /// <summary>Virtual method pointer for `getBroadPhaseCaps`</summary>
-        public delegate* unmanaged[Cdecl]<PxScene*, PxBroadPhaseCaps*, bool> getBroadPhaseCaps;
+        public delegate* unmanaged[Cdecl]<PxScene*, PxBroadPhaseCaps*, NativeBoolean> getBroadPhaseCaps;
         /// <summary>Virtual method pointer for `getNbBroadPhaseRegions`</summary>
         public delegate* unmanaged[Cdecl]<PxScene*, uint> getNbBroadPhaseRegions;
         /// <summary>Virtual method pointer for `getBroadPhaseRegions`</summary>
         public delegate* unmanaged[Cdecl]<PxScene*, PxBroadPhaseRegionInfo*, uint, uint, uint> getBroadPhaseRegions;
         /// <summary>Virtual method pointer for `addBroadPhaseRegion`</summary>
-        public delegate* unmanaged[Cdecl]<PxScene*, PxBroadPhaseRegion*, bool, uint> addBroadPhaseRegion;
+        public delegate* unmanaged[Cdecl]<PxScene*, PxBroadPhaseRegion*, NativeBoolean, uint> addBroadPhaseRegion;
         /// <summary>Virtual method pointer for `removeBroadPhaseRegion`</summary>
-        public delegate* unmanaged[Cdecl]<PxScene*, uint, bool> removeBroadPhaseRegion;
+        public delegate* unmanaged[Cdecl]<PxScene*, uint, NativeBoolean> removeBroadPhaseRegion;
         /// <summary>Virtual method pointer for `getTaskManager`</summary>
         public delegate* unmanaged[Cdecl]<PxScene*, PxTaskManager*> getTaskManager;
         /// <summary>Virtual method pointer for `lockRead`</summary>

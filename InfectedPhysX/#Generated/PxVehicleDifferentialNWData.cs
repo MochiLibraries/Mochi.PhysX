@@ -14,7 +14,7 @@ public unsafe partial struct PxVehicleDifferentialNWData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setDrivenWheel@PxVehicleDifferentialNWData@physx@@QEAAXI_N@Z", ExactSpelling = true)]
-    private static extern void setDrivenWheel_PInvoke(PxVehicleDifferentialNWData* @this, uint wheelId, bool drivenState);
+    private static extern void setDrivenWheel_PInvoke(PxVehicleDifferentialNWData* @this, uint wheelId, [MarshalAs(UnmanagedType.I1)] bool drivenState);
 
     public unsafe void setDrivenWheel(uint wheelId, bool drivenState)
     {
@@ -23,6 +23,7 @@ public unsafe partial struct PxVehicleDifferentialNWData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getIsDrivenWheel@PxVehicleDifferentialNWData@physx@@QEBA_NI@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool getIsDrivenWheel_PInvoke(PxVehicleDifferentialNWData* @this, uint wheelId);
 
     public unsafe bool getIsDrivenWheel(uint wheelId)
@@ -40,6 +41,7 @@ public unsafe partial struct PxVehicleDifferentialNWData
     [FieldOffset(12)] public uint mPad;
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleDifferentialNWData@physx@@AEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxVehicleDifferentialNWData* @this);
 
     public unsafe bool isValid()

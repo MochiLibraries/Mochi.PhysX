@@ -55,9 +55,9 @@ public unsafe partial struct PxCudaBuffer
         /// <summary>Virtual method pointer for `getCudaMemoryManager`</summary>
         public delegate* unmanaged[Cdecl]<PxCudaBuffer*, PxCudaMemoryManager*> getCudaMemoryManager;
         /// <summary>Virtual method pointer for `free`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaBuffer*, bool> free;
+        public delegate* unmanaged[Cdecl]<PxCudaBuffer*, NativeBoolean> free;
         /// <summary>Virtual method pointer for `realloc`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaBuffer*, ulong, byte*, int, byte*, PxAllocId, bool> realloc;
+        public delegate* unmanaged[Cdecl]<PxCudaBuffer*, ulong, byte*, int, byte*, PxAllocId, NativeBoolean> realloc;
         /// <summary>Virtual method pointer for `getType`</summary>
         public delegate* unmanaged[Cdecl]<PxCudaBuffer*, PxCudaBufferType*> getType;
         /// <summary>Virtual method pointer for `getPtr`</summary>

@@ -36,6 +36,7 @@ public unsafe partial struct PxVehicleDriveSimDataNW
     [FieldOffset(528)] public PxVehicleDifferentialNWData mDiff;
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleDriveSimDataNW@physx@@AEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxVehicleDriveSimDataNW* @this);
 
     public unsafe bool isValid()

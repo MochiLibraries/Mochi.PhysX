@@ -278,6 +278,7 @@ public unsafe partial struct PxVehicleWheelsSimData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getIsWheelDisabled@PxVehicleWheelsSimData@physx@@QEBA_NI@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool getIsWheelDisabled_PInvoke(PxVehicleWheelsSimData* @this, uint wheel);
 
     public unsafe bool getIsWheelDisabled(uint wheel)
@@ -352,6 +353,7 @@ public unsafe partial struct PxVehicleWheelsSimData
     [FieldOffset(88)] public ConstantArray_physx__UNICODE_003A____UNICODE_003A__PxU32_1 mPad;
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleWheelsSimData@physx@@AEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxVehicleWheelsSimData* @this);
 
     public unsafe bool isValid()
@@ -541,7 +543,7 @@ public unsafe partial struct PxVehicleWheelsSimData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setWheelEnabledState@PxVehicleWheelsSimData@physx@@QEAAXI_N@Z", ExactSpelling = true)]
-    private static extern void setWheelEnabledState_PInvoke(PxVehicleWheelsSimData* @this, uint wheel, bool state);
+    private static extern void setWheelEnabledState_PInvoke(PxVehicleWheelsSimData* @this, uint wheel, [MarshalAs(UnmanagedType.I1)] bool state);
 
     public unsafe void setWheelEnabledState(uint wheel, bool state)
     {
@@ -550,6 +552,7 @@ public unsafe partial struct PxVehicleWheelsSimData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getWheelEnabledState@PxVehicleWheelsSimData@physx@@QEBA_NI@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool getWheelEnabledState_PInvoke(PxVehicleWheelsSimData* @this, uint wheel);
 
     public unsafe bool getWheelEnabledState(uint wheel)

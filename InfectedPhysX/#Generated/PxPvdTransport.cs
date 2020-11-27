@@ -77,13 +77,13 @@ public unsafe partial struct PxPvdTransport
     public unsafe struct VirtualMethodTable
     {
         /// <summary>Virtual method pointer for `connect`</summary>
-        public delegate* unmanaged[Cdecl]<PxPvdTransport*, bool> connect;
+        public delegate* unmanaged[Cdecl]<PxPvdTransport*, NativeBoolean> connect;
         /// <summary>Virtual method pointer for `disconnect`</summary>
         public delegate* unmanaged[Cdecl]<PxPvdTransport*, void> disconnect;
         /// <summary>Virtual method pointer for `isConnected`</summary>
-        public delegate* unmanaged[Cdecl]<PxPvdTransport*, bool> isConnected;
+        public delegate* unmanaged[Cdecl]<PxPvdTransport*, NativeBoolean> isConnected;
         /// <summary>Virtual method pointer for `write`</summary>
-        public delegate* unmanaged[Cdecl]<PxPvdTransport*, byte*, uint, bool> write;
+        public delegate* unmanaged[Cdecl]<PxPvdTransport*, byte*, uint, NativeBoolean> write;
         /// <summary>Virtual method pointer for `lock`</summary>
         public delegate* unmanaged[Cdecl]<PxPvdTransport*, PxPvdTransport*> @lock;
         /// <summary>Virtual method pointer for `unlock`</summary>

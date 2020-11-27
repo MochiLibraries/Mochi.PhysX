@@ -6,9 +6,9 @@ public unsafe partial struct PxConstraintShaderTable
 {
     public const int eMAX_SOLVERPRPEP_DATASIZE = 400;
 
-    [FieldOffset(0)] public delegate* unmanaged[Cdecl]<Px1DConstraint*, PxVec3*, uint, PxConstraintInvMassScale*, void*, PxTransform*, PxTransform*, bool, PxVec3*, PxVec3*, uint>* solverPrep;
+    [FieldOffset(0)] public delegate* unmanaged[Cdecl]<Px1DConstraint*, PxVec3*, uint, PxConstraintInvMassScale*, void*, PxTransform*, PxTransform*, NativeBoolean, PxVec3*, PxVec3*, uint>* solverPrep;
 
-    [FieldOffset(8)] public delegate* unmanaged[Cdecl]<void*, PxTransform*, PxTransform*, bool, void>* project;
+    [FieldOffset(8)] public delegate* unmanaged[Cdecl]<void*, PxTransform*, PxTransform*, NativeBoolean, void>* project;
 
     [FieldOffset(16)] public delegate* unmanaged[Cdecl]<PxConstraintVisualizer*, void*, PxTransform*, PxTransform*, uint, void>* visualize;
 

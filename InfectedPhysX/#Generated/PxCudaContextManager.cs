@@ -229,31 +229,31 @@ public unsafe partial struct PxCudaContextManager
         /// <summary>Virtual method pointer for `getMemoryManager`</summary>
         public delegate* unmanaged[Cdecl]<PxCudaContextManager*, PxCudaMemoryManager*> getMemoryManager;
         /// <summary>Virtual method pointer for `contextIsValid`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, bool> contextIsValid;
+        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, NativeBoolean> contextIsValid;
         /// <summary>Virtual method pointer for `supportsArchSM10`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, bool> supportsArchSM10;
+        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, NativeBoolean> supportsArchSM10;
         /// <summary>Virtual method pointer for `supportsArchSM11`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, bool> supportsArchSM11;
+        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, NativeBoolean> supportsArchSM11;
         /// <summary>Virtual method pointer for `supportsArchSM12`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, bool> supportsArchSM12;
+        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, NativeBoolean> supportsArchSM12;
         /// <summary>Virtual method pointer for `supportsArchSM13`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, bool> supportsArchSM13;
+        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, NativeBoolean> supportsArchSM13;
         /// <summary>Virtual method pointer for `supportsArchSM20`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, bool> supportsArchSM20;
+        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, NativeBoolean> supportsArchSM20;
         /// <summary>Virtual method pointer for `supportsArchSM30`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, bool> supportsArchSM30;
+        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, NativeBoolean> supportsArchSM30;
         /// <summary>Virtual method pointer for `supportsArchSM35`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, bool> supportsArchSM35;
+        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, NativeBoolean> supportsArchSM35;
         /// <summary>Virtual method pointer for `supportsArchSM50`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, bool> supportsArchSM50;
+        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, NativeBoolean> supportsArchSM50;
         /// <summary>Virtual method pointer for `supportsArchSM52`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, bool> supportsArchSM52;
+        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, NativeBoolean> supportsArchSM52;
         /// <summary>Virtual method pointer for `supportsArchSM60`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, bool> supportsArchSM60;
+        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, NativeBoolean> supportsArchSM60;
         /// <summary>Virtual method pointer for `isIntegrated`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, bool> isIntegrated;
+        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, NativeBoolean> isIntegrated;
         /// <summary>Virtual method pointer for `canMapHostMemory`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, bool> canMapHostMemory;
+        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, NativeBoolean> canMapHostMemory;
         /// <summary>Virtual method pointer for `getDriverVersion`</summary>
         public delegate* unmanaged[Cdecl]<PxCudaContextManager*, int> getDriverVersion;
         /// <summary>Virtual method pointer for `getDeviceTotalMemBytes`</summary>
@@ -275,15 +275,15 @@ public unsafe partial struct PxCudaContextManager
         /// <summary>Virtual method pointer for `getInteropMode`</summary>
         public delegate* unmanaged[Cdecl]<PxCudaContextManager*, PxCudaInteropMode> getInteropMode;
         /// <summary>Virtual method pointer for `setUsingConcurrentStreams`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, bool, void> setUsingConcurrentStreams;
+        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, NativeBoolean, void> setUsingConcurrentStreams;
         /// <summary>Virtual method pointer for `getUsingConcurrentStreams`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, bool> getUsingConcurrentStreams;
+        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, NativeBoolean> getUsingConcurrentStreams;
         /// <summary>Virtual method pointer for `registerResourceInCudaGL`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, CUgraphicsResource_st**, uint, PxCudaInteropRegisterFlags, bool> registerResourceInCudaGL;
+        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, CUgraphicsResource_st**, uint, PxCudaInteropRegisterFlags, NativeBoolean> registerResourceInCudaGL;
         /// <summary>Virtual method pointer for `registerResourceInCudaD3D`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, CUgraphicsResource_st**, void*, PxCudaInteropRegisterFlags, bool> registerResourceInCudaD3D;
+        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, CUgraphicsResource_st**, void*, PxCudaInteropRegisterFlags, NativeBoolean> registerResourceInCudaD3D;
         /// <summary>Virtual method pointer for `unregisterResourceInCuda`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, CUgraphicsResource_st*, bool> unregisterResourceInCuda;
+        public delegate* unmanaged[Cdecl]<PxCudaContextManager*, CUgraphicsResource_st*, NativeBoolean> unregisterResourceInCuda;
         /// <summary>Virtual method pointer for `usingDedicatedGPU`</summary>
         public delegate* unmanaged[Cdecl]<PxCudaContextManager*, int> usingDedicatedGPU;
         /// <summary>Virtual method pointer for `release`</summary>

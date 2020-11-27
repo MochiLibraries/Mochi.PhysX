@@ -69,7 +69,7 @@ public unsafe partial struct PxSerializer
         /// <summary>Virtual method pointer for `requiresObjects`</summary>
         public delegate* unmanaged[Cdecl]<PxSerializer*, PxBase*, PxProcessPxBaseCallback*, void> requiresObjects;
         /// <summary>Virtual method pointer for `isSubordinate`</summary>
-        public delegate* unmanaged[Cdecl]<PxSerializer*, bool> isSubordinate;
+        public delegate* unmanaged[Cdecl]<PxSerializer*, NativeBoolean> isSubordinate;
         /// <summary>Virtual method pointer for `exportExtraData`</summary>
         public delegate* unmanaged[Cdecl]<PxSerializer*, PxBase*, PxSerializationContext*, void> exportExtraData;
         /// <summary>Virtual method pointer for `exportData`</summary>

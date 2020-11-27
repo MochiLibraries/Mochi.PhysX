@@ -33,6 +33,7 @@ public unsafe partial struct PxJointLimitPyramid
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxJointLimitPyramid@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxJointLimitPyramid* @this);
 
     public unsafe bool isValid()

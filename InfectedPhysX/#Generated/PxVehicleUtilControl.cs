@@ -5,19 +5,19 @@ public unsafe static partial class PxVehicleUtilControl
 {
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxVehicleDrive4WSmoothDigitalRawInputsAndSetAnalogInputs@physx@@YAXAEBUPxVehicleKeySmoothingData@1@AEBV?$PxFixedSizeLookupTable@$07@1@AEBVPxVehicleDrive4WRawInputData@1@M_NAEAVPxVehicleDrive4W@1@@Z", ExactSpelling = true)]
     public static extern void PxVehicleDrive4WSmoothDigitalRawInputsAndSetAnalogInputs(PxVehicleKeySmoothingData* keySmoothing, /* Failed to emit TranslatedParameter steerVsForwardSpeedTable: ClangTypeReference is not supported by the C# output generator. */
-    int* steerVsForwardSpeedTable, PxVehicleDrive4WRawInputData* rawInputData, float timestep, bool isVehicleInAir, PxVehicleDrive4W* focusVehicle);
+    int* steerVsForwardSpeedTable, PxVehicleDrive4WRawInputData* rawInputData, float timestep, [MarshalAs(UnmanagedType.I1)] bool isVehicleInAir, PxVehicleDrive4W* focusVehicle);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxVehicleDrive4WSmoothAnalogRawInputsAndSetAnalogInputs@physx@@YAXAEBUPxVehiclePadSmoothingData@1@AEBV?$PxFixedSizeLookupTable@$07@1@AEBVPxVehicleDrive4WRawInputData@1@M_NAEAVPxVehicleDrive4W@1@@Z", ExactSpelling = true)]
     public static extern void PxVehicleDrive4WSmoothAnalogRawInputsAndSetAnalogInputs(PxVehiclePadSmoothingData* padSmoothing, /* Failed to emit TranslatedParameter steerVsForwardSpeedTable: ClangTypeReference is not supported by the C# output generator. */
-    int* steerVsForwardSpeedTable, PxVehicleDrive4WRawInputData* rawInputData, float timestep, bool isVehicleInAir, PxVehicleDrive4W* focusVehicle);
+    int* steerVsForwardSpeedTable, PxVehicleDrive4WRawInputData* rawInputData, float timestep, [MarshalAs(UnmanagedType.I1)] bool isVehicleInAir, PxVehicleDrive4W* focusVehicle);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxVehicleDriveNWSmoothDigitalRawInputsAndSetAnalogInputs@physx@@YAXAEBUPxVehicleKeySmoothingData@1@AEBV?$PxFixedSizeLookupTable@$07@1@AEBVPxVehicleDriveNWRawInputData@1@M_NAEAVPxVehicleDriveNW@1@@Z", ExactSpelling = true)]
     public static extern void PxVehicleDriveNWSmoothDigitalRawInputsAndSetAnalogInputs(PxVehicleKeySmoothingData* keySmoothing, /* Failed to emit TranslatedParameter steerVsForwardSpeedTable: ClangTypeReference is not supported by the C# output generator. */
-    int* steerVsForwardSpeedTable, PxVehicleDriveNWRawInputData* rawInputData, float timestep, bool isVehicleInAir, PxVehicleDriveNW* focusVehicle);
+    int* steerVsForwardSpeedTable, PxVehicleDriveNWRawInputData* rawInputData, float timestep, [MarshalAs(UnmanagedType.I1)] bool isVehicleInAir, PxVehicleDriveNW* focusVehicle);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxVehicleDriveNWSmoothAnalogRawInputsAndSetAnalogInputs@physx@@YAXAEBUPxVehiclePadSmoothingData@1@AEBV?$PxFixedSizeLookupTable@$07@1@AEBVPxVehicleDriveNWRawInputData@1@M_NAEAVPxVehicleDriveNW@1@@Z", ExactSpelling = true)]
     public static extern void PxVehicleDriveNWSmoothAnalogRawInputsAndSetAnalogInputs(PxVehiclePadSmoothingData* padSmoothing, /* Failed to emit TranslatedParameter steerVsForwardSpeedTable: ClangTypeReference is not supported by the C# output generator. */
-    int* steerVsForwardSpeedTable, PxVehicleDriveNWRawInputData* rawInputData, float timestep, bool isVehicleInAir, PxVehicleDriveNW* focusVehicle);
+    int* steerVsForwardSpeedTable, PxVehicleDriveNWRawInputData* rawInputData, float timestep, [MarshalAs(UnmanagedType.I1)] bool isVehicleInAir, PxVehicleDriveNW* focusVehicle);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxVehicleDriveTankSmoothDigitalRawInputsAndSetAnalogInputs@physx@@YAXAEBUPxVehicleKeySmoothingData@1@AEBVPxVehicleDriveTankRawInputData@1@MAEAVPxVehicleDriveTank@1@@Z", ExactSpelling = true)]
     public static extern void PxVehicleDriveTankSmoothDigitalRawInputsAndSetAnalogInputs(PxVehicleKeySmoothingData* keySmoothing, PxVehicleDriveTankRawInputData* rawInputData, float timestep, PxVehicleDriveTank* focusVehicle);

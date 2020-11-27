@@ -120,11 +120,11 @@ public unsafe partial struct PxPrismaticJoint
         /// <summary>Virtual method pointer for `getConcreteTypeName`</summary>
         public delegate* unmanaged[Cdecl]<PxPrismaticJoint*, byte*> getConcreteTypeName;
         /// <summary>Virtual method pointer for `isReleasable`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, bool> isReleasable;
+        public delegate* unmanaged[Cdecl]<PxBase*, NativeBoolean> isReleasable;
         /// <summary>Virtual method pointer for `~PxPrismaticJoint`</summary>
         public delegate* unmanaged[Cdecl]<PxPrismaticJoint*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isKindOf`</summary>
-        public delegate* unmanaged[Cdecl]<PxPrismaticJoint*, byte*, bool> isKindOf;
+        public delegate* unmanaged[Cdecl]<PxPrismaticJoint*, byte*, NativeBoolean> isKindOf;
         /// <summary>Virtual method pointer for `setActors`</summary>
         public delegate* unmanaged[Cdecl]<PxJoint*, PxRigidActor*, PxRigidActor*, void> setActors;
         /// <summary>Virtual method pointer for `getActors`</summary>
@@ -146,7 +146,7 @@ public unsafe partial struct PxPrismaticJoint
         /// <summary>Virtual method pointer for `setConstraintFlags`</summary>
         public delegate* unmanaged[Cdecl]<PxJoint*, PxConstraintFlags, void> setConstraintFlags;
         /// <summary>Virtual method pointer for `setConstraintFlag`</summary>
-        public delegate* unmanaged[Cdecl]<PxJoint*, PxConstraintFlags, bool, void> setConstraintFlag;
+        public delegate* unmanaged[Cdecl]<PxJoint*, PxConstraintFlags, NativeBoolean, void> setConstraintFlag;
         /// <summary>Virtual method pointer for `getConstraintFlags`</summary>
         public delegate* unmanaged[Cdecl]<PxJoint*, PxConstraintFlags> getConstraintFlags;
         /// <summary>Virtual method pointer for `setInvMassScale0`</summary>
@@ -184,7 +184,7 @@ public unsafe partial struct PxPrismaticJoint
         /// <summary>Virtual method pointer for `setPrismaticJointFlags`</summary>
         public delegate* unmanaged[Cdecl]<PxPrismaticJoint*, PxPrismaticJointFlags, void> setPrismaticJointFlags;
         /// <summary>Virtual method pointer for `setPrismaticJointFlag`</summary>
-        public delegate* unmanaged[Cdecl]<PxPrismaticJoint*, PxPrismaticJointFlags, bool, void> setPrismaticJointFlag;
+        public delegate* unmanaged[Cdecl]<PxPrismaticJoint*, PxPrismaticJointFlags, NativeBoolean, void> setPrismaticJointFlag;
         /// <summary>Virtual method pointer for `getPrismaticJointFlags`</summary>
         public delegate* unmanaged[Cdecl]<PxPrismaticJoint*, PxPrismaticJointFlags> getPrismaticJointFlags;
         /// <summary>Virtual method pointer for `setProjectionLinearTolerance`</summary>

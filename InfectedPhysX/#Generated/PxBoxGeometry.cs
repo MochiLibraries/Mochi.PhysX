@@ -34,6 +34,7 @@ public unsafe partial struct PxBoxGeometry
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxBoxGeometry@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxBoxGeometry* @this);
 
     public unsafe bool isValid()

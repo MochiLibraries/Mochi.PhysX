@@ -42,8 +42,8 @@ public unsafe partial struct PxDefaultCpuDispatcher
         /// <summary>Virtual method pointer for `release`</summary>
         public delegate* unmanaged[Cdecl]<PxDefaultCpuDispatcher*, void> release;
         /// <summary>Virtual method pointer for `setRunProfiled`</summary>
-        public delegate* unmanaged[Cdecl]<PxDefaultCpuDispatcher*, bool, void> setRunProfiled;
+        public delegate* unmanaged[Cdecl]<PxDefaultCpuDispatcher*, NativeBoolean, void> setRunProfiled;
         /// <summary>Virtual method pointer for `getRunProfiled`</summary>
-        public delegate* unmanaged[Cdecl]<PxDefaultCpuDispatcher*, bool> getRunProfiled;
+        public delegate* unmanaged[Cdecl]<PxDefaultCpuDispatcher*, NativeBoolean> getRunProfiled;
     }
 }

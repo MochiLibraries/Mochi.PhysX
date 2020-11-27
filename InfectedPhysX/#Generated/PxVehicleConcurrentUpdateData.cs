@@ -21,7 +21,7 @@ public unsafe partial struct PxVehicleConcurrentUpdateData
 
     [FieldOffset(24)] public PxVec3 angularMomentumChange;
 
-    [FieldOffset(36)] public bool staySleeping;
+    [FieldOffset(36)] [MarshalAs(UnmanagedType.I1)] public bool staySleeping;
 
-    [FieldOffset(37)] public bool wakeup;
+    [FieldOffset(37)] [MarshalAs(UnmanagedType.I1)] public bool wakeup;
 }

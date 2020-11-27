@@ -125,11 +125,11 @@ public unsafe partial struct PxArticulation
         /// <summary>Virtual method pointer for `getConcreteTypeName`</summary>
         public delegate* unmanaged[Cdecl]<PxBase*, byte*> getConcreteTypeName;
         /// <summary>Virtual method pointer for `isReleasable`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, bool> isReleasable;
+        public delegate* unmanaged[Cdecl]<PxBase*, NativeBoolean> isReleasable;
         /// <summary>Virtual method pointer for `~PxArticulation`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulation*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isKindOf`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, byte*, bool> isKindOf;
+        public delegate* unmanaged[Cdecl]<PxBase*, byte*, NativeBoolean> isKindOf;
         /// <summary>Virtual method pointer for `getScene`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationBase*, PxScene*> getScene;
         /// <summary>Virtual method pointer for `setSolverIterationCounts`</summary>
@@ -137,7 +137,7 @@ public unsafe partial struct PxArticulation
         /// <summary>Virtual method pointer for `getSolverIterationCounts`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationBase*, uint*, uint*, void> getSolverIterationCounts;
         /// <summary>Virtual method pointer for `isSleeping`</summary>
-        public delegate* unmanaged[Cdecl]<PxArticulationBase*, bool> isSleeping;
+        public delegate* unmanaged[Cdecl]<PxArticulationBase*, NativeBoolean> isSleeping;
         /// <summary>Virtual method pointer for `setSleepThreshold`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationBase*, float, void> setSleepThreshold;
         /// <summary>Virtual method pointer for `getSleepThreshold`</summary>

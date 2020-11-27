@@ -32,7 +32,7 @@ public unsafe partial struct PxVehicleDriveTankRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setDigitalAccel@PxVehicleDriveTankRawInputData@physx@@QEAAX_N@Z", ExactSpelling = true)]
-    private static extern void setDigitalAccel_PInvoke(PxVehicleDriveTankRawInputData* @this, bool b);
+    private static extern void setDigitalAccel_PInvoke(PxVehicleDriveTankRawInputData* @this, [MarshalAs(UnmanagedType.I1)] bool b);
 
     public unsafe void setDigitalAccel(bool b)
     {
@@ -41,7 +41,7 @@ public unsafe partial struct PxVehicleDriveTankRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setDigitalLeftThrust@PxVehicleDriveTankRawInputData@physx@@QEAAX_N@Z", ExactSpelling = true)]
-    private static extern void setDigitalLeftThrust_PInvoke(PxVehicleDriveTankRawInputData* @this, bool b);
+    private static extern void setDigitalLeftThrust_PInvoke(PxVehicleDriveTankRawInputData* @this, [MarshalAs(UnmanagedType.I1)] bool b);
 
     public unsafe void setDigitalLeftThrust(bool b)
     {
@@ -50,7 +50,7 @@ public unsafe partial struct PxVehicleDriveTankRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setDigitalRightThrust@PxVehicleDriveTankRawInputData@physx@@QEAAX_N@Z", ExactSpelling = true)]
-    private static extern void setDigitalRightThrust_PInvoke(PxVehicleDriveTankRawInputData* @this, bool b);
+    private static extern void setDigitalRightThrust_PInvoke(PxVehicleDriveTankRawInputData* @this, [MarshalAs(UnmanagedType.I1)] bool b);
 
     public unsafe void setDigitalRightThrust(bool b)
     {
@@ -59,7 +59,7 @@ public unsafe partial struct PxVehicleDriveTankRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setDigitalLeftBrake@PxVehicleDriveTankRawInputData@physx@@QEAAX_N@Z", ExactSpelling = true)]
-    private static extern void setDigitalLeftBrake_PInvoke(PxVehicleDriveTankRawInputData* @this, bool b);
+    private static extern void setDigitalLeftBrake_PInvoke(PxVehicleDriveTankRawInputData* @this, [MarshalAs(UnmanagedType.I1)] bool b);
 
     public unsafe void setDigitalLeftBrake(bool b)
     {
@@ -68,7 +68,7 @@ public unsafe partial struct PxVehicleDriveTankRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setDigitalRightBrake@PxVehicleDriveTankRawInputData@physx@@QEAAX_N@Z", ExactSpelling = true)]
-    private static extern void setDigitalRightBrake_PInvoke(PxVehicleDriveTankRawInputData* @this, bool b);
+    private static extern void setDigitalRightBrake_PInvoke(PxVehicleDriveTankRawInputData* @this, [MarshalAs(UnmanagedType.I1)] bool b);
 
     public unsafe void setDigitalRightBrake(bool b)
     {
@@ -77,6 +77,7 @@ public unsafe partial struct PxVehicleDriveTankRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getDigitalAccel@PxVehicleDriveTankRawInputData@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool getDigitalAccel_PInvoke(PxVehicleDriveTankRawInputData* @this);
 
     public unsafe bool getDigitalAccel()
@@ -86,6 +87,7 @@ public unsafe partial struct PxVehicleDriveTankRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getDigitalLeftThrust@PxVehicleDriveTankRawInputData@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool getDigitalLeftThrust_PInvoke(PxVehicleDriveTankRawInputData* @this);
 
     public unsafe bool getDigitalLeftThrust()
@@ -95,6 +97,7 @@ public unsafe partial struct PxVehicleDriveTankRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getDigitalRightThrust@PxVehicleDriveTankRawInputData@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool getDigitalRightThrust_PInvoke(PxVehicleDriveTankRawInputData* @this);
 
     public unsafe bool getDigitalRightThrust()
@@ -104,6 +107,7 @@ public unsafe partial struct PxVehicleDriveTankRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getDigitalLeftBrake@PxVehicleDriveTankRawInputData@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool getDigitalLeftBrake_PInvoke(PxVehicleDriveTankRawInputData* @this);
 
     public unsafe bool getDigitalLeftBrake()
@@ -113,6 +117,7 @@ public unsafe partial struct PxVehicleDriveTankRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getDigitalRightBrake@PxVehicleDriveTankRawInputData@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool getDigitalRightBrake_PInvoke(PxVehicleDriveTankRawInputData* @this);
 
     public unsafe bool getDigitalRightBrake()
@@ -212,7 +217,7 @@ public unsafe partial struct PxVehicleDriveTankRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setGearUp@PxVehicleDriveTankRawInputData@physx@@QEAAX_N@Z", ExactSpelling = true)]
-    private static extern void setGearUp_PInvoke(PxVehicleDriveTankRawInputData* @this, bool gearUp);
+    private static extern void setGearUp_PInvoke(PxVehicleDriveTankRawInputData* @this, [MarshalAs(UnmanagedType.I1)] bool gearUp);
 
     public unsafe void setGearUp(bool gearUp)
     {
@@ -221,7 +226,7 @@ public unsafe partial struct PxVehicleDriveTankRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setGearDown@PxVehicleDriveTankRawInputData@physx@@QEAAX_N@Z", ExactSpelling = true)]
-    private static extern void setGearDown_PInvoke(PxVehicleDriveTankRawInputData* @this, bool gearDown);
+    private static extern void setGearDown_PInvoke(PxVehicleDriveTankRawInputData* @this, [MarshalAs(UnmanagedType.I1)] bool gearDown);
 
     public unsafe void setGearDown(bool gearDown)
     {
@@ -230,6 +235,7 @@ public unsafe partial struct PxVehicleDriveTankRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getGearUp@PxVehicleDriveTankRawInputData@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool getGearUp_PInvoke(PxVehicleDriveTankRawInputData* @this);
 
     public unsafe bool getGearUp()
@@ -239,6 +245,7 @@ public unsafe partial struct PxVehicleDriveTankRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getGearDown@PxVehicleDriveTankRawInputData@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool getGearDown_PInvoke(PxVehicleDriveTankRawInputData* @this);
 
     public unsafe bool getGearDown()
@@ -253,7 +260,7 @@ public unsafe partial struct PxVehicleDriveTankRawInputData
 
     [FieldOffset(24)] public ConstantArray_bool_5 mRawDigitalInputs;
 
-    [FieldOffset(29)] public bool mGearUp;
+    [FieldOffset(29)] [MarshalAs(UnmanagedType.I1)] public bool mGearUp;
 
-    [FieldOffset(30)] public bool mGearDown;
+    [FieldOffset(30)] [MarshalAs(UnmanagedType.I1)] public bool mGearDown;
 }

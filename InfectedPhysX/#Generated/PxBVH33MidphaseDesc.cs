@@ -18,6 +18,7 @@ public unsafe partial struct PxBVH33MidphaseDesc
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxBVH33MidphaseDesc@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxBVH33MidphaseDesc* @this);
 
     public unsafe bool isValid()

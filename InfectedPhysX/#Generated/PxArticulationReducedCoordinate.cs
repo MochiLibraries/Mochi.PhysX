@@ -235,11 +235,11 @@ public unsafe partial struct PxArticulationReducedCoordinate
         /// <summary>Virtual method pointer for `getConcreteTypeName`</summary>
         public delegate* unmanaged[Cdecl]<PxBase*, byte*> getConcreteTypeName;
         /// <summary>Virtual method pointer for `isReleasable`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, bool> isReleasable;
+        public delegate* unmanaged[Cdecl]<PxBase*, NativeBoolean> isReleasable;
         /// <summary>Virtual method pointer for `~PxArticulationReducedCoordinate`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationReducedCoordinate*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isKindOf`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, byte*, bool> isKindOf;
+        public delegate* unmanaged[Cdecl]<PxBase*, byte*, NativeBoolean> isKindOf;
         /// <summary>Virtual method pointer for `getScene`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationBase*, PxScene*> getScene;
         /// <summary>Virtual method pointer for `setSolverIterationCounts`</summary>
@@ -247,7 +247,7 @@ public unsafe partial struct PxArticulationReducedCoordinate
         /// <summary>Virtual method pointer for `getSolverIterationCounts`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationBase*, uint*, uint*, void> getSolverIterationCounts;
         /// <summary>Virtual method pointer for `isSleeping`</summary>
-        public delegate* unmanaged[Cdecl]<PxArticulationBase*, bool> isSleeping;
+        public delegate* unmanaged[Cdecl]<PxArticulationBase*, NativeBoolean> isSleeping;
         /// <summary>Virtual method pointer for `setSleepThreshold`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationBase*, float, void> setSleepThreshold;
         /// <summary>Virtual method pointer for `getSleepThreshold`</summary>
@@ -289,7 +289,7 @@ public unsafe partial struct PxArticulationReducedCoordinate
         /// <summary>Virtual method pointer for `setArticulationFlags`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationReducedCoordinate*, PxArticulationFlags, void> setArticulationFlags;
         /// <summary>Virtual method pointer for `setArticulationFlag`</summary>
-        public delegate* unmanaged[Cdecl]<PxArticulationReducedCoordinate*, PxArticulationFlags, bool, void> setArticulationFlag;
+        public delegate* unmanaged[Cdecl]<PxArticulationReducedCoordinate*, PxArticulationFlags, NativeBoolean, void> setArticulationFlag;
         /// <summary>Virtual method pointer for `getArticulationFlags`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationReducedCoordinate*, PxArticulationFlags> getArticulationFlags;
         /// <summary>Virtual method pointer for `getDofs`</summary>
@@ -301,7 +301,7 @@ public unsafe partial struct PxArticulationReducedCoordinate
         /// <summary>Virtual method pointer for `zeroCache`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationReducedCoordinate*, PxArticulationCache*, void> zeroCache;
         /// <summary>Virtual method pointer for `applyCache`</summary>
-        public delegate* unmanaged[Cdecl]<PxArticulationReducedCoordinate*, PxArticulationCache*, PxArticulationCache.PxArticulationCacheFlags, bool, void> applyCache;
+        public delegate* unmanaged[Cdecl]<PxArticulationReducedCoordinate*, PxArticulationCache*, PxArticulationCache.PxArticulationCacheFlags, NativeBoolean, void> applyCache;
         /// <summary>Virtual method pointer for `copyInternalStateToCache`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationReducedCoordinate*, PxArticulationCache*, PxArticulationCache.PxArticulationCacheFlags, void> copyInternalStateToCache;
         /// <summary>Virtual method pointer for `releaseCache`</summary>
@@ -327,7 +327,7 @@ public unsafe partial struct PxArticulationReducedCoordinate
         /// <summary>Virtual method pointer for `computeCoefficientMatrix`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationReducedCoordinate*, PxArticulationCache*, void> computeCoefficientMatrix;
         /// <summary>Virtual method pointer for `computeLambda`</summary>
-        public delegate* unmanaged[Cdecl]<PxArticulationReducedCoordinate*, PxArticulationCache*, PxArticulationCache*, float*, uint, bool> computeLambda;
+        public delegate* unmanaged[Cdecl]<PxArticulationReducedCoordinate*, PxArticulationCache*, PxArticulationCache*, float*, uint, NativeBoolean> computeLambda;
         /// <summary>Virtual method pointer for `computeGeneralizedMassMatrix`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationReducedCoordinate*, PxArticulationCache*, void> computeGeneralizedMassMatrix;
         /// <summary>Virtual method pointer for `addLoopJoint`</summary>
@@ -341,7 +341,7 @@ public unsafe partial struct PxArticulationReducedCoordinate
         /// <summary>Virtual method pointer for `getCoefficientMatrixSize`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationReducedCoordinate*, uint> getCoefficientMatrixSize;
         /// <summary>Virtual method pointer for `teleportRootLink`</summary>
-        public delegate* unmanaged[Cdecl]<PxArticulationReducedCoordinate*, PxTransform*, bool, void> teleportRootLink;
+        public delegate* unmanaged[Cdecl]<PxArticulationReducedCoordinate*, PxTransform*, NativeBoolean, void> teleportRootLink;
         /// <summary>Virtual method pointer for `getLinkVelocity`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationReducedCoordinate*, out PxSpatialVelocity, uint, void> getLinkVelocity;
         /// <summary>Virtual method pointer for `getLinkAcceleration`</summary>

@@ -70,11 +70,11 @@ public unsafe partial struct PxCapsuleController
         /// <summary>Virtual method pointer for `move`</summary>
         public delegate* unmanaged[Cdecl]<PxController*, PxVec3*, float, float, PxControllerFilters*, PxObstacleContext*, PxControllerCollisionFlags> move;
         /// <summary>Virtual method pointer for `setPosition`</summary>
-        public delegate* unmanaged[Cdecl]<PxController*, PxExtendedVec3*, bool> setPosition;
+        public delegate* unmanaged[Cdecl]<PxController*, PxExtendedVec3*, NativeBoolean> setPosition;
         /// <summary>Virtual method pointer for `getPosition`</summary>
         public delegate* unmanaged[Cdecl]<PxController*, PxExtendedVec3*> getPosition;
         /// <summary>Virtual method pointer for `setFootPosition`</summary>
-        public delegate* unmanaged[Cdecl]<PxController*, PxExtendedVec3*, bool> setFootPosition;
+        public delegate* unmanaged[Cdecl]<PxController*, PxExtendedVec3*, NativeBoolean> setFootPosition;
         /// <summary>Virtual method pointer for `getFootPosition`</summary>
         public delegate* unmanaged[Cdecl]<PxController*, out PxExtendedVec3, void> getFootPosition;
         /// <summary>Virtual method pointer for `getActor`</summary>
@@ -118,14 +118,14 @@ public unsafe partial struct PxCapsuleController
         /// <summary>Virtual method pointer for `getRadius`</summary>
         public delegate* unmanaged[Cdecl]<PxCapsuleController*, float> getRadius;
         /// <summary>Virtual method pointer for `setRadius`</summary>
-        public delegate* unmanaged[Cdecl]<PxCapsuleController*, float, bool> setRadius;
+        public delegate* unmanaged[Cdecl]<PxCapsuleController*, float, NativeBoolean> setRadius;
         /// <summary>Virtual method pointer for `getHeight`</summary>
         public delegate* unmanaged[Cdecl]<PxCapsuleController*, float> getHeight;
         /// <summary>Virtual method pointer for `setHeight`</summary>
-        public delegate* unmanaged[Cdecl]<PxCapsuleController*, float, bool> setHeight;
+        public delegate* unmanaged[Cdecl]<PxCapsuleController*, float, NativeBoolean> setHeight;
         /// <summary>Virtual method pointer for `getClimbingMode`</summary>
         public delegate* unmanaged[Cdecl]<PxCapsuleController*, PxCapsuleClimbingMode> getClimbingMode;
         /// <summary>Virtual method pointer for `setClimbingMode`</summary>
-        public delegate* unmanaged[Cdecl]<PxCapsuleController*, PxCapsuleClimbingMode, bool> setClimbingMode;
+        public delegate* unmanaged[Cdecl]<PxCapsuleController*, PxCapsuleClimbingMode, NativeBoolean> setClimbingMode;
     }
 }

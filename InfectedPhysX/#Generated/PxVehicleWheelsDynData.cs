@@ -124,6 +124,7 @@ public unsafe partial struct PxVehicleWheelsDynData
     [FieldOffset(0)] public PxVehicleWheels4DynData* mWheels4DynData;
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleWheelsDynData@physx@@AEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxVehicleWheelsDynData* @this);
 
     public unsafe bool isValid()

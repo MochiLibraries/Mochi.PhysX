@@ -143,7 +143,7 @@ public unsafe partial struct PxPhysics
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?createShape@PxPhysics@physx@@QEAAPEAVPxShape@2@AEBVPxGeometry@2@AEBVPxMaterial@2@_NV?$PxFlags@W4Enum@PxShapeFlag@physx@@E@2@@Z", ExactSpelling = true)]
-    private static extern PxShape* createShape_PInvoke(PxPhysics* @this, PxGeometry* geometry, PxMaterial* material, bool isExclusive, PxShapeFlags shapeFlags);
+    private static extern PxShape* createShape_PInvoke(PxPhysics* @this, PxGeometry* geometry, PxMaterial* material, [MarshalAs(UnmanagedType.I1)] bool isExclusive, PxShapeFlags shapeFlags);
 
     public unsafe PxShape* createShape(PxGeometry* geometry, PxMaterial* material, bool isExclusive, PxShapeFlags shapeFlags)
     {
@@ -245,10 +245,10 @@ public unsafe partial struct PxPhysics
     public static extern void PxRegisterHeightFields(PxPhysics* physics);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-    public static extern PxPhysics* PxCreateBasePhysics(uint version, PxFoundation* foundation, PxTolerancesScale* scale, bool trackOutstandingAllocations = false, PxPvd* pvd = null);
+    public static extern PxPhysics* PxCreateBasePhysics(uint version, PxFoundation* foundation, PxTolerancesScale* scale, [MarshalAs(UnmanagedType.I1)] bool trackOutstandingAllocations = false, PxPvd* pvd = null);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxCreatePhysics@@YAPEAVPxPhysics@physx@@IAEAVPxFoundation@2@AEBVPxTolerancesScale@2@_NPEAVPxPvd@2@@Z", ExactSpelling = true)]
-    public static extern PxPhysics* PxCreatePhysics(uint version, PxFoundation* foundation, PxTolerancesScale* scale, bool trackOutstandingAllocations = false, PxPvd* pvd = null);
+    public static extern PxPhysics* PxCreatePhysics(uint version, PxFoundation* foundation, PxTolerancesScale* scale, [MarshalAs(UnmanagedType.I1)] bool trackOutstandingAllocations = false, PxPvd* pvd = null);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
     public static extern PxPhysics* PxGetPhysics();
@@ -266,7 +266,7 @@ public unsafe partial struct PxPhysics
         /// <summary>Virtual method pointer for `getFoundation`</summary>
         public delegate* unmanaged[Cdecl]<PxPhysics*, PxFoundation*> getFoundation;
         /// <summary>Virtual method pointer for `createAggregate`</summary>
-        public delegate* unmanaged[Cdecl]<PxPhysics*, uint, bool, PxAggregate*> createAggregate;
+        public delegate* unmanaged[Cdecl]<PxPhysics*, uint, NativeBoolean, PxAggregate*> createAggregate;
         /// <summary>Virtual method pointer for `getTolerancesScale`</summary>
         public delegate* unmanaged[Cdecl]<PxPhysics*, PxTolerancesScale*> getTolerancesScale;
         /// <summary>Virtual method pointer for `createTriangleMesh`</summary>
@@ -306,7 +306,7 @@ public unsafe partial struct PxPhysics
         /// <summary>Virtual method pointer for `createPruningStructure`</summary>
         public delegate* unmanaged[Cdecl]<PxPhysics*, PxRigidActor**, uint, PxPruningStructure*> createPruningStructure;
         /// <summary>Virtual method pointer for `createShape`</summary>
-        public delegate* unmanaged[Cdecl]<PxPhysics*, PxGeometry*, PxMaterial**, ushort, bool, PxShapeFlags, PxShape*> createShape;
+        public delegate* unmanaged[Cdecl]<PxPhysics*, PxGeometry*, PxMaterial**, ushort, NativeBoolean, PxShapeFlags, PxShape*> createShape;
         /// <summary>Virtual method pointer for `getNbShapes`</summary>
         public delegate* unmanaged[Cdecl]<PxPhysics*, uint> getNbShapes;
         /// <summary>Virtual method pointer for `getShapes`</summary>
@@ -324,7 +324,7 @@ public unsafe partial struct PxPhysics
         /// <summary>Virtual method pointer for `getMaterials`</summary>
         public delegate* unmanaged[Cdecl]<PxPhysics*, PxMaterial**, uint, uint, uint> getMaterials;
         /// <summary>Virtual method pointer for `registerDeletionListener`</summary>
-        public delegate* unmanaged[Cdecl]<PxPhysics*, PxDeletionListener*, PxDeletionEventFlags*, bool, void> registerDeletionListener;
+        public delegate* unmanaged[Cdecl]<PxPhysics*, PxDeletionListener*, PxDeletionEventFlags*, NativeBoolean, void> registerDeletionListener;
         /// <summary>Virtual method pointer for `unregisterDeletionListener`</summary>
         public delegate* unmanaged[Cdecl]<PxPhysics*, PxDeletionListener*, void> unregisterDeletionListener;
         /// <summary>Virtual method pointer for `registerDeletionListenerObjects`</summary>

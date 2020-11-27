@@ -116,27 +116,27 @@ public unsafe partial struct PxCooking
         /// <summary>Virtual method pointer for `getParams`</summary>
         public delegate* unmanaged[Cdecl]<PxCooking*, PxCookingParams*> getParams;
         /// <summary>Virtual method pointer for `platformMismatch`</summary>
-        public delegate* unmanaged[Cdecl]<PxCooking*, bool> platformMismatch;
+        public delegate* unmanaged[Cdecl]<PxCooking*, NativeBoolean> platformMismatch;
         /// <summary>Virtual method pointer for `cookTriangleMesh`</summary>
-        public delegate* unmanaged[Cdecl]<PxCooking*, PxTriangleMeshDesc*, PxOutputStream*, PxTriangleMeshCookingResult*, bool> cookTriangleMesh;
+        public delegate* unmanaged[Cdecl]<PxCooking*, PxTriangleMeshDesc*, PxOutputStream*, PxTriangleMeshCookingResult*, NativeBoolean> cookTriangleMesh;
         /// <summary>Virtual method pointer for `createTriangleMesh`</summary>
         public delegate* unmanaged[Cdecl]<PxCooking*, PxTriangleMeshDesc*, PxPhysicsInsertionCallback*, PxTriangleMeshCookingResult*, PxTriangleMesh*> createTriangleMesh;
         /// <summary>Virtual method pointer for `validateTriangleMesh`</summary>
-        public delegate* unmanaged[Cdecl]<PxCooking*, PxTriangleMeshDesc*, bool> validateTriangleMesh;
+        public delegate* unmanaged[Cdecl]<PxCooking*, PxTriangleMeshDesc*, NativeBoolean> validateTriangleMesh;
         /// <summary>Virtual method pointer for `cookConvexMesh`</summary>
-        public delegate* unmanaged[Cdecl]<PxCooking*, PxConvexMeshDesc*, PxOutputStream*, PxConvexMeshCookingResult*, bool> cookConvexMesh;
+        public delegate* unmanaged[Cdecl]<PxCooking*, PxConvexMeshDesc*, PxOutputStream*, PxConvexMeshCookingResult*, NativeBoolean> cookConvexMesh;
         /// <summary>Virtual method pointer for `createConvexMesh`</summary>
         public delegate* unmanaged[Cdecl]<PxCooking*, PxConvexMeshDesc*, PxPhysicsInsertionCallback*, PxConvexMeshCookingResult*, PxConvexMesh*> createConvexMesh;
         /// <summary>Virtual method pointer for `validateConvexMesh`</summary>
-        public delegate* unmanaged[Cdecl]<PxCooking*, PxConvexMeshDesc*, bool> validateConvexMesh;
+        public delegate* unmanaged[Cdecl]<PxCooking*, PxConvexMeshDesc*, NativeBoolean> validateConvexMesh;
         /// <summary>Virtual method pointer for `computeHullPolygons`</summary>
-        public delegate* unmanaged[Cdecl]<PxCooking*, PxSimpleTriangleMesh*, PxAllocatorCallback*, uint*, PxVec3**, uint*, uint**, uint*, PxHullPolygon**, bool> computeHullPolygons;
+        public delegate* unmanaged[Cdecl]<PxCooking*, PxSimpleTriangleMesh*, PxAllocatorCallback*, uint*, PxVec3**, uint*, uint**, uint*, PxHullPolygon**, NativeBoolean> computeHullPolygons;
         /// <summary>Virtual method pointer for `cookHeightField`</summary>
-        public delegate* unmanaged[Cdecl]<PxCooking*, PxHeightFieldDesc*, PxOutputStream*, bool> cookHeightField;
+        public delegate* unmanaged[Cdecl]<PxCooking*, PxHeightFieldDesc*, PxOutputStream*, NativeBoolean> cookHeightField;
         /// <summary>Virtual method pointer for `createHeightField`</summary>
         public delegate* unmanaged[Cdecl]<PxCooking*, PxHeightFieldDesc*, PxPhysicsInsertionCallback*, PxHeightField*> createHeightField;
         /// <summary>Virtual method pointer for `cookBVHStructure`</summary>
-        public delegate* unmanaged[Cdecl]<PxCooking*, PxBVHStructureDesc*, PxOutputStream*, bool> cookBVHStructure;
+        public delegate* unmanaged[Cdecl]<PxCooking*, PxBVHStructureDesc*, PxOutputStream*, NativeBoolean> cookBVHStructure;
         /// <summary>Virtual method pointer for `createBVHStructure`</summary>
         public delegate* unmanaged[Cdecl]<PxCooking*, PxBVHStructureDesc*, PxPhysicsInsertionCallback*, PxBVHStructure*> createBVHStructure;
         /// <summary>Virtual method pointer for `~PxCooking`</summary>

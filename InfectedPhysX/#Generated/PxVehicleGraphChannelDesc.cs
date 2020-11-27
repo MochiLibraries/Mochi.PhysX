@@ -26,6 +26,7 @@ public unsafe partial struct PxVehicleGraphChannelDesc
     [FieldOffset(40)] public byte* mTitle;
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleGraphChannelDesc@physx@@AEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxVehicleGraphChannelDesc* @this);
 
     public unsafe bool isValid()

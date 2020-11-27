@@ -153,15 +153,15 @@ public unsafe partial struct PxHeightField
         /// <summary>Virtual method pointer for `getConcreteTypeName`</summary>
         public delegate* unmanaged[Cdecl]<PxHeightField*, byte*> getConcreteTypeName;
         /// <summary>Virtual method pointer for `isReleasable`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, bool> isReleasable;
+        public delegate* unmanaged[Cdecl]<PxBase*, NativeBoolean> isReleasable;
         /// <summary>Virtual method pointer for `~PxHeightField`</summary>
         public delegate* unmanaged[Cdecl]<PxHeightField*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isKindOf`</summary>
-        public delegate* unmanaged[Cdecl]<PxHeightField*, byte*, bool> isKindOf;
+        public delegate* unmanaged[Cdecl]<PxHeightField*, byte*, NativeBoolean> isKindOf;
         /// <summary>Virtual method pointer for `saveCells`</summary>
         public delegate* unmanaged[Cdecl]<PxHeightField*, void*, uint, uint> saveCells;
         /// <summary>Virtual method pointer for `modifySamples`</summary>
-        public delegate* unmanaged[Cdecl]<PxHeightField*, int, int, PxHeightFieldDesc*, bool, bool> modifySamples;
+        public delegate* unmanaged[Cdecl]<PxHeightField*, int, int, PxHeightFieldDesc*, NativeBoolean, NativeBoolean> modifySamples;
         /// <summary>Virtual method pointer for `getNbRows`</summary>
         public delegate* unmanaged[Cdecl]<PxHeightField*, uint> getNbRows;
         /// <summary>Virtual method pointer for `getNbColumns`</summary>

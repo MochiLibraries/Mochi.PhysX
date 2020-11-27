@@ -41,6 +41,7 @@ public unsafe partial struct PxMeshScale
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isIdentity@PxMeshScale@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isIdentity_PInvoke(PxMeshScale* @this);
 
     public unsafe bool isIdentity()
@@ -76,6 +77,7 @@ public unsafe partial struct PxMeshScale
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?hasNegativeDeterminant@PxMeshScale@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool hasNegativeDeterminant_PInvoke(PxMeshScale* @this);
 
     public unsafe bool hasNegativeDeterminant()
@@ -98,6 +100,7 @@ public unsafe partial struct PxMeshScale
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValidForTriangleMesh@PxMeshScale@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValidForTriangleMesh_PInvoke(PxMeshScale* @this);
 
     public unsafe bool isValidForTriangleMesh()
@@ -107,6 +110,7 @@ public unsafe partial struct PxMeshScale
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValidForConvexMesh@PxMeshScale@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValidForConvexMesh_PInvoke(PxMeshScale* @this);
 
     public unsafe bool isValidForConvexMesh()

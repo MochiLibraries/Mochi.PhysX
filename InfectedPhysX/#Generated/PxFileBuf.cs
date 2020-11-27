@@ -43,6 +43,7 @@ public unsafe partial struct PxFileBuf
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isOpen@PxFileBuf@general_PxIOStream2@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isOpen_PInvoke(PxFileBuf* @this);
 
     public unsafe bool isOpen()
@@ -153,6 +154,7 @@ public unsafe partial struct PxFileBuf
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isBigEndian@PxFileBuf@general_PxIOStream2@physx@@SA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool isBigEndian();
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?swap2Bytes@PxFileBuf@general_PxIOStream2@physx@@QEBAXPEAX@Z", ExactSpelling = true)]
@@ -272,7 +274,7 @@ public unsafe partial struct PxFileBuf
         { return readDouble_PInvoke(@this); }
     }
 
-    [FieldOffset(8)] public bool mEndianSwap;
+    [FieldOffset(8)] [MarshalAs(UnmanagedType.I1)] public bool mEndianSwap;
 
     [FieldOffset(12)] public EndianMode mEndianMode;
 

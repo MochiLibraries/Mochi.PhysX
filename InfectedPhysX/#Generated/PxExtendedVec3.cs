@@ -24,6 +24,7 @@ public unsafe partial struct PxExtendedVec3
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isZero@PxExtendedVec3@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isZero_PInvoke(PxExtendedVec3* @this);
 
     public unsafe bool isZero()
@@ -78,6 +79,7 @@ public unsafe partial struct PxExtendedVec3
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isFinite@PxExtendedVec3@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isFinite_PInvoke(PxExtendedVec3* @this);
 
     public unsafe bool isFinite()

@@ -86,6 +86,7 @@ public unsafe partial struct PxBounds3
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isEmpty@PxBounds3@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isEmpty_PInvoke(PxBounds3* @this);
 
     public unsafe bool isEmpty()
@@ -95,6 +96,7 @@ public unsafe partial struct PxBounds3
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?intersects@PxBounds3@physx@@QEBA_NAEBV12@@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool intersects_PInvoke(PxBounds3* @this, PxBounds3* b);
 
     public unsafe bool intersects(PxBounds3* b)
@@ -104,6 +106,7 @@ public unsafe partial struct PxBounds3
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?intersects1D@PxBounds3@physx@@QEBA_NAEBV12@I@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool intersects1D_PInvoke(PxBounds3* @this, PxBounds3* a, uint axis);
 
     public unsafe bool intersects1D(PxBounds3* a, uint axis)
@@ -113,6 +116,7 @@ public unsafe partial struct PxBounds3
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?contains@PxBounds3@physx@@QEBA_NAEBVPxVec3@2@@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool contains_PInvoke(PxBounds3* @this, PxVec3* v);
 
     public unsafe bool contains(PxVec3* v)
@@ -122,6 +126,7 @@ public unsafe partial struct PxBounds3
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isInside@PxBounds3@physx@@QEBA_NAEBV12@@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isInside_PInvoke(PxBounds3* @this, PxBounds3* box);
 
     public unsafe bool isInside(PxBounds3* box)
@@ -224,6 +229,7 @@ public unsafe partial struct PxBounds3
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isFinite@PxBounds3@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isFinite_PInvoke(PxBounds3* @this);
 
     public unsafe bool isFinite()
@@ -233,6 +239,7 @@ public unsafe partial struct PxBounds3
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxBounds3@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxBounds3* @this);
 
     public unsafe bool isValid()

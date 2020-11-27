@@ -21,6 +21,7 @@ public unsafe partial struct ContactBuffer
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?contact@ContactBuffer@Gu@physx@@QEAA_NAEBVPxVec3@3@0MI@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool contact_PInvoke(ContactBuffer* @this, PxVec3* worldPoint, PxVec3* worldNormalIn, float separation, uint faceIndex1);
 
     public unsafe bool contact(PxVec3* worldPoint, PxVec3* worldNormalIn, float separation, uint faceIndex1 = 4294967295)
@@ -30,6 +31,7 @@ public unsafe partial struct ContactBuffer
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?contact@ContactBuffer@Gu@physx@@QEAA_NAEBVPxVec3@3@0MGI@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool contact_PInvoke(ContactBuffer* @this, PxVec3* worldPoint, PxVec3* worldNormalIn, float separation, ushort internalUsage, uint faceIndex1);
 
     public unsafe bool contact(PxVec3* worldPoint, PxVec3* worldNormalIn, float separation, ushort internalUsage, uint faceIndex1 = 4294967295)
@@ -39,6 +41,7 @@ public unsafe partial struct ContactBuffer
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?contact@ContactBuffer@Gu@physx@@QEAA_NAEBUContactPoint@23@@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool contact_PInvoke(ContactBuffer* @this, ContactPoint* pt);
 
     public unsafe bool contact(ContactPoint* pt)

@@ -241,11 +241,11 @@ public unsafe partial struct PxArticulationJoint
         /// <summary>Virtual method pointer for `getConcreteTypeName`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationJoint*, byte*> getConcreteTypeName;
         /// <summary>Virtual method pointer for `isReleasable`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, bool> isReleasable;
+        public delegate* unmanaged[Cdecl]<PxBase*, NativeBoolean> isReleasable;
         /// <summary>Virtual method pointer for `~PxArticulationJoint`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationJoint*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isKindOf`</summary>
-        public delegate* unmanaged[Cdecl]<PxArticulationJoint*, byte*, bool> isKindOf;
+        public delegate* unmanaged[Cdecl]<PxArticulationJoint*, byte*, NativeBoolean> isKindOf;
         /// <summary>Virtual method pointer for `getParentArticulationLink`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationJointBase*, PxArticulationLink*> getParentArticulationLink;
         /// <summary>Virtual method pointer for `setParentPose`</summary>
@@ -307,17 +307,17 @@ public unsafe partial struct PxArticulationJoint
         /// <summary>Virtual method pointer for `getSwingLimitContactDistance`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationJoint*, float> getSwingLimitContactDistance;
         /// <summary>Virtual method pointer for `setSwingLimitEnabled`</summary>
-        public delegate* unmanaged[Cdecl]<PxArticulationJoint*, bool, void> setSwingLimitEnabled;
+        public delegate* unmanaged[Cdecl]<PxArticulationJoint*, NativeBoolean, void> setSwingLimitEnabled;
         /// <summary>Virtual method pointer for `getSwingLimitEnabled`</summary>
-        public delegate* unmanaged[Cdecl]<PxArticulationJoint*, bool> getSwingLimitEnabled;
+        public delegate* unmanaged[Cdecl]<PxArticulationJoint*, NativeBoolean> getSwingLimitEnabled;
         /// <summary>Virtual method pointer for `setTwistLimit`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationJoint*, float, float, void> setTwistLimit;
         /// <summary>Virtual method pointer for `getTwistLimit`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationJoint*, float*, float*, void> getTwistLimit;
         /// <summary>Virtual method pointer for `setTwistLimitEnabled`</summary>
-        public delegate* unmanaged[Cdecl]<PxArticulationJoint*, bool, void> setTwistLimitEnabled;
+        public delegate* unmanaged[Cdecl]<PxArticulationJoint*, NativeBoolean, void> setTwistLimitEnabled;
         /// <summary>Virtual method pointer for `getTwistLimitEnabled`</summary>
-        public delegate* unmanaged[Cdecl]<PxArticulationJoint*, bool> getTwistLimitEnabled;
+        public delegate* unmanaged[Cdecl]<PxArticulationJoint*, NativeBoolean> getTwistLimitEnabled;
         /// <summary>Virtual method pointer for `setTwistLimitContactDistance`</summary>
         public delegate* unmanaged[Cdecl]<PxArticulationJoint*, float, void> setTwistLimitContactDistance;
         /// <summary>Virtual method pointer for `getTwistLimitContactDistance`</summary>

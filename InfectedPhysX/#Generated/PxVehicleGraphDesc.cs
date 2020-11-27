@@ -26,6 +26,7 @@ public unsafe partial struct PxVehicleGraphDesc
     [FieldOffset(28)] public float mAlpha;
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleGraphDesc@physx@@AEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxVehicleGraphDesc* @this);
 
     public unsafe bool isValid()

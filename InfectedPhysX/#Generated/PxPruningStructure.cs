@@ -71,11 +71,11 @@ public unsafe partial struct PxPruningStructure
         /// <summary>Virtual method pointer for `getConcreteTypeName`</summary>
         public delegate* unmanaged[Cdecl]<PxPruningStructure*, byte*> getConcreteTypeName;
         /// <summary>Virtual method pointer for `isReleasable`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, bool> isReleasable;
+        public delegate* unmanaged[Cdecl]<PxBase*, NativeBoolean> isReleasable;
         /// <summary>Virtual method pointer for `~PxPruningStructure`</summary>
         public delegate* unmanaged[Cdecl]<PxPruningStructure*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isKindOf`</summary>
-        public delegate* unmanaged[Cdecl]<PxPruningStructure*, byte*, bool> isKindOf;
+        public delegate* unmanaged[Cdecl]<PxPruningStructure*, byte*, NativeBoolean> isKindOf;
         /// <summary>Virtual method pointer for `getRigidActors`</summary>
         public delegate* unmanaged[Cdecl]<PxPruningStructure*, PxRigidActor**, uint, uint, uint> getRigidActors;
         /// <summary>Virtual method pointer for `getNbRigidActors`</summary>

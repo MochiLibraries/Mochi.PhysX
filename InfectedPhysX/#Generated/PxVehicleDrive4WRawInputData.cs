@@ -20,7 +20,7 @@ public unsafe partial struct PxVehicleDrive4WRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setDigitalAccel@PxVehicleDrive4WRawInputData@physx@@QEAAX_N@Z", ExactSpelling = true)]
-    private static extern void setDigitalAccel_PInvoke(PxVehicleDrive4WRawInputData* @this, bool accelKeyPressed);
+    private static extern void setDigitalAccel_PInvoke(PxVehicleDrive4WRawInputData* @this, [MarshalAs(UnmanagedType.I1)] bool accelKeyPressed);
 
     public unsafe void setDigitalAccel(bool accelKeyPressed)
     {
@@ -29,7 +29,7 @@ public unsafe partial struct PxVehicleDrive4WRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setDigitalBrake@PxVehicleDrive4WRawInputData@physx@@QEAAX_N@Z", ExactSpelling = true)]
-    private static extern void setDigitalBrake_PInvoke(PxVehicleDrive4WRawInputData* @this, bool brakeKeyPressed);
+    private static extern void setDigitalBrake_PInvoke(PxVehicleDrive4WRawInputData* @this, [MarshalAs(UnmanagedType.I1)] bool brakeKeyPressed);
 
     public unsafe void setDigitalBrake(bool brakeKeyPressed)
     {
@@ -38,7 +38,7 @@ public unsafe partial struct PxVehicleDrive4WRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setDigitalHandbrake@PxVehicleDrive4WRawInputData@physx@@QEAAX_N@Z", ExactSpelling = true)]
-    private static extern void setDigitalHandbrake_PInvoke(PxVehicleDrive4WRawInputData* @this, bool handbrakeKeyPressed);
+    private static extern void setDigitalHandbrake_PInvoke(PxVehicleDrive4WRawInputData* @this, [MarshalAs(UnmanagedType.I1)] bool handbrakeKeyPressed);
 
     public unsafe void setDigitalHandbrake(bool handbrakeKeyPressed)
     {
@@ -47,7 +47,7 @@ public unsafe partial struct PxVehicleDrive4WRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setDigitalSteerLeft@PxVehicleDrive4WRawInputData@physx@@QEAAX_N@Z", ExactSpelling = true)]
-    private static extern void setDigitalSteerLeft_PInvoke(PxVehicleDrive4WRawInputData* @this, bool steerLeftKeyPressed);
+    private static extern void setDigitalSteerLeft_PInvoke(PxVehicleDrive4WRawInputData* @this, [MarshalAs(UnmanagedType.I1)] bool steerLeftKeyPressed);
 
     public unsafe void setDigitalSteerLeft(bool steerLeftKeyPressed)
     {
@@ -56,7 +56,7 @@ public unsafe partial struct PxVehicleDrive4WRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setDigitalSteerRight@PxVehicleDrive4WRawInputData@physx@@QEAAX_N@Z", ExactSpelling = true)]
-    private static extern void setDigitalSteerRight_PInvoke(PxVehicleDrive4WRawInputData* @this, bool steerRightKeyPressed);
+    private static extern void setDigitalSteerRight_PInvoke(PxVehicleDrive4WRawInputData* @this, [MarshalAs(UnmanagedType.I1)] bool steerRightKeyPressed);
 
     public unsafe void setDigitalSteerRight(bool steerRightKeyPressed)
     {
@@ -65,6 +65,7 @@ public unsafe partial struct PxVehicleDrive4WRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getDigitalAccel@PxVehicleDrive4WRawInputData@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool getDigitalAccel_PInvoke(PxVehicleDrive4WRawInputData* @this);
 
     public unsafe bool getDigitalAccel()
@@ -74,6 +75,7 @@ public unsafe partial struct PxVehicleDrive4WRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getDigitalBrake@PxVehicleDrive4WRawInputData@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool getDigitalBrake_PInvoke(PxVehicleDrive4WRawInputData* @this);
 
     public unsafe bool getDigitalBrake()
@@ -83,6 +85,7 @@ public unsafe partial struct PxVehicleDrive4WRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getDigitalHandbrake@PxVehicleDrive4WRawInputData@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool getDigitalHandbrake_PInvoke(PxVehicleDrive4WRawInputData* @this);
 
     public unsafe bool getDigitalHandbrake()
@@ -92,6 +95,7 @@ public unsafe partial struct PxVehicleDrive4WRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getDigitalSteerLeft@PxVehicleDrive4WRawInputData@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool getDigitalSteerLeft_PInvoke(PxVehicleDrive4WRawInputData* @this);
 
     public unsafe bool getDigitalSteerLeft()
@@ -101,6 +105,7 @@ public unsafe partial struct PxVehicleDrive4WRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getDigitalSteerRight@PxVehicleDrive4WRawInputData@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool getDigitalSteerRight_PInvoke(PxVehicleDrive4WRawInputData* @this);
 
     public unsafe bool getDigitalSteerRight()
@@ -182,7 +187,7 @@ public unsafe partial struct PxVehicleDrive4WRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setGearUp@PxVehicleDrive4WRawInputData@physx@@QEAAX_N@Z", ExactSpelling = true)]
-    private static extern void setGearUp_PInvoke(PxVehicleDrive4WRawInputData* @this, bool gearUpKeyPressed);
+    private static extern void setGearUp_PInvoke(PxVehicleDrive4WRawInputData* @this, [MarshalAs(UnmanagedType.I1)] bool gearUpKeyPressed);
 
     public unsafe void setGearUp(bool gearUpKeyPressed)
     {
@@ -191,7 +196,7 @@ public unsafe partial struct PxVehicleDrive4WRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setGearDown@PxVehicleDrive4WRawInputData@physx@@QEAAX_N@Z", ExactSpelling = true)]
-    private static extern void setGearDown_PInvoke(PxVehicleDrive4WRawInputData* @this, bool gearDownKeyPressed);
+    private static extern void setGearDown_PInvoke(PxVehicleDrive4WRawInputData* @this, [MarshalAs(UnmanagedType.I1)] bool gearDownKeyPressed);
 
     public unsafe void setGearDown(bool gearDownKeyPressed)
     {
@@ -200,6 +205,7 @@ public unsafe partial struct PxVehicleDrive4WRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getGearUp@PxVehicleDrive4WRawInputData@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool getGearUp_PInvoke(PxVehicleDrive4WRawInputData* @this);
 
     public unsafe bool getGearUp()
@@ -209,6 +215,7 @@ public unsafe partial struct PxVehicleDrive4WRawInputData
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getGearDown@PxVehicleDrive4WRawInputData@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool getGearDown_PInvoke(PxVehicleDrive4WRawInputData* @this);
 
     public unsafe bool getGearDown()
@@ -221,9 +228,9 @@ public unsafe partial struct PxVehicleDrive4WRawInputData
 
     [FieldOffset(16)] public ConstantArray_physx__UNICODE_003A____UNICODE_003A__PxReal_5 mRawAnalogInputs;
 
-    [FieldOffset(36)] public bool mGearUp;
+    [FieldOffset(36)] [MarshalAs(UnmanagedType.I1)] public bool mGearUp;
 
-    [FieldOffset(37)] public bool mGearDown;
+    [FieldOffset(37)] [MarshalAs(UnmanagedType.I1)] public bool mGearDown;
 
 
     [FieldOffset(0)] public VirtualMethodTable* VirtualMethodTablePointer;

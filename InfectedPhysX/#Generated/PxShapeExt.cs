@@ -11,9 +11,11 @@ public unsafe partial struct PxShapeExt
     public static extern uint raycast(PxShape* shape, PxRigidActor* actor, PxVec3* rayOrigin, PxVec3* rayDir, float maxDist, PxHitFlags hitFlags, uint maxHits, PxRaycastHit* rayHits);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?overlap@PxShapeExt@physx@@SA_NAEBVPxShape@2@AEBVPxRigidActor@2@AEBVPxGeometry@2@AEBVPxTransform@2@@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool overlap(PxShape* shape, PxRigidActor* actor, PxGeometry* otherGeom, PxTransform* otherGeomPose);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?sweep@PxShapeExt@physx@@SA_NAEBVPxShape@2@AEBVPxRigidActor@2@AEBVPxVec3@2@MAEBVPxGeometry@2@AEBVPxTransform@2@AEAUPxSweepHit@2@V?$PxFlags@W4Enum@PxHitFlag@physx@@G@2@@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool sweep(PxShape* shape, PxRigidActor* actor, PxVec3* unitDir, float distance, PxGeometry* otherGeom, PxTransform* otherGeomPose, PxSweepHit* sweepHit, PxHitFlags hitFlags);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getWorldBounds@PxShapeExt@physx@@SA?AVPxBounds3@2@AEBVPxShape@2@AEBVPxRigidActor@2@M@Z", ExactSpelling = true)]

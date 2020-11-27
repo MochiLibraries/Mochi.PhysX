@@ -35,6 +35,7 @@ public unsafe partial struct PxHeightFieldDesc
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxHeightFieldDesc@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxHeightFieldDesc* @this);
 
     public unsafe bool isValid()

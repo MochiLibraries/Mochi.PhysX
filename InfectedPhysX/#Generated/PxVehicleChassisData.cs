@@ -22,6 +22,7 @@ public unsafe partial struct PxVehicleChassisData
     [FieldOffset(28)] public float pad;
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleChassisData@physx@@AEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxVehicleChassisData* @this);
 
     public unsafe bool isValid()

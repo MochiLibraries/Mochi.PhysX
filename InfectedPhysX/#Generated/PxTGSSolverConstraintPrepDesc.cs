@@ -18,13 +18,13 @@ public unsafe partial struct PxTGSSolverConstraintPrepDesc
 
     [FieldOffset(168)] public void* writeback;
 
-    [FieldOffset(176)] public bool disablePreprocessing;
+    [FieldOffset(176)] [MarshalAs(UnmanagedType.I1)] public bool disablePreprocessing;
 
-    [FieldOffset(177)] public bool improvedSlerp;
+    [FieldOffset(177)] [MarshalAs(UnmanagedType.I1)] public bool improvedSlerp;
 
-    [FieldOffset(178)] public bool driveLimitsAreForces;
+    [FieldOffset(178)] [MarshalAs(UnmanagedType.I1)] public bool driveLimitsAreForces;
 
-    [FieldOffset(179)] public bool extendedLimits;
+    [FieldOffset(179)] [MarshalAs(UnmanagedType.I1)] public bool extendedLimits;
 
     [FieldOffset(180)] public PxVec3 body0WorldOffset;
 

@@ -35,7 +35,7 @@ public unsafe partial struct PxContactStreamIterator
 
     [FieldOffset(68)] public uint forceNoResponse;
 
-    [FieldOffset(72)] public bool pointStepped;
+    [FieldOffset(72)] [MarshalAs(UnmanagedType.I1)] public bool pointStepped;
 
     [FieldOffset(76)] public uint hasFaceIndices;
 
@@ -49,6 +49,7 @@ public unsafe partial struct PxContactStreamIterator
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?hasNextPatch@PxContactStreamIterator@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool hasNextPatch_PInvoke(PxContactStreamIterator* @this);
 
     public unsafe bool hasNextPatch()
@@ -85,6 +86,7 @@ public unsafe partial struct PxContactStreamIterator
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?hasNextContact@PxContactStreamIterator@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool hasNextContact_PInvoke(PxContactStreamIterator* @this);
 
     public unsafe bool hasNextContact()
@@ -256,6 +258,7 @@ public unsafe partial struct PxContactStreamIterator
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?advanceToIndex@PxContactStreamIterator@physx@@QEAA_NI@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool advanceToIndex_PInvoke(PxContactStreamIterator* @this, uint initialIndex);
 
     public unsafe bool advanceToIndex(uint initialIndex)

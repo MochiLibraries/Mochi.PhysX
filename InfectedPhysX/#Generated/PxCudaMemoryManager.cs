@@ -93,17 +93,17 @@ public unsafe partial struct PxCudaMemoryManager
         /// <summary>Virtual method pointer for `alloc`</summary>
         public delegate* unmanaged[Cdecl]<PxCudaMemoryManager*, PxCudaBufferType*, ulong, byte*, int, byte*, PxAllocId, PxCudaBuffer*> alloc_1;
         /// <summary>Virtual method pointer for `free`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaMemoryManager*, PxCudaBufferMemorySpace, ulong, bool> free;
+        public delegate* unmanaged[Cdecl]<PxCudaMemoryManager*, PxCudaBufferMemorySpace, ulong, NativeBoolean> free;
         /// <summary>Virtual method pointer for `realloc`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaMemoryManager*, PxCudaBufferMemorySpace, ulong, ulong, byte*, int, byte*, PxAllocId, bool> realloc;
+        public delegate* unmanaged[Cdecl]<PxCudaMemoryManager*, PxCudaBufferMemorySpace, ulong, ulong, byte*, int, byte*, PxAllocId, NativeBoolean> realloc;
         /// <summary>Virtual method pointer for `getStats`</summary>
         public delegate* unmanaged[Cdecl]<PxCudaMemoryManager*, PxCudaBufferType*, PxCudaMemoryManagerStats*, void> getStats;
         /// <summary>Virtual method pointer for `reserve`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaMemoryManager*, PxCudaBufferType*, ulong, bool> reserve;
+        public delegate* unmanaged[Cdecl]<PxCudaMemoryManager*, PxCudaBufferType*, ulong, NativeBoolean> reserve;
         /// <summary>Virtual method pointer for `setPageSize`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaMemoryManager*, PxCudaBufferType*, ulong, bool> setPageSize;
+        public delegate* unmanaged[Cdecl]<PxCudaMemoryManager*, PxCudaBufferType*, ulong, NativeBoolean> setPageSize;
         /// <summary>Virtual method pointer for `setMaxMemorySize`</summary>
-        public delegate* unmanaged[Cdecl]<PxCudaMemoryManager*, PxCudaBufferType*, ulong, bool> setMaxMemorySize;
+        public delegate* unmanaged[Cdecl]<PxCudaMemoryManager*, PxCudaBufferType*, ulong, NativeBoolean> setMaxMemorySize;
         /// <summary>Virtual method pointer for `getBaseSize`</summary>
         public delegate* unmanaged[Cdecl]<PxCudaMemoryManager*, PxCudaBufferType*, ulong> getBaseSize;
         /// <summary>Virtual method pointer for `getPageSize`</summary>

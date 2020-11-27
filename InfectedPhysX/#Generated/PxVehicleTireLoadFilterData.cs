@@ -35,6 +35,7 @@ public unsafe partial struct PxVehicleTireLoadFilterData
     [FieldOffset(20)] public ConstantArray_physx__UNICODE_003A____UNICODE_003A__PxU32_3 mPad;
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleTireLoadFilterData@physx@@AEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxVehicleTireLoadFilterData* @this);
 
     public unsafe bool isValid()

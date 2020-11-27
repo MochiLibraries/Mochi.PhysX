@@ -16,5 +16,5 @@ public unsafe partial struct PxMutableLinkData
 
     [FieldOffset(28)] public float maxAngularVelocitySq;
 
-    [FieldOffset(32)] public bool disableGravity;
+    [FieldOffset(32)] [MarshalAs(UnmanagedType.I1)] public bool disableGravity;
 }

@@ -35,6 +35,7 @@ public unsafe partial struct PxConvexMeshDesc
     }
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxConvexMeshDesc@physx@@QEBA_NXZ", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool isValid_PInvoke(PxConvexMeshDesc* @this);
 
     public unsafe bool isValid()

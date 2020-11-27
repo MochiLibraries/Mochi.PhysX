@@ -4,6 +4,7 @@ using System.Runtime.InteropServices;
 public unsafe static partial class PxExtensionsAPI
 {
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     public static extern bool PxInitExtensions(PxPhysics* physics, PxPvd* pvd);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]

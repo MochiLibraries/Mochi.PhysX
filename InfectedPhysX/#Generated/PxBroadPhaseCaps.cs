@@ -8,5 +8,5 @@ public unsafe partial struct PxBroadPhaseCaps
 
     [FieldOffset(4)] public uint maxNbObjects;
 
-    [FieldOffset(8)] public bool needsPredefinedBounds;
+    [FieldOffset(8)] [MarshalAs(UnmanagedType.I1)] public bool needsPredefinedBounds;
 }

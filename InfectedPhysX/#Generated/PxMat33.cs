@@ -90,6 +90,7 @@ public unsafe partial struct PxMat33
     public static extern void createDiagonal(out PxMat33 __returnBuffer, PxVec3* d);
 
     [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??8PxMat33@physx@@QEBA_NAEBV01@@Z", ExactSpelling = true)]
+    [return: MarshalAs(UnmanagedType.I1)]
     private static extern bool operator_EqualEqual_PInvoke(PxMat33* @this, PxMat33* m);
 
     public unsafe bool operator_EqualEqual(PxMat33* m)

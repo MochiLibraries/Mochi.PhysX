@@ -156,11 +156,11 @@ public unsafe partial struct PxRevoluteJoint
         /// <summary>Virtual method pointer for `getConcreteTypeName`</summary>
         public delegate* unmanaged[Cdecl]<PxRevoluteJoint*, byte*> getConcreteTypeName;
         /// <summary>Virtual method pointer for `isReleasable`</summary>
-        public delegate* unmanaged[Cdecl]<PxBase*, bool> isReleasable;
+        public delegate* unmanaged[Cdecl]<PxBase*, NativeBoolean> isReleasable;
         /// <summary>Virtual method pointer for `~PxRevoluteJoint`</summary>
         public delegate* unmanaged[Cdecl]<PxRevoluteJoint*, void> __DeletingDestructorPointer;
         /// <summary>Virtual method pointer for `isKindOf`</summary>
-        public delegate* unmanaged[Cdecl]<PxRevoluteJoint*, byte*, bool> isKindOf;
+        public delegate* unmanaged[Cdecl]<PxRevoluteJoint*, byte*, NativeBoolean> isKindOf;
         /// <summary>Virtual method pointer for `setActors`</summary>
         public delegate* unmanaged[Cdecl]<PxJoint*, PxRigidActor*, PxRigidActor*, void> setActors;
         /// <summary>Virtual method pointer for `getActors`</summary>
@@ -182,7 +182,7 @@ public unsafe partial struct PxRevoluteJoint
         /// <summary>Virtual method pointer for `setConstraintFlags`</summary>
         public delegate* unmanaged[Cdecl]<PxJoint*, PxConstraintFlags, void> setConstraintFlags;
         /// <summary>Virtual method pointer for `setConstraintFlag`</summary>
-        public delegate* unmanaged[Cdecl]<PxJoint*, PxConstraintFlags, bool, void> setConstraintFlag;
+        public delegate* unmanaged[Cdecl]<PxJoint*, PxConstraintFlags, NativeBoolean, void> setConstraintFlag;
         /// <summary>Virtual method pointer for `getConstraintFlags`</summary>
         public delegate* unmanaged[Cdecl]<PxJoint*, PxConstraintFlags> getConstraintFlags;
         /// <summary>Virtual method pointer for `setInvMassScale0`</summary>
@@ -218,7 +218,7 @@ public unsafe partial struct PxRevoluteJoint
         /// <summary>Virtual method pointer for `getLimit`</summary>
         public delegate* unmanaged[Cdecl]<PxRevoluteJoint*, out PxJointAngularLimitPair, void> getLimit;
         /// <summary>Virtual method pointer for `setDriveVelocity`</summary>
-        public delegate* unmanaged[Cdecl]<PxRevoluteJoint*, float, bool, void> setDriveVelocity;
+        public delegate* unmanaged[Cdecl]<PxRevoluteJoint*, float, NativeBoolean, void> setDriveVelocity;
         /// <summary>Virtual method pointer for `getDriveVelocity`</summary>
         public delegate* unmanaged[Cdecl]<PxRevoluteJoint*, float> getDriveVelocity;
         /// <summary>Virtual method pointer for `setDriveForceLimit`</summary>
@@ -232,7 +232,7 @@ public unsafe partial struct PxRevoluteJoint
         /// <summary>Virtual method pointer for `setRevoluteJointFlags`</summary>
         public delegate* unmanaged[Cdecl]<PxRevoluteJoint*, PxRevoluteJointFlags, void> setRevoluteJointFlags;
         /// <summary>Virtual method pointer for `setRevoluteJointFlag`</summary>
-        public delegate* unmanaged[Cdecl]<PxRevoluteJoint*, PxRevoluteJointFlags, bool, void> setRevoluteJointFlag;
+        public delegate* unmanaged[Cdecl]<PxRevoluteJoint*, PxRevoluteJointFlags, NativeBoolean, void> setRevoluteJointFlag;
         /// <summary>Virtual method pointer for `getRevoluteJointFlags`</summary>
         public delegate* unmanaged[Cdecl]<PxRevoluteJoint*, PxRevoluteJointFlags> getRevoluteJointFlags;
         /// <summary>Virtual method pointer for `setProjectionLinearTolerance`</summary>

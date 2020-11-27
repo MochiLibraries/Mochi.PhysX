@@ -70,11 +70,11 @@ public unsafe partial struct PxBoxController
         /// <summary>Virtual method pointer for `move`</summary>
         public delegate* unmanaged[Cdecl]<PxController*, PxVec3*, float, float, PxControllerFilters*, PxObstacleContext*, PxControllerCollisionFlags> move;
         /// <summary>Virtual method pointer for `setPosition`</summary>
-        public delegate* unmanaged[Cdecl]<PxController*, PxExtendedVec3*, bool> setPosition;
+        public delegate* unmanaged[Cdecl]<PxController*, PxExtendedVec3*, NativeBoolean> setPosition;
         /// <summary>Virtual method pointer for `getPosition`</summary>
         public delegate* unmanaged[Cdecl]<PxController*, PxExtendedVec3*> getPosition;
         /// <summary>Virtual method pointer for `setFootPosition`</summary>
-        public delegate* unmanaged[Cdecl]<PxController*, PxExtendedVec3*, bool> setFootPosition;
+        public delegate* unmanaged[Cdecl]<PxController*, PxExtendedVec3*, NativeBoolean> setFootPosition;
         /// <summary>Virtual method pointer for `getFootPosition`</summary>
         public delegate* unmanaged[Cdecl]<PxController*, out PxExtendedVec3, void> getFootPosition;
         /// <summary>Virtual method pointer for `getActor`</summary>
@@ -122,10 +122,10 @@ public unsafe partial struct PxBoxController
         /// <summary>Virtual method pointer for `getHalfForwardExtent`</summary>
         public delegate* unmanaged[Cdecl]<PxBoxController*, float> getHalfForwardExtent;
         /// <summary>Virtual method pointer for `setHalfHeight`</summary>
-        public delegate* unmanaged[Cdecl]<PxBoxController*, float, bool> setHalfHeight;
+        public delegate* unmanaged[Cdecl]<PxBoxController*, float, NativeBoolean> setHalfHeight;
         /// <summary>Virtual method pointer for `setHalfSideExtent`</summary>
-        public delegate* unmanaged[Cdecl]<PxBoxController*, float, bool> setHalfSideExtent;
+        public delegate* unmanaged[Cdecl]<PxBoxController*, float, NativeBoolean> setHalfSideExtent;
         /// <summary>Virtual method pointer for `setHalfForwardExtent`</summary>
-        public delegate* unmanaged[Cdecl]<PxBoxController*, float, bool> setHalfForwardExtent;
+        public delegate* unmanaged[Cdecl]<PxBoxController*, float, NativeBoolean> setHalfForwardExtent;
     }
 }
