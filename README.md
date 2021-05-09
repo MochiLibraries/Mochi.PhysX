@@ -20,7 +20,7 @@ Additionally, this project has some third-party dependencies. [See the third-par
 1. Ensure Git submodules are up-to-date with `git submodule update --init --recursive`
 2. Build and run `InfectedPhysX.Generator`
 
-Note: You may see many errors and warnings during generation. This is because Biohazrd doesn't support everything in PhysX tet. These errors only indicate the corresponding APIs were skipped, so the output should still be fine as long as you don't need those APIs.
+Note: You may see many errors and warnings during generation. This is because Biohazrd doesn't support everything in PhysX yet. These errors only indicate the corresponding APIs were skipped, so the output should still be fine as long as you don't need those APIs.
 
 ## Building the sample
 
@@ -30,13 +30,11 @@ Building/running the sample is currently only supported on Windows x64 with Visu
 
 Tool | Recommended Version
 -----|--------------------
-[Visual Studio 2019](https://visualstudio.microsoft.com/vs/) | 16.8.0 Preview 5.0
-[.NET Core SDK](http://dot.net/) | 5.0 RC2
-[PhysX Visaual Debugger](https://developer.nvidia.com/physx-visual-debugger) | Latest
+[Visual Studio 2019](https://visualstudio.microsoft.com/vs/) | 16.9.4
+[.NET Core SDK](http://dot.net/) | 5.0
+[PhysX Visual Debugger](https://developer.nvidia.com/physx-visual-debugger) | Latest
 
 Visual Studio requires the "Desktop development with C++" and  ".NET desktop development" workloads to be installed.
-
-(Note: I am unsure how whether CMake prefers preview or non-preview Visual Studio. You might need non-preview 2019 installed too.)
 
 ### Build Steps
 

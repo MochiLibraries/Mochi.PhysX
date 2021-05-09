@@ -1,4 +1,9 @@
 ==============================================================================
+Parsing Diagnostics
+==============================================================================
+Note: Successfully late-instantiated 5 template specializations.
+
+==============================================================================
 Translation Diagnostics
 ==============================================================================
 --------------------------- TranslatedParameter aQ ---------------------------
@@ -37,18 +42,6 @@ Warning: Non-constant default parameter values are not supported.
 Warning: Dropped default parameter value '0' because parameter comes before non-defaulted parameter 'shapeFlags'.
 ----------------------- TranslatedParameter shapeFlags -----------------------
 Warning: Non-constant default parameter values are not supported.
-------------- TranslatedParameter <>UnnamedTranslatedParameter_0 -------------
-Warning: Renamed duplicate Biohazrd.TranslatedParameter declaration '<>UnnamedTranslatedParameter' -> '<>UnnamedTranslatedParameter_0'
-------------- TranslatedParameter <>UnnamedTranslatedParameter_1 -------------
-Warning: Renamed duplicate Biohazrd.TranslatedParameter declaration '<>UnnamedTranslatedParameter' -> '<>UnnamedTranslatedParameter_1'
-------------- TranslatedParameter <>UnnamedTranslatedParameter_0 -------------
-Warning: Renamed duplicate Biohazrd.TranslatedParameter declaration '<>UnnamedTranslatedParameter' -> '<>UnnamedTranslatedParameter_0'
-------------- TranslatedParameter <>UnnamedTranslatedParameter_1 -------------
-Warning: Renamed duplicate Biohazrd.TranslatedParameter declaration '<>UnnamedTranslatedParameter' -> '<>UnnamedTranslatedParameter_1'
-------------- TranslatedParameter <>UnnamedTranslatedParameter_0 -------------
-Warning: Renamed duplicate Biohazrd.TranslatedParameter declaration '<>UnnamedTranslatedParameter' -> '<>UnnamedTranslatedParameter_0'
-------------- TranslatedParameter <>UnnamedTranslatedParameter_1 -------------
-Warning: Renamed duplicate Biohazrd.TranslatedParameter declaration '<>UnnamedTranslatedParameter' -> '<>UnnamedTranslatedParameter_1'
 ------------------------- TranslatedParameter flags --------------------------
 Warning: Non-constant default parameter values are not supported.
 ------------------------- TranslatedParameter flags --------------------------
@@ -69,12 +62,6 @@ Warning: Non-constant default parameter values are not supported.
 Warning: Non-constant default parameter values are not supported.
 ----------------------- TranslatedParameter allocator ------------------------
 Warning: Non-constant default parameter values are not supported.
-------------- TranslatedParameter <>UnnamedTranslatedParameter_0 -------------
-Warning: Renamed duplicate Biohazrd.TranslatedParameter declaration '<>UnnamedTranslatedParameter' -> '<>UnnamedTranslatedParameter_0'
-------------- TranslatedParameter <>UnnamedTranslatedParameter_1 -------------
-Warning: Renamed duplicate Biohazrd.TranslatedParameter declaration '<>UnnamedTranslatedParameter' -> '<>UnnamedTranslatedParameter_1'
-------------- TranslatedParameter <>UnnamedTranslatedParameter_2 -------------
-Warning: Renamed duplicate Biohazrd.TranslatedParameter declaration '<>UnnamedTranslatedParameter' -> '<>UnnamedTranslatedParameter_2'
 ----------------------- TranslatedParameter shapeFlags -----------------------
 Warning: Non-constant default parameter values are not supported.
 ----------------------- TranslatedParameter shapeFlags -----------------------
@@ -107,14 +94,6 @@ Warning: Renamed duplicate Biohazrd.TranslatedEnum declaration '<>UnnamedTransla
 Warning: Renamed duplicate Biohazrd.TranslatedEnum declaration '<>UnnamedTranslatedEnum' -> '<>UnnamedTranslatedEnum_1'
 ------------------ TranslatedEnum <>UnnamedTranslatedEnum_2 ------------------
 Warning: Renamed duplicate Biohazrd.TranslatedEnum declaration '<>UnnamedTranslatedEnum' -> '<>UnnamedTranslatedEnum_2'
----------------------- TranslatedFunction operator_Pipe ----------------------
-Warning: Type '`PxFlags<PxArticulationAxis::Enum, physx::PxU8>`' could not be transformed and was kludged into a System.Byte.
----------------------- TranslatedFunction operator_Amp -----------------------
-Warning: Type '`PxFlags<PxArticulationAxis::Enum, physx::PxU8>`' could not be transformed and was kludged into a System.Byte.
---------------------- TranslatedFunction operator_Tilde ----------------------
-Warning: Type '`PxFlags<PxArticulationAxis::Enum, physx::PxU8>`' could not be transformed and was kludged into a System.Byte.
------------- TranslatedFunction PxDefaultSimulationFilterShader__ ------------
-Warning: Function PxDefaultSimulationFilterShader automatically renamed to avoid collision with containing type.
 ---------------------- TranslatedParameter shapeOffset -----------------------
 Warning: Non-constant default parameter values are not supported.
 ---------------------- TranslatedParameter shapeOffset -----------------------
@@ -133,8 +112,6 @@ Warning: Non-constant default parameter values are not supported.
 ==============================================================================
 Broken Declarations
 ==============================================================================
---------------------- TranslatedNormalField mTorqueCurve ---------------------
-Error: Kludge failure: '`PxFixedSizeLookupTable<eMAX_NB_ENGINE_TORQUE_CURVE_ENTRIES>`' of size 80 could not be kludged into any C# built-in types.
 ----------- TranslatedUnsupportedDeclaration PxCreateRepXObject_1 ------------
 Warning at PxRepXSerializer.h:128: Templates are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxCreateRepXObject' -> 'PxCreateRepXObject_1'
@@ -143,40 +120,6 @@ Error: Declarations not supported by Biohazrd cannot be translated to C#.
 Warning at PxRepXSerializer.h:110: Templates are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxCreateRepXObject' -> 'PxCreateRepXObject_0'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_29 ---------------
-Warning at PxJoint.h:78: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_29'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_28 ---------------
-Warning at PxJoint.h:77: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_28'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_27 ---------------
-Warning at PxJoint.h:76: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_27'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_26 ---------------
-Warning at PxJoint.h:75: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_26'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_25 ---------------
-Warning at PxJoint.h:74: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_25'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_24 ---------------
-Warning at PxJoint.h:73: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_24'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_23 ---------------
-Warning at PxJoint.h:72: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_23'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_22 ---------------
-Warning at PxJoint.h:71: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_22'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
-------------------- TranslatedNormalField materialIndices --------------------
-Error: Kludge failure: '`PxTypedStridedData<physx::PxMaterialTableIndex>`' of size 16 could not be kludged into any C# built-in types.
 -------- TranslatedUnsupportedDeclaration PxSerializerDefaultAdapter ---------
 Warning at PxSerializer.h:150: Templates are not supported.
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
@@ -252,94 +195,6 @@ Error: Declarations not supported by Biohazrd cannot be translated to C#.
 Warning at PxBase.h:101: Templates are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'is' -> 'is_0'
 Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_21 ---------------
-Warning at PxTypeInfo.h:121: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_21'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_20 ---------------
-Warning at PxTypeInfo.h:120: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_20'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_19 ---------------
-Warning at PxTypeInfo.h:119: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_19'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_18 ---------------
-Warning at PxTypeInfo.h:118: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_18'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_17 ---------------
-Warning at PxTypeInfo.h:117: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_17'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_16 ---------------
-Warning at PxTypeInfo.h:116: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_16'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_15 ---------------
-Warning at PxTypeInfo.h:115: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_15'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_14 ---------------
-Warning at PxTypeInfo.h:114: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_14'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_13 ---------------
-Warning at PxTypeInfo.h:113: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_13'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_12 ---------------
-Warning at PxTypeInfo.h:112: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_12'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_11 ---------------
-Warning at PxTypeInfo.h:111: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_11'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_10 ---------------
-Warning at PxTypeInfo.h:110: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_10'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_9 ----------------
-Warning at PxTypeInfo.h:109: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_9'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_8 ----------------
-Warning at PxTypeInfo.h:108: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_8'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_7 ----------------
-Warning at PxTypeInfo.h:107: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_7'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_6 ----------------
-Warning at PxTypeInfo.h:106: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_6'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_5 ----------------
-Warning at PxTypeInfo.h:105: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_5'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_4 ----------------
-Warning at PxTypeInfo.h:104: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_4'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_3 ----------------
-Warning at PxTypeInfo.h:103: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_3'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_2 ----------------
-Warning at PxTypeInfo.h:102: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_2'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_1 ----------------
-Warning at PxTypeInfo.h:101: Templates specializations are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_1'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
---------------- TranslatedUnsupportedDeclaration PxTypeInfo_0 ----------------
-Warning at PxTypeInfo.h:91: Templates are not supported.
-Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'PxTypeInfo' -> 'PxTypeInfo_0'
-Error: Declarations not supported by Biohazrd cannot be translated to C#.
 -------------- TranslatedUnsupportedDeclaration readExtraData_1 --------------
 Warning at PxSerialFramework.h:243: Templates are not supported.
 Warning: Renamed duplicate Biohazrd.TranslatedUnsupportedDeclaration declaration 'readExtraData' -> 'readExtraData_1'
@@ -373,34 +228,25 @@ Generation Diagnostics
 Error: Could not emit TranslatedNormalField userRaycastResultBuffer @ TranslatedLibrary.PxBatchQueryMemory: Failed to resolve `Ref resolved by PxBatchQueryResult` during emit time.
 Error: Could not emit TranslatedNormalField userSweepResultBuffer @ TranslatedLibrary.PxBatchQueryMemory: Failed to resolve `Ref resolved by PxBatchQueryResult` during emit time.
 Error: Could not emit TranslatedNormalField userOverlapResultBuffer @ TranslatedLibrary.PxBatchQueryMemory: Failed to resolve `Ref resolved by PxBatchQueryResult` during emit time.
-Error: Could not emit TranslatedNormalField preFilterShader @ TranslatedLibrary.PxBatchQueryDesc: Failed to resolve `Ref resolved by PxFlags` during emit time.
-Error: Could not emit TranslatedFunction getPreFilterShader @ TranslatedLibrary.PxBatchQuery: Failed to resolve `Ref resolved by PxFlags` during emit time.
-Error: Could not emit TranslatedVTableEntry getPreFilterShader @ TranslatedLibrary.PxBatchQuery.getPreFilterShader: Failed to resolve `Ref resolved by PxFlags` during emit time.
 Error: Could not emit TranslatedNormalField materialIndex0 @ TranslatedLibrary.PxHeightFieldSample: Failed to resolve `Ref resolved by PxBitAndDataT` during emit time.
 Error: Could not emit TranslatedNormalField materialIndex1 @ TranslatedLibrary.PxHeightFieldSample: Failed to resolve `Ref resolved by PxBitAndDataT` during emit time.
-Error: Could not emit TranslatedNormalField filterShader @ TranslatedLibrary.PxSceneDesc: Failed to resolve `Ref resolved by PxFlags` during emit time.
-Error: Could not emit TranslatedNormalField filterShader @ TranslatedLibrary.PxSceneDesc: Failed to resolve `Ref resolved by PxFlags` during emit time.
-Error: Could not emit TranslatedFunction getFilterShader @ TranslatedLibrary.PxScene: Failed to resolve `Ref resolved by PxFlags` during emit time.
-Error: Could not emit TranslatedFunction getFilterShader @ TranslatedLibrary.PxScene: Failed to resolve `Ref resolved by PxFlags` during emit time.
 Error: Could not emit TranslatedParameter hitCall @ TranslatedLibrary.PxScene.raycast: Failed to resolve `Ref resolved by PxHitCallback` during emit time.
 Error: Could not emit TranslatedParameter hitCall @ TranslatedLibrary.PxScene.sweep: Failed to resolve `Ref resolved by PxHitCallback` during emit time.
 Error: Could not emit TranslatedParameter hitCall @ TranslatedLibrary.PxScene.overlap: Failed to resolve `Ref resolved by PxHitCallback` during emit time.
-Error: Could not emit TranslatedVTableEntry getFilterShader @ TranslatedLibrary.PxScene.getFilterShader: Failed to resolve `Ref resolved by PxFlags` during emit time.
-Error: Could not emit TranslatedVTableEntry getFilterShader @ TranslatedLibrary.PxScene.getFilterShader: Failed to resolve `Ref resolved by PxFlags` during emit time.
 Error: Could not emit TranslatedVTableEntry raycast @ TranslatedLibrary.PxScene.raycast: Failed to resolve `Ref resolved by PxHitCallback` during emit time.
 Error: Could not emit TranslatedVTableEntry sweep @ TranslatedLibrary.PxScene.sweep: Failed to resolve `Ref resolved by PxHitCallback` during emit time.
 Error: Could not emit TranslatedVTableEntry overlap @ TranslatedLibrary.PxScene.overlap: Failed to resolve `Ref resolved by PxHitCallback` during emit time.
+Error: Could not emit TranslatedNormalField materialIndices @ TranslatedLibrary.PxTriangleMeshDesc: Failed to resolve `Ref resolved by PxTypedStridedData` during emit time.
 Error: Could not emit TranslatedNormalField mFile @ TranslatedLibrary.PxDefaultFileOutputStream: Failed to resolve `Ref resolved by _iobuf` during emit time.
 Error: Could not emit TranslatedNormalField mFile @ TranslatedLibrary.PxDefaultFileInputData: Failed to resolve `Ref resolved by _iobuf` during emit time.
-Error: Could not emit TranslatedParameter outputFlags @ TranslatedLibrary.PxSceneQueryExt.raycastSingle: Failed to resolve `Ref resolved by PxFlags` during emit time.
-Error: Could not emit TranslatedParameter outputFlags @ TranslatedLibrary.PxSceneQueryExt.raycastMultiple: Failed to resolve `Ref resolved by PxFlags` during emit time.
-Error: Could not emit TranslatedParameter queryFlags @ TranslatedLibrary.PxSceneQueryExt.sweepAny: Failed to resolve `Ref resolved by PxFlags` during emit time.
-Error: Could not emit TranslatedParameter outputFlags @ TranslatedLibrary.PxSceneQueryExt.sweepSingle: Failed to resolve `Ref resolved by PxFlags` during emit time.
-Error: Could not emit TranslatedParameter outputFlags @ TranslatedLibrary.PxSceneQueryExt.sweepMultiple: Failed to resolve `Ref resolved by PxFlags` during emit time.
+Error: Could not emit TranslatedNormalField mTorqueCurve @ TranslatedLibrary.PxVehicleEngineData: Failed to resolve `Ref resolved by PxFixedSizeLookupTable` during emit time.
 Error: Could not emit TranslatedNormalField mWheels4SimData @ TranslatedLibrary.PxVehicleWheelsSimData: Failed to resolve `Ref resolved by PxVehicleWheels4SimData` during emit time.
-Error: Could not emit TranslatedParameter sceneQueryResults @ TranslatedLibrary.PxVehicleUpdate.PxVehicleSuspensionRaycasts: Failed to resolve `Ref resolved by PxBatchQueryResult` during emit time.
-Error: Could not emit TranslatedParameter sceneQueryResults @ TranslatedLibrary.PxVehicleUpdate.PxVehicleSuspensionSweeps: Failed to resolve `Ref resolved by PxBatchQueryResult` during emit time.
-Error: Could not emit TranslatedParameter steerVsForwardSpeedTable @ TranslatedLibrary.PxVehicleUtilControl.PxVehicleDrive4WSmoothDigitalRawInputsAndSetAnalogInputs: ClangTypeReference is not supported by the C# output generator.
-Error: Could not emit TranslatedParameter steerVsForwardSpeedTable @ TranslatedLibrary.PxVehicleUtilControl.PxVehicleDrive4WSmoothAnalogRawInputsAndSetAnalogInputs: ClangTypeReference is not supported by the C# output generator.
-Error: Could not emit TranslatedParameter steerVsForwardSpeedTable @ TranslatedLibrary.PxVehicleUtilControl.PxVehicleDriveNWSmoothDigitalRawInputsAndSetAnalogInputs: ClangTypeReference is not supported by the C# output generator.
-Error: Could not emit TranslatedParameter steerVsForwardSpeedTable @ TranslatedLibrary.PxVehicleUtilControl.PxVehicleDriveNWSmoothAnalogRawInputsAndSetAnalogInputs: ClangTypeReference is not supported by the C# output generator.
+Error: Could not emit TranslatedFunction operator_Pipe @ TranslatedLibrary.Globals: Failed to resolve `Ref resolved by PxFlags` during emit time.
+Error: Could not emit TranslatedFunction operator_Amp @ TranslatedLibrary.Globals: Failed to resolve `Ref resolved by PxFlags` during emit time.
+Error: Could not emit TranslatedFunction operator_Tilde @ TranslatedLibrary.Globals: Failed to resolve `Ref resolved by PxFlags` during emit time.
+Error: Could not emit TranslatedParameter sceneQueryResults @ TranslatedLibrary.Globals.PxVehicleSuspensionRaycasts: Failed to resolve `Ref resolved by PxBatchQueryResult` during emit time.
+Error: Could not emit TranslatedParameter sceneQueryResults @ TranslatedLibrary.Globals.PxVehicleSuspensionSweeps: Failed to resolve `Ref resolved by PxBatchQueryResult` during emit time.
+Error: Could not emit TranslatedParameter steerVsForwardSpeedTable @ TranslatedLibrary.Globals.PxVehicleDrive4WSmoothDigitalRawInputsAndSetAnalogInputs: Failed to resolve `Ref resolved by PxFixedSizeLookupTable` during emit time.
+Error: Could not emit TranslatedParameter steerVsForwardSpeedTable @ TranslatedLibrary.Globals.PxVehicleDrive4WSmoothAnalogRawInputsAndSetAnalogInputs: Failed to resolve `Ref resolved by PxFixedSizeLookupTable` during emit time.
+Error: Could not emit TranslatedParameter steerVsForwardSpeedTable @ TranslatedLibrary.Globals.PxVehicleDriveNWSmoothDigitalRawInputsAndSetAnalogInputs: Failed to resolve `Ref resolved by PxFixedSizeLookupTable` during emit time.
+Error: Could not emit TranslatedParameter steerVsForwardSpeedTable @ TranslatedLibrary.Globals.PxVehicleDriveNWSmoothAnalogRawInputsAndSetAnalogInputs: Failed to resolve `Ref resolved by PxFixedSizeLookupTable` during emit time.

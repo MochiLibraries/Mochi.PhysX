@@ -2,6 +2,7 @@
 // https://github.com/InfectedLibraries/PhysX/blob/909a7c4fe940154be8c1aca19d655137435dd2f5/physx/snippets/snippethelloworld/SnippetHelloWorld.cpp
 // Some quirks due to unimplemented features or bugs in Biohazrd are marked with "BIOQUIRK" comments.
 // This sample does not necessarily represent the final shape of how Biohazrd will expose C++ classes to C#.
+using PhysX;
 using System;
 using System.Diagnostics;
 using System.Reflection;
@@ -10,6 +11,7 @@ using System.Text;
 // Switch between these to change the allocator implementation:
 using Allocator = InfectedPhysX.Sample.BasicAllocator;
 //using Allocator = InfectedPhysX.Sample.LoggingAllocator;
+using static PhysX.Globals;
 
 namespace InfectedPhysX.Sample
 {
@@ -34,7 +36,7 @@ namespace InfectedPhysX.Sample
             //---------------------------------------------------------------------------------------------------------------------------------------
             Console.WriteLine("Initializing foundation");
             const uint PX_PHYSICS_VERSION = (4 << 24) + (1 << 16) + (1 << 8);
-            PxFoundation* foundation = PxFoundation.PxCreateFoundation(PX_PHYSICS_VERSION, &allocator, &errorCallback);
+            PxFoundation* foundation = PxCreateFoundation(PX_PHYSICS_VERSION, &allocator, &errorCallback);
 
             if (foundation == null)
             {
@@ -44,12 +46,12 @@ namespace InfectedPhysX.Sample
 
             //---------------------------------------------------------------------------------------------------------------------------------------
             Console.WriteLine("Initializing Pvd...");
-            PxPvd* pvd = PxPvd.PxCreatePvd(foundation);
+            PxPvd* pvd = PxCreatePvd(foundation);
 
             PxPvdTransport* transport;
             byte[] host = Encoding.ASCII.GetBytes("127.0.0.1");
             fixed (byte* hostP = host)
-            { transport = PxPvdTransport.PxDefaultPvdSocketTransportCreate(hostP, 5425, 10); }
+            { transport = PxDefaultPvdSocketTransportCreate(hostP, 5425, 10); }
 
             Console.WriteLine("Connecting to Pvd...");
             pvd->connect(transport, PxPvdInstrumentationFlags.eALL);
@@ -58,7 +60,7 @@ namespace InfectedPhysX.Sample
             Console.WriteLine("Initializing physics");
             PxTolerancesScale scale = default;
             scale.Constructor();
-            PxPhysics* physics = PxPhysics.PxCreatePhysics(PX_PHYSICS_VERSION, foundation, &scale, trackOutstandingAllocations: true, pvd);
+            PxPhysics* physics = PxCreatePhysics(PX_PHYSICS_VERSION, foundation, &scale, trackOutstandingAllocations: true, pvd);
 
             if (physics == null)
             {
@@ -68,7 +70,7 @@ namespace InfectedPhysX.Sample
 
             //---------------------------------------------------------------------------------------------------------------------------------------
             Console.WriteLine("Creating dispatcher");
-            PxDefaultCpuDispatcher* dispatcher = PxDefaultCpuDispatcher.PxDefaultCpuDispatcherCreate(2, null);
+            PxDefaultCpuDispatcher* dispatcher = PxDefaultCpuDispatcherCreate(2, null);
 
             //---------------------------------------------------------------------------------------------------------------------------------------
             Console.WriteLine("Creating scene");
@@ -77,8 +79,7 @@ namespace InfectedPhysX.Sample
             sceneDescription.gravity = new PxVec3() { x = 0f, y = -9.81f, z = 0f };
             sceneDescription.cpuDispatcher = (PxCpuDispatcher*)dispatcher;
             sceneDescription.filterShader =
-                //BIOQUIRK: This function pointer wasn't translated quite right.
-                (delegate* unmanaged[Cdecl]<uint, PxFilterData, uint, PxFilterData, int*, void*, uint, int>*)
+                (delegate* unmanaged[Cdecl]<uint, PxFilterData, uint, PxFilterData, PxPairFlags*, void*, uint, PxFilterFlags>)
                 //BIOQUIRK: We're basically trying to get a pointer to this function in PhysX.
                 // We can't actually use a function pointer here because C# considers this a managed function (since it could be a managed stub.)
                 //&PxDefaultSimulationFilterShader.PxDefaultSimulationFilterShader__
@@ -114,7 +115,7 @@ namespace InfectedPhysX.Sample
                 },
                 d = 0f
             };
-            PxRigidStatic* groundPlane = PxSimpleFactory.PxCreatePlane(physics, &planeDescription, material);
+            PxRigidStatic* groundPlane = PxCreatePlane(physics, &planeDescription, material);
             scene->addActor((PxActor*)groundPlane, null);
 
             //---------------------------------------------------------------------------------------------------------------------------------------
@@ -186,7 +187,7 @@ namespace InfectedPhysX.Sample
 
                 PxTransform identity = default;
                 identity.Constructor(default(PxIDENTITY));
-                PxRigidDynamic* dynamic = PxSimpleFactory.PxCreateDynamic(physics, &transform, (PxGeometry*)&geometry, material, 10f, &identity);
+                PxRigidDynamic* dynamic = PxCreateDynamic(physics, &transform, (PxGeometry*)&geometry, material, 10f, &identity);
                 dynamic->Base.setAngularDamping(0.5f);
                 dynamic->Base.setLinearVelocity(&velocity);
                 scene->addActor((PxActor*)dynamic);

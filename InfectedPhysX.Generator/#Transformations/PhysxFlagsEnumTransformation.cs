@@ -2,6 +2,7 @@
 using Biohazrd.Transformation;
 using ClangSharp;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Diagnostics;
 using ClangType = ClangSharp.Type;
 
@@ -103,7 +104,7 @@ namespace InfectedPhysX.Generator
                     Name = enumInfo.FlagsTypedef.Name,
                     IsFlags = true,
                     UnderlyingType = new ClangTypeReference(enumInfo.UnderlyingType),
-                    SecondaryDeclarations = declaration.SecondaryDeclarations.AddIfNotNull(enumInfo.FlagsTypedef.Declaration)
+                    ReplacedDeclarations = ImmutableArray.Create<TranslatedDeclaration>(enumInfo.FlagsTypedef)
                 };
             }
 
@@ -113,7 +114,7 @@ namespace InfectedPhysX.Generator
         protected override TransformationResult TransformFunction(TransformationContext context, TranslatedFunction declaration)
         {
             // Remove the PX_FLAGS_OPERATORS, which we define as static operator overloads that return one of the enumerated PxFlags<,> types.
-            if (declaration is { IsOperatorOverload: true, IsInstanceMethod: false, Declaration: FunctionDecl functionDecl } && FlagsCanonicalTypes.Contains(functionDecl.ReturnType.CanonicalType))
+            if (declaration is { SpecialFunctionKind: SpecialFunctionKind.OperatorOverload, IsInstanceMethod: false, Declaration: FunctionDecl functionDecl } && FlagsCanonicalTypes.Contains(functionDecl.ReturnType.CanonicalType))
             { return null; }
 
             return declaration;

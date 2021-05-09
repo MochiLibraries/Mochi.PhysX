@@ -1,4 +1,5 @@
-﻿using Biohazrd;
+﻿#define USE_TOP_LEVEL_STATEMENTS // Workaround for https://github.com/dotnet/roslyn/issues/50591
+using Biohazrd;
 using Biohazrd.CSharp;
 using Biohazrd.OutputGeneration;
 using Biohazrd.Transformation.Common;
@@ -7,6 +8,11 @@ using InfectedPhysX.Generator;
 using System;
 using System.Collections.Immutable;
 using System.IO;
+using System.Runtime.CompilerServices;
+
+#if !USE_TOP_LEVEL_STATEMENTS
+static class Program { static void Main(string[] args) {
+#endif
 
 if (args.Length != 2)
 {
@@ -87,23 +93,35 @@ library = new RemoveExplicitBitFieldPaddingFieldsTransformation().Transform(libr
 library = new AddBaseVTableAliasTransformation().Transform(library);
 library = new ConstOverloadRenameTransformation().Transform(library);
 library = new MakeEverythingPublicTransformation().Transform(library);
-library = new RemoveRemainingTypedefsTransformation().Transform(library);
+library = new CSharpTypeReductionTransformation().Transform(library);
 
-CSharpTypeReductionTransformation typeReductionTransformation = new();
-int iterations = 0;
-do
-{
-    library = typeReductionTransformation.Transform(library);
-    iterations++;
-} while (typeReductionTransformation.ConstantArrayTypesCreated > 0);
-Console.WriteLine($"Finished reducing types in {iterations} iterations.");
-
-library = new LiftAnonymousUnionFieldsTransformation().Transform(library);
 library = new CSharpBuiltinTypeTransformation().Transform(library);
+library = new LiftAnonymousRecordFieldsTransformation().Transform(library);
 library = new KludgeUnknownClangTypesIntoBuiltinTypesTransformation(emitErrorOnFail: true).Transform(library);
 library = new WrapNonBlittableTypesWhereNecessaryTransformation().Transform(library);
+library = new PhysXNamespaceFixupTransformation().Transform(library);
+library = new AddTrampolineMethodOptionsTransformation(MethodImplOptions.AggressiveInlining).Transform(library);
+library = new MoveLooseDeclarationsIntoTypesTransformation
+(
+    // PhysX has a lot of global functions which confuse this transformation.
+    // For example, PxJoint.h has PxSetJointGlobalFrame in the global namespace and involves the type physx::PxJoint.
+    (c, d) => "Globals"
+).Transform(library);
+library = new AutoNameUnnamedParametersTransformation().Transform(library);
+library = new StripUnreferencedLazyDeclarationsTransformation().Transform(library);
 library = new DeduplicateNamesTransformation().Transform(library);
-library = new MoveLooseDeclarationsIntoTypesTransformation().Transform(library);
+library = new OrganizeOutputFilesByNamespaceTransformation("PhysX").Transform(library);
+
+// Generate module definition
+#pragma warning disable CS0618 // Type or member is obsolete
+ModuleDefinitionGenerator.Generate(outputSession, "InfectedPhysX.def", library);
+InlineReferenceFileGenerator.Generate(outputSession, "InfectedPhysX.cpp", library);
+#pragma warning restore CS0618 // Type or member is obsolete
+
+//TODO: Rework things to use Biohazrd's new inline handling:
+// Use InlineExportHelper
+// Rebuild the DLL
+// Use the librarian to identify DLL exports
 
 // Perform validation
 Console.WriteLine("==============================================================================");
@@ -120,16 +138,11 @@ Console.WriteLine("=============================================================
 Console.WriteLine("Emitting translation...");
 Console.WriteLine("==============================================================================");
 
-// Generate module definition
-ModuleDefinitionGenerator.Generate(outputSession, "InfectedPhysX.def", library);
-InlineReferenceFileGenerator.Generate(outputSession, "InfectedPhysX.cpp", library);
-
 ImmutableArray<TranslationDiagnostic> generationDiagnostics = CSharpLibraryGenerator.Generate
 (
     CSharpGenerationOptions.Default with { DumpClangInfo = false },
     outputSession,
-    library,
-    LibraryTranslationMode.OneFilePerType
+    library
 );
 
 // Write out diagnostics log
@@ -142,3 +155,7 @@ using StreamWriter diagnosticsOutput = outputSession.Open<StreamWriter>("Diagnos
 diagnostics.WriteOutDiagnostics(diagnosticsOutput, writeToConsole: true);
 
 outputSession.Dispose();
+
+#if !USE_TOP_LEVEL_STATEMENTS
+}}
+#endif
