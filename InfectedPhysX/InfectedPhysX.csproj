@@ -5,4 +5,10 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <!-- TODO: Move this to its own project and just include each one present -->
+  <ItemGroup Condition="'$(NETCoreSdkRuntimeIdentifier)' == 'win-x64'">
+    <None Include="..\bin\Mochi.PhysX.Native\win-x64\checked\Mochi.PhysX.Native.dll" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\bin\Mochi.PhysX.Native\win-x64\checked\Mochi.PhysX.Native.pdb" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>

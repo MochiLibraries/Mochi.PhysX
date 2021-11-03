@@ -6,72 +6,72 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 32)]
     public unsafe partial struct PxAllocInfo
     {
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxAllocInfo@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper75", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxAllocInfo* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
+        public void Constructor()
         {
             fixed (PxAllocInfo* @this = &this)
             { Constructor_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxAllocInfo@physx@@QEAA@PEBDH0W4Enum@PxAllocId@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper76", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxAllocInfo* @this, byte* file, int line, byte* allocName, PxAllocId allocId);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(byte* file, int line, byte* allocName, PxAllocId allocId)
+        public void Constructor(byte* file, int line, byte* allocName, PxAllocId allocId)
         {
             fixed (PxAllocInfo* @this = &this)
             { Constructor_PInvoke(@this, file, line, allocName, allocId); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getFileName@PxAllocInfo@physx@@QEBAPEBDXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getFileName@PxAllocInfo@physx@@QEBAPEBDXZ", ExactSpelling = true)]
         private static extern byte* getFileName_PInvoke(PxAllocInfo* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe byte* getFileName()
+        public byte* getFileName()
         {
             fixed (PxAllocInfo* @this = &this)
             { return getFileName_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getLine@PxAllocInfo@physx@@QEBAHXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getLine@PxAllocInfo@physx@@QEBAHXZ", ExactSpelling = true)]
         private static extern int getLine_PInvoke(PxAllocInfo* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe int getLine()
+        public int getLine()
         {
             fixed (PxAllocInfo* @this = &this)
             { return getLine_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getAllocName@PxAllocInfo@physx@@QEBAPEBDXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getAllocName@PxAllocInfo@physx@@QEBAPEBDXZ", ExactSpelling = true)]
         private static extern byte* getAllocName_PInvoke(PxAllocInfo* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe byte* getAllocName()
+        public byte* getAllocName()
         {
             fixed (PxAllocInfo* @this = &this)
             { return getAllocName_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getAllocId@PxAllocInfo@physx@@QEBA?AW4Enum@PxAllocId@2@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getAllocId@PxAllocInfo@physx@@QEBA?AW4Enum@PxAllocId@2@XZ", ExactSpelling = true)]
         private static extern PxAllocId getAllocId_PInvoke(PxAllocInfo* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxAllocId getAllocId()
+        public PxAllocId getAllocId()
         {
             fixed (PxAllocInfo* @this = &this)
             { return getAllocId_PInvoke(@this); }

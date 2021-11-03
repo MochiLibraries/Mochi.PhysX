@@ -6,14 +6,14 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxCpuDispatcher
     {
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void submitTask(PxBaseTask* task)
+        public void submitTask(PxBaseTask* task)
         {
             fixed (PxCpuDispatcher* @this = &this)
             { VirtualMethodTablePointer->submitTask(@this, task); }
@@ -21,7 +21,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint getWorkerCount()
+        public uint getWorkerCount()
         {
             fixed (PxCpuDispatcher* @this = &this)
             { return VirtualMethodTablePointer->getWorkerCount(@this); }
@@ -29,7 +29,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
+        public void Destructor()
         {
             fixed (PxCpuDispatcher* @this = &this)
             { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }

@@ -6,28 +6,28 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 16)]
     public unsafe partial struct PxActorShape
     {
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxActorShape@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper102", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxActorShape* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
+        public void Constructor()
         {
             fixed (PxActorShape* @this = &this)
             { Constructor_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxActorShape@physx@@QEAA@PEAVPxRigidActor@1@PEAVPxShape@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper103", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxActorShape* @this, PxRigidActor* a, PxShape* s);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxRigidActor* a, PxShape* s)
+        public void Constructor(PxRigidActor* a, PxShape* s)
         {
             fixed (PxActorShape* @this = &this)
             { Constructor_PInvoke(@this, a, s); }

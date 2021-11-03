@@ -6,19 +6,19 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxDefaultErrorCallback
     {
         [FieldOffset(0)] public PxErrorCallback Base;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxDefaultErrorCallback@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxDefaultErrorCallback@physx@@QEAA@XZ", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxDefaultErrorCallback* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
+        public void Constructor()
         {
             fixed (PxDefaultErrorCallback* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -26,7 +26,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
+        public void Destructor()
         {
             fixed (PxDefaultErrorCallback* @this = &this)
             { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }
@@ -34,7 +34,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void reportError(PxErrorCode code, byte* message, byte* file, int line)
+        public void reportError(PxErrorCode code, byte* message, byte* file, int line)
         {
             fixed (PxDefaultErrorCallback* @this = &this)
             { VirtualMethodTablePointer->reportError(@this, code, message, file, line); }

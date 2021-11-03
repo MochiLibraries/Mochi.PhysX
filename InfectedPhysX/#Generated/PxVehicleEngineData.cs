@@ -6,19 +6,19 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 112)]
     public unsafe partial struct PxVehicleEngineData
     {
         public const int eMAX_NB_ENGINE_TORQUE_CURVE_ENTRIES = 8;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxVehicleEngineData@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper185", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxVehicleEngineData* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
+        public void Constructor()
         {
             fixed (PxVehicleEngineData* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -39,23 +39,23 @@ namespace PhysX
 
         [FieldOffset(100)] public float mDampingRateZeroThrottleClutchDisengaged;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getRecipMOI@PxVehicleEngineData@physx@@QEBAMXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getRecipMOI@PxVehicleEngineData@physx@@QEBAMXZ", ExactSpelling = true)]
         private static extern float getRecipMOI_PInvoke(PxVehicleEngineData* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float getRecipMOI()
+        public float getRecipMOI()
         {
             fixed (PxVehicleEngineData* @this = &this)
             { return getRecipMOI_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getRecipMaxOmega@PxVehicleEngineData@physx@@QEBAMXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getRecipMaxOmega@PxVehicleEngineData@physx@@QEBAMXZ", ExactSpelling = true)]
         private static extern float getRecipMaxOmega_PInvoke(PxVehicleEngineData* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float getRecipMaxOmega()
+        public float getRecipMaxOmega()
         {
             fixed (PxVehicleEngineData* @this = &this)
             { return getRecipMaxOmega_PInvoke(@this); }
@@ -65,24 +65,12 @@ namespace PhysX
 
         [FieldOffset(108)] public float mRecipMaxOmega;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleEngineData@physx@@AEBA_NXZ", ExactSpelling = true)]
-        [return: MarshalAs(UnmanagedType.I1)]
-        private static extern bool isValid_PInvoke(PxVehicleEngineData* @this);
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool isValid()
-        {
-            fixed (PxVehicleEngineData* @this = &this)
-            { return isValid_PInvoke(@this); }
-        }
-
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxVehicleEngineData@physx@@QEAA@W4PxEMPTY@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper186", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxVehicleEngineData* @this, PxEMPTY arg0);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxEMPTY arg0)
+        public void Constructor(PxEMPTY arg0)
         {
             fixed (PxVehicleEngineData* @this = &this)
             { Constructor_PInvoke(@this, arg0); }

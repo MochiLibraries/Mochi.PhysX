@@ -6,50 +6,28 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxSceneWriteLock
     {
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxSceneWriteLock@physx@@AEAA@AEBV01@@Z", ExactSpelling = true)]
-        private static extern void Constructor_PInvoke(PxSceneWriteLock* @this, PxSceneWriteLock* arg0);
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxSceneWriteLock* arg0)
-        {
-            fixed (PxSceneWriteLock* @this = &this)
-            { Constructor_PInvoke(@this, arg0); }
-        }
-
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??4PxSceneWriteLock@physx@@AEAAAEAV01@AEBV01@@Z", ExactSpelling = true)]
-        private static extern PxSceneWriteLock* operator_Equal_PInvoke(PxSceneWriteLock* @this, PxSceneWriteLock* arg0);
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxSceneWriteLock* operator_Equal(PxSceneWriteLock* arg0)
-        {
-            fixed (PxSceneWriteLock* @this = &this)
-            { return operator_Equal_PInvoke(@this, arg0); }
-        }
-
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxSceneWriteLock@physx@@QEAA@AEAVPxScene@1@PEBDI@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper132", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxSceneWriteLock* @this, PxScene* scene, byte* file, uint line);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxScene* scene, byte* file = null, uint line = 0)
+        public void Constructor(PxScene* scene, byte* file = null, uint line = 0)
         {
             fixed (PxSceneWriteLock* @this = &this)
             { Constructor_PInvoke(@this, scene, file, line); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??1PxSceneWriteLock@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper133", ExactSpelling = true)]
         private static extern void Destructor_PInvoke(PxSceneWriteLock* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
+        public void Destructor()
         {
             fixed (PxSceneWriteLock* @this = &this)
             { Destructor_PInvoke(@this); }

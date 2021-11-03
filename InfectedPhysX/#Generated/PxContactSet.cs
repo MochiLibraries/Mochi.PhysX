@@ -6,328 +6,317 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 16)]
     public unsafe partial struct PxContactSet
     {
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getPoint@PxContactSet@physx@@QEBAAEBVPxVec3@2@I@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getPoint@PxContactSet@physx@@QEBAAEBVPxVec3@2@I@Z", ExactSpelling = true)]
         private static extern PxVec3* getPoint_PInvoke(PxContactSet* @this, uint i);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxVec3* getPoint(uint i)
+        public PxVec3* getPoint(uint i)
         {
             fixed (PxContactSet* @this = &this)
             { return getPoint_PInvoke(@this, i); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setPoint@PxContactSet@physx@@QEAAXIAEBVPxVec3@2@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setPoint@PxContactSet@physx@@QEAAXIAEBVPxVec3@2@@Z", ExactSpelling = true)]
         private static extern void setPoint_PInvoke(PxContactSet* @this, uint i, PxVec3* p);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setPoint(uint i, PxVec3* p)
+        public void setPoint(uint i, PxVec3* p)
         {
             fixed (PxContactSet* @this = &this)
             { setPoint_PInvoke(@this, i, p); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getNormal@PxContactSet@physx@@QEBAAEBVPxVec3@2@I@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getNormal@PxContactSet@physx@@QEBAAEBVPxVec3@2@I@Z", ExactSpelling = true)]
         private static extern PxVec3* getNormal_PInvoke(PxContactSet* @this, uint i);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxVec3* getNormal(uint i)
+        public PxVec3* getNormal(uint i)
         {
             fixed (PxContactSet* @this = &this)
             { return getNormal_PInvoke(@this, i); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setNormal@PxContactSet@physx@@QEAAXIAEBVPxVec3@2@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setNormal@PxContactSet@physx@@QEAAXIAEBVPxVec3@2@@Z", ExactSpelling = true)]
         private static extern void setNormal_PInvoke(PxContactSet* @this, uint i, PxVec3* n);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setNormal(uint i, PxVec3* n)
+        public void setNormal(uint i, PxVec3* n)
         {
             fixed (PxContactSet* @this = &this)
             { setNormal_PInvoke(@this, i, n); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getSeparation@PxContactSet@physx@@QEBAMI@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getSeparation@PxContactSet@physx@@QEBAMI@Z", ExactSpelling = true)]
         private static extern float getSeparation_PInvoke(PxContactSet* @this, uint i);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float getSeparation(uint i)
+        public float getSeparation(uint i)
         {
             fixed (PxContactSet* @this = &this)
             { return getSeparation_PInvoke(@this, i); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setSeparation@PxContactSet@physx@@QEAAXIM@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setSeparation@PxContactSet@physx@@QEAAXIM@Z", ExactSpelling = true)]
         private static extern void setSeparation_PInvoke(PxContactSet* @this, uint i, float s);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setSeparation(uint i, float s)
+        public void setSeparation(uint i, float s)
         {
             fixed (PxContactSet* @this = &this)
             { setSeparation_PInvoke(@this, i, s); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getTargetVelocity@PxContactSet@physx@@QEBAAEBVPxVec3@2@I@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getTargetVelocity@PxContactSet@physx@@QEBAAEBVPxVec3@2@I@Z", ExactSpelling = true)]
         private static extern PxVec3* getTargetVelocity_PInvoke(PxContactSet* @this, uint i);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxVec3* getTargetVelocity(uint i)
+        public PxVec3* getTargetVelocity(uint i)
         {
             fixed (PxContactSet* @this = &this)
             { return getTargetVelocity_PInvoke(@this, i); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setTargetVelocity@PxContactSet@physx@@QEAAXIAEBVPxVec3@2@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setTargetVelocity@PxContactSet@physx@@QEAAXIAEBVPxVec3@2@@Z", ExactSpelling = true)]
         private static extern void setTargetVelocity_PInvoke(PxContactSet* @this, uint i, PxVec3* v);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setTargetVelocity(uint i, PxVec3* v)
+        public void setTargetVelocity(uint i, PxVec3* v)
         {
             fixed (PxContactSet* @this = &this)
             { setTargetVelocity_PInvoke(@this, i, v); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getInternalFaceIndex0@PxContactSet@physx@@QEAAII@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getInternalFaceIndex0@PxContactSet@physx@@QEBAII@Z", ExactSpelling = true)]
         private static extern uint getInternalFaceIndex0_PInvoke(PxContactSet* @this, uint i);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint getInternalFaceIndex0(uint i)
+        public uint getInternalFaceIndex0(uint i)
         {
             fixed (PxContactSet* @this = &this)
             { return getInternalFaceIndex0_PInvoke(@this, i); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getInternalFaceIndex1@PxContactSet@physx@@QEAAII@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getInternalFaceIndex1@PxContactSet@physx@@QEBAII@Z", ExactSpelling = true)]
         private static extern uint getInternalFaceIndex1_PInvoke(PxContactSet* @this, uint i);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint getInternalFaceIndex1(uint i)
+        public uint getInternalFaceIndex1(uint i)
         {
             fixed (PxContactSet* @this = &this)
             { return getInternalFaceIndex1_PInvoke(@this, i); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getMaxImpulse@PxContactSet@physx@@QEBAMI@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getMaxImpulse@PxContactSet@physx@@QEBAMI@Z", ExactSpelling = true)]
         private static extern float getMaxImpulse_PInvoke(PxContactSet* @this, uint i);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float getMaxImpulse(uint i)
+        public float getMaxImpulse(uint i)
         {
             fixed (PxContactSet* @this = &this)
             { return getMaxImpulse_PInvoke(@this, i); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setMaxImpulse@PxContactSet@physx@@QEAAXIM@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setMaxImpulse@PxContactSet@physx@@QEAAXIM@Z", ExactSpelling = true)]
         private static extern void setMaxImpulse_PInvoke(PxContactSet* @this, uint i, float s);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setMaxImpulse(uint i, float s)
+        public void setMaxImpulse(uint i, float s)
         {
             fixed (PxContactSet* @this = &this)
             { setMaxImpulse_PInvoke(@this, i, s); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getRestitution@PxContactSet@physx@@QEBAMI@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getRestitution@PxContactSet@physx@@QEBAMI@Z", ExactSpelling = true)]
         private static extern float getRestitution_PInvoke(PxContactSet* @this, uint i);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float getRestitution(uint i)
+        public float getRestitution(uint i)
         {
             fixed (PxContactSet* @this = &this)
             { return getRestitution_PInvoke(@this, i); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setRestitution@PxContactSet@physx@@QEAAXIM@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setRestitution@PxContactSet@physx@@QEAAXIM@Z", ExactSpelling = true)]
         private static extern void setRestitution_PInvoke(PxContactSet* @this, uint i, float r);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setRestitution(uint i, float r)
+        public void setRestitution(uint i, float r)
         {
             fixed (PxContactSet* @this = &this)
             { setRestitution_PInvoke(@this, i, r); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getStaticFriction@PxContactSet@physx@@QEBAMI@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getStaticFriction@PxContactSet@physx@@QEBAMI@Z", ExactSpelling = true)]
         private static extern float getStaticFriction_PInvoke(PxContactSet* @this, uint i);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float getStaticFriction(uint i)
+        public float getStaticFriction(uint i)
         {
             fixed (PxContactSet* @this = &this)
             { return getStaticFriction_PInvoke(@this, i); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setStaticFriction@PxContactSet@physx@@QEAAXIM@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setStaticFriction@PxContactSet@physx@@QEAAXIM@Z", ExactSpelling = true)]
         private static extern void setStaticFriction_PInvoke(PxContactSet* @this, uint i, float f);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setStaticFriction(uint i, float f)
+        public void setStaticFriction(uint i, float f)
         {
             fixed (PxContactSet* @this = &this)
             { setStaticFriction_PInvoke(@this, i, f); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getDynamicFriction@PxContactSet@physx@@QEBAMI@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getDynamicFriction@PxContactSet@physx@@QEBAMI@Z", ExactSpelling = true)]
         private static extern float getDynamicFriction_PInvoke(PxContactSet* @this, uint i);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float getDynamicFriction(uint i)
+        public float getDynamicFriction(uint i)
         {
             fixed (PxContactSet* @this = &this)
             { return getDynamicFriction_PInvoke(@this, i); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setDynamicFriction@PxContactSet@physx@@QEAAXIM@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setDynamicFriction@PxContactSet@physx@@QEAAXIM@Z", ExactSpelling = true)]
         private static extern void setDynamicFriction_PInvoke(PxContactSet* @this, uint i, float f);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setDynamicFriction(uint i, float f)
+        public void setDynamicFriction(uint i, float f)
         {
             fixed (PxContactSet* @this = &this)
             { setDynamicFriction_PInvoke(@this, i, f); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?ignore@PxContactSet@physx@@QEAAXI@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?ignore@PxContactSet@physx@@QEAAXI@Z", ExactSpelling = true)]
         private static extern void ignore_PInvoke(PxContactSet* @this, uint i);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void ignore(uint i)
+        public void ignore(uint i)
         {
             fixed (PxContactSet* @this = &this)
             { ignore_PInvoke(@this, i); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?size@PxContactSet@physx@@QEBAIXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?size@PxContactSet@physx@@QEBAIXZ", ExactSpelling = true)]
         private static extern uint size_PInvoke(PxContactSet* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint size()
+        public uint size()
         {
             fixed (PxContactSet* @this = &this)
             { return size_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getInvMassScale0@PxContactSet@physx@@QEBAMXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getInvMassScale0@PxContactSet@physx@@QEBAMXZ", ExactSpelling = true)]
         private static extern float getInvMassScale0_PInvoke(PxContactSet* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float getInvMassScale0()
+        public float getInvMassScale0()
         {
             fixed (PxContactSet* @this = &this)
             { return getInvMassScale0_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getInvMassScale1@PxContactSet@physx@@QEBAMXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getInvMassScale1@PxContactSet@physx@@QEBAMXZ", ExactSpelling = true)]
         private static extern float getInvMassScale1_PInvoke(PxContactSet* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float getInvMassScale1()
+        public float getInvMassScale1()
         {
             fixed (PxContactSet* @this = &this)
             { return getInvMassScale1_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getInvInertiaScale0@PxContactSet@physx@@QEBAMXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getInvInertiaScale0@PxContactSet@physx@@QEBAMXZ", ExactSpelling = true)]
         private static extern float getInvInertiaScale0_PInvoke(PxContactSet* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float getInvInertiaScale0()
+        public float getInvInertiaScale0()
         {
             fixed (PxContactSet* @this = &this)
             { return getInvInertiaScale0_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getInvInertiaScale1@PxContactSet@physx@@QEBAMXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getInvInertiaScale1@PxContactSet@physx@@QEBAMXZ", ExactSpelling = true)]
         private static extern float getInvInertiaScale1_PInvoke(PxContactSet* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float getInvInertiaScale1()
+        public float getInvInertiaScale1()
         {
             fixed (PxContactSet* @this = &this)
             { return getInvInertiaScale1_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setInvMassScale0@PxContactSet@physx@@QEAAXM@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setInvMassScale0@PxContactSet@physx@@QEAAXM@Z", ExactSpelling = true)]
         private static extern void setInvMassScale0_PInvoke(PxContactSet* @this, float scale);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setInvMassScale0(float scale)
+        public void setInvMassScale0(float scale)
         {
             fixed (PxContactSet* @this = &this)
             { setInvMassScale0_PInvoke(@this, scale); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setInvMassScale1@PxContactSet@physx@@QEAAXM@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setInvMassScale1@PxContactSet@physx@@QEAAXM@Z", ExactSpelling = true)]
         private static extern void setInvMassScale1_PInvoke(PxContactSet* @this, float scale);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setInvMassScale1(float scale)
+        public void setInvMassScale1(float scale)
         {
             fixed (PxContactSet* @this = &this)
             { setInvMassScale1_PInvoke(@this, scale); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setInvInertiaScale0@PxContactSet@physx@@QEAAXM@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setInvInertiaScale0@PxContactSet@physx@@QEAAXM@Z", ExactSpelling = true)]
         private static extern void setInvInertiaScale0_PInvoke(PxContactSet* @this, float scale);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setInvInertiaScale0(float scale)
+        public void setInvInertiaScale0(float scale)
         {
             fixed (PxContactSet* @this = &this)
             { setInvInertiaScale0_PInvoke(@this, scale); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setInvInertiaScale1@PxContactSet@physx@@QEAAXM@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setInvInertiaScale1@PxContactSet@physx@@QEAAXM@Z", ExactSpelling = true)]
         private static extern void setInvInertiaScale1_PInvoke(PxContactSet* @this, float scale);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setInvInertiaScale1(float scale)
+        public void setInvInertiaScale1(float scale)
         {
             fixed (PxContactSet* @this = &this)
             { setInvInertiaScale1_PInvoke(@this, scale); }
-        }
-
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getPatch@PxContactSet@physx@@IEBAPEAUPxContactPatch@2@XZ", ExactSpelling = true)]
-        private static extern PxContactPatch* getPatch_PInvoke(PxContactSet* @this);
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxContactPatch* getPatch()
-        {
-            fixed (PxContactSet* @this = &this)
-            { return getPatch_PInvoke(@this); }
         }
 
         [FieldOffset(0)] public uint mCount;

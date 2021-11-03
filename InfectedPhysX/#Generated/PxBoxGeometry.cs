@@ -6,53 +6,53 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 16)]
     public unsafe partial struct PxBoxGeometry
     {
         [FieldOffset(0)] public PxGeometry Base;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxBoxGeometry@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper82", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxBoxGeometry* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
+        public void Constructor()
         {
             fixed (PxBoxGeometry* @this = &this)
             { Constructor_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxBoxGeometry@physx@@QEAA@MMM@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper83", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxBoxGeometry* @this, float hx, float hy, float hz);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(float hx, float hy, float hz)
+        public void Constructor(float hx, float hy, float hz)
         {
             fixed (PxBoxGeometry* @this = &this)
             { Constructor_PInvoke(@this, hx, hy, hz); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxBoxGeometry@physx@@QEAA@VPxVec3@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper84", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxBoxGeometry* @this, PxVec3* halfExtents_);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxVec3* halfExtents_)
+        public void Constructor(PxVec3* halfExtents_)
         {
             fixed (PxBoxGeometry* @this = &this)
             { Constructor_PInvoke(@this, halfExtents_); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxBoxGeometry@physx@@QEBA_NXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxBoxGeometry@physx@@QEBA_NXZ", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool isValid_PInvoke(PxBoxGeometry* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool isValid()
+        public bool isValid()
         {
             fixed (PxBoxGeometry* @this = &this)
             { return isValid_PInvoke(@this); }

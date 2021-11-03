@@ -2,7 +2,7 @@
   "profiles": {
     "InfectedPhysX.Generator": {
       "commandName": "Project",
-      "commandLineArgs": "\"$(ProjectDir)../external/PhysX/\" \"$(ProjectDir)../InfectedPhysX/#Generated/\""
+      "commandLineArgs": "\"$(ProjectDir)../external/PhysX/\" \"$(ProjectDir)../InfectedPhysX/#Generated/\" \"$(ProjectDir)../Mochi.PhysX.Native/\""
     }
   }
 }

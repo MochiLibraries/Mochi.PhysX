@@ -6,14 +6,14 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxInputStream
     {
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint read(void* dest, uint count)
+        public uint read(void* dest, uint count)
         {
             fixed (PxInputStream* @this = &this)
             { return VirtualMethodTablePointer->read(@this, dest, count); }
@@ -21,7 +21,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
+        public void Destructor()
         {
             fixed (PxInputStream* @this = &this)
             { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }

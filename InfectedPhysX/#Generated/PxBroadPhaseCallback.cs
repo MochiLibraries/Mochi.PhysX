@@ -6,14 +6,14 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxBroadPhaseCallback
     {
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
+        public void Destructor()
         {
             fixed (PxBroadPhaseCallback* @this = &this)
             { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }
@@ -21,7 +21,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void onObjectOutOfBounds(PxShape* shape, PxActor* actor)
+        public void onObjectOutOfBounds(PxShape* shape, PxActor* actor)
         {
             fixed (PxBroadPhaseCallback* @this = &this)
             { VirtualMethodTablePointer->onObjectOutOfBounds_1(@this, shape, actor); }
@@ -29,7 +29,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void onObjectOutOfBounds(PxAggregate* aggregate)
+        public void onObjectOutOfBounds(PxAggregate* aggregate)
         {
             fixed (PxBroadPhaseCallback* @this = &this)
             { VirtualMethodTablePointer->onObjectOutOfBounds_0(@this, aggregate); }

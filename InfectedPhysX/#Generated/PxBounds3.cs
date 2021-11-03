@@ -6,170 +6,251 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 24)]
     public unsafe partial struct PxBounds3
     {
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxBounds3@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper41", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxBounds3* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
+        public void Constructor()
         {
             fixed (PxBounds3* @this = &this)
             { Constructor_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxBounds3@physx@@QEAA@AEBVPxVec3@1@0@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper42", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxBounds3* @this, PxVec3* minimum, PxVec3* maximum);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxVec3* minimum, PxVec3* maximum)
+        public void Constructor(PxVec3* minimum, PxVec3* maximum)
         {
             fixed (PxBounds3* @this = &this)
             { Constructor_PInvoke(@this, minimum, maximum); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?empty@PxBounds3@physx@@SA?AV12@XZ", ExactSpelling = true)]
-        public static extern PxBounds3* empty(out PxBounds3 __returnBuffer);
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?empty@PxBounds3@physx@@SA?AV12@XZ", ExactSpelling = true)]
+        private static extern PxBounds3* empty_PInvoke(out PxBounds3 __returnBuffer);
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?boundsOfPoints@PxBounds3@physx@@SA?AV12@AEBVPxVec3@2@0@Z", ExactSpelling = true)]
-        public static extern PxBounds3* boundsOfPoints(out PxBounds3 __returnBuffer, PxVec3* v0, PxVec3* v1);
+        [DebuggerStepThrough, DebuggerHidden]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static PxBounds3 empty()
+        {
+            PxBounds3 __returnBuffer;
+            empty_PInvoke(out __returnBuffer);
+            return __returnBuffer;
+        }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?centerExtents@PxBounds3@physx@@SA?AV12@AEBVPxVec3@2@0@Z", ExactSpelling = true)]
-        public static extern PxBounds3* centerExtents(out PxBounds3 __returnBuffer, PxVec3* center, PxVec3* extent);
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?boundsOfPoints@PxBounds3@physx@@SA?AV12@AEBVPxVec3@2@0@Z", ExactSpelling = true)]
+        private static extern PxBounds3* boundsOfPoints_PInvoke(out PxBounds3 __returnBuffer, PxVec3* v0, PxVec3* v1);
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?basisExtent@PxBounds3@physx@@SA?AV12@AEBVPxVec3@2@AEBVPxMat33@2@0@Z", ExactSpelling = true)]
-        public static extern PxBounds3* basisExtent(out PxBounds3 __returnBuffer, PxVec3* center, PxMat33* basis, PxVec3* extent);
+        [DebuggerStepThrough, DebuggerHidden]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static PxBounds3 boundsOfPoints(PxVec3* v0, PxVec3* v1)
+        {
+            PxBounds3 __returnBuffer;
+            boundsOfPoints_PInvoke(out __returnBuffer, v0, v1);
+            return __returnBuffer;
+        }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?poseExtent@PxBounds3@physx@@SA?AV12@AEBVPxTransform@2@AEBVPxVec3@2@@Z", ExactSpelling = true)]
-        public static extern PxBounds3* poseExtent(out PxBounds3 __returnBuffer, PxTransform* pose, PxVec3* extent);
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?centerExtents@PxBounds3@physx@@SA?AV12@AEBVPxVec3@2@0@Z", ExactSpelling = true)]
+        private static extern PxBounds3* centerExtents_PInvoke(out PxBounds3 __returnBuffer, PxVec3* center, PxVec3* extent);
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?transformSafe@PxBounds3@physx@@SA?AV12@AEBVPxMat33@2@AEBV12@@Z", ExactSpelling = true)]
-        public static extern PxBounds3* transformSafe(out PxBounds3 __returnBuffer, PxMat33* matrix, PxBounds3* bounds);
+        [DebuggerStepThrough, DebuggerHidden]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static PxBounds3 centerExtents(PxVec3* center, PxVec3* extent)
+        {
+            PxBounds3 __returnBuffer;
+            centerExtents_PInvoke(out __returnBuffer, center, extent);
+            return __returnBuffer;
+        }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?transformFast@PxBounds3@physx@@SA?AV12@AEBVPxMat33@2@AEBV12@@Z", ExactSpelling = true)]
-        public static extern PxBounds3* transformFast(out PxBounds3 __returnBuffer, PxMat33* matrix, PxBounds3* bounds);
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?basisExtent@PxBounds3@physx@@SA?AV12@AEBVPxVec3@2@AEBVPxMat33@2@0@Z", ExactSpelling = true)]
+        private static extern PxBounds3* basisExtent_PInvoke(out PxBounds3 __returnBuffer, PxVec3* center, PxMat33* basis, PxVec3* extent);
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?transformSafe@PxBounds3@physx@@SA?AV12@AEBVPxTransform@2@AEBV12@@Z", ExactSpelling = true)]
-        public static extern PxBounds3* transformSafe(out PxBounds3 __returnBuffer, PxTransform* transform, PxBounds3* bounds);
+        [DebuggerStepThrough, DebuggerHidden]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static PxBounds3 basisExtent(PxVec3* center, PxMat33* basis, PxVec3* extent)
+        {
+            PxBounds3 __returnBuffer;
+            basisExtent_PInvoke(out __returnBuffer, center, basis, extent);
+            return __returnBuffer;
+        }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?transformFast@PxBounds3@physx@@SA?AV12@AEBVPxTransform@2@AEBV12@@Z", ExactSpelling = true)]
-        public static extern PxBounds3* transformFast(out PxBounds3 __returnBuffer, PxTransform* transform, PxBounds3* bounds);
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?poseExtent@PxBounds3@physx@@SA?AV12@AEBVPxTransform@2@AEBVPxVec3@2@@Z", ExactSpelling = true)]
+        private static extern PxBounds3* poseExtent_PInvoke(out PxBounds3 __returnBuffer, PxTransform* pose, PxVec3* extent);
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setEmpty@PxBounds3@physx@@QEAAXXZ", ExactSpelling = true)]
+        [DebuggerStepThrough, DebuggerHidden]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static PxBounds3 poseExtent(PxTransform* pose, PxVec3* extent)
+        {
+            PxBounds3 __returnBuffer;
+            poseExtent_PInvoke(out __returnBuffer, pose, extent);
+            return __returnBuffer;
+        }
+
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?transformSafe@PxBounds3@physx@@SA?AV12@AEBVPxMat33@2@AEBV12@@Z", ExactSpelling = true)]
+        private static extern PxBounds3* transformSafe_PInvoke(out PxBounds3 __returnBuffer, PxMat33* matrix, PxBounds3* bounds);
+
+        [DebuggerStepThrough, DebuggerHidden]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static PxBounds3 transformSafe(PxMat33* matrix, PxBounds3* bounds)
+        {
+            PxBounds3 __returnBuffer;
+            transformSafe_PInvoke(out __returnBuffer, matrix, bounds);
+            return __returnBuffer;
+        }
+
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?transformFast@PxBounds3@physx@@SA?AV12@AEBVPxMat33@2@AEBV12@@Z", ExactSpelling = true)]
+        private static extern PxBounds3* transformFast_PInvoke(out PxBounds3 __returnBuffer, PxMat33* matrix, PxBounds3* bounds);
+
+        [DebuggerStepThrough, DebuggerHidden]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static PxBounds3 transformFast(PxMat33* matrix, PxBounds3* bounds)
+        {
+            PxBounds3 __returnBuffer;
+            transformFast_PInvoke(out __returnBuffer, matrix, bounds);
+            return __returnBuffer;
+        }
+
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?transformSafe@PxBounds3@physx@@SA?AV12@AEBVPxTransform@2@AEBV12@@Z", ExactSpelling = true)]
+        private static extern PxBounds3* transformSafe_PInvoke(out PxBounds3 __returnBuffer, PxTransform* transform, PxBounds3* bounds);
+
+        [DebuggerStepThrough, DebuggerHidden]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static PxBounds3 transformSafe(PxTransform* transform, PxBounds3* bounds)
+        {
+            PxBounds3 __returnBuffer;
+            transformSafe_PInvoke(out __returnBuffer, transform, bounds);
+            return __returnBuffer;
+        }
+
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?transformFast@PxBounds3@physx@@SA?AV12@AEBVPxTransform@2@AEBV12@@Z", ExactSpelling = true)]
+        private static extern PxBounds3* transformFast_PInvoke(out PxBounds3 __returnBuffer, PxTransform* transform, PxBounds3* bounds);
+
+        [DebuggerStepThrough, DebuggerHidden]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static PxBounds3 transformFast(PxTransform* transform, PxBounds3* bounds)
+        {
+            PxBounds3 __returnBuffer;
+            transformFast_PInvoke(out __returnBuffer, transform, bounds);
+            return __returnBuffer;
+        }
+
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setEmpty@PxBounds3@physx@@QEAAXXZ", ExactSpelling = true)]
         private static extern void setEmpty_PInvoke(PxBounds3* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setEmpty()
+        public void setEmpty()
         {
             fixed (PxBounds3* @this = &this)
             { setEmpty_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setMaximal@PxBounds3@physx@@QEAAXXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setMaximal@PxBounds3@physx@@QEAAXXZ", ExactSpelling = true)]
         private static extern void setMaximal_PInvoke(PxBounds3* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setMaximal()
+        public void setMaximal()
         {
             fixed (PxBounds3* @this = &this)
             { setMaximal_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?include@PxBounds3@physx@@QEAAXAEBVPxVec3@2@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?include@PxBounds3@physx@@QEAAXAEBVPxVec3@2@@Z", ExactSpelling = true)]
         private static extern void include_PInvoke(PxBounds3* @this, PxVec3* v);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void include(PxVec3* v)
+        public void include(PxVec3* v)
         {
             fixed (PxBounds3* @this = &this)
             { include_PInvoke(@this, v); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?include@PxBounds3@physx@@QEAAXAEBV12@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?include@PxBounds3@physx@@QEAAXAEBV12@@Z", ExactSpelling = true)]
         private static extern void include_PInvoke(PxBounds3* @this, PxBounds3* b);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void include(PxBounds3* b)
+        public void include(PxBounds3* b)
         {
             fixed (PxBounds3* @this = &this)
             { include_PInvoke(@this, b); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isEmpty@PxBounds3@physx@@QEBA_NXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isEmpty@PxBounds3@physx@@QEBA_NXZ", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool isEmpty_PInvoke(PxBounds3* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool isEmpty()
+        public bool isEmpty()
         {
             fixed (PxBounds3* @this = &this)
             { return isEmpty_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?intersects@PxBounds3@physx@@QEBA_NAEBV12@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?intersects@PxBounds3@physx@@QEBA_NAEBV12@@Z", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool intersects_PInvoke(PxBounds3* @this, PxBounds3* b);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool intersects(PxBounds3* b)
+        public bool intersects(PxBounds3* b)
         {
             fixed (PxBounds3* @this = &this)
             { return intersects_PInvoke(@this, b); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?intersects1D@PxBounds3@physx@@QEBA_NAEBV12@I@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?intersects1D@PxBounds3@physx@@QEBA_NAEBV12@I@Z", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool intersects1D_PInvoke(PxBounds3* @this, PxBounds3* a, uint axis);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool intersects1D(PxBounds3* a, uint axis)
+        public bool intersects1D(PxBounds3* a, uint axis)
         {
             fixed (PxBounds3* @this = &this)
             { return intersects1D_PInvoke(@this, a, axis); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?contains@PxBounds3@physx@@QEBA_NAEBVPxVec3@2@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?contains@PxBounds3@physx@@QEBA_NAEBVPxVec3@2@@Z", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool contains_PInvoke(PxBounds3* @this, PxVec3* v);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool contains(PxVec3* v)
+        public bool contains(PxVec3* v)
         {
             fixed (PxBounds3* @this = &this)
             { return contains_PInvoke(@this, v); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isInside@PxBounds3@physx@@QEBA_NAEBV12@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isInside@PxBounds3@physx@@QEBA_NAEBV12@@Z", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool isInside_PInvoke(PxBounds3* @this, PxBounds3* box);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool isInside(PxBounds3* box)
+        public bool isInside(PxBounds3* box)
         {
             fixed (PxBounds3* @this = &this)
             { return isInside_PInvoke(@this, box); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getCenter@PxBounds3@physx@@QEBA?AVPxVec3@2@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getCenter@PxBounds3@physx@@QEBA?AVPxVec3@2@XZ", ExactSpelling = true)]
         private static extern PxVec3* getCenter_PInvoke(PxBounds3* @this, out PxVec3 __returnBuffer);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxVec3 getCenter()
+        public PxVec3 getCenter()
         {
             fixed (PxBounds3* @this = &this)
             {
@@ -179,34 +260,34 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getCenter@PxBounds3@physx@@QEBAMI@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getCenter@PxBounds3@physx@@QEBAMI@Z", ExactSpelling = true)]
         private static extern float getCenter_PInvoke(PxBounds3* @this, uint axis);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float getCenter(uint axis)
+        public float getCenter(uint axis)
         {
             fixed (PxBounds3* @this = &this)
             { return getCenter_PInvoke(@this, axis); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getExtents@PxBounds3@physx@@QEBAMI@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getExtents@PxBounds3@physx@@QEBAMI@Z", ExactSpelling = true)]
         private static extern float getExtents_PInvoke(PxBounds3* @this, uint axis);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float getExtents(uint axis)
+        public float getExtents(uint axis)
         {
             fixed (PxBounds3* @this = &this)
             { return getExtents_PInvoke(@this, axis); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getDimensions@PxBounds3@physx@@QEBA?AVPxVec3@2@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getDimensions@PxBounds3@physx@@QEBA?AVPxVec3@2@XZ", ExactSpelling = true)]
         private static extern PxVec3* getDimensions_PInvoke(PxBounds3* @this, out PxVec3 __returnBuffer);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxVec3 getDimensions()
+        public PxVec3 getDimensions()
         {
             fixed (PxBounds3* @this = &this)
             {
@@ -216,12 +297,12 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getExtents@PxBounds3@physx@@QEBA?AVPxVec3@2@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getExtents@PxBounds3@physx@@QEBA?AVPxVec3@2@XZ", ExactSpelling = true)]
         private static extern PxVec3* getExtents_PInvoke(PxBounds3* @this, out PxVec3 __returnBuffer);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxVec3 getExtents()
+        public PxVec3 getExtents()
         {
             fixed (PxBounds3* @this = &this)
             {
@@ -231,69 +312,69 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?scaleSafe@PxBounds3@physx@@QEAAXM@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?scaleSafe@PxBounds3@physx@@QEAAXM@Z", ExactSpelling = true)]
         private static extern void scaleSafe_PInvoke(PxBounds3* @this, float scale);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void scaleSafe(float scale)
+        public void scaleSafe(float scale)
         {
             fixed (PxBounds3* @this = &this)
             { scaleSafe_PInvoke(@this, scale); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?scaleFast@PxBounds3@physx@@QEAAXM@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?scaleFast@PxBounds3@physx@@QEAAXM@Z", ExactSpelling = true)]
         private static extern void scaleFast_PInvoke(PxBounds3* @this, float scale);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void scaleFast(float scale)
+        public void scaleFast(float scale)
         {
             fixed (PxBounds3* @this = &this)
             { scaleFast_PInvoke(@this, scale); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?fattenSafe@PxBounds3@physx@@QEAAXM@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?fattenSafe@PxBounds3@physx@@QEAAXM@Z", ExactSpelling = true)]
         private static extern void fattenSafe_PInvoke(PxBounds3* @this, float distance);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void fattenSafe(float distance)
+        public void fattenSafe(float distance)
         {
             fixed (PxBounds3* @this = &this)
             { fattenSafe_PInvoke(@this, distance); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?fattenFast@PxBounds3@physx@@QEAAXM@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?fattenFast@PxBounds3@physx@@QEAAXM@Z", ExactSpelling = true)]
         private static extern void fattenFast_PInvoke(PxBounds3* @this, float distance);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void fattenFast(float distance)
+        public void fattenFast(float distance)
         {
             fixed (PxBounds3* @this = &this)
             { fattenFast_PInvoke(@this, distance); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isFinite@PxBounds3@physx@@QEBA_NXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isFinite@PxBounds3@physx@@QEBA_NXZ", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool isFinite_PInvoke(PxBounds3* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool isFinite()
+        public bool isFinite()
         {
             fixed (PxBounds3* @this = &this)
             { return isFinite_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxBounds3@physx@@QEBA_NXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxBounds3@physx@@QEBA_NXZ", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool isValid_PInvoke(PxBounds3* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool isValid()
+        public bool isValid()
         {
             fixed (PxBounds3* @this = &this)
             { return isValid_PInvoke(@this); }

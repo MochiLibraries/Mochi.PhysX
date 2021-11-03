@@ -6,27 +6,16 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 32)]
     public unsafe partial struct PxTask
     {
         [FieldOffset(0)] public PxBaseTask Base;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxTask@physx@@QEAA@XZ", ExactSpelling = true)]
-        private static extern void Constructor_PInvoke(PxTask* @this);
-
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
-        {
-            fixed (PxTask* @this = &this)
-            { Constructor_PInvoke(@this); }
-        }
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
+        public void Destructor()
         {
             fixed (PxTask* @this = &this)
             { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }
@@ -34,29 +23,29 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void release()
+        public void release()
         {
             fixed (PxTask* @this = &this)
             { VirtualMethodTablePointer->release(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?finishBefore@PxTask@physx@@QEAAXI@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?finishBefore@PxTask@physx@@QEAAXI@Z", ExactSpelling = true)]
         private static extern void finishBefore_PInvoke(PxTask* @this, uint taskID);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void finishBefore(uint taskID)
+        public void finishBefore(uint taskID)
         {
             fixed (PxTask* @this = &this)
             { finishBefore_PInvoke(@this, taskID); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?startAfter@PxTask@physx@@QEAAXI@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?startAfter@PxTask@physx@@QEAAXI@Z", ExactSpelling = true)]
         private static extern void startAfter_PInvoke(PxTask* @this, uint taskID);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void startAfter(uint taskID)
+        public void startAfter(uint taskID)
         {
             fixed (PxTask* @this = &this)
             { startAfter_PInvoke(@this, taskID); }
@@ -64,7 +53,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void addReference()
+        public void addReference()
         {
             fixed (PxTask* @this = &this)
             { VirtualMethodTablePointer->addReference(@this); }
@@ -72,7 +61,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void removeReference()
+        public void removeReference()
         {
             fixed (PxTask* @this = &this)
             { VirtualMethodTablePointer->removeReference(@this); }
@@ -80,18 +69,18 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe int getReference()
+        public int getReference()
         {
             fixed (PxTask* @this = &this)
             { return VirtualMethodTablePointer->getReference(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getTaskID@PxTask@physx@@QEBAIXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getTaskID@PxTask@physx@@QEBAIXZ", ExactSpelling = true)]
         private static extern uint getTaskID_PInvoke(PxTask* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint getTaskID()
+        public uint getTaskID()
         {
             fixed (PxTask* @this = &this)
             { return getTaskID_PInvoke(@this); }
@@ -99,7 +88,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void submitted()
+        public void submitted()
         {
             fixed (PxTask* @this = &this)
             { VirtualMethodTablePointer->submitted(@this); }
@@ -115,9 +104,9 @@ namespace PhysX
             /// <summary>Virtual method pointer for `~PxTask`</summary>
             public delegate* unmanaged[Cdecl]<PxTask*, void> __DeletingDestructorPointer;
             /// <summary>Virtual method pointer for `run`</summary>
-            public delegate* unmanaged[Cdecl]<PxBaseTask*, void> run;
+            public delegate* unmanaged[Cdecl]<PxTask*, void> run;
             /// <summary>Virtual method pointer for `getName`</summary>
-            public delegate* unmanaged[Cdecl]<PxBaseTask*, byte*> getName;
+            public delegate* unmanaged[Cdecl]<PxTask*, byte*> getName;
             /// <summary>Virtual method pointer for `addReference`</summary>
             public delegate* unmanaged[Cdecl]<PxTask*, void> addReference;
             /// <summary>Virtual method pointer for `removeReference`</summary>

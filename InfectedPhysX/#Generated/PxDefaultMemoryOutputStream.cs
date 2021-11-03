@@ -6,19 +6,19 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 32)]
     public unsafe partial struct PxDefaultMemoryOutputStream
     {
         [FieldOffset(0)] public PxOutputStream Base;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxDefaultMemoryOutputStream@physx@@QEAA@AEAVPxAllocatorCallback@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxDefaultMemoryOutputStream@physx@@QEAA@AEAVPxAllocatorCallback@1@@Z", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxDefaultMemoryOutputStream* @this, PxAllocatorCallback* allocator);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxAllocatorCallback* allocator)
+        public void Constructor(PxAllocatorCallback* allocator)
         {
             fixed (PxDefaultMemoryOutputStream* @this = &this)
             { Constructor_PInvoke(@this, allocator); }
@@ -26,7 +26,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
+        public void Destructor()
         {
             fixed (PxDefaultMemoryOutputStream* @this = &this)
             { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }
@@ -34,7 +34,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint write(void* src, uint count)
+        public uint write(void* src, uint count)
         {
             fixed (PxDefaultMemoryOutputStream* @this = &this)
             { return VirtualMethodTablePointer->write(@this, src, count); }
@@ -42,7 +42,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint getSize()
+        public uint getSize()
         {
             fixed (PxDefaultMemoryOutputStream* @this = &this)
             { return VirtualMethodTablePointer->getSize(@this); }
@@ -50,32 +50,10 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe byte* getData()
+        public byte* getData()
         {
             fixed (PxDefaultMemoryOutputStream* @this = &this)
             { return VirtualMethodTablePointer->getData(@this); }
-        }
-
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxDefaultMemoryOutputStream@physx@@AEAA@AEBV01@@Z", ExactSpelling = true)]
-        private static extern void Constructor_PInvoke(PxDefaultMemoryOutputStream* @this, PxDefaultMemoryOutputStream* arg0);
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxDefaultMemoryOutputStream* arg0)
-        {
-            fixed (PxDefaultMemoryOutputStream* @this = &this)
-            { Constructor_PInvoke(@this, arg0); }
-        }
-
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??4PxDefaultMemoryOutputStream@physx@@AEAAAEAV01@AEBV01@@Z", ExactSpelling = true)]
-        private static extern PxDefaultMemoryOutputStream* operator_Equal_PInvoke(PxDefaultMemoryOutputStream* @this, PxDefaultMemoryOutputStream* arg0);
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxDefaultMemoryOutputStream* operator_Equal(PxDefaultMemoryOutputStream* arg0)
-        {
-            fixed (PxDefaultMemoryOutputStream* @this = &this)
-            { return operator_Equal_PInvoke(@this, arg0); }
         }
 
         [FieldOffset(8)] public PxAllocatorCallback* mAllocator;

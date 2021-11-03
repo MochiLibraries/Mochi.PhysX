@@ -6,14 +6,14 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxAllocatorCallback
     {
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
+        public void Destructor()
         {
             fixed (PxAllocatorCallback* @this = &this)
             { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }
@@ -21,7 +21,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void* allocate(ulong size, byte* typeName, byte* filename, int line)
+        public void* allocate(ulong size, byte* typeName, byte* filename, int line)
         {
             fixed (PxAllocatorCallback* @this = &this)
             { return VirtualMethodTablePointer->allocate(@this, size, typeName, filename, line); }
@@ -29,7 +29,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void deallocate(void* ptr)
+        public void deallocate(void* ptr)
         {
             fixed (PxAllocatorCallback* @this = &this)
             { VirtualMethodTablePointer->deallocate(@this, ptr); }

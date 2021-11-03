@@ -6,14 +6,14 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxQueryFilterCallback
     {
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxQueryHitType preFilter(PxFilterData* filterData, PxShape* shape, PxRigidActor* actor, PxHitFlags* queryFlags)
+        public PxQueryHitType preFilter(PxFilterData* filterData, PxShape* shape, PxRigidActor* actor, PxHitFlags* queryFlags)
         {
             fixed (PxQueryFilterCallback* @this = &this)
             { return VirtualMethodTablePointer->preFilter(@this, filterData, shape, actor, queryFlags); }
@@ -21,7 +21,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxQueryHitType postFilter(PxFilterData* filterData, PxQueryHit* hit)
+        public PxQueryHitType postFilter(PxFilterData* filterData, PxQueryHit* hit)
         {
             fixed (PxQueryFilterCallback* @this = &this)
             { return VirtualMethodTablePointer->postFilter(@this, filterData, hit); }
@@ -29,7 +29,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
+        public void Destructor()
         {
             fixed (PxQueryFilterCallback* @this = &this)
             { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }

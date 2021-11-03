@@ -6,60 +6,49 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 40)]
     public unsafe partial struct PxLightCpuTask
     {
         [FieldOffset(0)] public PxBaseTask Base;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxLightCpuTask@physx@@QEAA@XZ", ExactSpelling = true)]
-        private static extern void Constructor_PInvoke(PxLightCpuTask* @this);
-
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
-        {
-            fixed (PxLightCpuTask* @this = &this)
-            { Constructor_PInvoke(@this); }
-        }
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
+        public void Destructor()
         {
             fixed (PxLightCpuTask* @this = &this)
             { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setContinuation@PxLightCpuTask@physx@@QEAAXAEAVPxTaskManager@2@PEAVPxBaseTask@2@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setContinuation@PxLightCpuTask@physx@@QEAAXAEAVPxTaskManager@2@PEAVPxBaseTask@2@@Z", ExactSpelling = true)]
         private static extern void setContinuation_PInvoke(PxLightCpuTask* @this, PxTaskManager* tm, PxBaseTask* c);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setContinuation(PxTaskManager* tm, PxBaseTask* c)
+        public void setContinuation(PxTaskManager* tm, PxBaseTask* c)
         {
             fixed (PxLightCpuTask* @this = &this)
             { setContinuation_PInvoke(@this, tm, c); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setContinuation@PxLightCpuTask@physx@@QEAAXPEAVPxBaseTask@2@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setContinuation@PxLightCpuTask@physx@@QEAAXPEAVPxBaseTask@2@@Z", ExactSpelling = true)]
         private static extern void setContinuation_PInvoke(PxLightCpuTask* @this, PxBaseTask* c);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setContinuation(PxBaseTask* c)
+        public void setContinuation(PxBaseTask* c)
         {
             fixed (PxLightCpuTask* @this = &this)
             { setContinuation_PInvoke(@this, c); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getContinuation@PxLightCpuTask@physx@@QEBAPEAVPxBaseTask@2@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getContinuation@PxLightCpuTask@physx@@QEBAPEAVPxBaseTask@2@XZ", ExactSpelling = true)]
         private static extern PxBaseTask* getContinuation_PInvoke(PxLightCpuTask* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxBaseTask* getContinuation()
+        public PxBaseTask* getContinuation()
         {
             fixed (PxLightCpuTask* @this = &this)
             { return getContinuation_PInvoke(@this); }
@@ -67,7 +56,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void removeReference()
+        public void removeReference()
         {
             fixed (PxLightCpuTask* @this = &this)
             { VirtualMethodTablePointer->removeReference(@this); }
@@ -75,7 +64,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe int getReference()
+        public int getReference()
         {
             fixed (PxLightCpuTask* @this = &this)
             { return VirtualMethodTablePointer->getReference(@this); }
@@ -83,7 +72,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void addReference()
+        public void addReference()
         {
             fixed (PxLightCpuTask* @this = &this)
             { VirtualMethodTablePointer->addReference(@this); }
@@ -91,7 +80,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void release()
+        public void release()
         {
             fixed (PxLightCpuTask* @this = &this)
             { VirtualMethodTablePointer->release(@this); }
@@ -109,9 +98,9 @@ namespace PhysX
             /// <summary>Virtual method pointer for `~PxLightCpuTask`</summary>
             public delegate* unmanaged[Cdecl]<PxLightCpuTask*, void> __DeletingDestructorPointer;
             /// <summary>Virtual method pointer for `run`</summary>
-            public delegate* unmanaged[Cdecl]<PxBaseTask*, void> run;
+            public delegate* unmanaged[Cdecl]<PxLightCpuTask*, void> run;
             /// <summary>Virtual method pointer for `getName`</summary>
-            public delegate* unmanaged[Cdecl]<PxBaseTask*, byte*> getName;
+            public delegate* unmanaged[Cdecl]<PxLightCpuTask*, byte*> getName;
             /// <summary>Virtual method pointer for `addReference`</summary>
             public delegate* unmanaged[Cdecl]<PxLightCpuTask*, void> addReference;
             /// <summary>Virtual method pointer for `removeReference`</summary>

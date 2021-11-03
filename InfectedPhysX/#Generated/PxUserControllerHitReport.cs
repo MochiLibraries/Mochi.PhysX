@@ -6,14 +6,14 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxUserControllerHitReport
     {
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void onShapeHit(PxControllerShapeHit* hit)
+        public void onShapeHit(PxControllerShapeHit* hit)
         {
             fixed (PxUserControllerHitReport* @this = &this)
             { VirtualMethodTablePointer->onShapeHit(@this, hit); }
@@ -21,7 +21,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void onControllerHit(PxControllersHit* hit)
+        public void onControllerHit(PxControllersHit* hit)
         {
             fixed (PxUserControllerHitReport* @this = &this)
             { VirtualMethodTablePointer->onControllerHit(@this, hit); }
@@ -29,18 +29,10 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void onObstacleHit(PxControllerObstacleHit* hit)
+        public void onObstacleHit(PxControllerObstacleHit* hit)
         {
             fixed (PxUserControllerHitReport* @this = &this)
             { VirtualMethodTablePointer->onObstacleHit(@this, hit); }
-        }
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
-        {
-            fixed (PxUserControllerHitReport* @this = &this)
-            { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }
         }
 
         [FieldOffset(0)] public VirtualMethodTable* VirtualMethodTablePointer;
@@ -55,7 +47,7 @@ namespace PhysX
             /// <summary>Virtual method pointer for `onObstacleHit`</summary>
             public delegate* unmanaged[Cdecl]<PxUserControllerHitReport*, PxControllerObstacleHit*, void> onObstacleHit;
             /// <summary>Virtual method pointer for `~PxUserControllerHitReport`</summary>
-            public delegate* unmanaged[Cdecl]<PxUserControllerHitReport*, void> __DeletingDestructorPointer;
+            public void* __DeletingDestructorPointer;
         }
     }
 }

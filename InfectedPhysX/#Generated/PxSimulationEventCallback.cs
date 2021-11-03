@@ -6,14 +6,14 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxSimulationEventCallback
     {
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void onConstraintBreak(PxConstraintInfo* constraints, uint count)
+        public void onConstraintBreak(PxConstraintInfo* constraints, uint count)
         {
             fixed (PxSimulationEventCallback* @this = &this)
             { VirtualMethodTablePointer->onConstraintBreak(@this, constraints, count); }
@@ -21,7 +21,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void onWake(PxActor** actors, uint count)
+        public void onWake(PxActor** actors, uint count)
         {
             fixed (PxSimulationEventCallback* @this = &this)
             { VirtualMethodTablePointer->onWake(@this, actors, count); }
@@ -29,7 +29,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void onSleep(PxActor** actors, uint count)
+        public void onSleep(PxActor** actors, uint count)
         {
             fixed (PxSimulationEventCallback* @this = &this)
             { VirtualMethodTablePointer->onSleep(@this, actors, count); }
@@ -37,7 +37,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void onContact(PxContactPairHeader* pairHeader, PxContactPair* pairs, uint nbPairs)
+        public void onContact(PxContactPairHeader* pairHeader, PxContactPair* pairs, uint nbPairs)
         {
             fixed (PxSimulationEventCallback* @this = &this)
             { VirtualMethodTablePointer->onContact(@this, pairHeader, pairs, nbPairs); }
@@ -45,7 +45,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void onTrigger(PxTriggerPair* pairs, uint count)
+        public void onTrigger(PxTriggerPair* pairs, uint count)
         {
             fixed (PxSimulationEventCallback* @this = &this)
             { VirtualMethodTablePointer->onTrigger(@this, pairs, count); }
@@ -53,7 +53,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void onAdvance(PxRigidBody** bodyBuffer, PxTransform* poseBuffer, uint count)
+        public void onAdvance(PxRigidBody** bodyBuffer, PxTransform* poseBuffer, uint count)
         {
             fixed (PxSimulationEventCallback* @this = &this)
             { VirtualMethodTablePointer->onAdvance(@this, bodyBuffer, poseBuffer, count); }
@@ -61,7 +61,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
+        public void Destructor()
         {
             fixed (PxSimulationEventCallback* @this = &this)
             { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }

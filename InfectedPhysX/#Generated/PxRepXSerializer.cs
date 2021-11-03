@@ -6,22 +6,14 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxRepXSerializer
     {
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
-        {
-            fixed (PxRepXSerializer* @this = &this)
-            { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }
-        }
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe byte* getTypeName()
+        public byte* getTypeName()
         {
             fixed (PxRepXSerializer* @this = &this)
             { return VirtualMethodTablePointer->getTypeName(@this); }
@@ -29,7 +21,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void objectToFile(PxRepXObject* inLiveObject, PxCollection* inCollection, XmlWriter* inWriter, MemoryBuffer* inTempBuffer, PxRepXInstantiationArgs* inArgs)
+        public void objectToFile(PxRepXObject* inLiveObject, PxCollection* inCollection, XmlWriter* inWriter, MemoryBuffer* inTempBuffer, PxRepXInstantiationArgs* inArgs)
         {
             fixed (PxRepXSerializer* @this = &this)
             { VirtualMethodTablePointer->objectToFile(@this, inLiveObject, inCollection, inWriter, inTempBuffer, inArgs); }
@@ -37,7 +29,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxRepXObject fileToObject(XmlReader* inReader, XmlMemoryAllocator* inAllocator, PxRepXInstantiationArgs* inArgs, PxCollection* inCollection)
+        public PxRepXObject fileToObject(XmlReader* inReader, XmlMemoryAllocator* inAllocator, PxRepXInstantiationArgs* inArgs, PxCollection* inCollection)
         {
             fixed (PxRepXSerializer* @this = &this)
             {
@@ -53,7 +45,7 @@ namespace PhysX
         public unsafe struct VirtualMethodTable
         {
             /// <summary>Virtual method pointer for `~PxRepXSerializer`</summary>
-            public delegate* unmanaged[Cdecl]<PxRepXSerializer*, void> __DeletingDestructorPointer;
+            public void* __DeletingDestructorPointer;
             /// <summary>Virtual method pointer for `getTypeName`</summary>
             public delegate* unmanaged[Cdecl]<PxRepXSerializer*, byte*> getTypeName;
             /// <summary>Virtual method pointer for `objectToFile`</summary>

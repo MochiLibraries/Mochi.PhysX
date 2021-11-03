@@ -6,25 +6,17 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxContactModifyCallback
     {
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void onContactModify(PxContactModifyPair* pairs, uint count)
+        public void onContactModify(PxContactModifyPair* pairs, uint count)
         {
             fixed (PxContactModifyCallback* @this = &this)
             { VirtualMethodTablePointer->onContactModify(@this, pairs, count); }
-        }
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
-        {
-            fixed (PxContactModifyCallback* @this = &this)
-            { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }
         }
 
         [FieldOffset(0)] public VirtualMethodTable* VirtualMethodTablePointer;
@@ -35,7 +27,7 @@ namespace PhysX
             /// <summary>Virtual method pointer for `onContactModify`</summary>
             public delegate* unmanaged[Cdecl]<PxContactModifyCallback*, PxContactModifyPair*, uint, void> onContactModify;
             /// <summary>Virtual method pointer for `~PxContactModifyCallback`</summary>
-            public delegate* unmanaged[Cdecl]<PxContactModifyCallback*, void> __DeletingDestructorPointer;
+            public void* __DeletingDestructorPointer;
         }
     }
 }

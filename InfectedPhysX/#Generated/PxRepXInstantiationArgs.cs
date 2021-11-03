@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 24)]
     public unsafe partial struct PxRepXInstantiationArgs
@@ -17,12 +17,12 @@ namespace PhysX
 
         [FieldOffset(16)] public PxStringTable* stringTable;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxRepXInstantiationArgs@physx@@QEAA@AEAVPxPhysics@1@PEAVPxCooking@1@PEAVPxStringTable@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper183", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxRepXInstantiationArgs* @this, PxPhysics* inPhysics, PxCooking* inCooking, PxStringTable* inStringTable);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxPhysics* inPhysics, PxCooking* inCooking = null, PxStringTable* inStringTable = null)
+        public void Constructor(PxPhysics* inPhysics, PxCooking* inCooking = null, PxStringTable* inStringTable = null)
         {
             fixed (PxRepXInstantiationArgs* @this = &this)
             { Constructor_PInvoke(@this, inPhysics, inCooking, inStringTable); }

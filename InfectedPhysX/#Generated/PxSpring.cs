@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxSpring
@@ -15,12 +15,12 @@ namespace PhysX
 
         [FieldOffset(4)] public float damping;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxSpring@physx@@QEAA@MM@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper158", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxSpring* @this, float stiffness_, float damping_);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(float stiffness_, float damping_)
+        public void Constructor(float stiffness_, float damping_)
         {
             fixed (PxSpring* @this = &this)
             { Constructor_PInvoke(@this, stiffness_, damping_); }

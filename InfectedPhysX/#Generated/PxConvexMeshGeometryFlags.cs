@@ -4,7 +4,7 @@
 #nullable enable
 using System;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [Flags]
     public enum PxConvexMeshGeometryFlags : byte

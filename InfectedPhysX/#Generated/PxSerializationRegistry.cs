@@ -6,14 +6,14 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxSerializationRegistry
     {
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void registerSerializer(ushort type, PxSerializer* serializer)
+        public void registerSerializer(ushort type, PxSerializer* serializer)
         {
             fixed (PxSerializationRegistry* @this = &this)
             { VirtualMethodTablePointer->registerSerializer(@this, type, serializer); }
@@ -21,7 +21,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxSerializer* unregisterSerializer(ushort type)
+        public PxSerializer* unregisterSerializer(ushort type)
         {
             fixed (PxSerializationRegistry* @this = &this)
             { return VirtualMethodTablePointer->unregisterSerializer(@this, type); }
@@ -29,7 +29,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void registerBinaryMetaDataCallback(delegate* unmanaged[Cdecl]<PxOutputStream*, void> callback)
+        public void registerBinaryMetaDataCallback(delegate* unmanaged[Cdecl]<PxOutputStream*, void> callback)
         {
             fixed (PxSerializationRegistry* @this = &this)
             { VirtualMethodTablePointer->registerBinaryMetaDataCallback(@this, callback); }
@@ -37,7 +37,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxSerializer* getSerializer(ushort type)
+        public PxSerializer* getSerializer(ushort type)
         {
             fixed (PxSerializationRegistry* @this = &this)
             { return VirtualMethodTablePointer->getSerializer(@this, type); }
@@ -45,7 +45,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void registerRepXSerializer(ushort type, PxRepXSerializer* serializer)
+        public void registerRepXSerializer(ushort type, PxRepXSerializer* serializer)
         {
             fixed (PxSerializationRegistry* @this = &this)
             { VirtualMethodTablePointer->registerRepXSerializer(@this, type, serializer); }
@@ -53,7 +53,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxRepXSerializer* unregisterRepXSerializer(ushort type)
+        public PxRepXSerializer* unregisterRepXSerializer(ushort type)
         {
             fixed (PxSerializationRegistry* @this = &this)
             { return VirtualMethodTablePointer->unregisterRepXSerializer(@this, type); }
@@ -61,7 +61,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxRepXSerializer* getRepXSerializer(byte* typeName)
+        public PxRepXSerializer* getRepXSerializer(byte* typeName)
         {
             fixed (PxSerializationRegistry* @this = &this)
             { return VirtualMethodTablePointer->getRepXSerializer(@this, typeName); }
@@ -69,18 +69,10 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void release()
+        public void release()
         {
             fixed (PxSerializationRegistry* @this = &this)
             { VirtualMethodTablePointer->release(@this); }
-        }
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
-        {
-            fixed (PxSerializationRegistry* @this = &this)
-            { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }
         }
 
         [FieldOffset(0)] public VirtualMethodTable* VirtualMethodTablePointer;
@@ -105,7 +97,7 @@ namespace PhysX
             /// <summary>Virtual method pointer for `release`</summary>
             public delegate* unmanaged[Cdecl]<PxSerializationRegistry*, void> release;
             /// <summary>Virtual method pointer for `~PxSerializationRegistry`</summary>
-            public delegate* unmanaged[Cdecl]<PxSerializationRegistry*, void> __DeletingDestructorPointer;
+            public void* __DeletingDestructorPointer;
         }
     }
 }

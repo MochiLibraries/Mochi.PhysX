@@ -6,14 +6,14 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxCacheAllocator
     {
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe byte* allocateCacheData(uint byteSize)
+        public byte* allocateCacheData(uint byteSize)
         {
             fixed (PxCacheAllocator* @this = &this)
             { return VirtualMethodTablePointer->allocateCacheData(@this, byteSize); }
@@ -21,7 +21,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
+        public void Destructor()
         {
             fixed (PxCacheAllocator* @this = &this)
             { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }

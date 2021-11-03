@@ -6,28 +6,28 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 12)]
     public unsafe partial struct PxMidphaseDesc
     {
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxMidphaseDesc@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper155", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxMidphaseDesc* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
+        public void Constructor()
         {
             fixed (PxMidphaseDesc* @this = &this)
             { Constructor_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getType@PxMidphaseDesc@physx@@QEBA?AW4Enum@PxMeshMidPhase@2@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getType@PxMidphaseDesc@physx@@QEBA?AW4Enum@PxMeshMidPhase@2@XZ", ExactSpelling = true)]
         private static extern PxMeshMidPhase getType_PInvoke(PxMidphaseDesc* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxMeshMidPhase getType()
+        public PxMeshMidPhase getType()
         {
             fixed (PxMidphaseDesc* @this = &this)
             { return getType_PInvoke(@this); }
@@ -37,35 +37,35 @@ namespace PhysX
 
         [FieldOffset(0)] public PxBVH34MidphaseDesc mBVH34Desc;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setToDefault@PxMidphaseDesc@physx@@QEAAXW4Enum@PxMeshMidPhase@2@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setToDefault@PxMidphaseDesc@physx@@QEAAXW4Enum@PxMeshMidPhase@2@@Z", ExactSpelling = true)]
         private static extern void setToDefault_PInvoke(PxMidphaseDesc* @this, PxMeshMidPhase type);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setToDefault(PxMeshMidPhase type)
+        public void setToDefault(PxMeshMidPhase type)
         {
             fixed (PxMidphaseDesc* @this = &this)
             { setToDefault_PInvoke(@this, type); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxMidphaseDesc@physx@@QEBA_NXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxMidphaseDesc@physx@@QEBA_NXZ", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool isValid_PInvoke(PxMidphaseDesc* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool isValid()
+        public bool isValid()
         {
             fixed (PxMidphaseDesc* @this = &this)
             { return isValid_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??4PxMidphaseDesc@physx@@QEAAAEAV01@W4Enum@PxMeshMidPhase@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??4PxMidphaseDesc@physx@@QEAAAEAV01@W4Enum@PxMeshMidPhase@1@@Z", ExactSpelling = true)]
         private static extern PxMidphaseDesc* operator_Equal_PInvoke(PxMidphaseDesc* @this, PxMeshMidPhase descType);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxMidphaseDesc* operator_Equal(PxMeshMidPhase descType)
+        public PxMidphaseDesc* operator_Equal(PxMeshMidPhase descType)
         {
             fixed (PxMidphaseDesc* @this = &this)
             { return operator_Equal_PInvoke(@this, descType); }

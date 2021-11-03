@@ -6,42 +6,42 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxSphereGeometry
     {
         [FieldOffset(0)] public PxGeometry Base;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxSphereGeometry@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper93", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxSphereGeometry* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
+        public void Constructor()
         {
             fixed (PxSphereGeometry* @this = &this)
             { Constructor_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxSphereGeometry@physx@@QEAA@M@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper94", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxSphereGeometry* @this, float ir);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(float ir)
+        public void Constructor(float ir)
         {
             fixed (PxSphereGeometry* @this = &this)
             { Constructor_PInvoke(@this, ir); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxSphereGeometry@physx@@QEBA_NXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxSphereGeometry@physx@@QEBA_NXZ", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool isValid_PInvoke(PxSphereGeometry* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool isValid()
+        public bool isValid()
         {
             fixed (PxSphereGeometry* @this = &this)
             { return isValid_PInvoke(@this); }

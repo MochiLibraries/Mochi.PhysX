@@ -2,16 +2,16 @@
 // https://github.com/InfectedLibraries/PhysX/blob/909a7c4fe940154be8c1aca19d655137435dd2f5/physx/snippets/snippethelloworld/SnippetHelloWorld.cpp
 // Some quirks due to unimplemented features or bugs in Biohazrd are marked with "BIOQUIRK" comments.
 // This sample does not necessarily represent the final shape of how Biohazrd will expose C++ classes to C#.
-using PhysX;
+using Mochi.PhysX;
 using System;
 using System.Diagnostics;
-using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
+using static Mochi.PhysX.Globals;
+
 // Switch between these to change the allocator implementation:
-using Allocator = InfectedPhysX.Sample.BasicAllocator;
 //using Allocator = InfectedPhysX.Sample.LoggingAllocator;
-using static PhysX.Globals;
+using Allocator = InfectedPhysX.Sample.BasicAllocator;
 
 namespace InfectedPhysX.Sample
 {
@@ -19,7 +19,7 @@ namespace InfectedPhysX.Sample
     {
         public static void Main(string[] args)
         {
-            NativeLibrary.SetDllImportResolver(typeof(PxDefaultErrorCallback).Assembly, NativeLibraryResolver);
+            Console.WriteLine($"PhysX native runtime build information: '{BuildInfo}'...");
 
             //---------------------------------------------------------------------------------------------------------------------------------------
             //BIOQUIRK: Can't use PxDefaultErrorCallback because it's in a static library.
@@ -35,7 +35,7 @@ namespace InfectedPhysX.Sample
 
             //---------------------------------------------------------------------------------------------------------------------------------------
             Console.WriteLine("Initializing foundation");
-            const uint PX_PHYSICS_VERSION = (4 << 24) + (1 << 16) + (1 << 8);
+            const uint PX_PHYSICS_VERSION = (4 << 24) + (1 << 16) + (2 << 8); //BIOQUIRK: Constant not translated
             PxFoundation* foundation = PxCreateFoundation(PX_PHYSICS_VERSION, &allocator, &errorCallback);
 
             if (foundation == null)
@@ -54,12 +54,13 @@ namespace InfectedPhysX.Sample
             { transport = PxDefaultPvdSocketTransportCreate(hostP, 5425, 10); }
 
             Console.WriteLine("Connecting to Pvd...");
-            pvd->connect(transport, PxPvdInstrumentationFlags.eALL);
+            PxPvdInstrumentationFlags pxPvdInstrumentationFlags = PxPvdInstrumentationFlags.eALL; //BIOQUIRK
+            pvd->connect(transport, &pxPvdInstrumentationFlags);
 
             //---------------------------------------------------------------------------------------------------------------------------------------
             Console.WriteLine("Initializing physics");
             PxTolerancesScale scale = default;
-            scale.Constructor();
+            scale.Constructor(); //BIOQUIRK: These should be replaced with C# 10 parameterless constructors
             PxPhysics* physics = PxCreatePhysics(PX_PHYSICS_VERSION, foundation, &scale, trackOutstandingAllocations: true, pvd);
 
             if (physics == null)
@@ -79,13 +80,17 @@ namespace InfectedPhysX.Sample
             sceneDescription.gravity = new PxVec3() { x = 0f, y = -9.81f, z = 0f };
             sceneDescription.cpuDispatcher = (PxCpuDispatcher*)dispatcher;
             sceneDescription.filterShader =
-                (delegate* unmanaged[Cdecl]<uint, PxFilterData, uint, PxFilterData, PxPairFlags*, void*, uint, PxFilterFlags>)
+                (delegate* unmanaged[Cdecl]<PxFilterFlags*, uint, PxFilterData*, uint, PxFilterData*, PxPairFlags*, void*, uint, PxFilterFlags*>)
                 //BIOQUIRK: We're basically trying to get a pointer to this function in PhysX.
                 // We can't actually use a function pointer here because C# considers this a managed function (since it could be a managed stub.)
                 //&PxDefaultSimulationFilterShader.PxDefaultSimulationFilterShader__
                 // As such, we manually use NativeLibrary.GetExport here.
                 // This code should be improved by https://github.com/InfectedLibraries/Biohazrd/issues/80
-                NativeLibrary.GetExport(PhysXDllHandle, "?PxDefaultSimulationFilterShader@physx@@YA?AV?$PxFlags@W4Enum@PxFilterFlag@physx@@G@1@IUPxFilterData@1@I0AEAV?$PxFlags@W4Enum@PxPairFlag@physx@@G@1@PEBXI@Z")
+                NativeLibrary.GetExport
+                (
+                    NativeLibrary.Load("Mochi.PhysX.Native.dll"),
+                    "?PxDefaultSimulationFilterShader@physx@@YA?AV?$PxFlags@W4Enum@PxFilterFlag@physx@@G@1@IUPxFilterData@1@I0AEAV?$PxFlags@W4Enum@PxPairFlag@physx@@G@1@PEBXI@Z"
+                )
             ;
             PxScene* scene = physics->createScene(&sceneDescription);
 
@@ -124,7 +129,8 @@ namespace InfectedPhysX.Sample
                 PxBoxGeometry stackBoxGeometry = new PxBoxGeometry();
                 const float halfExtent = 2f;
                 stackBoxGeometry.Constructor(halfExtent, halfExtent, halfExtent);
-                PxShape* shape = physics->createShape((PxGeometry*)&stackBoxGeometry, material, isExclusive: false, PxShapeFlags.eVISUALIZATION | PxShapeFlags.eSCENE_QUERY_SHAPE | PxShapeFlags.eSIMULATION_SHAPE);
+                PxShapeFlags shapeFlags = PxShapeFlags.eVISUALIZATION | PxShapeFlags.eSCENE_QUERY_SHAPE | PxShapeFlags.eSIMULATION_SHAPE;
+                PxShape* shape = physics->createShape((PxGeometry*)&stackBoxGeometry, material, isExclusive: false, &shapeFlags);
                 float stackZ = 10f;
                 for (int stackNum = 0; stackNum < 5; stackNum++)
                 {
@@ -228,15 +234,6 @@ namespace InfectedPhysX.Sample
             allocator.deallocate(scratchMemory);
             physics->release();
             foundation->release();
-        }
-
-        private static IntPtr PhysXDllHandle;
-        private static IntPtr NativeLibraryResolver(string libraryName, Assembly assembly, DllImportSearchPath? searchPath)
-        {
-            if (libraryName == "TODO.dll")
-            { return PhysXDllHandle = NativeLibrary.Load(@"InfectedPhysX.Native_64.dll"); }
-
-            return IntPtr.Zero;
         }
     }
 }

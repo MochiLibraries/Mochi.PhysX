@@ -6,14 +6,14 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxBatchQuery
     {
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void execute()
+        public void execute()
         {
             fixed (PxBatchQuery* @this = &this)
             { VirtualMethodTablePointer->execute(@this); }
@@ -21,7 +21,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe delegate* unmanaged[Cdecl]<PxFilterData, PxFilterData, void*, uint, PxHitFlags*, PxQueryHitType> getPreFilterShader()
+        public delegate* unmanaged[Cdecl]<PxFilterData*, PxFilterData*, void*, uint, PxHitFlags*, PxQueryHitType> getPreFilterShader()
         {
             fixed (PxBatchQuery* @this = &this)
             { return VirtualMethodTablePointer->getPreFilterShader(@this); }
@@ -29,7 +29,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe delegate* unmanaged[Cdecl]<PxFilterData, PxFilterData, void*, uint, PxQueryHit*, PxQueryHitType> getPostFilterShader()
+        public delegate* unmanaged[Cdecl]<PxFilterData*, PxFilterData*, void*, uint, PxQueryHit*, PxQueryHitType> getPostFilterShader()
         {
             fixed (PxBatchQuery* @this = &this)
             { return VirtualMethodTablePointer->getPostFilterShader(@this); }
@@ -37,7 +37,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void* getFilterShaderData()
+        public void* getFilterShaderData()
         {
             fixed (PxBatchQuery* @this = &this)
             { return VirtualMethodTablePointer->getFilterShaderData(@this); }
@@ -45,7 +45,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint getFilterShaderDataSize()
+        public uint getFilterShaderDataSize()
         {
             fixed (PxBatchQuery* @this = &this)
             { return VirtualMethodTablePointer->getFilterShaderDataSize(@this); }
@@ -53,7 +53,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setUserMemory(PxBatchQueryMemory* arg0)
+        public void setUserMemory(PxBatchQueryMemory* arg0)
         {
             fixed (PxBatchQuery* @this = &this)
             { VirtualMethodTablePointer->setUserMemory(@this, arg0); }
@@ -61,7 +61,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxBatchQueryMemory* getUserMemory()
+        public PxBatchQueryMemory* getUserMemory()
         {
             fixed (PxBatchQuery* @this = &this)
             { return VirtualMethodTablePointer->getUserMemory(@this); }
@@ -69,7 +69,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void release()
+        public void release()
         {
             fixed (PxBatchQuery* @this = &this)
             { VirtualMethodTablePointer->release(@this); }
@@ -77,7 +77,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void raycast(PxVec3* origin, PxVec3* unitDir, float distance, ushort maxTouchHits, PxHitFlags hitFlags, PxQueryFilterData* filterData, void* userData = null, PxQueryCache* cache = null)
+        public void raycast(PxVec3* origin, PxVec3* unitDir, float distance, ushort maxTouchHits, PxHitFlags* hitFlags, PxQueryFilterData* filterData, void* userData = null, PxQueryCache* cache = null)
         {
             fixed (PxBatchQuery* @this = &this)
             { VirtualMethodTablePointer->raycast(@this, origin, unitDir, distance, maxTouchHits, hitFlags, filterData, userData, cache); }
@@ -85,7 +85,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void overlap(PxGeometry* geometry, PxTransform* pose, ushort maxTouchHits, PxQueryFilterData* filterData, void* userData = null, PxQueryCache* cache = null)
+        public void overlap(PxGeometry* geometry, PxTransform* pose, ushort maxTouchHits, PxQueryFilterData* filterData, void* userData = null, PxQueryCache* cache = null)
         {
             fixed (PxBatchQuery* @this = &this)
             { VirtualMethodTablePointer->overlap(@this, geometry, pose, maxTouchHits, filterData, userData, cache); }
@@ -93,18 +93,10 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void sweep(PxGeometry* geometry, PxTransform* pose, PxVec3* unitDir, float distance, ushort maxTouchHits, PxHitFlags hitFlags, PxQueryFilterData* filterData, void* userData = null, PxQueryCache* cache = null, float inflation = 0f)
+        public void sweep(PxGeometry* geometry, PxTransform* pose, PxVec3* unitDir, float distance, ushort maxTouchHits, PxHitFlags* hitFlags, PxQueryFilterData* filterData, void* userData = null, PxQueryCache* cache = null, float inflation = 0f)
         {
             fixed (PxBatchQuery* @this = &this)
             { VirtualMethodTablePointer->sweep(@this, geometry, pose, unitDir, distance, maxTouchHits, hitFlags, filterData, userData, cache, inflation); }
-        }
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
-        {
-            fixed (PxBatchQuery* @this = &this)
-            { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }
         }
 
         [FieldOffset(0)] public VirtualMethodTable* VirtualMethodTablePointer;
@@ -115,9 +107,9 @@ namespace PhysX
             /// <summary>Virtual method pointer for `execute`</summary>
             public delegate* unmanaged[Cdecl]<PxBatchQuery*, void> execute;
             /// <summary>Virtual method pointer for `getPreFilterShader`</summary>
-            public delegate* unmanaged[Cdecl]<PxBatchQuery*, delegate* unmanaged[Cdecl]<PxFilterData, PxFilterData, void*, uint, PxHitFlags*, PxQueryHitType>> getPreFilterShader;
+            public delegate* unmanaged[Cdecl]<PxBatchQuery*, delegate* unmanaged[Cdecl]<PxFilterData*, PxFilterData*, void*, uint, PxHitFlags*, PxQueryHitType>> getPreFilterShader;
             /// <summary>Virtual method pointer for `getPostFilterShader`</summary>
-            public delegate* unmanaged[Cdecl]<PxBatchQuery*, delegate* unmanaged[Cdecl]<PxFilterData, PxFilterData, void*, uint, PxQueryHit*, PxQueryHitType>> getPostFilterShader;
+            public delegate* unmanaged[Cdecl]<PxBatchQuery*, delegate* unmanaged[Cdecl]<PxFilterData*, PxFilterData*, void*, uint, PxQueryHit*, PxQueryHitType>> getPostFilterShader;
             /// <summary>Virtual method pointer for `getFilterShaderData`</summary>
             public delegate* unmanaged[Cdecl]<PxBatchQuery*, void*> getFilterShaderData;
             /// <summary>Virtual method pointer for `getFilterShaderDataSize`</summary>
@@ -129,13 +121,13 @@ namespace PhysX
             /// <summary>Virtual method pointer for `release`</summary>
             public delegate* unmanaged[Cdecl]<PxBatchQuery*, void> release;
             /// <summary>Virtual method pointer for `raycast`</summary>
-            public delegate* unmanaged[Cdecl]<PxBatchQuery*, PxVec3*, PxVec3*, float, ushort, PxHitFlags, PxQueryFilterData*, void*, PxQueryCache*, void> raycast;
+            public delegate* unmanaged[Cdecl]<PxBatchQuery*, PxVec3*, PxVec3*, float, ushort, PxHitFlags*, PxQueryFilterData*, void*, PxQueryCache*, void> raycast;
             /// <summary>Virtual method pointer for `overlap`</summary>
             public delegate* unmanaged[Cdecl]<PxBatchQuery*, PxGeometry*, PxTransform*, ushort, PxQueryFilterData*, void*, PxQueryCache*, void> overlap;
             /// <summary>Virtual method pointer for `sweep`</summary>
-            public delegate* unmanaged[Cdecl]<PxBatchQuery*, PxGeometry*, PxTransform*, PxVec3*, float, ushort, PxHitFlags, PxQueryFilterData*, void*, PxQueryCache*, float, void> sweep;
+            public delegate* unmanaged[Cdecl]<PxBatchQuery*, PxGeometry*, PxTransform*, PxVec3*, float, ushort, PxHitFlags*, PxQueryFilterData*, void*, PxQueryCache*, float, void> sweep;
             /// <summary>Virtual method pointer for `~PxBatchQuery`</summary>
-            public delegate* unmanaged[Cdecl]<PxBatchQuery*, void> __DeletingDestructorPointer;
+            public void* __DeletingDestructorPointer;
         }
     }
 }

@@ -6,43 +6,32 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 48)]
     public unsafe partial struct PxContactPairExtraDataIterator
     {
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxContactPairExtraDataIterator@physx@@QEAA@PEBEI@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper138", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxContactPairExtraDataIterator* @this, byte* stream, uint size);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(byte* stream, uint size)
+        public void Constructor(byte* stream, uint size)
         {
             fixed (PxContactPairExtraDataIterator* @this = &this)
             { Constructor_PInvoke(@this, stream, size); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?nextItemSet@PxContactPairExtraDataIterator@physx@@QEAA_NXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?nextItemSet@PxContactPairExtraDataIterator@physx@@QEAA_NXZ", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool nextItemSet_PInvoke(PxContactPairExtraDataIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool nextItemSet()
+        public bool nextItemSet()
         {
             fixed (PxContactPairExtraDataIterator* @this = &this)
             { return nextItemSet_PInvoke(@this); }
-        }
-
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?clearDataPtrs@PxContactPairExtraDataIterator@physx@@AEAAXXZ", ExactSpelling = true)]
-        private static extern void clearDataPtrs_PInvoke(PxContactPairExtraDataIterator* @this);
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void clearDataPtrs()
-        {
-            fixed (PxContactPairExtraDataIterator* @this = &this)
-            { clearDataPtrs_PInvoke(@this); }
         }
 
         [FieldOffset(0)] public byte* currPtr;

@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 56)]
     public unsafe partial struct PxSimpleTriangleMesh
@@ -17,35 +17,35 @@ namespace PhysX
 
         [FieldOffset(48)] public PxMeshFlags flags;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxSimpleTriangleMesh@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper109", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxSimpleTriangleMesh* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
+        public void Constructor()
         {
             fixed (PxSimpleTriangleMesh* @this = &this)
             { Constructor_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setToDefault@PxSimpleTriangleMesh@physx@@QEAAXXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setToDefault@PxSimpleTriangleMesh@physx@@QEAAXXZ", ExactSpelling = true)]
         private static extern void setToDefault_PInvoke(PxSimpleTriangleMesh* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setToDefault()
+        public void setToDefault()
         {
             fixed (PxSimpleTriangleMesh* @this = &this)
             { setToDefault_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxSimpleTriangleMesh@physx@@QEBA_NXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxSimpleTriangleMesh@physx@@QEBA_NXZ", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool isValid_PInvoke(PxSimpleTriangleMesh* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool isValid()
+        public bool isValid()
         {
             fixed (PxSimpleTriangleMesh* @this = &this)
             { return isValid_PInvoke(@this); }

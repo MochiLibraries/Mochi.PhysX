@@ -6,19 +6,19 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 40)]
     public unsafe partial struct PxVehicleDriveNWRawInputData
     {
         [FieldOffset(0)] public PxVehicleDrive4WRawInputData Base;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxVehicleDriveNWRawInputData@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper227", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxVehicleDriveNWRawInputData* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
+        public void Constructor()
         {
             fixed (PxVehicleDriveNWRawInputData* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -26,7 +26,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
+        public void Destructor()
         {
             fixed (PxVehicleDriveNWRawInputData* @this = &this)
             { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }

@@ -6,58 +6,39 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 16)]
     public unsafe partial struct PxDeserializationContext
     {
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxBase* resolveReference(uint kind, ulong reference)
+        public PxBase* resolveReference(uint kind, ulong reference)
         {
             fixed (PxDeserializationContext* @this = &this)
             { return VirtualMethodTablePointer->resolveReference(@this, kind, reference); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?readName@PxDeserializationContext@physx@@QEAAXAEAPEBD@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?readName@PxDeserializationContext@physx@@QEAAXAEAPEBD@Z", ExactSpelling = true)]
         private static extern void readName_PInvoke(PxDeserializationContext* @this, byte** name);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void readName(byte** name)
+        public void readName(byte** name)
         {
             fixed (PxDeserializationContext* @this = &this)
             { readName_PInvoke(@this, name); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?alignExtraData@PxDeserializationContext@physx@@QEAAXI@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?alignExtraData@PxDeserializationContext@physx@@QEAAXI@Z", ExactSpelling = true)]
         private static extern void alignExtraData_PInvoke(PxDeserializationContext* @this, uint alignment);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void alignExtraData(uint alignment = 16)
+        public void alignExtraData(uint alignment = 16)
         {
             fixed (PxDeserializationContext* @this = &this)
             { alignExtraData_PInvoke(@this, alignment); }
-        }
-
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxDeserializationContext@physx@@IEAA@XZ", ExactSpelling = true)]
-        private static extern void Constructor_PInvoke(PxDeserializationContext* @this);
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
-        {
-            fixed (PxDeserializationContext* @this = &this)
-            { Constructor_PInvoke(@this); }
-        }
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
-        {
-            fixed (PxDeserializationContext* @this = &this)
-            { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }
         }
 
         [FieldOffset(8)] public byte* mExtraDataAddress;
@@ -70,7 +51,7 @@ namespace PhysX
             /// <summary>Virtual method pointer for `resolveReference`</summary>
             public delegate* unmanaged[Cdecl]<PxDeserializationContext*, uint, ulong, PxBase*> resolveReference;
             /// <summary>Virtual method pointer for `~PxDeserializationContext`</summary>
-            public delegate* unmanaged[Cdecl]<PxDeserializationContext*, void> __DeletingDestructorPointer;
+            public void* __DeletingDestructorPointer;
         }
     }
 }

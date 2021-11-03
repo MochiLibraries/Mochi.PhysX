@@ -4,7 +4,7 @@
 #nullable enable
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 80)]
     public unsafe partial struct Px1DConstraint

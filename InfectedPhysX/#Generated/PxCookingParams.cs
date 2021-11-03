@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 48)]
     public unsafe partial struct PxCookingParams
@@ -33,12 +33,12 @@ namespace PhysX
 
         [FieldOffset(44)] public uint gaussMapLimit;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxCookingParams@physx@@QEAA@AEBVPxTolerancesScale@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper157", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxCookingParams* @this, PxTolerancesScale* sc);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxTolerancesScale* sc)
+        public void Constructor(PxTolerancesScale* sc)
         {
             fixed (PxCookingParams* @this = &this)
             { Constructor_PInvoke(@this, sc); }

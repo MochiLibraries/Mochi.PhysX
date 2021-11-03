@@ -4,7 +4,7 @@
 #nullable enable
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 48)]
     public unsafe partial struct PxContactPairPoint

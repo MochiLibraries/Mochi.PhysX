@@ -4,7 +4,7 @@
 #nullable enable
 using System.Runtime.InteropServices;
 
-namespace PhysX.Gu
+namespace Mochi.PhysX.Gu
 {
     [StructLayout(LayoutKind.Explicit, Size = 64)]
     public unsafe partial struct ContactPoint

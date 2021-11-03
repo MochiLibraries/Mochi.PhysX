@@ -4,18 +4,18 @@
 #nullable enable
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 1)]
     public unsafe partial struct PxRigidActorExt
     {
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?createExclusiveShape@PxRigidActorExt@physx@@SAPEAVPxShape@2@AEAVPxRigidActor@2@AEBVPxGeometry@2@PEBQEAVPxMaterial@2@GV?$PxFlags@W4Enum@PxShapeFlag@physx@@E@2@@Z", ExactSpelling = true)]
-        public static extern PxShape* createExclusiveShape(PxRigidActor* actor, PxGeometry* geometry, PxMaterial** materials, ushort materialCount, PxShapeFlags shapeFlags);
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?createExclusiveShape@PxRigidActorExt@physx@@SAPEAVPxShape@2@AEAVPxRigidActor@2@AEBVPxGeometry@2@PEBQEAVPxMaterial@2@GV?$PxFlags@W4Enum@PxShapeFlag@physx@@E@2@@Z", ExactSpelling = true)]
+        public static extern PxShape* createExclusiveShape(PxRigidActor* actor, PxGeometry* geometry, PxMaterial** materials, ushort materialCount, PxShapeFlags* shapeFlags);
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?createExclusiveShape@PxRigidActorExt@physx@@SAPEAVPxShape@2@AEAVPxRigidActor@2@AEBVPxGeometry@2@AEBVPxMaterial@2@V?$PxFlags@W4Enum@PxShapeFlag@physx@@E@2@@Z", ExactSpelling = true)]
-        public static extern PxShape* createExclusiveShape(PxRigidActor* actor, PxGeometry* geometry, PxMaterial* material, PxShapeFlags shapeFlags);
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?createExclusiveShape@PxRigidActorExt@physx@@SAPEAVPxShape@2@AEAVPxRigidActor@2@AEBVPxGeometry@2@AEBVPxMaterial@2@V?$PxFlags@W4Enum@PxShapeFlag@physx@@E@2@@Z", ExactSpelling = true)]
+        public static extern PxShape* createExclusiveShape(PxRigidActor* actor, PxGeometry* geometry, PxMaterial* material, PxShapeFlags* shapeFlags);
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getRigidActorShapeLocalBoundsList@PxRigidActorExt@physx@@SAPEAVPxBounds3@2@AEBVPxRigidActor@2@AEAI@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getRigidActorShapeLocalBoundsList@PxRigidActorExt@physx@@SAPEAVPxBounds3@2@AEBVPxRigidActor@2@AEAI@Z", ExactSpelling = true)]
         public static extern PxBounds3* getRigidActorShapeLocalBoundsList(PxRigidActor* actor, uint* numBounds);
     }
 }

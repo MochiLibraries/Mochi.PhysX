@@ -6,14 +6,14 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxControllerBehaviorCallback
     {
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxControllerBehaviorFlags getBehaviorFlags(PxShape* shape, PxActor* actor)
+        public PxControllerBehaviorFlags getBehaviorFlags(PxShape* shape, PxActor* actor)
         {
             fixed (PxControllerBehaviorCallback* @this = &this)
             {
@@ -25,7 +25,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxControllerBehaviorFlags getBehaviorFlags(PxController* controller)
+        public PxControllerBehaviorFlags getBehaviorFlags(PxController* controller)
         {
             fixed (PxControllerBehaviorCallback* @this = &this)
             {
@@ -37,7 +37,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxControllerBehaviorFlags getBehaviorFlags(PxObstacle* obstacle)
+        public PxControllerBehaviorFlags getBehaviorFlags(PxObstacle* obstacle)
         {
             fixed (PxControllerBehaviorCallback* @this = &this)
             {
@@ -45,14 +45,6 @@ namespace PhysX
                 VirtualMethodTablePointer->getBehaviorFlags_0(@this, &__returnBuffer, obstacle);
                 return __returnBuffer;
             }
-        }
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
-        {
-            fixed (PxControllerBehaviorCallback* @this = &this)
-            { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }
         }
 
         [FieldOffset(0)] public VirtualMethodTable* VirtualMethodTablePointer;
@@ -67,7 +59,7 @@ namespace PhysX
             /// <summary>Virtual method pointer for `getBehaviorFlags`</summary>
             public delegate* unmanaged[Cdecl]<PxControllerBehaviorCallback*, PxControllerBehaviorFlags*, PxShape*, PxActor*, PxControllerBehaviorFlags*> getBehaviorFlags_2;
             /// <summary>Virtual method pointer for `~PxControllerBehaviorCallback`</summary>
-            public delegate* unmanaged[Cdecl]<PxControllerBehaviorCallback*, void> __DeletingDestructorPointer;
+            public void* __DeletingDestructorPointer;
         }
     }
 }

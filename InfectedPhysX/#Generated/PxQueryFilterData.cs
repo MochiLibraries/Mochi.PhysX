@@ -6,39 +6,39 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 20)]
     public unsafe partial struct PxQueryFilterData
     {
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxQueryFilterData@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper118", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxQueryFilterData* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
+        public void Constructor()
         {
             fixed (PxQueryFilterData* @this = &this)
             { Constructor_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxQueryFilterData@physx@@QEAA@AEBUPxFilterData@1@V?$PxFlags@W4Enum@PxQueryFlag@physx@@G@1@@Z", ExactSpelling = true)]
-        private static extern void Constructor_PInvoke(PxQueryFilterData* @this, PxFilterData* fd, PxQueryFlags f);
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper119", ExactSpelling = true)]
+        private static extern void Constructor_PInvoke(PxQueryFilterData* @this, PxFilterData* fd, PxQueryFlags* f);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxFilterData* fd, PxQueryFlags f)
+        public void Constructor(PxFilterData* fd, PxQueryFlags* f)
         {
             fixed (PxQueryFilterData* @this = &this)
             { Constructor_PInvoke(@this, fd, f); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxQueryFilterData@physx@@QEAA@V?$PxFlags@W4Enum@PxQueryFlag@physx@@G@1@@Z", ExactSpelling = true)]
-        private static extern void Constructor_PInvoke(PxQueryFilterData* @this, PxQueryFlags f);
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper120", ExactSpelling = true)]
+        private static extern void Constructor_PInvoke(PxQueryFilterData* @this, PxQueryFlags* f);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxQueryFlags f)
+        public void Constructor(PxQueryFlags* f)
         {
             fixed (PxQueryFilterData* @this = &this)
             { Constructor_PInvoke(@this, f); }

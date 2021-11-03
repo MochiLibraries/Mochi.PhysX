@@ -1,0 +1,37 @@
+# This .gitignore will be copied into the PhysX repo before we build since it doesn't have one of its own due to the Nvidia developers using Perforce.
+
+# Ignore this file
+/.gitignore
+
+# Ignore user-specific Visual Studio files
+.vs/
+*.vcxproj.user
+
+# Ignore CMake-generated files, keep public folder since it's not generated
+physx/compiler/*
+physx/include/PxConfig.h
+!physx/compiler/public/
+
+# Ignore build outputs, but keep closed-source portions of the PhysX SDK
+physx/bin/*
+!physx/bin/**/PhysXDevice.dll
+!physx/bin/**/PhysXDevice64.dll
+!physx/bin/**/glut32.dll
+!physx/bin/**/libPhysXGpu_64.so
+
+# Ignore CMake install target outputs
+physx/install/
+
+# Ignore generated sample resources
+physx/samples/media/user/*/
+
+# Ignore Kapla demo build outputs
+kaplademo/**/bin/
+kaplademo/**/lib/
+kaplademo/**/compiler/**/x64/
+
+# Ignore Mochi.PhysX presets
+mochi-physx-*.xml
+
+# Ignore automatically fixed shell scripts for autocrlf+WSL
+*-nocrlf.sh

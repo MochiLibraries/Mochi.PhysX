@@ -1,0 +1,38 @@
+<Project>
+  <!-- Default configuration and platform when not present -->
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
+    <Platform Condition="'$(Platform)' == ''">AnyCPU</Platform>
+  </PropertyGroup>
+  <!-- Build to central folders instead of scattering bin and obj throughout the solution tree -->
+  <PropertyGroup>
+    <!--
+      We include the project file extension by default to avoid unexpected collisions, but drop it for C# and C++ projects since we don't expect them to collide.
+    -->
+    <ThisProjectOutputSubdirectory>$(MSBuildProjectFile)</ThisProjectOutputSubdirectory>
+    <ThisProjectOutputSubdirectory Condition="'$(MSBuildProjectExtension)' == '.csproj'">$(MSBuildProjectName)</ThisProjectOutputSubdirectory>
+    <ThisProjectOutputSubdirectory Condition="'$(MSBuildProjectExtension)' == '.vcxproj'">$(MSBuildProjectName)</ThisProjectOutputSubdirectory>
+
+    <_ProjectTreeRoot>$(MSBuildThisFileDirectory)../</_ProjectTreeRoot>
+
+    <!--
+      Odd things can happen when WSL and Windows share the same output directories. As such if we detect we're running under WSL we use different output directories.
+    -->
+    <_WslPathPart></_WslPathPart>
+    <_WslSuffixPart></_WslSuffixPart>
+    <_WslPathPart Condition="'$(WSL_DISTRO_NAME)' != ''">wsl/</_WslPathPart>
+    <_WslSuffixPart Condition="'$(WSL_DISTRO_NAME)' != ''">-wsl</_WslSuffixPart>
+
+    <BaseOutputPath>$(_ProjectTreeRoot)bin/$(Configuration)-$(Platform)$(_WslSuffixPart)/</BaseOutputPath>
+    <OutputPath>$(BaseOutputPath)$(ThisProjectOutputSubdirectory)/</OutputPath>
+    <OutputDir>$(OutputPath)</OutputDir>
+
+    <BaseIntermediateOutputPath>$(_ProjectTreeRoot)obj/$(_WslPathPart)$(ThisProjectOutputSubdirectory)/</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Configuration)-$(Platform)/</IntermediateOutputPath>
+
+    <PackageOutputPath>$(_ProjectTreeRoot)packages/$(_WslPathPart)</PackageOutputPath>
+
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+  </PropertyGroup>
+</Project>

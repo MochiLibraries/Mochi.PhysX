@@ -6,22 +6,14 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxStringTable
     {
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
-        {
-            fixed (PxStringTable* @this = &this)
-            { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }
-        }
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe byte* allocateStr(byte* inSrc)
+        public byte* allocateStr(byte* inSrc)
         {
             fixed (PxStringTable* @this = &this)
             { return VirtualMethodTablePointer->allocateStr(@this, inSrc); }
@@ -29,7 +21,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void release()
+        public void release()
         {
             fixed (PxStringTable* @this = &this)
             { VirtualMethodTablePointer->release(@this); }
@@ -41,7 +33,7 @@ namespace PhysX
         public unsafe struct VirtualMethodTable
         {
             /// <summary>Virtual method pointer for `~PxStringTable`</summary>
-            public delegate* unmanaged[Cdecl]<PxStringTable*, void> __DeletingDestructorPointer;
+            public void* __DeletingDestructorPointer;
             /// <summary>Virtual method pointer for `allocateStr`</summary>
             public delegate* unmanaged[Cdecl]<PxStringTable*, byte*, byte*> allocateStr;
             /// <summary>Virtual method pointer for `release`</summary>

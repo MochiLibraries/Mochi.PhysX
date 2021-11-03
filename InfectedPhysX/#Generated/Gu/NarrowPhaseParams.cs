@@ -6,17 +6,17 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX.Gu
+namespace Mochi.PhysX.Gu
 {
     [StructLayout(LayoutKind.Explicit, Size = 12)]
     public unsafe partial struct NarrowPhaseParams
     {
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0NarrowPhaseParams@Gu@physx@@QEAA@MMM@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper37", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(NarrowPhaseParams* @this, float contactDistance, float meshContactMargin, float toleranceLength);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(float contactDistance, float meshContactMargin, float toleranceLength)
+        public void Constructor(float contactDistance, float meshContactMargin, float toleranceLength)
         {
             fixed (NarrowPhaseParams* @this = &this)
             { Constructor_PInvoke(@this, contactDistance, meshContactMargin, toleranceLength); }

@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 48)]
     public unsafe partial struct PxJacobianRow
@@ -19,45 +19,45 @@ namespace PhysX
 
         [FieldOffset(36)] public PxVec3 angular1;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxJacobianRow@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper159", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxJacobianRow* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
+        public void Constructor()
         {
             fixed (PxJacobianRow* @this = &this)
             { Constructor_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxJacobianRow@physx@@QEAA@AEBVPxVec3@1@000@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper160", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxJacobianRow* @this, PxVec3* lin0, PxVec3* lin1, PxVec3* ang0, PxVec3* ang1);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxVec3* lin0, PxVec3* lin1, PxVec3* ang0, PxVec3* ang1)
+        public void Constructor(PxVec3* lin0, PxVec3* lin1, PxVec3* ang0, PxVec3* ang1)
         {
             fixed (PxJacobianRow* @this = &this)
             { Constructor_PInvoke(@this, lin0, lin1, ang0, ang1); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??XPxJacobianRow@physx@@QEAAXM@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??XPxJacobianRow@physx@@QEAAXM@Z", ExactSpelling = true)]
         private static extern void operator_StarEqual_PInvoke(PxJacobianRow* @this, float scale);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void operator_StarEqual(float scale)
+        public void operator_StarEqual(float scale)
         {
             fixed (PxJacobianRow* @this = &this)
             { operator_StarEqual_PInvoke(@this, scale); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??DPxJacobianRow@physx@@QEBA?AU01@M@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??DPxJacobianRow@physx@@QEBA?AU01@M@Z", ExactSpelling = true)]
         private static extern PxJacobianRow* operator_Star_PInvoke(PxJacobianRow* @this, out PxJacobianRow __returnBuffer, float scale);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxJacobianRow operator_Star(float scale)
+        public PxJacobianRow operator_Star(float scale)
         {
             fixed (PxJacobianRow* @this = &this)
             {

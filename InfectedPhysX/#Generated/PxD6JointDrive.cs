@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 16)]
     public unsafe partial struct PxD6JointDrive
@@ -17,35 +17,35 @@ namespace PhysX
 
         [FieldOffset(12)] public PxD6JointDriveFlags flags;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxD6JointDrive@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper173", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxD6JointDrive* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
+        public void Constructor()
         {
             fixed (PxD6JointDrive* @this = &this)
             { Constructor_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxD6JointDrive@physx@@QEAA@MMM_N@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper174", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxD6JointDrive* @this, float driveStiffness, float driveDamping, float driveForceLimit, [MarshalAs(UnmanagedType.I1)] bool isAcceleration);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(float driveStiffness, float driveDamping, float driveForceLimit, bool isAcceleration = false)
+        public void Constructor(float driveStiffness, float driveDamping, float driveForceLimit, bool isAcceleration = false)
         {
             fixed (PxD6JointDrive* @this = &this)
             { Constructor_PInvoke(@this, driveStiffness, driveDamping, driveForceLimit, isAcceleration); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxD6JointDrive@physx@@QEBA_NXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxD6JointDrive@physx@@QEBA_NXZ", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool isValid_PInvoke(PxD6JointDrive* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool isValid()
+        public bool isValid()
         {
             fixed (PxD6JointDrive* @this = &this)
             { return isValid_PInvoke(@this); }

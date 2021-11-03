@@ -6,30 +6,19 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 56)]
     public unsafe partial struct PxObstacle
     {
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxObstacle@physx@@IEAA@XZ", ExactSpelling = true)]
-        private static extern void Constructor_PInvoke(PxObstacle* @this);
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
-        {
-            fixed (PxObstacle* @this = &this)
-            { Constructor_PInvoke(@this); }
-        }
-
         [FieldOffset(0)] public PxGeometryType mType;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getType@PxObstacle@physx@@QEBA?AW4Enum@PxGeometryType@2@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getType@PxObstacle@physx@@QEBA?AW4Enum@PxGeometryType@2@XZ", ExactSpelling = true)]
         private static extern PxGeometryType getType_PInvoke(PxObstacle* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxGeometryType getType()
+        public PxGeometryType getType()
         {
             fixed (PxObstacle* @this = &this)
             { return getType_PInvoke(@this); }

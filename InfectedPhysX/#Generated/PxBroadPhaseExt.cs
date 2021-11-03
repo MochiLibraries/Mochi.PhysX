@@ -4,12 +4,12 @@
 #nullable enable
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 1)]
     public unsafe partial struct PxBroadPhaseExt
     {
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?createRegionsFromWorldBounds@PxBroadPhaseExt@physx@@SAIPEAVPxBounds3@2@AEBV32@II@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?createRegionsFromWorldBounds@PxBroadPhaseExt@physx@@SAIPEAVPxBounds3@2@AEBV32@II@Z", ExactSpelling = true)]
         public static extern uint createRegionsFromWorldBounds(PxBounds3* regions, PxBounds3* globalBounds, uint nbSubdiv, uint upAxis = 1);
     }
 }

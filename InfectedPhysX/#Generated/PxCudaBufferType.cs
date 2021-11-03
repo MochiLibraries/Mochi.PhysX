@@ -6,28 +6,28 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxCudaBufferType
     {
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxCudaBufferType@physx@@QEAA@AEBU01@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper77", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxCudaBufferType* @this, PxCudaBufferType* t);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxCudaBufferType* t)
+        public void Constructor(PxCudaBufferType* t)
         {
             fixed (PxCudaBufferType* @this = &this)
             { Constructor_PInvoke(@this, t); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxCudaBufferType@physx@@QEAA@W4Enum@PxCudaBufferMemorySpace@1@W42PxCudaBufferFlags@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper78", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxCudaBufferType* @this, PxCudaBufferMemorySpace _memSpace, PxCudaBufferFlags _flags);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxCudaBufferMemorySpace _memSpace, PxCudaBufferFlags _flags)
+        public void Constructor(PxCudaBufferMemorySpace _memSpace, PxCudaBufferFlags _flags)
         {
             fixed (PxCudaBufferType* @this = &this)
             { Constructor_PInvoke(@this, _memSpace, _flags); }

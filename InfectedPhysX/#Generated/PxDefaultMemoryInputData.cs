@@ -6,19 +6,19 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 32)]
     public unsafe partial struct PxDefaultMemoryInputData
     {
         [FieldOffset(0)] public PxInputData Base;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxDefaultMemoryInputData@physx@@QEAA@PEAEI@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxDefaultMemoryInputData@physx@@QEAA@PEAEI@Z", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxDefaultMemoryInputData* @this, byte* data, uint length);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(byte* data, uint length)
+        public void Constructor(byte* data, uint length)
         {
             fixed (PxDefaultMemoryInputData* @this = &this)
             { Constructor_PInvoke(@this, data, length); }
@@ -26,7 +26,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint read(void* dest, uint count)
+        public uint read(void* dest, uint count)
         {
             fixed (PxDefaultMemoryInputData* @this = &this)
             { return VirtualMethodTablePointer->read(@this, dest, count); }
@@ -34,7 +34,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint getLength()
+        public uint getLength()
         {
             fixed (PxDefaultMemoryInputData* @this = &this)
             { return VirtualMethodTablePointer->getLength(@this); }
@@ -42,7 +42,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void seek(uint pos)
+        public void seek(uint pos)
         {
             fixed (PxDefaultMemoryInputData* @this = &this)
             { VirtualMethodTablePointer->seek(@this, pos); }
@@ -50,7 +50,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint tell()
+        public uint tell()
         {
             fixed (PxDefaultMemoryInputData* @this = &this)
             { return VirtualMethodTablePointer->tell(@this); }
@@ -70,7 +70,7 @@ namespace PhysX
             /// <summary>Virtual method pointer for `read`</summary>
             public delegate* unmanaged[Cdecl]<PxDefaultMemoryInputData*, void*, uint, uint> read;
             /// <summary>Virtual method pointer for `~PxDefaultMemoryInputData`</summary>
-            public delegate* unmanaged[Cdecl]<PxDefaultMemoryInputData*, void> __DeletingDestructorPointer;
+            public void* __DeletingDestructorPointer;
             /// <summary>Virtual method pointer for `getLength`</summary>
             public delegate* unmanaged[Cdecl]<PxDefaultMemoryInputData*, uint> getLength;
             /// <summary>Virtual method pointer for `seek`</summary>

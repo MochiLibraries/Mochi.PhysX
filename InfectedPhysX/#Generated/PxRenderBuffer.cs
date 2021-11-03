@@ -6,14 +6,14 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxRenderBuffer
     {
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
+        public void Destructor()
         {
             fixed (PxRenderBuffer* @this = &this)
             { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }
@@ -21,7 +21,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint getNbPoints()
+        public uint getNbPoints()
         {
             fixed (PxRenderBuffer* @this = &this)
             { return VirtualMethodTablePointer->getNbPoints(@this); }
@@ -29,7 +29,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxDebugPoint* getPoints()
+        public PxDebugPoint* getPoints()
         {
             fixed (PxRenderBuffer* @this = &this)
             { return VirtualMethodTablePointer->getPoints(@this); }
@@ -37,7 +37,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint getNbLines()
+        public uint getNbLines()
         {
             fixed (PxRenderBuffer* @this = &this)
             { return VirtualMethodTablePointer->getNbLines(@this); }
@@ -45,7 +45,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxDebugLine* getLines()
+        public PxDebugLine* getLines()
         {
             fixed (PxRenderBuffer* @this = &this)
             { return VirtualMethodTablePointer->getLines(@this); }
@@ -53,7 +53,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint getNbTriangles()
+        public uint getNbTriangles()
         {
             fixed (PxRenderBuffer* @this = &this)
             { return VirtualMethodTablePointer->getNbTriangles(@this); }
@@ -61,7 +61,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxDebugTriangle* getTriangles()
+        public PxDebugTriangle* getTriangles()
         {
             fixed (PxRenderBuffer* @this = &this)
             { return VirtualMethodTablePointer->getTriangles(@this); }
@@ -69,7 +69,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint getNbTexts()
+        public uint getNbTexts()
         {
             fixed (PxRenderBuffer* @this = &this)
             { return VirtualMethodTablePointer->getNbTexts(@this); }
@@ -77,7 +77,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxDebugText* getTexts()
+        public PxDebugText* getTexts()
         {
             fixed (PxRenderBuffer* @this = &this)
             { return VirtualMethodTablePointer->getTexts(@this); }
@@ -85,7 +85,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void append(PxRenderBuffer* other)
+        public void append(PxRenderBuffer* other)
         {
             fixed (PxRenderBuffer* @this = &this)
             { VirtualMethodTablePointer->append(@this, other); }
@@ -93,7 +93,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void clear()
+        public void clear()
         {
             fixed (PxRenderBuffer* @this = &this)
             { VirtualMethodTablePointer->clear(@this); }

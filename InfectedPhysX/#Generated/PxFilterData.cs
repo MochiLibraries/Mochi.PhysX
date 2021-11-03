@@ -6,96 +6,96 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 16)]
     public unsafe partial struct PxFilterData
     {
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxFilterData@physx@@QEAA@W4PxEMPTY@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper114", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxFilterData* @this, PxEMPTY arg0);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxEMPTY arg0)
+        public void Constructor(PxEMPTY arg0)
         {
             fixed (PxFilterData* @this = &this)
             { Constructor_PInvoke(@this, arg0); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxFilterData@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper115", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxFilterData* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
+        public void Constructor()
         {
             fixed (PxFilterData* @this = &this)
             { Constructor_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxFilterData@physx@@QEAA@AEBU01@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper116", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxFilterData* @this, PxFilterData* fd);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxFilterData* fd)
+        public void Constructor(PxFilterData* fd)
         {
             fixed (PxFilterData* @this = &this)
             { Constructor_PInvoke(@this, fd); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxFilterData@physx@@QEAA@IIII@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper117", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxFilterData* @this, uint w0, uint w1, uint w2, uint w3);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(uint w0, uint w1, uint w2, uint w3)
+        public void Constructor(uint w0, uint w1, uint w2, uint w3)
         {
             fixed (PxFilterData* @this = &this)
             { Constructor_PInvoke(@this, w0, w1, w2, w3); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setToDefault@PxFilterData@physx@@QEAAXXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setToDefault@PxFilterData@physx@@QEAAXXZ", ExactSpelling = true)]
         private static extern void setToDefault_PInvoke(PxFilterData* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setToDefault()
+        public void setToDefault()
         {
             fixed (PxFilterData* @this = &this)
             { setToDefault_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??4PxFilterData@physx@@QEAAXAEBU01@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??4PxFilterData@physx@@QEAAXAEBU01@@Z", ExactSpelling = true)]
         private static extern void operator_Equal_PInvoke(PxFilterData* @this, PxFilterData* fd);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void operator_Equal(PxFilterData* fd)
+        public void operator_Equal(PxFilterData* fd)
         {
             fixed (PxFilterData* @this = &this)
             { operator_Equal_PInvoke(@this, fd); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??8PxFilterData@physx@@QEBA_NAEBU01@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??8PxFilterData@physx@@QEBA_NAEBU01@@Z", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool operator_EqualEqual_PInvoke(PxFilterData* @this, PxFilterData* a);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool operator_EqualEqual(PxFilterData* a)
+        public bool operator_EqualEqual(PxFilterData* a)
         {
             fixed (PxFilterData* @this = &this)
             { return operator_EqualEqual_PInvoke(@this, a); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??9PxFilterData@physx@@QEBA_NAEBU01@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??9PxFilterData@physx@@QEBA_NAEBU01@@Z", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool operator_ExclaimEqual_PInvoke(PxFilterData* @this, PxFilterData* a);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool operator_ExclaimEqual(PxFilterData* a)
+        public bool operator_ExclaimEqual(PxFilterData* a)
         {
             fixed (PxFilterData* @this = &this)
             { return operator_ExclaimEqual_PInvoke(@this, a); }

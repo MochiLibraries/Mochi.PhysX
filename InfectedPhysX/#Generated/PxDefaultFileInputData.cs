@@ -6,19 +6,19 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 24)]
     public unsafe partial struct PxDefaultFileInputData
     {
         [FieldOffset(0)] public PxInputData Base;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxDefaultFileInputData@physx@@QEAA@PEBD@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxDefaultFileInputData@physx@@QEAA@PEBD@Z", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxDefaultFileInputData* @this, byte* name);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(byte* name)
+        public void Constructor(byte* name)
         {
             fixed (PxDefaultFileInputData* @this = &this)
             { Constructor_PInvoke(@this, name); }
@@ -26,7 +26,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
+        public void Destructor()
         {
             fixed (PxDefaultFileInputData* @this = &this)
             { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }
@@ -34,7 +34,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint read(void* dest, uint count)
+        public uint read(void* dest, uint count)
         {
             fixed (PxDefaultFileInputData* @this = &this)
             { return VirtualMethodTablePointer->read(@this, dest, count); }
@@ -42,7 +42,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void seek(uint pos)
+        public void seek(uint pos)
         {
             fixed (PxDefaultFileInputData* @this = &this)
             { VirtualMethodTablePointer->seek(@this, pos); }
@@ -50,7 +50,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint tell()
+        public uint tell()
         {
             fixed (PxDefaultFileInputData* @this = &this)
             { return VirtualMethodTablePointer->tell(@this); }
@@ -58,19 +58,19 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint getLength()
+        public uint getLength()
         {
             fixed (PxDefaultFileInputData* @this = &this)
             { return VirtualMethodTablePointer->getLength(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxDefaultFileInputData@physx@@QEBA_NXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxDefaultFileInputData@physx@@QEBA_NXZ", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool isValid_PInvoke(PxDefaultFileInputData* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool isValid()
+        public bool isValid()
         {
             fixed (PxDefaultFileInputData* @this = &this)
             { return isValid_PInvoke(@this); }

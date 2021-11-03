@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 80)]
     public unsafe partial struct PxContactStreamIterator
@@ -46,304 +46,282 @@ namespace PhysX
 
         [FieldOffset(76)] public uint hasFaceIndices;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxContactStreamIterator@physx@@QEAA@PEBE0PEBIII@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper36", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxContactStreamIterator* @this, byte* contactPatches, byte* contactPoints, uint* contactFaceIndices, uint nbPatches, uint nbContacts);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(byte* contactPatches, byte* contactPoints, uint* contactFaceIndices, uint nbPatches, uint nbContacts)
+        public void Constructor(byte* contactPatches, byte* contactPoints, uint* contactFaceIndices, uint nbPatches, uint nbContacts)
         {
             fixed (PxContactStreamIterator* @this = &this)
             { Constructor_PInvoke(@this, contactPatches, contactPoints, contactFaceIndices, nbPatches, nbContacts); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?hasNextPatch@PxContactStreamIterator@physx@@QEBA_NXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?hasNextPatch@PxContactStreamIterator@physx@@QEBA_NXZ", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool hasNextPatch_PInvoke(PxContactStreamIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool hasNextPatch()
+        public bool hasNextPatch()
         {
             fixed (PxContactStreamIterator* @this = &this)
             { return hasNextPatch_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getTotalContactCount@PxContactStreamIterator@physx@@QEBAIXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getTotalContactCount@PxContactStreamIterator@physx@@QEBAIXZ", ExactSpelling = true)]
         private static extern uint getTotalContactCount_PInvoke(PxContactStreamIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint getTotalContactCount()
+        public uint getTotalContactCount()
         {
             fixed (PxContactStreamIterator* @this = &this)
             { return getTotalContactCount_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getTotalPatchCount@PxContactStreamIterator@physx@@QEBAIXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getTotalPatchCount@PxContactStreamIterator@physx@@QEBAIXZ", ExactSpelling = true)]
         private static extern uint getTotalPatchCount_PInvoke(PxContactStreamIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint getTotalPatchCount()
+        public uint getTotalPatchCount()
         {
             fixed (PxContactStreamIterator* @this = &this)
             { return getTotalPatchCount_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?nextPatch@PxContactStreamIterator@physx@@QEAAXXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?nextPatch@PxContactStreamIterator@physx@@QEAAXXZ", ExactSpelling = true)]
         private static extern void nextPatch_PInvoke(PxContactStreamIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void nextPatch()
+        public void nextPatch()
         {
             fixed (PxContactStreamIterator* @this = &this)
             { nextPatch_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?hasNextContact@PxContactStreamIterator@physx@@QEBA_NXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?hasNextContact@PxContactStreamIterator@physx@@QEBA_NXZ", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool hasNextContact_PInvoke(PxContactStreamIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool hasNextContact()
+        public bool hasNextContact()
         {
             fixed (PxContactStreamIterator* @this = &this)
             { return hasNextContact_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?nextContact@PxContactStreamIterator@physx@@QEAAXXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?nextContact@PxContactStreamIterator@physx@@QEAAXXZ", ExactSpelling = true)]
         private static extern void nextContact_PInvoke(PxContactStreamIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void nextContact()
+        public void nextContact()
         {
             fixed (PxContactStreamIterator* @this = &this)
             { nextContact_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getContactNormal@PxContactStreamIterator@physx@@QEBAAEBVPxVec3@2@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getContactNormal@PxContactStreamIterator@physx@@QEBAAEBVPxVec3@2@XZ", ExactSpelling = true)]
         private static extern PxVec3* getContactNormal_PInvoke(PxContactStreamIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxVec3* getContactNormal()
+        public PxVec3* getContactNormal()
         {
             fixed (PxContactStreamIterator* @this = &this)
             { return getContactNormal_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getInvMassScale0@PxContactStreamIterator@physx@@QEBAMXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getInvMassScale0@PxContactStreamIterator@physx@@QEBAMXZ", ExactSpelling = true)]
         private static extern float getInvMassScale0_PInvoke(PxContactStreamIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float getInvMassScale0()
+        public float getInvMassScale0()
         {
             fixed (PxContactStreamIterator* @this = &this)
             { return getInvMassScale0_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getInvMassScale1@PxContactStreamIterator@physx@@QEBAMXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getInvMassScale1@PxContactStreamIterator@physx@@QEBAMXZ", ExactSpelling = true)]
         private static extern float getInvMassScale1_PInvoke(PxContactStreamIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float getInvMassScale1()
+        public float getInvMassScale1()
         {
             fixed (PxContactStreamIterator* @this = &this)
             { return getInvMassScale1_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getInvInertiaScale0@PxContactStreamIterator@physx@@QEBAMXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getInvInertiaScale0@PxContactStreamIterator@physx@@QEBAMXZ", ExactSpelling = true)]
         private static extern float getInvInertiaScale0_PInvoke(PxContactStreamIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float getInvInertiaScale0()
+        public float getInvInertiaScale0()
         {
             fixed (PxContactStreamIterator* @this = &this)
             { return getInvInertiaScale0_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getInvInertiaScale1@PxContactStreamIterator@physx@@QEBAMXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getInvInertiaScale1@PxContactStreamIterator@physx@@QEBAMXZ", ExactSpelling = true)]
         private static extern float getInvInertiaScale1_PInvoke(PxContactStreamIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float getInvInertiaScale1()
+        public float getInvInertiaScale1()
         {
             fixed (PxContactStreamIterator* @this = &this)
             { return getInvInertiaScale1_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getMaxImpulse@PxContactStreamIterator@physx@@QEBAMXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getMaxImpulse@PxContactStreamIterator@physx@@QEBAMXZ", ExactSpelling = true)]
         private static extern float getMaxImpulse_PInvoke(PxContactStreamIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float getMaxImpulse()
+        public float getMaxImpulse()
         {
             fixed (PxContactStreamIterator* @this = &this)
             { return getMaxImpulse_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getTargetVel@PxContactStreamIterator@physx@@QEBAAEBVPxVec3@2@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getTargetVel@PxContactStreamIterator@physx@@QEBAAEBVPxVec3@2@XZ", ExactSpelling = true)]
         private static extern PxVec3* getTargetVel_PInvoke(PxContactStreamIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxVec3* getTargetVel()
+        public PxVec3* getTargetVel()
         {
             fixed (PxContactStreamIterator* @this = &this)
             { return getTargetVel_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getContactPoint@PxContactStreamIterator@physx@@QEBAAEBVPxVec3@2@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getContactPoint@PxContactStreamIterator@physx@@QEBAAEBVPxVec3@2@XZ", ExactSpelling = true)]
         private static extern PxVec3* getContactPoint_PInvoke(PxContactStreamIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxVec3* getContactPoint()
+        public PxVec3* getContactPoint()
         {
             fixed (PxContactStreamIterator* @this = &this)
             { return getContactPoint_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getSeparation@PxContactStreamIterator@physx@@QEBAMXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getSeparation@PxContactStreamIterator@physx@@QEBAMXZ", ExactSpelling = true)]
         private static extern float getSeparation_PInvoke(PxContactStreamIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float getSeparation()
+        public float getSeparation()
         {
             fixed (PxContactStreamIterator* @this = &this)
             { return getSeparation_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getFaceIndex0@PxContactStreamIterator@physx@@QEBAIXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getFaceIndex0@PxContactStreamIterator@physx@@QEBAIXZ", ExactSpelling = true)]
         private static extern uint getFaceIndex0_PInvoke(PxContactStreamIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint getFaceIndex0()
+        public uint getFaceIndex0()
         {
             fixed (PxContactStreamIterator* @this = &this)
             { return getFaceIndex0_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getFaceIndex1@PxContactStreamIterator@physx@@QEBAIXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getFaceIndex1@PxContactStreamIterator@physx@@QEBAIXZ", ExactSpelling = true)]
         private static extern uint getFaceIndex1_PInvoke(PxContactStreamIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint getFaceIndex1()
+        public uint getFaceIndex1()
         {
             fixed (PxContactStreamIterator* @this = &this)
             { return getFaceIndex1_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getStaticFriction@PxContactStreamIterator@physx@@QEBAMXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getStaticFriction@PxContactStreamIterator@physx@@QEBAMXZ", ExactSpelling = true)]
         private static extern float getStaticFriction_PInvoke(PxContactStreamIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float getStaticFriction()
+        public float getStaticFriction()
         {
             fixed (PxContactStreamIterator* @this = &this)
             { return getStaticFriction_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getDynamicFriction@PxContactStreamIterator@physx@@QEBAMXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getDynamicFriction@PxContactStreamIterator@physx@@QEBAMXZ", ExactSpelling = true)]
         private static extern float getDynamicFriction_PInvoke(PxContactStreamIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float getDynamicFriction()
+        public float getDynamicFriction()
         {
             fixed (PxContactStreamIterator* @this = &this)
             { return getDynamicFriction_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getRestitution@PxContactStreamIterator@physx@@QEBAMXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getRestitution@PxContactStreamIterator@physx@@QEBAMXZ", ExactSpelling = true)]
         private static extern float getRestitution_PInvoke(PxContactStreamIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float getRestitution()
+        public float getRestitution()
         {
             fixed (PxContactStreamIterator* @this = &this)
             { return getRestitution_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getMaterialFlags@PxContactStreamIterator@physx@@QEBAIXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getMaterialFlags@PxContactStreamIterator@physx@@QEBAIXZ", ExactSpelling = true)]
         private static extern uint getMaterialFlags_PInvoke(PxContactStreamIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint getMaterialFlags()
+        public uint getMaterialFlags()
         {
             fixed (PxContactStreamIterator* @this = &this)
             { return getMaterialFlags_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getMaterialIndex0@PxContactStreamIterator@physx@@QEBAGXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getMaterialIndex0@PxContactStreamIterator@physx@@QEBAGXZ", ExactSpelling = true)]
         private static extern ushort getMaterialIndex0_PInvoke(PxContactStreamIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe ushort getMaterialIndex0()
+        public ushort getMaterialIndex0()
         {
             fixed (PxContactStreamIterator* @this = &this)
             { return getMaterialIndex0_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getMaterialIndex1@PxContactStreamIterator@physx@@QEBAGXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getMaterialIndex1@PxContactStreamIterator@physx@@QEBAGXZ", ExactSpelling = true)]
         private static extern ushort getMaterialIndex1_PInvoke(PxContactStreamIterator* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe ushort getMaterialIndex1()
+        public ushort getMaterialIndex1()
         {
             fixed (PxContactStreamIterator* @this = &this)
             { return getMaterialIndex1_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?advanceToIndex@PxContactStreamIterator@physx@@QEAA_NI@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?advanceToIndex@PxContactStreamIterator@physx@@QEAA_NI@Z", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool advanceToIndex_PInvoke(PxContactStreamIterator* @this, uint initialIndex);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool advanceToIndex(uint initialIndex)
+        public bool advanceToIndex(uint initialIndex)
         {
             fixed (PxContactStreamIterator* @this = &this)
             { return advanceToIndex_PInvoke(@this, initialIndex); }
-        }
-
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getContactPatch@PxContactStreamIterator@physx@@AEBAAEBUPxContactPatch@2@XZ", ExactSpelling = true)]
-        private static extern PxContactPatch* getContactPatch_PInvoke(PxContactStreamIterator* @this);
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxContactPatch* getContactPatch()
-        {
-            fixed (PxContactStreamIterator* @this = &this)
-            { return getContactPatch_PInvoke(@this); }
-        }
-
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getExtendedContact@PxContactStreamIterator@physx@@AEBAAEBUPxExtendedContact@2@XZ", ExactSpelling = true)]
-        private static extern PxExtendedContact* getExtendedContact_PInvoke(PxContactStreamIterator* @this);
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxExtendedContact* getExtendedContact()
-        {
-            fixed (PxContactStreamIterator* @this = &this)
-            { return getExtendedContact_PInvoke(@this); }
         }
     }
 }

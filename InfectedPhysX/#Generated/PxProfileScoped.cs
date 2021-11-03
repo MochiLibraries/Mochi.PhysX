@@ -6,28 +6,28 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 40)]
     public unsafe partial struct PxProfileScoped
     {
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxProfileScoped@physx@@QEAA@PEAVPxProfilerCallback@1@PEBD_N_K@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper232", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxProfileScoped* @this, PxProfilerCallback* callback, byte* eventName, [MarshalAs(UnmanagedType.I1)] bool detached, ulong contextId);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxProfilerCallback* callback, byte* eventName, bool detached, ulong contextId)
+        public void Constructor(PxProfilerCallback* callback, byte* eventName, bool detached, ulong contextId)
         {
             fixed (PxProfileScoped* @this = &this)
             { Constructor_PInvoke(@this, callback, eventName, detached, contextId); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??1PxProfileScoped@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper233", ExactSpelling = true)]
         private static extern void Destructor_PInvoke(PxProfileScoped* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
+        public void Destructor()
         {
             fixed (PxProfileScoped* @this = &this)
             { Destructor_PInvoke(@this); }

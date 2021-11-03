@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "InfectedPhysX.Sample": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

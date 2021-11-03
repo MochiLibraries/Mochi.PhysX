@@ -6,42 +6,42 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 48)]
     public unsafe partial struct PxConvexMeshGeometry
     {
         [FieldOffset(0)] public PxGeometry Base;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxConvexMeshGeometry@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper91", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxConvexMeshGeometry* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
+        public void Constructor()
         {
             fixed (PxConvexMeshGeometry* @this = &this)
             { Constructor_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxConvexMeshGeometry@physx@@QEAA@PEAVPxConvexMesh@1@AEBVPxMeshScale@1@V?$PxFlags@W4Enum@PxConvexMeshGeometryFlag@physx@@E@1@@Z", ExactSpelling = true)]
-        private static extern void Constructor_PInvoke(PxConvexMeshGeometry* @this, PxConvexMesh* mesh, PxMeshScale* scaling, PxConvexMeshGeometryFlags flags);
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper92", ExactSpelling = true)]
+        private static extern void Constructor_PInvoke(PxConvexMeshGeometry* @this, PxConvexMesh* mesh, PxMeshScale* scaling, PxConvexMeshGeometryFlags* flags);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxConvexMesh* mesh, PxMeshScale* scaling, PxConvexMeshGeometryFlags flags)
+        public void Constructor(PxConvexMesh* mesh, PxMeshScale* scaling, PxConvexMeshGeometryFlags* flags)
         {
             fixed (PxConvexMeshGeometry* @this = &this)
             { Constructor_PInvoke(@this, mesh, scaling, flags); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxConvexMeshGeometry@physx@@QEBA_NXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxConvexMeshGeometry@physx@@QEBA_NXZ", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool isValid_PInvoke(PxConvexMeshGeometry* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool isValid()
+        public bool isValid()
         {
             fixed (PxConvexMeshGeometry* @this = &this)
             { return isValid_PInvoke(@this); }

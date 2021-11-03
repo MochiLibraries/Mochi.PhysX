@@ -6,17 +6,17 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 16)]
     public unsafe partial struct PxDebugPoint
     {
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxDebugPoint@physx@@QEAA@AEBVPxVec3@1@AEBI@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper69", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxDebugPoint* @this, PxVec3* p, uint* c);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxVec3* p, uint* c)
+        public void Constructor(PxVec3* p, uint* c)
         {
             fixed (PxDebugPoint* @this = &this)
             { Constructor_PInvoke(@this, p, c); }

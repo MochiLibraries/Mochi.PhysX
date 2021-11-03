@@ -6,42 +6,42 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 32)]
     public unsafe partial struct PxHeightFieldGeometry
     {
         [FieldOffset(0)] public PxGeometry Base;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxHeightFieldGeometry@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper98", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxHeightFieldGeometry* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
+        public void Constructor()
         {
             fixed (PxHeightFieldGeometry* @this = &this)
             { Constructor_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxHeightFieldGeometry@physx@@QEAA@PEAVPxHeightField@1@V?$PxFlags@W4Enum@PxMeshGeometryFlag@physx@@E@1@MMM@Z", ExactSpelling = true)]
-        private static extern void Constructor_PInvoke(PxHeightFieldGeometry* @this, PxHeightField* hf, PxMeshGeometryFlags flags, float heightScale_, float rowScale_, float columnScale_);
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper99", ExactSpelling = true)]
+        private static extern void Constructor_PInvoke(PxHeightFieldGeometry* @this, PxHeightField* hf, PxMeshGeometryFlags* flags, float heightScale_, float rowScale_, float columnScale_);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxHeightField* hf, PxMeshGeometryFlags flags, float heightScale_, float rowScale_, float columnScale_)
+        public void Constructor(PxHeightField* hf, PxMeshGeometryFlags* flags, float heightScale_, float rowScale_, float columnScale_)
         {
             fixed (PxHeightFieldGeometry* @this = &this)
             { Constructor_PInvoke(@this, hf, flags, heightScale_, rowScale_, columnScale_); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxHeightFieldGeometry@physx@@QEBA_NXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxHeightFieldGeometry@physx@@QEBA_NXZ", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool isValid_PInvoke(PxHeightFieldGeometry* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool isValid()
+        public bool isValid()
         {
             fixed (PxHeightFieldGeometry* @this = &this)
             { return isValid_PInvoke(@this); }

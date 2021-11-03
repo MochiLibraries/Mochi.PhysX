@@ -7,172 +7,172 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 64)]
     public unsafe partial struct PxMat44
     {
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxMat44@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper50", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxMat44* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
+        public void Constructor()
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxMat44@physx@@QEAA@W4PxIDENTITY@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper51", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxMat44* @this, PxIDENTITY r);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxIDENTITY r)
+        public void Constructor(PxIDENTITY r)
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this, r); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxMat44@physx@@QEAA@W4PxZERO@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper52", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxMat44* @this, PxZERO r);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxZERO r)
+        public void Constructor(PxZERO r)
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this, r); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxMat44@physx@@QEAA@AEBVPxVec4@1@000@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper53", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxMat44* @this, PxVec4* col0, PxVec4* col1, PxVec4* col2, PxVec4* col3);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxVec4* col0, PxVec4* col1, PxVec4* col2, PxVec4* col3)
+        public void Constructor(PxVec4* col0, PxVec4* col1, PxVec4* col2, PxVec4* col3)
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this, col0, col1, col2, col3); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxMat44@physx@@QEAA@M@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper54", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxMat44* @this, float r);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(float r)
+        public void Constructor(float r)
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this, r); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxMat44@physx@@QEAA@AEBVPxVec3@1@000@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper55", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxMat44* @this, PxVec3* col0, PxVec3* col1, PxVec3* col2, PxVec3* col3);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxVec3* col0, PxVec3* col1, PxVec3* col2, PxVec3* col3)
+        public void Constructor(PxVec3* col0, PxVec3* col1, PxVec3* col2, PxVec3* col3)
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this, col0, col1, col2, col3); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxMat44@physx@@QEAA@QEAM@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper56", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxMat44* @this, float* values);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(float* values)
+        public void Constructor(float* values)
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this, values); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxMat44@physx@@QEAA@AEBVPxQuat@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper57", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxMat44* @this, PxQuat* q);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxQuat* q)
+        public void Constructor(PxQuat* q)
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this, q); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxMat44@physx@@QEAA@AEBVPxVec4@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper58", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxMat44* @this, PxVec4* diagonal);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxVec4* diagonal)
+        public void Constructor(PxVec4* diagonal)
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this, diagonal); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxMat44@physx@@QEAA@AEBVPxMat33@1@AEBVPxVec3@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper59", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxMat44* @this, PxMat33* axes, PxVec3* position);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxMat33* axes, PxVec3* position)
+        public void Constructor(PxMat33* axes, PxVec3* position)
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this, axes, position); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxMat44@physx@@QEAA@AEBVPxTransform@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper60", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxMat44* @this, PxTransform* t);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxTransform* t)
+        public void Constructor(PxTransform* t)
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this, t); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??8PxMat44@physx@@QEBA_NAEBV01@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??8PxMat44@physx@@QEBA_NAEBV01@@Z", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool operator_EqualEqual_PInvoke(PxMat44* @this, PxMat44* m);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool operator_EqualEqual(PxMat44* m)
+        public bool operator_EqualEqual(PxMat44* m)
         {
             fixed (PxMat44* @this = &this)
             { return operator_EqualEqual_PInvoke(@this, m); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxMat44@physx@@QEAA@AEBV01@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper61", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxMat44* @this, PxMat44* other);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxMat44* other)
+        public void Constructor(PxMat44* other)
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this, other); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??4PxMat44@physx@@QEAAAEAV01@AEBV01@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??4PxMat44@physx@@QEAAAEAV01@AEBV01@@Z", ExactSpelling = true)]
         private static extern PxMat44* operator_Equal_PInvoke(PxMat44* @this, PxMat44* other);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxMat44* operator_Equal(PxMat44* other)
+        public PxMat44* operator_Equal(PxMat44* other)
         {
             fixed (PxMat44* @this = &this)
             { return operator_Equal_PInvoke(@this, other); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getTranspose@PxMat44@physx@@QEBA?BV12@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getTranspose@PxMat44@physx@@QEBA?BV12@XZ", ExactSpelling = true)]
         private static extern PxMat44* getTranspose_PInvoke(PxMat44* @this, out PxMat44 __returnBuffer);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxMat44 getTranspose()
+        public PxMat44 getTranspose()
         {
             fixed (PxMat44* @this = &this)
             {
@@ -182,12 +182,12 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??GPxMat44@physx@@QEBA?BV01@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??GPxMat44@physx@@QEBA?BV01@XZ", ExactSpelling = true)]
         private static extern PxMat44* operator_Minus_PInvoke(PxMat44* @this, out PxMat44 __returnBuffer);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxMat44 operator_Minus()
+        public PxMat44 operator_Minus()
         {
             fixed (PxMat44* @this = &this)
             {
@@ -197,12 +197,12 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??HPxMat44@physx@@QEBA?BV01@AEBV01@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??HPxMat44@physx@@QEBA?BV01@AEBV01@@Z", ExactSpelling = true)]
         private static extern PxMat44* operator_Plus_PInvoke(PxMat44* @this, out PxMat44 __returnBuffer, PxMat44* other);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxMat44 operator_Plus(PxMat44* other)
+        public PxMat44 operator_Plus(PxMat44* other)
         {
             fixed (PxMat44* @this = &this)
             {
@@ -212,12 +212,12 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??GPxMat44@physx@@QEBA?BV01@AEBV01@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??GPxMat44@physx@@QEBA?BV01@AEBV01@@Z", ExactSpelling = true)]
         private static extern PxMat44* operator_Minus_PInvoke(PxMat44* @this, out PxMat44 __returnBuffer, PxMat44* other);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxMat44 operator_Minus(PxMat44* other)
+        public PxMat44 operator_Minus(PxMat44* other)
         {
             fixed (PxMat44* @this = &this)
             {
@@ -227,12 +227,12 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??DPxMat44@physx@@QEBA?BV01@M@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??DPxMat44@physx@@QEBA?BV01@M@Z", ExactSpelling = true)]
         private static extern PxMat44* operator_Star_PInvoke(PxMat44* @this, out PxMat44 __returnBuffer, float scalar);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxMat44 operator_Star(float scalar)
+        public PxMat44 operator_Star(float scalar)
         {
             fixed (PxMat44* @this = &this)
             {
@@ -242,12 +242,12 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??DPxMat44@physx@@QEBA?BV01@AEBV01@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??DPxMat44@physx@@QEBA?BV01@AEBV01@@Z", ExactSpelling = true)]
         private static extern PxMat44* operator_Star_PInvoke(PxMat44* @this, out PxMat44 __returnBuffer, PxMat44* other);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxMat44 operator_Star(PxMat44* other)
+        public PxMat44 operator_Star(PxMat44* other)
         {
             fixed (PxMat44* @this = &this)
             {
@@ -257,79 +257,79 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??YPxMat44@physx@@QEAAAEAV01@AEBV01@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??YPxMat44@physx@@QEAAAEAV01@AEBV01@@Z", ExactSpelling = true)]
         private static extern PxMat44* operator_PlusEqual_PInvoke(PxMat44* @this, PxMat44* other);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxMat44* operator_PlusEqual(PxMat44* other)
+        public PxMat44* operator_PlusEqual(PxMat44* other)
         {
             fixed (PxMat44* @this = &this)
             { return operator_PlusEqual_PInvoke(@this, other); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??ZPxMat44@physx@@QEAAAEAV01@AEBV01@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??ZPxMat44@physx@@QEAAAEAV01@AEBV01@@Z", ExactSpelling = true)]
         private static extern PxMat44* operator_MinusEqual_PInvoke(PxMat44* @this, PxMat44* other);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxMat44* operator_MinusEqual(PxMat44* other)
+        public PxMat44* operator_MinusEqual(PxMat44* other)
         {
             fixed (PxMat44* @this = &this)
             { return operator_MinusEqual_PInvoke(@this, other); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??XPxMat44@physx@@QEAAAEAV01@M@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??XPxMat44@physx@@QEAAAEAV01@M@Z", ExactSpelling = true)]
         private static extern PxMat44* operator_StarEqual_PInvoke(PxMat44* @this, float scalar);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxMat44* operator_StarEqual(float scalar)
+        public PxMat44* operator_StarEqual(float scalar)
         {
             fixed (PxMat44* @this = &this)
             { return operator_StarEqual_PInvoke(@this, scalar); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??XPxMat44@physx@@QEAAAEAV01@AEBV01@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??XPxMat44@physx@@QEAAAEAV01@AEBV01@@Z", ExactSpelling = true)]
         private static extern PxMat44* operator_StarEqual_PInvoke(PxMat44* @this, PxMat44* other);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxMat44* operator_StarEqual(PxMat44* other)
+        public PxMat44* operator_StarEqual(PxMat44* other)
         {
             fixed (PxMat44* @this = &this)
             { return operator_StarEqual_PInvoke(@this, other); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??RPxMat44@physx@@QEBAMII@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??RPxMat44@physx@@QEBAMII@Z", ExactSpelling = true)]
         private static extern float operator_Call_Const_PInvoke(PxMat44* @this, uint row, uint col);
 
         [EditorBrowsable(EditorBrowsableState.Never)]
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float operator_Call_Const(uint row, uint col)
+        public float operator_Call_Const(uint row, uint col)
         {
             fixed (PxMat44* @this = &this)
             { return operator_Call_Const_PInvoke(@this, row, col); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??RPxMat44@physx@@QEAAAEAMII@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??RPxMat44@physx@@QEAAAEAMII@Z", ExactSpelling = true)]
         private static extern float* operator_Call_PInvoke(PxMat44* @this, uint row, uint col);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float* operator_Call(uint row, uint col)
+        public float* operator_Call(uint row, uint col)
         {
             fixed (PxMat44* @this = &this)
             { return operator_Call_PInvoke(@this, row, col); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?transform@PxMat44@physx@@QEBA?BVPxVec4@2@AEBV32@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?transform@PxMat44@physx@@QEBA?BVPxVec4@2@AEBV32@@Z", ExactSpelling = true)]
         private static extern PxVec4* transform_PInvoke(PxMat44* @this, out PxVec4 __returnBuffer, PxVec4* other);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxVec4 transform(PxVec4* other)
+        public PxVec4 transform(PxVec4* other)
         {
             fixed (PxMat44* @this = &this)
             {
@@ -339,12 +339,12 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?transform@PxMat44@physx@@QEBA?BVPxVec3@2@AEBV32@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?transform@PxMat44@physx@@QEBA?BVPxVec3@2@AEBV32@@Z", ExactSpelling = true)]
         private static extern PxVec3* transform_PInvoke(PxMat44* @this, out PxVec3 __returnBuffer, PxVec3* other);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxVec3 transform(PxVec3* other)
+        public PxVec3 transform(PxVec3* other)
         {
             fixed (PxMat44* @this = &this)
             {
@@ -354,12 +354,12 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?rotate@PxMat44@physx@@QEBA?BVPxVec4@2@AEBV32@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?rotate@PxMat44@physx@@QEBA?BVPxVec4@2@AEBV32@@Z", ExactSpelling = true)]
         private static extern PxVec4* rotate_PInvoke(PxMat44* @this, out PxVec4 __returnBuffer, PxVec4* other);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxVec4 rotate(PxVec4* other)
+        public PxVec4 rotate(PxVec4* other)
         {
             fixed (PxMat44* @this = &this)
             {
@@ -369,12 +369,12 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?rotate@PxMat44@physx@@QEBA?BVPxVec3@2@AEBV32@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?rotate@PxMat44@physx@@QEBA?BVPxVec3@2@AEBV32@@Z", ExactSpelling = true)]
         private static extern PxVec3* rotate_PInvoke(PxMat44* @this, out PxVec3 __returnBuffer, PxVec3* other);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxVec3 rotate(PxVec3* other)
+        public PxVec3 rotate(PxVec3* other)
         {
             fixed (PxMat44* @this = &this)
             {
@@ -384,12 +384,12 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getBasis@PxMat44@physx@@QEBA?BVPxVec3@2@H@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getBasis@PxMat44@physx@@QEBA?BVPxVec3@2@H@Z", ExactSpelling = true)]
         private static extern PxVec3* getBasis_PInvoke(PxMat44* @this, out PxVec3 __returnBuffer, int num);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxVec3 getBasis(int num)
+        public PxVec3 getBasis(int num)
         {
             fixed (PxMat44* @this = &this)
             {
@@ -399,12 +399,12 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getPosition@PxMat44@physx@@QEBA?BVPxVec3@2@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getPosition@PxMat44@physx@@QEBA?BVPxVec3@2@XZ", ExactSpelling = true)]
         private static extern PxVec3* getPosition_PInvoke(PxMat44* @this, out PxVec3 __returnBuffer);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxVec3 getPosition()
+        public PxVec3 getPosition()
         {
             fixed (PxMat44* @this = &this)
             {
@@ -414,68 +414,68 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setPosition@PxMat44@physx@@QEAAXAEBVPxVec3@2@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setPosition@PxMat44@physx@@QEAAXAEBVPxVec3@2@@Z", ExactSpelling = true)]
         private static extern void setPosition_PInvoke(PxMat44* @this, PxVec3* position);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setPosition(PxVec3* position)
+        public void setPosition(PxVec3* position)
         {
             fixed (PxMat44* @this = &this)
             { setPosition_PInvoke(@this, position); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?front@PxMat44@physx@@QEBAPEBMXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?front@PxMat44@physx@@QEBAPEBMXZ", ExactSpelling = true)]
         private static extern float* front_PInvoke(PxMat44* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float* front()
+        public float* front()
         {
             fixed (PxMat44* @this = &this)
             { return front_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??APxMat44@physx@@QEAAAEAVPxVec4@1@I@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??APxMat44@physx@@QEAAAEAVPxVec4@1@I@Z", ExactSpelling = true)]
         private static extern PxVec4* operator_Subscript_PInvoke(PxMat44* @this, uint num);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxVec4* operator_Subscript(uint num)
+        public PxVec4* operator_Subscript(uint num)
         {
             fixed (PxMat44* @this = &this)
             { return operator_Subscript_PInvoke(@this, num); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??APxMat44@physx@@QEBAAEBVPxVec4@1@I@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??APxMat44@physx@@QEBAAEBVPxVec4@1@I@Z", ExactSpelling = true)]
         private static extern PxVec4* operator_Subscript_Const_PInvoke(PxMat44* @this, uint num);
 
         [EditorBrowsable(EditorBrowsableState.Never)]
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxVec4* operator_Subscript_Const(uint num)
+        public PxVec4* operator_Subscript_Const(uint num)
         {
             fixed (PxMat44* @this = &this)
             { return operator_Subscript_Const_PInvoke(@this, num); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?scale@PxMat44@physx@@QEAAXAEBVPxVec4@2@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?scale@PxMat44@physx@@QEAAXAEBVPxVec4@2@@Z", ExactSpelling = true)]
         private static extern void scale_PInvoke(PxMat44* @this, PxVec4* p);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void scale(PxVec4* p)
+        public void scale(PxVec4* p)
         {
             fixed (PxMat44* @this = &this)
             { scale_PInvoke(@this, p); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?inverseRT@PxMat44@physx@@QEBA?BV12@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?inverseRT@PxMat44@physx@@QEBA?BV12@XZ", ExactSpelling = true)]
         private static extern PxMat44* inverseRT_PInvoke(PxMat44* @this, out PxMat44 __returnBuffer);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxMat44 inverseRT()
+        public PxMat44 inverseRT()
         {
             fixed (PxMat44* @this = &this)
             {
@@ -485,13 +485,13 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isFinite@PxMat44@physx@@QEBA_NXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isFinite@PxMat44@physx@@QEBA_NXZ", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool isFinite_PInvoke(PxMat44* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool isFinite()
+        public bool isFinite()
         {
             fixed (PxMat44* @this = &this)
             { return isFinite_PInvoke(@this); }

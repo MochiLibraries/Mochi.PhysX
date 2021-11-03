@@ -1,6 +1,7 @@
 ﻿using Biohazrd;
 using Biohazrd.Transformation;
 using ClangSharp;
+using ClangSharp.Interop;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Diagnostics;
@@ -44,7 +45,7 @@ namespace InfectedPhysX.Generator
                 // Get the declaration
                 if (library.FindClangCursor(templateSpecialization.Handle.Declaration) is not ClassTemplateSpecializationDecl templateSpecializationDeclaration)
                 {
-                    Debug.Assert(false, "The declaration for a TemplateSpecializationType is expected to be a ClassTemplateSpecializationDecl.");
+                    Debug.Fail("The declaration for a TemplateSpecializationType is expected to be a ClassTemplateSpecializationDecl.");
                     continue;
                 }
 
@@ -55,21 +56,33 @@ namespace InfectedPhysX.Generator
                 // We expect there to be two template arguments: PxFlags<enumtype, storagetype>
                 if (templateSpecializationDeclaration.TemplateArgs.Count != 2)
                 {
-                    Debug.Assert(false, "PxFlags should always have two template arguments.");
+                    Debug.Fail("PxFlags should always have two template arguments.");
                     continue;
                 }
 
                 // Extract the arguments
-                ClangType enumArgument = templateSpecializationDeclaration.TemplateArgs[0];
-                ClangType storageType = templateSpecializationDeclaration.TemplateArgs[1];
+                TemplateArgument enumArgument = templateSpecializationDeclaration.TemplateArgs[0];
+                TemplateArgument storageType = templateSpecializationDeclaration.TemplateArgs[1];
+
+                if (enumArgument.Kind != CXTemplateArgumentKind.CXTemplateArgumentKind_Type)
+                {
+                    Debug.Fail("The first template argument to PxFlags should be a type argument");
+                    continue;
+                }
+
+                if (storageType.Kind != CXTemplateArgumentKind.CXTemplateArgumentKind_Type)
+                {
+                    Debug.Fail("The second template argument to PxFlags should be a type argument");
+                    continue;
+                }
 
                 // The first argument should be an EnumType with a corresponding EnumDecl
-                if (enumArgument is not EnumType { Decl: EnumDecl enumDecl })
+                if (enumArgument.AsType is not EnumType { Decl: EnumDecl enumDecl })
                 { continue; }
 
                 // Record the relevant info needed to perform the transformation
                 FlagsTypedefs.Add(typedef);
-                FlagsEnums.Add(enumDecl, (typedef, storageType));
+                FlagsEnums.Add(enumDecl, (typedef, storageType.AsType));
                 FlagsCanonicalTypes.Add(templateSpecialization.CanonicalType); //TODO: Is this the same for all PxFlags?
             }
 

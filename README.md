@@ -7,24 +7,26 @@ This repo contains C# bindings for [NVIDIA PhysX](https://github.com/InfectedLib
 
 This project is not ready to be used, if you're looking for a PhysX binding for C# I'd suggest watching releases on this repository and consider [sponsoring development of this library](https://github.com/sponsors/PathogenDavid).
 
-This repository primarily exists to serve as an example what using Biohazrd looks like today with a C++ library that has a relatively complex API. For the sake of demonstration, the output of the generator for Windows x64 is committed under [InfectedPhysX/#Generated](InfectedPhysX/#Generated).
-
 ## License
 
 This project is licensed under the MIT License. [See the license file for details](LICENSE.txt).
 
 Additionally, this project has some third-party dependencies. [See the third-party notice listing for details](THIRD-PARTY-NOTICES.md).
 
-## Generating the bindings
+## Building PhysX and generating the bindings
 
 1. Ensure Git submodules are up-to-date with `git submodule update --init --recursive`
-2. Build and run `InfectedPhysX.Generator`
+2. Build and run `build.cmd` from the repository root
 
 Note: You may see many errors and warnings during generation. This is because Biohazrd doesn't support everything in PhysX yet. These errors only indicate the corresponding APIs were skipped, so the output should still be fine as long as you don't need those APIs.
+
+If you make any changes to the PhysX source code or change the branch it uses, you must re-generate the bindings using `build.cmd`.
 
 ## Building the sample
 
 Building/running the sample is currently only supported on Windows x64 with Visual Studio 2019.
+
+The sample does not currently have a graphical output, but will automatically connect to [the PhysX Visual Debugger](https://developer.nvidia.com/physx-visual-debugger) if it's running.
 
 ### Prerequisites
 
@@ -35,18 +37,3 @@ Tool | Recommended Version
 [PhysX Visual Debugger](https://developer.nvidia.com/physx-visual-debugger) | Latest
 
 Visual Studio requires the "Desktop development with C++" and  ".NET desktop development" workloads to be installed.
-
-### Build Steps
-
-This process will be streamlined eventually. For now we're avoiding deviating too far from how PhysX is normally built.
-
-1. Ensure Git submodules are up-to-date with `git submodule update --init --recursive`
-2. Run `external/PhysX/physx/generate_projects.bat InfectedPhysX_win64`
-3. Open `external/PhysX/physx/compiler/InfectedPhysX_win64/PhysXSDK.sln` in Visual Studio
-4. Build the `INSTALL` project in the `checked` configuration for the `x64` platform
-5. Start the [PhysX Visual Debugger](https://developer.nvidia.com/physx-visual-debugger) (Optional, but you won't see the output otherwise.)
-6. Open `InfectedImGui.sln` and build/run `InfectedImGui.Sample`
-
-If you make any changes to the PhysX source code or change the branch it uses, you must re-generate the bindings using the instructions above.
-
-Additionally you may need to rebuild PhysX if you modify the binding generator. This is because there's a small native component to expose inline methods to C# that would not otherwise get exported by the C++ compiler.

@@ -6,7 +6,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX.Infrastructure
+namespace Mochi.PhysX.Infrastructure
 {
     [StructLayout(LayoutKind.Sequential)]
     public readonly partial struct NativeBoolean : IComparable, IComparable<bool>, IEquatable<bool>, IComparable<NativeBoolean>, IEquatable<NativeBoolean>

@@ -6,28 +6,28 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxScopedCudaLock
     {
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxScopedCudaLock@physx@@QEAA@AEAVPxCudaContextManager@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper80", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxScopedCudaLock* @this, PxCudaContextManager* ctx);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxCudaContextManager* ctx)
+        public void Constructor(PxCudaContextManager* ctx)
         {
             fixed (PxScopedCudaLock* @this = &this)
             { Constructor_PInvoke(@this, ctx); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??1PxScopedCudaLock@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper81", ExactSpelling = true)]
         private static extern void Destructor_PInvoke(PxScopedCudaLock* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
+        public void Destructor()
         {
             fixed (PxScopedCudaLock* @this = &this)
             { Destructor_PInvoke(@this); }

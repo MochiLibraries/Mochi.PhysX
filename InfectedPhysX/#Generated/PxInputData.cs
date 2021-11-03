@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxInputData
@@ -15,7 +15,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint getLength()
+        public uint getLength()
         {
             fixed (PxInputData* @this = &this)
             { return VirtualMethodTablePointer->getLength(@this); }
@@ -23,7 +23,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void seek(uint offset)
+        public void seek(uint offset)
         {
             fixed (PxInputData* @this = &this)
             { VirtualMethodTablePointer->seek(@this, offset); }
@@ -31,7 +31,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint tell()
+        public uint tell()
         {
             fixed (PxInputData* @this = &this)
             { return VirtualMethodTablePointer->tell(@this); }
@@ -39,7 +39,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
+        public void Destructor()
         {
             fixed (PxInputData* @this = &this)
             { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }
@@ -51,7 +51,7 @@ namespace PhysX
         public unsafe struct VirtualMethodTable
         {
             /// <summary>Virtual method pointer for `read`</summary>
-            public delegate* unmanaged[Cdecl]<PxInputStream*, void*, uint, uint> read;
+            public delegate* unmanaged[Cdecl]<PxInputData*, void*, uint, uint> read;
             /// <summary>Virtual method pointer for `~PxInputData`</summary>
             public delegate* unmanaged[Cdecl]<PxInputData*, void> __DeletingDestructorPointer;
             /// <summary>Virtual method pointer for `getLength`</summary>

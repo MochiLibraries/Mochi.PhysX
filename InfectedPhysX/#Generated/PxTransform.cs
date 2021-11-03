@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 28)]
     public unsafe partial struct PxTransform
@@ -15,101 +15,101 @@ namespace PhysX
 
         [FieldOffset(16)] public PxVec3 p;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxTransform@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper25", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxTransform* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
+        public void Constructor()
         {
             fixed (PxTransform* @this = &this)
             { Constructor_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxTransform@physx@@QEAA@AEBVPxVec3@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper26", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxTransform* @this, PxVec3* position);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxVec3* position)
+        public void Constructor(PxVec3* position)
         {
             fixed (PxTransform* @this = &this)
             { Constructor_PInvoke(@this, position); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxTransform@physx@@QEAA@W4PxIDENTITY@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper27", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxTransform* @this, PxIDENTITY r);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxIDENTITY r)
+        public void Constructor(PxIDENTITY r)
         {
             fixed (PxTransform* @this = &this)
             { Constructor_PInvoke(@this, r); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxTransform@physx@@QEAA@AEBVPxQuat@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper28", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxTransform* @this, PxQuat* orientation);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxQuat* orientation)
+        public void Constructor(PxQuat* orientation)
         {
             fixed (PxTransform* @this = &this)
             { Constructor_PInvoke(@this, orientation); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxTransform@physx@@QEAA@MMMVPxQuat@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper29", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxTransform* @this, float x, float y, float z, PxQuat* aQ);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(float x, float y, float z, PxQuat* aQ)
+        public void Constructor(float x, float y, float z, PxQuat* aQ)
         {
             fixed (PxTransform* @this = &this)
             { Constructor_PInvoke(@this, x, y, z, aQ); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxTransform@physx@@QEAA@AEBVPxVec3@1@AEBVPxQuat@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper30", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxTransform* @this, PxVec3* p0, PxQuat* q0);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxVec3* p0, PxQuat* q0)
+        public void Constructor(PxVec3* p0, PxQuat* q0)
         {
             fixed (PxTransform* @this = &this)
             { Constructor_PInvoke(@this, p0, q0); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxTransform@physx@@QEAA@AEBVPxMat44@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper31", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxTransform* @this, PxMat44* m);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxMat44* m)
+        public void Constructor(PxMat44* m)
         {
             fixed (PxTransform* @this = &this)
             { Constructor_PInvoke(@this, m); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??8PxTransform@physx@@QEBA_NAEBV01@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??8PxTransform@physx@@QEBA_NAEBV01@@Z", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool operator_EqualEqual_PInvoke(PxTransform* @this, PxTransform* t);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool operator_EqualEqual(PxTransform* t)
+        public bool operator_EqualEqual(PxTransform* t)
         {
             fixed (PxTransform* @this = &this)
             { return operator_EqualEqual_PInvoke(@this, t); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??DPxTransform@physx@@QEBA?AV01@AEBV01@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??DPxTransform@physx@@QEBA?AV01@AEBV01@@Z", ExactSpelling = true)]
         private static extern PxTransform* operator_Star_PInvoke(PxTransform* @this, out PxTransform __returnBuffer, PxTransform* x);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxTransform operator_Star(PxTransform* x)
+        public PxTransform operator_Star(PxTransform* x)
         {
             fixed (PxTransform* @this = &this)
             {
@@ -119,23 +119,23 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??XPxTransform@physx@@QEAAAEAV01@AEAV01@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??XPxTransform@physx@@QEAAAEAV01@AEAV01@@Z", ExactSpelling = true)]
         private static extern PxTransform* operator_StarEqual_PInvoke(PxTransform* @this, PxTransform* other);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxTransform* operator_StarEqual(PxTransform* other)
+        public PxTransform* operator_StarEqual(PxTransform* other)
         {
             fixed (PxTransform* @this = &this)
             { return operator_StarEqual_PInvoke(@this, other); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getInverse@PxTransform@physx@@QEBA?AV12@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getInverse@PxTransform@physx@@QEBA?AV12@XZ", ExactSpelling = true)]
         private static extern PxTransform* getInverse_PInvoke(PxTransform* @this, out PxTransform __returnBuffer);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxTransform getInverse()
+        public PxTransform getInverse()
         {
             fixed (PxTransform* @this = &this)
             {
@@ -145,12 +145,12 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?transform@PxTransform@physx@@QEBA?AVPxVec3@2@AEBV32@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?transform@PxTransform@physx@@QEBA?AVPxVec3@2@AEBV32@@Z", ExactSpelling = true)]
         private static extern PxVec3* transform_PInvoke(PxTransform* @this, out PxVec3 __returnBuffer, PxVec3* input);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxVec3 transform(PxVec3* input)
+        public PxVec3 transform(PxVec3* input)
         {
             fixed (PxTransform* @this = &this)
             {
@@ -160,12 +160,12 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?transformInv@PxTransform@physx@@QEBA?AVPxVec3@2@AEBV32@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?transformInv@PxTransform@physx@@QEBA?AVPxVec3@2@AEBV32@@Z", ExactSpelling = true)]
         private static extern PxVec3* transformInv_PInvoke(PxTransform* @this, out PxVec3 __returnBuffer, PxVec3* input);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxVec3 transformInv(PxVec3* input)
+        public PxVec3 transformInv(PxVec3* input)
         {
             fixed (PxTransform* @this = &this)
             {
@@ -175,12 +175,12 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?rotate@PxTransform@physx@@QEBA?AVPxVec3@2@AEBV32@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?rotate@PxTransform@physx@@QEBA?AVPxVec3@2@AEBV32@@Z", ExactSpelling = true)]
         private static extern PxVec3* rotate_PInvoke(PxTransform* @this, out PxVec3 __returnBuffer, PxVec3* input);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxVec3 rotate(PxVec3* input)
+        public PxVec3 rotate(PxVec3* input)
         {
             fixed (PxTransform* @this = &this)
             {
@@ -190,12 +190,12 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?rotateInv@PxTransform@physx@@QEBA?AVPxVec3@2@AEBV32@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?rotateInv@PxTransform@physx@@QEBA?AVPxVec3@2@AEBV32@@Z", ExactSpelling = true)]
         private static extern PxVec3* rotateInv_PInvoke(PxTransform* @this, out PxVec3 __returnBuffer, PxVec3* input);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxVec3 rotateInv(PxVec3* input)
+        public PxVec3 rotateInv(PxVec3* input)
         {
             fixed (PxTransform* @this = &this)
             {
@@ -205,12 +205,12 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?transform@PxTransform@physx@@QEBA?AV12@AEBV12@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?transform@PxTransform@physx@@QEBA?AV12@AEBV12@@Z", ExactSpelling = true)]
         private static extern PxTransform* transform_PInvoke(PxTransform* @this, out PxTransform __returnBuffer, PxTransform* src);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxTransform transform(PxTransform* src)
+        public PxTransform transform(PxTransform* src)
         {
             fixed (PxTransform* @this = &this)
             {
@@ -220,48 +220,48 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxTransform@physx@@QEBA_NXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxTransform@physx@@QEBA_NXZ", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool isValid_PInvoke(PxTransform* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool isValid()
+        public bool isValid()
         {
             fixed (PxTransform* @this = &this)
             { return isValid_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isSane@PxTransform@physx@@QEBA_NXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isSane@PxTransform@physx@@QEBA_NXZ", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool isSane_PInvoke(PxTransform* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool isSane()
+        public bool isSane()
         {
             fixed (PxTransform* @this = &this)
             { return isSane_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isFinite@PxTransform@physx@@QEBA_NXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isFinite@PxTransform@physx@@QEBA_NXZ", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool isFinite_PInvoke(PxTransform* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool isFinite()
+        public bool isFinite()
         {
             fixed (PxTransform* @this = &this)
             { return isFinite_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?transformInv@PxTransform@physx@@QEBA?AV12@AEBV12@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?transformInv@PxTransform@physx@@QEBA?AV12@AEBV12@@Z", ExactSpelling = true)]
         private static extern PxTransform* transformInv_PInvoke(PxTransform* @this, out PxTransform __returnBuffer, PxTransform* src);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxTransform transformInv(PxTransform* src)
+        public PxTransform transformInv(PxTransform* src)
         {
             fixed (PxTransform* @this = &this)
             {
@@ -271,12 +271,12 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?transform@PxTransform@physx@@QEBA?AVPxPlane@2@AEBV32@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?transform@PxTransform@physx@@QEBA?AVPxPlane@2@AEBV32@@Z", ExactSpelling = true)]
         private static extern PxPlane* transform_PInvoke(PxTransform* @this, out PxPlane __returnBuffer, PxPlane* plane);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxPlane transform(PxPlane* plane)
+        public PxPlane transform(PxPlane* plane)
         {
             fixed (PxTransform* @this = &this)
             {
@@ -286,12 +286,12 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?inverseTransform@PxTransform@physx@@QEBA?AVPxPlane@2@AEBV32@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?inverseTransform@PxTransform@physx@@QEBA?AVPxPlane@2@AEBV32@@Z", ExactSpelling = true)]
         private static extern PxPlane* inverseTransform_PInvoke(PxTransform* @this, out PxPlane __returnBuffer, PxPlane* plane);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxPlane inverseTransform(PxPlane* plane)
+        public PxPlane inverseTransform(PxPlane* plane)
         {
             fixed (PxTransform* @this = &this)
             {
@@ -301,12 +301,12 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getNormalized@PxTransform@physx@@QEBA?AV12@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getNormalized@PxTransform@physx@@QEBA?AV12@XZ", ExactSpelling = true)]
         private static extern PxTransform* getNormalized_PInvoke(PxTransform* @this, out PxTransform __returnBuffer);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxTransform getNormalized()
+        public PxTransform getNormalized()
         {
             fixed (PxTransform* @this = &this)
             {

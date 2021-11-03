@@ -6,14 +6,14 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxSerializationContext
     {
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void registerReference(PxBase* @base, uint kind, ulong reference)
+        public void registerReference(PxBase* @base, uint kind, ulong reference)
         {
             fixed (PxSerializationContext* @this = &this)
             { VirtualMethodTablePointer->registerReference(@this, @base, kind, reference); }
@@ -21,7 +21,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxCollection* getCollection()
+        public PxCollection* getCollection()
         {
             fixed (PxSerializationContext* @this = &this)
             { return VirtualMethodTablePointer->getCollection(@this); }
@@ -29,7 +29,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void writeData(void* data, uint size)
+        public void writeData(void* data, uint size)
         {
             fixed (PxSerializationContext* @this = &this)
             { VirtualMethodTablePointer->writeData(@this, data, size); }
@@ -37,7 +37,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void alignData(uint alignment = 16)
+        public void alignData(uint alignment = 16)
         {
             fixed (PxSerializationContext* @this = &this)
             { VirtualMethodTablePointer->alignData(@this, alignment); }
@@ -45,29 +45,10 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void writeName(byte* name)
+        public void writeName(byte* name)
         {
             fixed (PxSerializationContext* @this = &this)
             { VirtualMethodTablePointer->writeName(@this, name); }
-        }
-
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxSerializationContext@physx@@IEAA@XZ", ExactSpelling = true)]
-        private static extern void Constructor_PInvoke(PxSerializationContext* @this);
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
-        {
-            fixed (PxSerializationContext* @this = &this)
-            { Constructor_PInvoke(@this); }
-        }
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
-        {
-            fixed (PxSerializationContext* @this = &this)
-            { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }
         }
 
         [FieldOffset(0)] public VirtualMethodTable* VirtualMethodTablePointer;
@@ -86,7 +67,7 @@ namespace PhysX
             /// <summary>Virtual method pointer for `writeName`</summary>
             public delegate* unmanaged[Cdecl]<PxSerializationContext*, byte*, void> writeName;
             /// <summary>Virtual method pointer for `~PxSerializationContext`</summary>
-            public delegate* unmanaged[Cdecl]<PxSerializationContext*, void> __DeletingDestructorPointer;
+            public void* __DeletingDestructorPointer;
         }
     }
 }

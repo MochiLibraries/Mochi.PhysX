@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 4)]
     public unsafe partial struct PxHeightFieldSample
@@ -16,34 +16,34 @@ namespace PhysX
         [FieldOffset(2)] public /* Failed to emit TranslatedNormalField materialIndex0: Failed to resolve `Ref resolved by PxBitAndDataT` during emit time. */
         int materialIndex0;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?tessFlag@PxHeightFieldSample@physx@@QEBAEXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?tessFlag@PxHeightFieldSample@physx@@QEBAEXZ", ExactSpelling = true)]
         private static extern byte tessFlag_PInvoke(PxHeightFieldSample* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe byte tessFlag()
+        public byte tessFlag()
         {
             fixed (PxHeightFieldSample* @this = &this)
             { return tessFlag_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setTessFlag@PxHeightFieldSample@physx@@QEAAXXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setTessFlag@PxHeightFieldSample@physx@@QEAAXXZ", ExactSpelling = true)]
         private static extern void setTessFlag_PInvoke(PxHeightFieldSample* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setTessFlag()
+        public void setTessFlag()
         {
             fixed (PxHeightFieldSample* @this = &this)
             { setTessFlag_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?clearTessFlag@PxHeightFieldSample@physx@@QEAAXXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?clearTessFlag@PxHeightFieldSample@physx@@QEAAXXZ", ExactSpelling = true)]
         private static extern void clearTessFlag_PInvoke(PxHeightFieldSample* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void clearTessFlag()
+        public void clearTessFlag()
         {
             fixed (PxHeightFieldSample* @this = &this)
             { clearTessFlag_PInvoke(@this); }

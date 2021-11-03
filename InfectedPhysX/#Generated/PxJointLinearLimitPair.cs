@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 28)]
     public unsafe partial struct PxJointLinearLimitPair
@@ -17,35 +17,35 @@ namespace PhysX
 
         [FieldOffset(24)] public float lower;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxJointLinearLimitPair@physx@@QEAA@AEBVPxTolerancesScale@1@MMM@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper165", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxJointLinearLimitPair* @this, PxTolerancesScale* scale, float lowerLimit, float upperLimit, float contactDist);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxTolerancesScale* scale, float lowerLimit = -1.13427449E+38f, float upperLimit = 1.13427449E+38f, float contactDist = -1f)
+        public void Constructor(PxTolerancesScale* scale, float lowerLimit = -1.13427449E+38f, float upperLimit = 1.13427449E+38f, float contactDist = -1f)
         {
             fixed (PxJointLinearLimitPair* @this = &this)
             { Constructor_PInvoke(@this, scale, lowerLimit, upperLimit, contactDist); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxJointLinearLimitPair@physx@@QEAA@MMAEBVPxSpring@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper166", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxJointLinearLimitPair* @this, float lowerLimit, float upperLimit, PxSpring* spring);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(float lowerLimit, float upperLimit, PxSpring* spring)
+        public void Constructor(float lowerLimit, float upperLimit, PxSpring* spring)
         {
             fixed (PxJointLinearLimitPair* @this = &this)
             { Constructor_PInvoke(@this, lowerLimit, upperLimit, spring); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxJointLinearLimitPair@physx@@QEBA_NXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxJointLinearLimitPair@physx@@QEBA_NXZ", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool isValid_PInvoke(PxJointLinearLimitPair* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool isValid()
+        public bool isValid()
         {
             fixed (PxJointLinearLimitPair* @this = &this)
             { return isValid_PInvoke(@this); }

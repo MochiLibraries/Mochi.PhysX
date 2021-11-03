@@ -6,17 +6,17 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 32)]
     public unsafe partial struct PxVehicleChassisData
     {
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxVehicleChassisData@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper184", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxVehicleChassisData* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
+        public void Constructor()
         {
             fixed (PxVehicleChassisData* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -29,17 +29,5 @@ namespace PhysX
         [FieldOffset(16)] public PxVec3 mCMOffset;
 
         [FieldOffset(28)] public float pad;
-
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleChassisData@physx@@AEBA_NXZ", ExactSpelling = true)]
-        [return: MarshalAs(UnmanagedType.I1)]
-        private static extern bool isValid_PInvoke(PxVehicleChassisData* @this);
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool isValid()
-        {
-            fixed (PxVehicleChassisData* @this = &this)
-            { return isValid_PInvoke(@this); }
-        }
     }
 }

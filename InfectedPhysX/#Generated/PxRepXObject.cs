@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 24)]
     public unsafe partial struct PxRepXObject
@@ -17,24 +17,24 @@ namespace PhysX
 
         [FieldOffset(16)] public ulong id;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxRepXObject@physx@@QEAA@PEBDPEBX_K@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper182", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxRepXObject* @this, byte* inTypeName, void* inSerializable, ulong inId);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(byte* inTypeName, void* inSerializable = null, ulong inId = 0)
+        public void Constructor(byte* inTypeName, void* inSerializable = null, ulong inId = 0)
         {
             fixed (PxRepXObject* @this = &this)
             { Constructor_PInvoke(@this, inTypeName, inSerializable, inId); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxRepXObject@physx@@QEBA_NXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxRepXObject@physx@@QEBA_NXZ", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool isValid_PInvoke(PxRepXObject* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool isValid()
+        public bool isValid()
         {
             fixed (PxRepXObject* @this = &this)
             { return isValid_PInvoke(@this); }

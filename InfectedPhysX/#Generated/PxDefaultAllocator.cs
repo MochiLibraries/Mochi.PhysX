@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxDefaultAllocator
@@ -15,7 +15,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void* allocate(ulong size, byte* arg1, byte* arg2, int arg3)
+        public void* allocate(ulong size, byte* arg1, byte* arg2, int arg3)
         {
             fixed (PxDefaultAllocator* @this = &this)
             { return VirtualMethodTablePointer->allocate(@this, size, arg1, arg2, arg3); }
@@ -23,7 +23,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void deallocate(void* ptr)
+        public void deallocate(void* ptr)
         {
             fixed (PxDefaultAllocator* @this = &this)
             { VirtualMethodTablePointer->deallocate(@this, ptr); }
@@ -35,7 +35,7 @@ namespace PhysX
         public unsafe struct VirtualMethodTable
         {
             /// <summary>Virtual method pointer for `~PxDefaultAllocator`</summary>
-            public delegate* unmanaged[Cdecl]<PxDefaultAllocator*, void> __DeletingDestructorPointer;
+            public void* __DeletingDestructorPointer;
             /// <summary>Virtual method pointer for `allocate`</summary>
             public delegate* unmanaged[Cdecl]<PxDefaultAllocator*, ulong, byte*, byte*, int, void*> allocate;
             /// <summary>Virtual method pointer for `deallocate`</summary>

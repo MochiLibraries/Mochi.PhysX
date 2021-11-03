@@ -6,30 +6,30 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX.Immediate
+namespace Mochi.PhysX.Immediate
 {
     [StructLayout(LayoutKind.Explicit, Size = 360)]
     public unsafe partial struct PxFeatherstoneArticulationLinkData
     {
         [FieldOffset(0)] public PxMutableLinkData Base;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxFeatherstoneArticulationLinkData@immediate@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper40", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxFeatherstoneArticulationLinkData* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
+        public void Constructor()
         {
             fixed (PxFeatherstoneArticulationLinkData* @this = &this)
             { Constructor_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?initData@PxFeatherstoneArticulationLinkData@immediate@physx@@QEAAXXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?initData@PxFeatherstoneArticulationLinkData@immediate@physx@@QEAAXXZ", ExactSpelling = true)]
         private static extern void initData_PInvoke(PxFeatherstoneArticulationLinkData* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void initData()
+        public void initData()
         {
             fixed (PxFeatherstoneArticulationLinkData* @this = &this)
             { initData_PInvoke(@this); }

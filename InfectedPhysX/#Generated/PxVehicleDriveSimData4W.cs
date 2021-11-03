@@ -6,63 +6,63 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 576)]
     public unsafe partial struct PxVehicleDriveSimData4W
     {
         [FieldOffset(0)] public PxVehicleDriveSimData Base;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxVehicleDriveSimData4W@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper216", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxVehicleDriveSimData4W* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
+        public void Constructor()
         {
             fixed (PxVehicleDriveSimData4W* @this = &this)
             { Constructor_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getDiffData@PxVehicleDriveSimData4W@physx@@QEBAAEBVPxVehicleDifferential4WData@2@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getDiffData@PxVehicleDriveSimData4W@physx@@QEBAAEBVPxVehicleDifferential4WData@2@XZ", ExactSpelling = true)]
         private static extern PxVehicleDifferential4WData* getDiffData_PInvoke(PxVehicleDriveSimData4W* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxVehicleDifferential4WData* getDiffData()
+        public PxVehicleDifferential4WData* getDiffData()
         {
             fixed (PxVehicleDriveSimData4W* @this = &this)
             { return getDiffData_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getAckermannGeometryData@PxVehicleDriveSimData4W@physx@@QEBAAEBVPxVehicleAckermannGeometryData@2@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getAckermannGeometryData@PxVehicleDriveSimData4W@physx@@QEBAAEBVPxVehicleAckermannGeometryData@2@XZ", ExactSpelling = true)]
         private static extern PxVehicleAckermannGeometryData* getAckermannGeometryData_PInvoke(PxVehicleDriveSimData4W* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxVehicleAckermannGeometryData* getAckermannGeometryData()
+        public PxVehicleAckermannGeometryData* getAckermannGeometryData()
         {
             fixed (PxVehicleDriveSimData4W* @this = &this)
             { return getAckermannGeometryData_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setDiffData@PxVehicleDriveSimData4W@physx@@QEAAXAEBVPxVehicleDifferential4WData@2@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setDiffData@PxVehicleDriveSimData4W@physx@@QEAAXAEBVPxVehicleDifferential4WData@2@@Z", ExactSpelling = true)]
         private static extern void setDiffData_PInvoke(PxVehicleDriveSimData4W* @this, PxVehicleDifferential4WData* diff);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setDiffData(PxVehicleDifferential4WData* diff)
+        public void setDiffData(PxVehicleDifferential4WData* diff)
         {
             fixed (PxVehicleDriveSimData4W* @this = &this)
             { setDiffData_PInvoke(@this, diff); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setAckermannGeometryData@PxVehicleDriveSimData4W@physx@@QEAAXAEBVPxVehicleAckermannGeometryData@2@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setAckermannGeometryData@PxVehicleDriveSimData4W@physx@@QEAAXAEBVPxVehicleAckermannGeometryData@2@@Z", ExactSpelling = true)]
         private static extern void setAckermannGeometryData_PInvoke(PxVehicleDriveSimData4W* @this, PxVehicleAckermannGeometryData* ackermannData);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setAckermannGeometryData(PxVehicleAckermannGeometryData* ackermannData)
+        public void setAckermannGeometryData(PxVehicleAckermannGeometryData* ackermannData)
         {
             fixed (PxVehicleDriveSimData4W* @this = &this)
             { setAckermannGeometryData_PInvoke(@this, ackermannData); }
@@ -72,30 +72,18 @@ namespace PhysX
 
         [FieldOffset(560)] public PxVehicleAckermannGeometryData mAckermannGeometry;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxVehicleDriveSimData4W@physx@@AEBA_NXZ", ExactSpelling = true)]
-        [return: MarshalAs(UnmanagedType.I1)]
-        private static extern bool isValid_PInvoke(PxVehicleDriveSimData4W* @this);
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool isValid()
-        {
-            fixed (PxVehicleDriveSimData4W* @this = &this)
-            { return isValid_PInvoke(@this); }
-        }
-
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxVehicleDriveSimData4W@physx@@QEAA@W4PxEMPTY@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper217", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxVehicleDriveSimData4W* @this, PxEMPTY arg0);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxEMPTY arg0)
+        public void Constructor(PxEMPTY arg0)
         {
             fixed (PxVehicleDriveSimData4W* @this = &this)
             { Constructor_PInvoke(@this, arg0); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getBinaryMetaData@PxVehicleDriveSimData4W@physx@@SAXAEAVPxOutputStream@2@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getBinaryMetaData@PxVehicleDriveSimData4W@physx@@SAXAEAVPxOutputStream@2@@Z", ExactSpelling = true)]
         public static extern void getBinaryMetaData(PxOutputStream* stream);
     }
 }

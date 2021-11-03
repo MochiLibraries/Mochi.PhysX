@@ -4,7 +4,7 @@
 #nullable enable
 using System.Runtime.InteropServices;
 
-namespace PhysX.Immediate
+namespace Mochi.PhysX.Immediate
 {
     [StructLayout(LayoutKind.Explicit, Size = 56)]
     public unsafe partial struct PxArticulationJointData

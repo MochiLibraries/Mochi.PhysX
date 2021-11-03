@@ -6,14 +6,14 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxLockedData
     {
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxDataAccessFlags getDataAccessFlags()
+        public PxDataAccessFlags getDataAccessFlags()
         {
             fixed (PxLockedData* @this = &this)
             {
@@ -25,7 +25,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void unlock()
+        public void unlock()
         {
             fixed (PxLockedData* @this = &this)
             { VirtualMethodTablePointer->unlock(@this); }
@@ -33,7 +33,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
+        public void Destructor()
         {
             fixed (PxLockedData* @this = &this)
             { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }

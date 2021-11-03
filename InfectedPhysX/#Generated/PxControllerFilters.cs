@@ -6,17 +6,17 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 32)]
     public unsafe partial struct PxControllerFilters
     {
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxControllerFilters@physx@@QEAA@PEBUPxFilterData@1@PEAVPxQueryFilterCallback@1@PEAVPxControllerFilterCallback@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper148", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxControllerFilters* @this, PxFilterData* filterData, PxQueryFilterCallback* cb, PxControllerFilterCallback* cctFilterCb);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxFilterData* filterData = null, PxQueryFilterCallback* cb = null, PxControllerFilterCallback* cctFilterCb = null)
+        public void Constructor(PxFilterData* filterData = null, PxQueryFilterCallback* cb = null, PxControllerFilterCallback* cctFilterCb = null)
         {
             fixed (PxControllerFilters* @this = &this)
             { Constructor_PInvoke(@this, filterData, cb, cctFilterCb); }

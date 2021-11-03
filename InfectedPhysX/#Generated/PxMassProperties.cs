@@ -6,50 +6,50 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 52)]
     public unsafe partial struct PxMassProperties
     {
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxMassProperties@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper177", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxMassProperties* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor()
+        public void Constructor()
         {
             fixed (PxMassProperties* @this = &this)
             { Constructor_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxMassProperties@physx@@QEAA@MAEBVPxMat33@1@AEBVPxVec3@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper178", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxMassProperties* @this, float m, PxMat33* inertiaT, PxVec3* com);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(float m, PxMat33* inertiaT, PxVec3* com)
+        public void Constructor(float m, PxMat33* inertiaT, PxVec3* com)
         {
             fixed (PxMassProperties* @this = &this)
             { Constructor_PInvoke(@this, m, inertiaT, com); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxMassProperties@physx@@QEAA@AEBVPxGeometry@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper179", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxMassProperties* @this, PxGeometry* geometry);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxGeometry* geometry)
+        public void Constructor(PxGeometry* geometry)
         {
             fixed (PxMassProperties* @this = &this)
             { Constructor_PInvoke(@this, geometry); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??DPxMassProperties@physx@@QEBA?AV01@M@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??DPxMassProperties@physx@@QEBA?AV01@M@Z", ExactSpelling = true)]
         private static extern PxMassProperties* operator_Star_PInvoke(PxMassProperties* @this, out PxMassProperties __returnBuffer, float scale);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxMassProperties operator_Star(float scale)
+        public PxMassProperties operator_Star(float scale)
         {
             fixed (PxMassProperties* @this = &this)
             {
@@ -59,31 +59,76 @@ namespace PhysX
             }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?translate@PxMassProperties@physx@@QEAAXAEBVPxVec3@2@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?translate@PxMassProperties@physx@@QEAAXAEBVPxVec3@2@@Z", ExactSpelling = true)]
         private static extern void translate_PInvoke(PxMassProperties* @this, PxVec3* t);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void translate(PxVec3* t)
+        public void translate(PxVec3* t)
         {
             fixed (PxMassProperties* @this = &this)
             { translate_PInvoke(@this, t); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getMassSpaceInertia@PxMassProperties@physx@@SA?AVPxVec3@2@AEBVPxMat33@2@AEAVPxQuat@2@@Z", ExactSpelling = true)]
-        public static extern PxVec3* getMassSpaceInertia(out PxVec3 __returnBuffer, PxMat33* inertia, PxQuat* massFrame);
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getMassSpaceInertia@PxMassProperties@physx@@SA?AVPxVec3@2@AEBVPxMat33@2@AEAVPxQuat@2@@Z", ExactSpelling = true)]
+        private static extern PxVec3* getMassSpaceInertia_PInvoke(out PxVec3 __returnBuffer, PxMat33* inertia, PxQuat* massFrame);
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?translateInertia@PxMassProperties@physx@@SA?AVPxMat33@2@AEBV32@MAEBVPxVec3@2@@Z", ExactSpelling = true)]
-        public static extern PxMat33* translateInertia(out PxMat33 __returnBuffer, PxMat33* inertia, float mass, PxVec3* t);
+        [DebuggerStepThrough, DebuggerHidden]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static PxVec3 getMassSpaceInertia(PxMat33* inertia, PxQuat* massFrame)
+        {
+            PxVec3 __returnBuffer;
+            getMassSpaceInertia_PInvoke(out __returnBuffer, inertia, massFrame);
+            return __returnBuffer;
+        }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?rotateInertia@PxMassProperties@physx@@SA?AVPxMat33@2@AEBV32@AEBVPxQuat@2@@Z", ExactSpelling = true)]
-        public static extern PxMat33* rotateInertia(out PxMat33 __returnBuffer, PxMat33* inertia, PxQuat* q);
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?translateInertia@PxMassProperties@physx@@SA?AVPxMat33@2@AEBV32@MAEBVPxVec3@2@@Z", ExactSpelling = true)]
+        private static extern PxMat33* translateInertia_PInvoke(out PxMat33 __returnBuffer, PxMat33* inertia, float mass, PxVec3* t);
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?scaleInertia@PxMassProperties@physx@@SA?AVPxMat33@2@AEBV32@AEBVPxQuat@2@AEBVPxVec3@2@@Z", ExactSpelling = true)]
-        public static extern PxMat33* scaleInertia(out PxMat33 __returnBuffer, PxMat33* inertia, PxQuat* scaleRotation, PxVec3* scale);
+        [DebuggerStepThrough, DebuggerHidden]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static PxMat33 translateInertia(PxMat33* inertia, float mass, PxVec3* t)
+        {
+            PxMat33 __returnBuffer;
+            translateInertia_PInvoke(out __returnBuffer, inertia, mass, t);
+            return __returnBuffer;
+        }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?sum@PxMassProperties@physx@@SA?AV12@PEBV12@PEBVPxTransform@2@I@Z", ExactSpelling = true)]
-        public static extern PxMassProperties* sum(out PxMassProperties __returnBuffer, PxMassProperties* props, PxTransform* transforms, uint count);
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?rotateInertia@PxMassProperties@physx@@SA?AVPxMat33@2@AEBV32@AEBVPxQuat@2@@Z", ExactSpelling = true)]
+        private static extern PxMat33* rotateInertia_PInvoke(out PxMat33 __returnBuffer, PxMat33* inertia, PxQuat* q);
+
+        [DebuggerStepThrough, DebuggerHidden]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static PxMat33 rotateInertia(PxMat33* inertia, PxQuat* q)
+        {
+            PxMat33 __returnBuffer;
+            rotateInertia_PInvoke(out __returnBuffer, inertia, q);
+            return __returnBuffer;
+        }
+
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?scaleInertia@PxMassProperties@physx@@SA?AVPxMat33@2@AEBV32@AEBVPxQuat@2@AEBVPxVec3@2@@Z", ExactSpelling = true)]
+        private static extern PxMat33* scaleInertia_PInvoke(out PxMat33 __returnBuffer, PxMat33* inertia, PxQuat* scaleRotation, PxVec3* scale);
+
+        [DebuggerStepThrough, DebuggerHidden]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static PxMat33 scaleInertia(PxMat33* inertia, PxQuat* scaleRotation, PxVec3* scale)
+        {
+            PxMat33 __returnBuffer;
+            scaleInertia_PInvoke(out __returnBuffer, inertia, scaleRotation, scale);
+            return __returnBuffer;
+        }
+
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?sum@PxMassProperties@physx@@SA?AV12@PEBV12@PEBVPxTransform@2@I@Z", ExactSpelling = true)]
+        private static extern PxMassProperties* sum_PInvoke(out PxMassProperties __returnBuffer, PxMassProperties* props, PxTransform* transforms, uint count);
+
+        [DebuggerStepThrough, DebuggerHidden]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static PxMassProperties sum(PxMassProperties* props, PxTransform* transforms, uint count)
+        {
+            PxMassProperties __returnBuffer;
+            sum_PInvoke(out __returnBuffer, props, transforms, count);
+            return __returnBuffer;
+        }
 
         [FieldOffset(0)] public PxMat33 inertiaTensor;
 

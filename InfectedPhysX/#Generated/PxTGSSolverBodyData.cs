@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 48)]
     public unsafe partial struct PxTGSSolverBodyData
@@ -27,12 +27,12 @@ namespace PhysX
 
         [FieldOffset(44)] public uint pad;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?projectVelocity@PxTGSSolverBodyData@physx@@QEBAMAEBVPxVec3@2@0@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?projectVelocity@PxTGSSolverBodyData@physx@@QEBAMAEBVPxVec3@2@0@Z", ExactSpelling = true)]
         private static extern float projectVelocity_PInvoke(PxTGSSolverBodyData* @this, PxVec3* linear, PxVec3* angular);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe float projectVelocity(PxVec3* linear, PxVec3* angular)
+        public float projectVelocity(PxVec3* linear, PxVec3* angular)
         {
             fixed (PxTGSSolverBodyData* @this = &this)
             { return projectVelocity_PInvoke(@this, linear, angular); }

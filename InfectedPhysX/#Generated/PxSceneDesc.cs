@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 312)]
     public unsafe partial struct PxSceneDesc
@@ -23,7 +23,7 @@ namespace PhysX
 
         [FieldOffset(48)] public uint filterShaderDataSize;
 
-        [FieldOffset(56)] public delegate* unmanaged[Cdecl]<uint, PxFilterData, uint, PxFilterData, PxPairFlags*, void*, uint, PxFilterFlags> filterShader;
+        [FieldOffset(56)] public delegate* unmanaged[Cdecl]<PxFilterFlags*, uint, PxFilterData*, uint, PxFilterData*, PxPairFlags*, void*, uint, PxFilterFlags*> filterShader;
 
         [FieldOffset(64)] public PxSimulationFilterCallback* filterCallback;
 
@@ -93,46 +93,46 @@ namespace PhysX
 
         [FieldOffset(300)] public PxTolerancesScale tolerancesScale;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxSceneDesc@physx@@QEAA@AEBVPxTolerancesScale@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper125", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxSceneDesc* @this, PxTolerancesScale* scale);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxTolerancesScale* scale)
+        public void Constructor(PxTolerancesScale* scale)
         {
             fixed (PxSceneDesc* @this = &this)
             { Constructor_PInvoke(@this, scale); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setToDefault@PxSceneDesc@physx@@QEAAXAEBVPxTolerancesScale@2@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?setToDefault@PxSceneDesc@physx@@QEAAXAEBVPxTolerancesScale@2@@Z", ExactSpelling = true)]
         private static extern void setToDefault_PInvoke(PxSceneDesc* @this, PxTolerancesScale* scale);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setToDefault(PxTolerancesScale* scale)
+        public void setToDefault(PxTolerancesScale* scale)
         {
             fixed (PxSceneDesc* @this = &this)
             { setToDefault_PInvoke(@this, scale); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxSceneDesc@physx@@QEBA_NXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxSceneDesc@physx@@QEBA_NXZ", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool isValid_PInvoke(PxSceneDesc* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool isValid()
+        public bool isValid()
         {
             fixed (PxSceneDesc* @this = &this)
             { return isValid_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getTolerancesScale@PxSceneDesc@physx@@QEBAAEBVPxTolerancesScale@2@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getTolerancesScale@PxSceneDesc@physx@@QEBAAEBVPxTolerancesScale@2@XZ", ExactSpelling = true)]
         private static extern PxTolerancesScale* getTolerancesScale_PInvoke(PxSceneDesc* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxTolerancesScale* getTolerancesScale()
+        public PxTolerancesScale* getTolerancesScale()
         {
             fixed (PxSceneDesc* @this = &this)
             { return getTolerancesScale_PInvoke(@this); }

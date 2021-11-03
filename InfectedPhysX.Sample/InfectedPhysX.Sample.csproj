@@ -3,14 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-
-    <InfectedPhysXNativeBinDir>$(ProjectDir)..\external\PhysX\physx\install\InfectedPhysX\bin\win.x86_64.vc142.mt\checked\</InfectedPhysXNativeBinDir>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Include="$(InfectedPhysXNativeBinDir)InfectedPhysX.Native_64.dll" CopyToOutputDirectory="PreserveNewest" />
-    <None Include="$(InfectedPhysXNativeBinDir)InfectedPhysX.Native_64.pdb" CopyToOutputDirectory="PreserveNewest" Condition="Exists('$(InfectedPhysXNativeBinDir)InfectedPhysX.Native_64.pdb')" />
-  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\InfectedPhysX\InfectedPhysX.csproj" />

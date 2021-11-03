@@ -6,14 +6,14 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct PxTaskManager
     {
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void setCpuDispatcher(PxCpuDispatcher* @ref)
+        public void setCpuDispatcher(PxCpuDispatcher* @ref)
         {
             fixed (PxTaskManager* @this = &this)
             { VirtualMethodTablePointer->setCpuDispatcher(@this, @ref); }
@@ -21,7 +21,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxCpuDispatcher* getCpuDispatcher()
+        public PxCpuDispatcher* getCpuDispatcher()
         {
             fixed (PxTaskManager* @this = &this)
             { return VirtualMethodTablePointer->getCpuDispatcher(@this); }
@@ -29,7 +29,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void resetDependencies()
+        public void resetDependencies()
         {
             fixed (PxTaskManager* @this = &this)
             { VirtualMethodTablePointer->resetDependencies(@this); }
@@ -37,7 +37,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void startSimulation()
+        public void startSimulation()
         {
             fixed (PxTaskManager* @this = &this)
             { VirtualMethodTablePointer->startSimulation(@this); }
@@ -45,7 +45,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void stopSimulation()
+        public void stopSimulation()
         {
             fixed (PxTaskManager* @this = &this)
             { VirtualMethodTablePointer->stopSimulation(@this); }
@@ -53,7 +53,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void taskCompleted(PxTask* task)
+        public void taskCompleted(PxTask* task)
         {
             fixed (PxTaskManager* @this = &this)
             { VirtualMethodTablePointer->taskCompleted(@this, task); }
@@ -61,7 +61,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint getNamedTask(byte* name)
+        public uint getNamedTask(byte* name)
         {
             fixed (PxTaskManager* @this = &this)
             { return VirtualMethodTablePointer->getNamedTask(@this, name); }
@@ -69,7 +69,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint submitNamedTask(PxTask* task, byte* name, PxTaskType type = PxTaskType.TT_CPU)
+        public uint submitNamedTask(PxTask* task, byte* name, PxTaskType type = PxTaskType.TT_CPU)
         {
             fixed (PxTaskManager* @this = &this)
             { return VirtualMethodTablePointer->submitNamedTask(@this, task, name, type); }
@@ -77,7 +77,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint submitUnnamedTask(PxTask* task, PxTaskType type = PxTaskType.TT_CPU)
+        public uint submitUnnamedTask(PxTask* task, PxTaskType type = PxTaskType.TT_CPU)
         {
             fixed (PxTaskManager* @this = &this)
             { return VirtualMethodTablePointer->submitUnnamedTask(@this, task, type); }
@@ -85,7 +85,7 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe PxTask* getTaskFromID(uint id)
+        public PxTask* getTaskFromID(uint id)
         {
             fixed (PxTaskManager* @this = &this)
             { return VirtualMethodTablePointer->getTaskFromID(@this, id); }
@@ -93,78 +93,14 @@ namespace PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void release()
+        public void release()
         {
             fixed (PxTaskManager* @this = &this)
             { VirtualMethodTablePointer->release(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?createTaskManager@PxTaskManager@physx@@SAPEAV12@AEAVPxErrorCallback@2@PEAVPxCpuDispatcher@2@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?createTaskManager@PxTaskManager@physx@@SAPEAV12@AEAVPxErrorCallback@2@PEAVPxCpuDispatcher@2@@Z", ExactSpelling = true)]
         public static extern PxTaskManager* createTaskManager(PxErrorCallback* errorCallback, PxCpuDispatcher* arg1 = null);
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
-        {
-            fixed (PxTaskManager* @this = &this)
-            { VirtualMethodTablePointer->__DeletingDestructorPointer(@this); }
-        }
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void finishBefore(PxTask* task, uint taskID)
-        {
-            fixed (PxTaskManager* @this = &this)
-            { VirtualMethodTablePointer->finishBefore(@this, task, taskID); }
-        }
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void startAfter(PxTask* task, uint taskID)
-        {
-            fixed (PxTaskManager* @this = &this)
-            { VirtualMethodTablePointer->startAfter(@this, task, taskID); }
-        }
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void addReference(uint taskID)
-        {
-            fixed (PxTaskManager* @this = &this)
-            { VirtualMethodTablePointer->addReference_1(@this, taskID); }
-        }
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void decrReference(uint taskID)
-        {
-            fixed (PxTaskManager* @this = &this)
-            { VirtualMethodTablePointer->decrReference_1(@this, taskID); }
-        }
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe int getReference(uint taskID)
-        {
-            fixed (PxTaskManager* @this = &this)
-            { return VirtualMethodTablePointer->getReference(@this, taskID); }
-        }
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void decrReference(PxLightCpuTask* arg0)
-        {
-            fixed (PxTaskManager* @this = &this)
-            { VirtualMethodTablePointer->decrReference_0(@this, arg0); }
-        }
-
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void addReference(PxLightCpuTask* arg0)
-        {
-            fixed (PxTaskManager* @this = &this)
-            { VirtualMethodTablePointer->addReference_0(@this, arg0); }
-        }
 
         [FieldOffset(0)] public VirtualMethodTable* VirtualMethodTablePointer;
 
@@ -194,21 +130,21 @@ namespace PhysX
             /// <summary>Virtual method pointer for `release`</summary>
             public delegate* unmanaged[Cdecl]<PxTaskManager*, void> release;
             /// <summary>Virtual method pointer for `~PxTaskManager`</summary>
-            public delegate* unmanaged[Cdecl]<PxTaskManager*, void> __DeletingDestructorPointer;
+            public void* __DeletingDestructorPointer;
             /// <summary>Virtual method pointer for `finishBefore`</summary>
-            public delegate* unmanaged[Cdecl]<PxTaskManager*, PxTask*, uint, void> finishBefore;
+            public void* finishBefore;
             /// <summary>Virtual method pointer for `startAfter`</summary>
-            public delegate* unmanaged[Cdecl]<PxTaskManager*, PxTask*, uint, void> startAfter;
+            public void* startAfter;
             /// <summary>Virtual method pointer for `addReference`</summary>
-            public delegate* unmanaged[Cdecl]<PxTaskManager*, PxLightCpuTask*, void> addReference_0;
+            public void* addReference_0;
             /// <summary>Virtual method pointer for `addReference`</summary>
-            public delegate* unmanaged[Cdecl]<PxTaskManager*, uint, void> addReference_1;
+            public void* addReference_1;
             /// <summary>Virtual method pointer for `decrReference`</summary>
-            public delegate* unmanaged[Cdecl]<PxTaskManager*, PxLightCpuTask*, void> decrReference_0;
+            public void* decrReference_0;
             /// <summary>Virtual method pointer for `decrReference`</summary>
-            public delegate* unmanaged[Cdecl]<PxTaskManager*, uint, void> decrReference_1;
+            public void* decrReference_1;
             /// <summary>Virtual method pointer for `getReference`</summary>
-            public delegate* unmanaged[Cdecl]<PxTaskManager*, uint, int> getReference;
+            public void* getReference;
         }
     }
 }

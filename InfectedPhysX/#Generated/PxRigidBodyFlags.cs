@@ -4,10 +4,10 @@
 #nullable enable
 using System;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [Flags]
-    public enum PxRigidBodyFlags : byte
+    public enum PxRigidBodyFlags : ushort
     {
         eKINEMATIC = 1,
         eUSE_KINEMATIC_TARGET_FOR_SCENE_QUERIES = 2,
@@ -16,6 +16,9 @@ namespace PhysX
         eENABLE_POSE_INTEGRATION_PREVIEW = 16,
         eENABLE_SPECULATIVE_CCD = 32,
         eENABLE_CCD_MAX_CONTACT_IMPULSE = 64,
-        eRETAIN_ACCELERATIONS = 128
+        eRETAIN_ACCELERATIONS = 128,
+        eFORCE_KINE_KINE_NOTIFICATIONS = 256,
+        eFORCE_STATIC_KINE_NOTIFICATIONS = 512,
+        eRESERVED = 32768
     }
 }

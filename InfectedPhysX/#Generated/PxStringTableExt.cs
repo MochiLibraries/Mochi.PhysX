@@ -4,12 +4,12 @@
 #nullable enable
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 1)]
     public unsafe partial struct PxStringTableExt
     {
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?createStringTable@PxStringTableExt@physx@@SAAEAVPxStringTable@2@AEAVPxAllocatorCallback@2@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?createStringTable@PxStringTableExt@physx@@SAAEAVPxStringTable@2@AEAVPxAllocatorCallback@2@@Z", ExactSpelling = true)]
         public static extern PxStringTable* createStringTable(PxAllocatorCallback* inAllocator);
     }
 }

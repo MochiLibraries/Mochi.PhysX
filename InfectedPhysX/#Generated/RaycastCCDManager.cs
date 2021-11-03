@@ -6,51 +6,51 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 8)]
     public unsafe partial struct RaycastCCDManager
     {
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0RaycastCCDManager@physx@@QEAA@PEAVPxScene@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0RaycastCCDManager@physx@@QEAA@PEAVPxScene@1@@Z", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(RaycastCCDManager* @this, PxScene* scene);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(PxScene* scene)
+        public void Constructor(PxScene* scene)
         {
             fixed (RaycastCCDManager* @this = &this)
             { Constructor_PInvoke(@this, scene); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??1RaycastCCDManager@physx@@QEAA@XZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??1RaycastCCDManager@physx@@QEAA@XZ", ExactSpelling = true)]
         private static extern void Destructor_PInvoke(RaycastCCDManager* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Destructor()
+        public void Destructor()
         {
             fixed (RaycastCCDManager* @this = &this)
             { Destructor_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?registerRaycastCCDObject@RaycastCCDManager@physx@@QEAA_NPEAVPxRigidDynamic@2@PEAVPxShape@2@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?registerRaycastCCDObject@RaycastCCDManager@physx@@QEAA_NPEAVPxRigidDynamic@2@PEAVPxShape@2@@Z", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool registerRaycastCCDObject_PInvoke(RaycastCCDManager* @this, PxRigidDynamic* actor, PxShape* shape);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool registerRaycastCCDObject(PxRigidDynamic* actor, PxShape* shape)
+        public bool registerRaycastCCDObject(PxRigidDynamic* actor, PxShape* shape)
         {
             fixed (RaycastCCDManager* @this = &this)
             { return registerRaycastCCDObject_PInvoke(@this, actor, shape); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?doRaycastCCD@RaycastCCDManager@physx@@QEAAX_N@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?doRaycastCCD@RaycastCCDManager@physx@@QEAAX_N@Z", ExactSpelling = true)]
         private static extern void doRaycastCCD_PInvoke(RaycastCCDManager* @this, [MarshalAs(UnmanagedType.I1)] bool doDynamicDynamicCCD);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void doRaycastCCD(bool doDynamicDynamicCCD)
+        public void doRaycastCCD(bool doDynamicDynamicCCD)
         {
             fixed (RaycastCCDManager* @this = &this)
             { doRaycastCCD_PInvoke(@this, doDynamicDynamicCCD); }

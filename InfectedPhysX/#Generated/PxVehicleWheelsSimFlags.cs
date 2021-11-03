@@ -4,11 +4,13 @@
 #nullable enable
 using System;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [Flags]
     public enum PxVehicleWheelsSimFlags : uint
     {
-        eLIMIT_SUSPENSION_EXPANSION_VELOCITY = 1
+        eLIMIT_SUSPENSION_EXPANSION_VELOCITY = 1,
+        eDISABLE_INTERNAL_CYLINDER_PLANE_INTERSECTION_TEST = 2,
+        eDISABLE_SUSPENSION_FORCE_PROJECTION = 4
     }
 }

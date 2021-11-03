@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 28)]
     public unsafe partial struct PxJointLimitCone
@@ -17,35 +17,35 @@ namespace PhysX
 
         [FieldOffset(24)] public float zAngle;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxJointLimitCone@physx@@QEAA@MMM@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper169", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxJointLimitCone* @this, float yLimitAngle, float zLimitAngle, float contactDist);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(float yLimitAngle, float zLimitAngle, float contactDist = -1f)
+        public void Constructor(float yLimitAngle, float zLimitAngle, float contactDist = -1f)
         {
             fixed (PxJointLimitCone* @this = &this)
             { Constructor_PInvoke(@this, yLimitAngle, zLimitAngle, contactDist); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxJointLimitCone@physx@@QEAA@MMAEBVPxSpring@1@@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper170", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxJointLimitCone* @this, float yLimitAngle, float zLimitAngle, PxSpring* spring);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(float yLimitAngle, float zLimitAngle, PxSpring* spring)
+        public void Constructor(float yLimitAngle, float zLimitAngle, PxSpring* spring)
         {
             fixed (PxJointLimitCone* @this = &this)
             { Constructor_PInvoke(@this, yLimitAngle, zLimitAngle, spring); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxJointLimitCone@physx@@QEBA_NXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?isValid@PxJointLimitCone@physx@@QEBA_NXZ", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]
         private static extern bool isValid_PInvoke(PxJointLimitCone* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe bool isValid()
+        public bool isValid()
         {
             fixed (PxJointLimitCone* @this = &this)
             { return isValid_PInvoke(@this); }

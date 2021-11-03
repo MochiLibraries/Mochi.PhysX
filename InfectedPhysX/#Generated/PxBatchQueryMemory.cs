@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace PhysX
+namespace Mochi.PhysX
 {
     [StructLayout(LayoutKind.Explicit, Size = 72)]
     public unsafe partial struct PxBatchQueryMemory
@@ -32,45 +32,45 @@ namespace PhysX
 
         [FieldOffset(56)] public uint overlapTouchBufferSize;
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getMaxRaycastsPerExecute@PxBatchQueryMemory@physx@@QEBAIXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getMaxRaycastsPerExecute@PxBatchQueryMemory@physx@@QEBAIXZ", ExactSpelling = true)]
         private static extern uint getMaxRaycastsPerExecute_PInvoke(PxBatchQueryMemory* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint getMaxRaycastsPerExecute()
+        public uint getMaxRaycastsPerExecute()
         {
             fixed (PxBatchQueryMemory* @this = &this)
             { return getMaxRaycastsPerExecute_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getMaxSweepsPerExecute@PxBatchQueryMemory@physx@@QEBAIXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getMaxSweepsPerExecute@PxBatchQueryMemory@physx@@QEBAIXZ", ExactSpelling = true)]
         private static extern uint getMaxSweepsPerExecute_PInvoke(PxBatchQueryMemory* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint getMaxSweepsPerExecute()
+        public uint getMaxSweepsPerExecute()
         {
             fixed (PxBatchQueryMemory* @this = &this)
             { return getMaxSweepsPerExecute_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getMaxOverlapsPerExecute@PxBatchQueryMemory@physx@@QEBAIXZ", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?getMaxOverlapsPerExecute@PxBatchQueryMemory@physx@@QEBAIXZ", ExactSpelling = true)]
         private static extern uint getMaxOverlapsPerExecute_PInvoke(PxBatchQueryMemory* @this);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe uint getMaxOverlapsPerExecute()
+        public uint getMaxOverlapsPerExecute()
         {
             fixed (PxBatchQueryMemory* @this = &this)
             { return getMaxOverlapsPerExecute_PInvoke(@this); }
         }
 
-        [DllImport("TODO.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "??0PxBatchQueryMemory@physx@@QEAA@III@Z", ExactSpelling = true)]
+        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "__InlineHelper121", ExactSpelling = true)]
         private static extern void Constructor_PInvoke(PxBatchQueryMemory* @this, uint raycastResultBufferSize_, uint sweepResultBufferSize_, uint overlapResultBufferSize_);
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public unsafe void Constructor(uint raycastResultBufferSize_, uint sweepResultBufferSize_, uint overlapResultBufferSize_)
+        public void Constructor(uint raycastResultBufferSize_, uint sweepResultBufferSize_, uint overlapResultBufferSize_)
         {
             fixed (PxBatchQueryMemory* @this = &this)
             { Constructor_PInvoke(@this, raycastResultBufferSize_, sweepResultBufferSize_, overlapResultBufferSize_); }
