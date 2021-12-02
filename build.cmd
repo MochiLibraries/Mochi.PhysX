@@ -9,7 +9,7 @@ set PHYSX_PRESET=mochi-physx-win-x64
 
 :: Ensure PhysX SDK has been cloned
 if not exist %PHYSX_SDK_ROOT%\physx\ (
-    echo PhysX SDK not found, did you forget to clone recursively?
+    echo PhysX SDK not found, did you forget to clone recursively? 1>&2
     exit /B 1
 )
 
@@ -30,13 +30,13 @@ if not exist %PHYSX_SDK_ROOT%\physx\compiler\%PHYSX_PRESET%\INSTALL.vcxproj (
     cmd /C %PHYSX_SDK_ROOT%\physx\generate_projects.bat %PHYSX_PRESET%
 
     if not errorlevel 0 (
-        echo Failed to generate PhysX Visual Studio solution!
+        echo Failed to generate PhysX Visual Studio solution! 1>&2
         exit /B 1
     )
 
     :: The Python script doesn't always exit with an error code when there's an error, so double check that CMake was invoked
     if not exist %PHYSX_SDK_ROOT%\physx\compiler\%PHYSX_PRESET%\INSTALL.vcxproj (
-        echo Failed to generate PhysX Visual Studio solution!
+        echo Failed to generate PhysX Visual Studio solution! 1>&2
         exit /B 1
     )
 )
