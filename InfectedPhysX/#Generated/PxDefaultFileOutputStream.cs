@@ -19,7 +19,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(byte* name)
+        public PxDefaultFileOutputStream(byte* name)
         {
             fixed (PxDefaultFileOutputStream* @this = &this)
             { Constructor_PInvoke(@this, name); }

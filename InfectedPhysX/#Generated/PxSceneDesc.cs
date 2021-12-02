@@ -98,7 +98,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxTolerancesScale* scale)
+        public PxSceneDesc(PxTolerancesScale* scale)
         {
             fixed (PxSceneDesc* @this = &this)
             { Constructor_PInvoke(@this, scale); }

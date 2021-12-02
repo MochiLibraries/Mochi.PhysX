@@ -24,7 +24,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxJacobianRow()
         {
             fixed (PxJacobianRow* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -35,7 +35,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxVec3* lin0, PxVec3* lin1, PxVec3* ang0, PxVec3* ang1)
+        public PxJacobianRow(PxVec3* lin0, PxVec3* lin1, PxVec3* ang0, PxVec3* ang1)
         {
             fixed (PxJacobianRow* @this = &this)
             { Constructor_PInvoke(@this, lin0, lin1, ang0, ang1); }

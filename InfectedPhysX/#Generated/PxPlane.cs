@@ -16,7 +16,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxPlane()
         {
             fixed (PxPlane* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -27,7 +27,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(float nx, float ny, float nz, float distance)
+        public PxPlane(float nx, float ny, float nz, float distance)
         {
             fixed (PxPlane* @this = &this)
             { Constructor_PInvoke(@this, nx, ny, nz, distance); }
@@ -38,7 +38,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxVec3* normal, float distance)
+        public PxPlane(PxVec3* normal, float distance)
         {
             fixed (PxPlane* @this = &this)
             { Constructor_PInvoke(@this, normal, distance); }
@@ -49,7 +49,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxVec3* point, PxVec3* normal)
+        public PxPlane(PxVec3* point, PxVec3* normal)
         {
             fixed (PxPlane* @this = &this)
             { Constructor_PInvoke(@this, point, normal); }
@@ -60,7 +60,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxVec3* p0, PxVec3* p1, PxVec3* p2)
+        public PxPlane(PxVec3* p0, PxVec3* p1, PxVec3* p2)
         {
             fixed (PxPlane* @this = &this)
             { Constructor_PInvoke(@this, p0, p1, p2); }

@@ -18,7 +18,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxBoxGeometry()
         {
             fixed (PxBoxGeometry* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -29,7 +29,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(float hx, float hy, float hz)
+        public PxBoxGeometry(float hx, float hy, float hz)
         {
             fixed (PxBoxGeometry* @this = &this)
             { Constructor_PInvoke(@this, hx, hy, hz); }
@@ -40,7 +40,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxVec3* halfExtents_)
+        public PxBoxGeometry(PxVec3* halfExtents_)
         {
             fixed (PxBoxGeometry* @this = &this)
             { Constructor_PInvoke(@this, halfExtents_); }

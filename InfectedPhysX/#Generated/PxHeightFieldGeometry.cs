@@ -18,7 +18,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxHeightFieldGeometry()
         {
             fixed (PxHeightFieldGeometry* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -29,7 +29,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxHeightField* hf, PxMeshGeometryFlags* flags, float heightScale_, float rowScale_, float columnScale_)
+        public PxHeightFieldGeometry(PxHeightField* hf, PxMeshGeometryFlags* flags, float heightScale_, float rowScale_, float columnScale_)
         {
             fixed (PxHeightFieldGeometry* @this = &this)
             { Constructor_PInvoke(@this, hf, flags, heightScale_, rowScale_, columnScale_); }

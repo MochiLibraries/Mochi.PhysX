@@ -16,7 +16,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(byte a, byte b)
+        public PxDominanceGroupPair(byte a, byte b)
         {
             fixed (PxDominanceGroupPair* @this = &this)
             { Constructor_PInvoke(@this, a, b); }

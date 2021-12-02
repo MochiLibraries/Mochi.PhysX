@@ -223,7 +223,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxGeometryHolder()
         {
             fixed (PxGeometryHolder* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -234,7 +234,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxGeometry* geometry)
+        public PxGeometryHolder(PxGeometry* geometry)
         {
             fixed (PxGeometryHolder* @this = &this)
             { Constructor_PInvoke(@this, geometry); }

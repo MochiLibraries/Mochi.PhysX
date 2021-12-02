@@ -16,7 +16,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxCudaContextManager* ctx)
+        public PxScopedCudaLock(PxCudaContextManager* ctx)
         {
             fixed (PxScopedCudaLock* @this = &this)
             { Constructor_PInvoke(@this, ctx); }

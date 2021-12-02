@@ -16,7 +16,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxScene* scene, byte* file = null, uint line = 0)
+        public PxSceneWriteLock(PxScene* scene, byte* file = null, uint line = 0)
         {
             fixed (PxSceneWriteLock* @this = &this)
             { Constructor_PInvoke(@this, scene, file, line); }

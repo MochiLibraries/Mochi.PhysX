@@ -21,7 +21,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxTriangleMeshDesc()
         {
             fixed (PxTriangleMeshDesc* @this = &this)
             { Constructor_PInvoke(@this); }

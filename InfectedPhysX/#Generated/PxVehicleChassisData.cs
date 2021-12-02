@@ -16,7 +16,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxVehicleChassisData()
         {
             fixed (PxVehicleChassisData* @this = &this)
             { Constructor_PInvoke(@this); }

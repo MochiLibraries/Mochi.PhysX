@@ -16,7 +16,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxActorShape()
         {
             fixed (PxActorShape* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -27,7 +27,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxRigidActor* a, PxShape* s)
+        public PxActorShape(PxRigidActor* a, PxShape* s)
         {
             fixed (PxActorShape* @this = &this)
             { Constructor_PInvoke(@this, a, s); }

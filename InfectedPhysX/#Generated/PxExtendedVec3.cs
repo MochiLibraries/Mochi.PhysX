@@ -17,7 +17,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxExtendedVec3()
         {
             fixed (PxExtendedVec3* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -28,7 +28,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(double _x, double _y, double _z)
+        public PxExtendedVec3(double _x, double _y, double _z)
         {
             fixed (PxExtendedVec3* @this = &this)
             { Constructor_PInvoke(@this, _x, _y, _z); }

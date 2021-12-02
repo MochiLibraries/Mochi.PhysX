@@ -16,7 +16,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxFilterData* filterData = null, PxQueryFilterCallback* cb = null, PxControllerFilterCallback* cctFilterCb = null)
+        public PxControllerFilters(PxFilterData* filterData = null, PxQueryFilterCallback* cb = null, PxControllerFilterCallback* cctFilterCb = null)
         {
             fixed (PxControllerFilters* @this = &this)
             { Constructor_PInvoke(@this, filterData, cb, cctFilterCb); }

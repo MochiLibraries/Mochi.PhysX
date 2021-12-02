@@ -18,7 +18,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxSphereGeometry()
         {
             fixed (PxSphereGeometry* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -29,7 +29,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(float ir)
+        public PxSphereGeometry(float ir)
         {
             fixed (PxSphereGeometry* @this = &this)
             { Constructor_PInvoke(@this, ir); }

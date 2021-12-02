@@ -17,7 +17,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxVehicleDriveTankControlModel mode)
+        public PxVehicleDriveTankRawInputData(PxVehicleDriveTankControlModel mode)
         {
             fixed (PxVehicleDriveTankRawInputData* @this = &this)
             { Constructor_PInvoke(@this, mode); }

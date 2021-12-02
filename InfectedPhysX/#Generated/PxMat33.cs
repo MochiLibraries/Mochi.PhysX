@@ -17,7 +17,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxMat33()
         {
             fixed (PxMat33* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -28,7 +28,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxIDENTITY r)
+        public PxMat33(PxIDENTITY r)
         {
             fixed (PxMat33* @this = &this)
             { Constructor_PInvoke(@this, r); }
@@ -39,7 +39,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxZERO r)
+        public PxMat33(PxZERO r)
         {
             fixed (PxMat33* @this = &this)
             { Constructor_PInvoke(@this, r); }
@@ -50,7 +50,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxVec3* col0, PxVec3* col1, PxVec3* col2)
+        public PxMat33(PxVec3* col0, PxVec3* col1, PxVec3* col2)
         {
             fixed (PxMat33* @this = &this)
             { Constructor_PInvoke(@this, col0, col1, col2); }
@@ -61,7 +61,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(float r)
+        public PxMat33(float r)
         {
             fixed (PxMat33* @this = &this)
             { Constructor_PInvoke(@this, r); }
@@ -72,7 +72,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(float* values)
+        public PxMat33(float* values)
         {
             fixed (PxMat33* @this = &this)
             { Constructor_PInvoke(@this, values); }
@@ -83,7 +83,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxQuat* q)
+        public PxMat33(PxQuat* q)
         {
             fixed (PxMat33* @this = &this)
             { Constructor_PInvoke(@this, q); }
@@ -94,7 +94,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxMat33* other)
+        public PxMat33(PxMat33* other)
         {
             fixed (PxMat33* @this = &this)
             { Constructor_PInvoke(@this, other); }

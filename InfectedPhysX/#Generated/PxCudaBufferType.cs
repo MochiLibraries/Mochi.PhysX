@@ -16,7 +16,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxCudaBufferType* t)
+        public PxCudaBufferType(PxCudaBufferType* t)
         {
             fixed (PxCudaBufferType* @this = &this)
             { Constructor_PInvoke(@this, t); }
@@ -27,7 +27,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxCudaBufferMemorySpace _memSpace, PxCudaBufferFlags _flags)
+        public PxCudaBufferType(PxCudaBufferMemorySpace _memSpace, PxCudaBufferFlags _flags)
         {
             fixed (PxCudaBufferType* @this = &this)
             { Constructor_PInvoke(@this, _memSpace, _flags); }

@@ -16,7 +16,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxMassProperties()
         {
             fixed (PxMassProperties* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -27,7 +27,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(float m, PxMat33* inertiaT, PxVec3* com)
+        public PxMassProperties(float m, PxMat33* inertiaT, PxVec3* com)
         {
             fixed (PxMassProperties* @this = &this)
             { Constructor_PInvoke(@this, m, inertiaT, com); }
@@ -38,7 +38,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxGeometry* geometry)
+        public PxMassProperties(PxGeometry* geometry)
         {
             fixed (PxMassProperties* @this = &this)
             { Constructor_PInvoke(@this, geometry); }

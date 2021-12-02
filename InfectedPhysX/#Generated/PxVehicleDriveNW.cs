@@ -60,7 +60,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxBaseFlags* baseFlags)
+        public PxVehicleDriveNW(PxBaseFlags* baseFlags)
         {
             fixed (PxVehicleDriveNW* @this = &this)
             { Constructor_PInvoke(@this, baseFlags); }
@@ -71,7 +71,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxVehicleDriveNW()
         {
             fixed (PxVehicleDriveNW* @this = &this)
             { Constructor_PInvoke(@this); }

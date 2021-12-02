@@ -17,7 +17,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxMat44()
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -28,7 +28,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxIDENTITY r)
+        public PxMat44(PxIDENTITY r)
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this, r); }
@@ -39,7 +39,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxZERO r)
+        public PxMat44(PxZERO r)
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this, r); }
@@ -50,7 +50,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxVec4* col0, PxVec4* col1, PxVec4* col2, PxVec4* col3)
+        public PxMat44(PxVec4* col0, PxVec4* col1, PxVec4* col2, PxVec4* col3)
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this, col0, col1, col2, col3); }
@@ -61,7 +61,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(float r)
+        public PxMat44(float r)
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this, r); }
@@ -72,7 +72,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxVec3* col0, PxVec3* col1, PxVec3* col2, PxVec3* col3)
+        public PxMat44(PxVec3* col0, PxVec3* col1, PxVec3* col2, PxVec3* col3)
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this, col0, col1, col2, col3); }
@@ -83,7 +83,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(float* values)
+        public PxMat44(float* values)
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this, values); }
@@ -94,7 +94,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxQuat* q)
+        public PxMat44(PxQuat* q)
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this, q); }
@@ -105,7 +105,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxVec4* diagonal)
+        public PxMat44(PxVec4* diagonal)
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this, diagonal); }
@@ -116,7 +116,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxMat33* axes, PxVec3* position)
+        public PxMat44(PxMat33* axes, PxVec3* position)
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this, axes, position); }
@@ -127,7 +127,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxTransform* t)
+        public PxMat44(PxTransform* t)
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this, t); }
@@ -150,7 +150,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxMat44* other)
+        public PxMat44(PxMat44* other)
         {
             fixed (PxMat44* @this = &this)
             { Constructor_PInvoke(@this, other); }

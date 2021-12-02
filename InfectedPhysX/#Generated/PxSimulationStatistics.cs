@@ -100,7 +100,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxSimulationStatistics()
         {
             fixed (PxSimulationStatistics* @this = &this)
             { Constructor_PInvoke(@this); }

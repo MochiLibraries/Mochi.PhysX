@@ -16,7 +16,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxConstraintInfo()
         {
             fixed (PxConstraintInfo* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -27,7 +27,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxConstraint* c, void* extRef, uint t)
+        public PxConstraintInfo(PxConstraint* c, void* extRef, uint t)
         {
             fixed (PxConstraintInfo* @this = &this)
             { Constructor_PInvoke(@this, c, extRef, t); }

@@ -17,7 +17,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public Px1DConstraintFlag()
         {
             fixed (Px1DConstraintFlag* @this = &this)
             { Constructor_PInvoke(@this); }

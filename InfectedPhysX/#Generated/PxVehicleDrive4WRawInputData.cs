@@ -17,7 +17,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxVehicleDrive4WRawInputData()
         {
             fixed (PxVehicleDrive4WRawInputData* @this = &this)
             { Constructor_PInvoke(@this); }

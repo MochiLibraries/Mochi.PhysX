@@ -16,7 +16,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxEMPTY arg0)
+        public PxFilterData(PxEMPTY arg0)
         {
             fixed (PxFilterData* @this = &this)
             { Constructor_PInvoke(@this, arg0); }
@@ -27,7 +27,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxFilterData()
         {
             fixed (PxFilterData* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -38,7 +38,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxFilterData* fd)
+        public PxFilterData(PxFilterData* fd)
         {
             fixed (PxFilterData* @this = &this)
             { Constructor_PInvoke(@this, fd); }
@@ -49,7 +49,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(uint w0, uint w1, uint w2, uint w3)
+        public PxFilterData(uint w0, uint w1, uint w2, uint w3)
         {
             fixed (PxFilterData* @this = &this)
             { Constructor_PInvoke(@this, w0, w1, w2, w3); }

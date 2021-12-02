@@ -18,7 +18,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxDefaultErrorCallback()
         {
             fixed (PxDefaultErrorCallback* @this = &this)
             { Constructor_PInvoke(@this); }

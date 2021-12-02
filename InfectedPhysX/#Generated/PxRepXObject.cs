@@ -22,7 +22,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(byte* inTypeName, void* inSerializable = null, ulong inId = 0)
+        public PxRepXObject(byte* inTypeName, void* inSerializable = null, ulong inId = 0)
         {
             fixed (PxRepXObject* @this = &this)
             { Constructor_PInvoke(@this, inTypeName, inSerializable, inId); }

@@ -18,7 +18,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxLocationHit()
         {
             fixed (PxLocationHit* @this = &this)
             { Constructor_PInvoke(@this); }

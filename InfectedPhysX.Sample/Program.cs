@@ -59,8 +59,7 @@ namespace InfectedPhysX.Sample
 
             //---------------------------------------------------------------------------------------------------------------------------------------
             Console.WriteLine("Initializing physics");
-            PxTolerancesScale scale = default;
-            scale.Constructor(); //BIOQUIRK: These should be replaced with C# 10 parameterless constructors
+            PxTolerancesScale scale = new();
             PxPhysics* physics = PxCreatePhysics(PX_PHYSICS_VERSION, foundation, &scale, trackOutstandingAllocations: true, pvd);
 
             if (physics == null)
@@ -75,8 +74,7 @@ namespace InfectedPhysX.Sample
 
             //---------------------------------------------------------------------------------------------------------------------------------------
             Console.WriteLine("Creating scene");
-            PxSceneDesc sceneDescription = default;
-            sceneDescription.Constructor(physics->getTolerancesScale());
+            PxSceneDesc sceneDescription = new(physics->getTolerancesScale());
             sceneDescription.gravity = new PxVec3() { x = 0f, y = -9.81f, z = 0f };
             sceneDescription.cpuDispatcher = (PxCpuDispatcher*)dispatcher;
             sceneDescription.filterShader =
@@ -126,9 +124,8 @@ namespace InfectedPhysX.Sample
             //---------------------------------------------------------------------------------------------------------------------------------------
             Console.WriteLine("Adding stacks");
             {
-                PxBoxGeometry stackBoxGeometry = new PxBoxGeometry();
                 const float halfExtent = 2f;
-                stackBoxGeometry.Constructor(halfExtent, halfExtent, halfExtent);
+                PxBoxGeometry stackBoxGeometry = new PxBoxGeometry(halfExtent, halfExtent, halfExtent);
                 PxShapeFlags shapeFlags = PxShapeFlags.eVISUALIZATION | PxShapeFlags.eSCENE_QUERY_SHAPE | PxShapeFlags.eSIMULATION_SHAPE;
                 PxShape* shape = physics->createShape((PxGeometry*)&stackBoxGeometry, material, isExclusive: false, &shapeFlags);
                 float stackZ = 10f;
@@ -142,8 +139,7 @@ namespace InfectedPhysX.Sample
                         y = 0f,
                         z = stackZ -= 10f
                     };
-                    PxTransform transform = default;
-                    transform.Constructor(&transformPosition);
+                    PxTransform transform = new(&transformPosition);
 
                     for (int i = 0; i < size; i++)
                     {
@@ -155,8 +151,7 @@ namespace InfectedPhysX.Sample
                                 y = ((float)(i * 2 + 1)) * halfExtent,
                                 z = 0f
                             };
-                            PxTransform localTransform = default;
-                            localTransform.Constructor(&position);
+                            PxTransform localTransform = new(&position);
 
                             PxTransform bodyTransform = transform.transform(&localTransform);
                             PxRigidDynamic* body = physics->createRigidDynamic(&bodyTransform);
@@ -178,11 +173,8 @@ namespace InfectedPhysX.Sample
                     y = 40f,
                     z = 100f,
                 };
-                PxTransform transform = default;
-                transform.Constructor(&position);
-
-                PxSphereGeometry geometry = default;
-                geometry.Constructor(10f);
+                PxTransform transform = new(&position);
+                PxSphereGeometry geometry = new(10f);
 
                 PxVec3 velocity = new PxVec3()
                 {
@@ -191,8 +183,7 @@ namespace InfectedPhysX.Sample
                     z = -100f
                 };
 
-                PxTransform identity = default;
-                identity.Constructor(default(PxIDENTITY));
+                PxTransform identity = new(default(PxIDENTITY));
                 PxRigidDynamic* dynamic = PxCreateDynamic(physics, &transform, (PxGeometry*)&geometry, material, 10f, &identity);
                 dynamic->Base.setAngularDamping(0.5f);
                 dynamic->Base.setLinearVelocity(&velocity);

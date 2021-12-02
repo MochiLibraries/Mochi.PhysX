@@ -16,7 +16,7 @@ namespace Mochi.PhysX.Gu
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(float contactDistance, float meshContactMargin, float toleranceLength)
+        public NarrowPhaseParams(float contactDistance, float meshContactMargin, float toleranceLength)
         {
             fixed (NarrowPhaseParams* @this = &this)
             { Constructor_PInvoke(@this, contactDistance, meshContactMargin, toleranceLength); }

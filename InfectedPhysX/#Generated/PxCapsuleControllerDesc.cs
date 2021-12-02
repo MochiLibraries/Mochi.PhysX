@@ -19,7 +19,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxCapsuleControllerDesc()
         {
             fixed (PxCapsuleControllerDesc* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -38,7 +38,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxCapsuleControllerDesc* arg0)
+        public PxCapsuleControllerDesc(PxCapsuleControllerDesc* arg0)
         {
             fixed (PxCapsuleControllerDesc* @this = &this)
             { Constructor_PInvoke(@this, arg0); }

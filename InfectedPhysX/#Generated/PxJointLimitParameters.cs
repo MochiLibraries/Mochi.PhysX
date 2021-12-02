@@ -26,7 +26,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxJointLimitParameters()
         {
             fixed (PxJointLimitParameters* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -37,7 +37,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxJointLimitParameters* p)
+        public PxJointLimitParameters(PxJointLimitParameters* p)
         {
             fixed (PxJointLimitParameters* @this = &this)
             { Constructor_PInvoke(@this, p); }

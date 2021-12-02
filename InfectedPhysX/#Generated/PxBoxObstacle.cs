@@ -18,7 +18,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxBoxObstacle()
         {
             fixed (PxBoxObstacle* @this = &this)
             { Constructor_PInvoke(@this); }

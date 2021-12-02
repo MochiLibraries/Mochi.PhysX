@@ -70,7 +70,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(uint raycastResultBufferSize_, uint sweepResultBufferSize_, uint overlapResultBufferSize_)
+        public PxBatchQueryMemory(uint raycastResultBufferSize_, uint sweepResultBufferSize_, uint overlapResultBufferSize_)
         {
             fixed (PxBatchQueryMemory* @this = &this)
             { Constructor_PInvoke(@this, raycastResultBufferSize_, sweepResultBufferSize_, overlapResultBufferSize_); }

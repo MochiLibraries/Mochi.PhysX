@@ -16,7 +16,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxMeshScale()
         {
             fixed (PxMeshScale* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -27,7 +27,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(float r)
+        public PxMeshScale(float r)
         {
             fixed (PxMeshScale* @this = &this)
             { Constructor_PInvoke(@this, r); }
@@ -38,7 +38,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxVec3* s)
+        public PxMeshScale(PxVec3* s)
         {
             fixed (PxMeshScale* @this = &this)
             { Constructor_PInvoke(@this, s); }
@@ -49,7 +49,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxVec3* s, PxQuat* r)
+        public PxMeshScale(PxVec3* s, PxQuat* r)
         {
             fixed (PxMeshScale* @this = &this)
             { Constructor_PInvoke(@this, s, r); }

@@ -20,7 +20,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxBoundedData()
         {
             fixed (PxBoundedData* @this = &this)
             { Constructor_PInvoke(@this); }

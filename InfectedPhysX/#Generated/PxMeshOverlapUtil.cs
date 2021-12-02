@@ -17,7 +17,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxMeshOverlapUtil()
         {
             fixed (PxMeshOverlapUtil* @this = &this)
             { Constructor_PInvoke(@this); }

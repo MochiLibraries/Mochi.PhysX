@@ -18,7 +18,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(byte* name)
+        public PxDefaultFileInputData(byte* name)
         {
             fixed (PxDefaultFileInputData* @this = &this)
             { Constructor_PInvoke(@this, name); }

@@ -166,7 +166,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(ushort concreteType, PxBaseFlags* baseFlags)
+        public PxVehicleWheels(ushort concreteType, PxBaseFlags* baseFlags)
         {
             fixed (PxVehicleWheels* @this = &this)
             { Constructor_PInvoke(@this, concreteType, baseFlags); }
@@ -177,7 +177,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxBaseFlags* baseFlags)
+        public PxVehicleWheels(PxBaseFlags* baseFlags)
         {
             fixed (PxVehicleWheels* @this = &this)
             { Constructor_PInvoke(@this, baseFlags); }

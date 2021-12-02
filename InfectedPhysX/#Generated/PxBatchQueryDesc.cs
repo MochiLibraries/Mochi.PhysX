@@ -26,7 +26,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(uint maxRaycastsPerExecute, uint maxSweepsPerExecute, uint maxOverlapsPerExecute)
+        public PxBatchQueryDesc(uint maxRaycastsPerExecute, uint maxSweepsPerExecute, uint maxOverlapsPerExecute)
         {
             fixed (PxBatchQueryDesc* @this = &this)
             { Constructor_PInvoke(@this, maxRaycastsPerExecute, maxSweepsPerExecute, maxOverlapsPerExecute); }

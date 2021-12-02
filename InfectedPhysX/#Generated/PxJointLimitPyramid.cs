@@ -26,7 +26,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(float yLimitAngleMin, float yLimitAngleMax, float zLimitAngleMin, float zLimitAngleMax, float contactDist = -1f)
+        public PxJointLimitPyramid(float yLimitAngleMin, float yLimitAngleMax, float zLimitAngleMin, float zLimitAngleMax, float contactDist = -1f)
         {
             fixed (PxJointLimitPyramid* @this = &this)
             { Constructor_PInvoke(@this, yLimitAngleMin, yLimitAngleMax, zLimitAngleMin, zLimitAngleMax, contactDist); }
@@ -37,7 +37,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(float yLimitAngleMin, float yLimitAngleMax, float zLimitAngleMin, float zLimitAngleMax, PxSpring* spring)
+        public PxJointLimitPyramid(float yLimitAngleMin, float yLimitAngleMax, float zLimitAngleMin, float zLimitAngleMax, PxSpring* spring)
         {
             fixed (PxJointLimitPyramid* @this = &this)
             { Constructor_PInvoke(@this, yLimitAngleMin, yLimitAngleMax, zLimitAngleMin, zLimitAngleMax, spring); }

@@ -20,7 +20,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxTolerancesScale()
         {
             fixed (PxTolerancesScale* @this = &this)
             { Constructor_PInvoke(@this); }

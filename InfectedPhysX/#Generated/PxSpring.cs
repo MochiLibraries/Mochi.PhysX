@@ -20,7 +20,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(float stiffness_, float damping_)
+        public PxSpring(float stiffness_, float damping_)
         {
             fixed (PxSpring* @this = &this)
             { Constructor_PInvoke(@this, stiffness_, damping_); }

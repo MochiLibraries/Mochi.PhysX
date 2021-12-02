@@ -18,7 +18,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxAllocatorCallback* allocator)
+        public PxDefaultMemoryOutputStream(PxAllocatorCallback* allocator)
         {
             fixed (PxDefaultMemoryOutputStream* @this = &this)
             { Constructor_PInvoke(@this, allocator); }

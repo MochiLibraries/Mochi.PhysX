@@ -16,7 +16,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxProfilerCallback* callback, byte* eventName, bool detached, ulong contextId)
+        public PxProfileScoped(PxProfilerCallback* callback, byte* eventName, bool detached, ulong contextId)
         {
             fixed (PxProfileScoped* @this = &this)
             { Constructor_PInvoke(@this, callback, eventName, detached, contextId); }

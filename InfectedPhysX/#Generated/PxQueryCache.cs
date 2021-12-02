@@ -16,7 +16,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxQueryCache()
         {
             fixed (PxQueryCache* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -27,7 +27,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxShape* s, uint findex)
+        public PxQueryCache(PxShape* s, uint findex)
         {
             fixed (PxQueryCache* @this = &this)
             { Constructor_PInvoke(@this, s, findex); }

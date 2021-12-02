@@ -24,7 +24,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxConstraintInvMassScale()
         {
             fixed (PxConstraintInvMassScale* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -35,7 +35,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(float lin0, float ang0, float lin1, float ang1)
+        public PxConstraintInvMassScale(float lin0, float ang0, float lin1, float ang1)
         {
             fixed (PxConstraintInvMassScale* @this = &this)
             { Constructor_PInvoke(@this, lin0, ang0, lin1, ang1); }

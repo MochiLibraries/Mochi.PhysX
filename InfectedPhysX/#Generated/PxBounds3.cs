@@ -16,7 +16,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxBounds3()
         {
             fixed (PxBounds3* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -27,7 +27,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxVec3* minimum, PxVec3* maximum)
+        public PxBounds3(PxVec3* minimum, PxVec3* maximum)
         {
             fixed (PxBounds3* @this = &this)
             { Constructor_PInvoke(@this, minimum, maximum); }

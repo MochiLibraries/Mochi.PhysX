@@ -16,7 +16,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxAllocInfo()
         {
             fixed (PxAllocInfo* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -27,7 +27,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(byte* file, int line, byte* allocName, PxAllocId allocId)
+        public PxAllocInfo(byte* file, int line, byte* allocName, PxAllocId allocId)
         {
             fixed (PxAllocInfo* @this = &this)
             { Constructor_PInvoke(@this, file, line, allocName, allocId); }

@@ -20,7 +20,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxTransform()
         {
             fixed (PxTransform* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -31,7 +31,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxVec3* position)
+        public PxTransform(PxVec3* position)
         {
             fixed (PxTransform* @this = &this)
             { Constructor_PInvoke(@this, position); }
@@ -42,7 +42,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxIDENTITY r)
+        public PxTransform(PxIDENTITY r)
         {
             fixed (PxTransform* @this = &this)
             { Constructor_PInvoke(@this, r); }
@@ -53,7 +53,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxQuat* orientation)
+        public PxTransform(PxQuat* orientation)
         {
             fixed (PxTransform* @this = &this)
             { Constructor_PInvoke(@this, orientation); }
@@ -64,7 +64,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(float x, float y, float z, PxQuat* aQ)
+        public PxTransform(float x, float y, float z, PxQuat* aQ)
         {
             fixed (PxTransform* @this = &this)
             { Constructor_PInvoke(@this, x, y, z, aQ); }
@@ -75,7 +75,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxVec3* p0, PxQuat* q0)
+        public PxTransform(PxVec3* p0, PxQuat* q0)
         {
             fixed (PxTransform* @this = &this)
             { Constructor_PInvoke(@this, p0, q0); }
@@ -86,7 +86,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxMat44* m)
+        public PxTransform(PxMat44* m)
         {
             fixed (PxTransform* @this = &this)
             { Constructor_PInvoke(@this, m); }

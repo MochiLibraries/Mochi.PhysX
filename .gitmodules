@@ -1,6 +1,6 @@
 [submodule "external/Biohazrd"]
 	path = external/Biohazrd
-	url = https://github.com/InfectedLibraries/Biohazrd.git
+	url = https://github.com/MochiLibraries/Biohazrd.git
 [submodule "external/PhysX"]
 	path = external/PhysX
 	url = https://github.com/InfectedLibraries/PhysX.git

@@ -16,7 +16,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxDebugText()
         {
             fixed (PxDebugText* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -27,7 +27,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxVec3* p, float* s, uint* c, byte* str)
+        public PxDebugText(PxVec3* p, float* s, uint* c, byte* str)
         {
             fixed (PxDebugText* @this = &this)
             { Constructor_PInvoke(@this, p, s, c, str); }

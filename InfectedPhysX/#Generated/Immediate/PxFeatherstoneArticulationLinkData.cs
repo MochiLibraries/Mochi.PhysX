@@ -18,7 +18,7 @@ namespace Mochi.PhysX.Immediate
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxFeatherstoneArticulationLinkData()
         {
             fixed (PxFeatherstoneArticulationLinkData* @this = &this)
             { Constructor_PInvoke(@this); }

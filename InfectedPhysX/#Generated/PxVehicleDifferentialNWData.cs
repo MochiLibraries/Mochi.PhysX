@@ -17,7 +17,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxVehicleDifferentialNWData()
         {
             fixed (PxVehicleDifferentialNWData* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -59,7 +59,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxEMPTY arg0)
+        public PxVehicleDifferentialNWData(PxEMPTY arg0)
         {
             fixed (PxVehicleDifferentialNWData* @this = &this)
             { Constructor_PInvoke(@this, arg0); }

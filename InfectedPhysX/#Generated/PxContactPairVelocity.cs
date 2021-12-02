@@ -19,7 +19,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxContactPairVelocity()
         {
             fixed (PxContactPairVelocity* @this = &this)
             { Constructor_PInvoke(@this); }

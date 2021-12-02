@@ -22,7 +22,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxPhysics* inPhysics, PxCooking* inCooking = null, PxStringTable* inStringTable = null)
+        public PxRepXInstantiationArgs(PxPhysics* inPhysics, PxCooking* inCooking = null, PxStringTable* inStringTable = null)
         {
             fixed (PxRepXInstantiationArgs* @this = &this)
             { Constructor_PInvoke(@this, inPhysics, inCooking, inStringTable); }

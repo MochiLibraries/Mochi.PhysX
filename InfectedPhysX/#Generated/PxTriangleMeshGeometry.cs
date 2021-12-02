@@ -18,7 +18,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxTriangleMeshGeometry()
         {
             fixed (PxTriangleMeshGeometry* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -29,7 +29,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxTriangleMesh* mesh, PxMeshScale* scaling, PxMeshGeometryFlags* flags)
+        public PxTriangleMeshGeometry(PxTriangleMesh* mesh, PxMeshScale* scaling, PxMeshGeometryFlags* flags)
         {
             fixed (PxTriangleMeshGeometry* @this = &this)
             { Constructor_PInvoke(@this, mesh, scaling, flags); }

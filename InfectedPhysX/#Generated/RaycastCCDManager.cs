@@ -16,7 +16,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxScene* scene)
+        public RaycastCCDManager(PxScene* scene)
         {
             fixed (RaycastCCDManager* @this = &this)
             { Constructor_PInvoke(@this, scene); }

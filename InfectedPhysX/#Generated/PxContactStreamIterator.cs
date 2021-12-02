@@ -51,7 +51,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(byte* contactPatches, byte* contactPoints, uint* contactFaceIndices, uint nbPatches, uint nbContacts)
+        public PxContactStreamIterator(byte* contactPatches, byte* contactPoints, uint* contactFaceIndices, uint nbPatches, uint nbContacts)
         {
             fixed (PxContactStreamIterator* @this = &this)
             { Constructor_PInvoke(@this, contactPatches, contactPoints, contactFaceIndices, nbPatches, nbContacts); }

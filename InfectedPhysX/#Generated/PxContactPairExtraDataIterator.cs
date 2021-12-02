@@ -16,7 +16,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(byte* stream, uint size)
+        public PxContactPairExtraDataIterator(byte* stream, uint size)
         {
             fixed (PxContactPairExtraDataIterator* @this = &this)
             { Constructor_PInvoke(@this, stream, size); }

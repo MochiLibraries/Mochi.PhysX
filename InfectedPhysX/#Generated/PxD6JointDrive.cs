@@ -22,7 +22,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxD6JointDrive()
         {
             fixed (PxD6JointDrive* @this = &this)
             { Constructor_PInvoke(@this); }
@@ -33,7 +33,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(float driveStiffness, float driveDamping, float driveForceLimit, bool isAcceleration = false)
+        public PxD6JointDrive(float driveStiffness, float driveDamping, float driveForceLimit, bool isAcceleration = false)
         {
             fixed (PxD6JointDrive* @this = &this)
             { Constructor_PInvoke(@this, driveStiffness, driveDamping, driveForceLimit, isAcceleration); }

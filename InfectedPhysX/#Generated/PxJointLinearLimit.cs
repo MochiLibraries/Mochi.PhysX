@@ -20,7 +20,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(PxTolerancesScale* scale, float extent, float contactDist = -1f)
+        public PxJointLinearLimit(PxTolerancesScale* scale, float extent, float contactDist = -1f)
         {
             fixed (PxJointLinearLimit* @this = &this)
             { Constructor_PInvoke(@this, scale, extent, contactDist); }
@@ -31,7 +31,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor(float extent, PxSpring* spring)
+        public PxJointLinearLimit(float extent, PxSpring* spring)
         {
             fixed (PxJointLinearLimit* @this = &this)
             { Constructor_PInvoke(@this, extent, spring); }

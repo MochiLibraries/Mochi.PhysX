@@ -23,7 +23,7 @@ namespace Mochi.PhysX
 
             [DebuggerStepThrough, DebuggerHidden]
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            public void Constructor()
+            public PxXmlMiscParameter()
             {
                 fixed (PxXmlMiscParameter* @this = &this)
                 { Constructor_PInvoke(@this); }
@@ -34,7 +34,7 @@ namespace Mochi.PhysX
 
             [DebuggerStepThrough, DebuggerHidden]
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            public void Constructor(PxVec3* inUpVector, PxTolerancesScale inScale)
+            public PxXmlMiscParameter(PxVec3* inUpVector, PxTolerancesScale inScale)
             {
                 fixed (PxXmlMiscParameter* @this = &this)
                 { Constructor_PInvoke(@this, inUpVector, inScale); }

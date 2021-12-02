@@ -32,7 +32,7 @@ namespace Mochi.PhysX
 
         [DebuggerStepThrough, DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Constructor()
+        public PxSceneLimits()
         {
             fixed (PxSceneLimits* @this = &this)
             { Constructor_PInvoke(@this); }
