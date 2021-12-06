@@ -24,7 +24,7 @@ string physXSdkRoot = Path.GetFullPath(args[0]);
 string outputDirectoryPath = Path.GetFullPath(args[1]);
 string nativeRuntimeRoot = Path.GetFullPath(args[2]);
 
-string inlineExportHelperFileName = Path.Combine(nativeRuntimeRoot, "InlineExportHelper.cpp");
+string inlineExportHelperFileName = Path.Combine(nativeRuntimeRoot, "InlineExportHelper.gen.cpp");
 
 const string canonicalBuildVariant = "checked";
 
@@ -56,7 +56,8 @@ if (!Directory.Exists(physXSdkRoot))
     return 1;
 }
 
-string physXBinariesDirectoryPath = Path.Combine(physXSdkRoot, "physx", "install", physXPresetName, "bin");
+string physXInstallRoot = Path.Combine(physXSdkRoot, "physx", "install", physXPresetName);
+string physXBinariesDirectoryPath = Path.Combine(physXInstallRoot, "bin");
 {
     string? binarySubdirectory = null;
 
@@ -88,8 +89,7 @@ string physXBinariesDirectoryPath = Path.Combine(physXSdkRoot, "physx", "install
 
 string[] includeDirectories =
 {
-    Path.Combine(physXSdkRoot, "physx", "include"),
-    Path.Combine(physXSdkRoot, "pxshared", "include")
+    Path.Combine(physXInstallRoot, "include")
 };
 
 foreach (string includeDirectory in includeDirectories)
@@ -219,7 +219,7 @@ library = new DeduplicateNamesTransformation().Transform(library);
 library = new OrganizeOutputFilesByNamespaceTransformation("Mochi.PhysX").Transform(library);
 
 // Generate the exports list for the native runtime
-using (TextWriter exportsList = OperatingSystem.IsWindows() ? outputSession.Open<CppCodeWriter>(Path.Combine(nativeRuntimeRoot, "Exports.cpp")) : outputSession.Open<StreamWriter>(Path.Combine(nativeRuntimeRoot, "Exports.map")))
+using (TextWriter exportsList = OperatingSystem.IsWindows() ? outputSession.Open<CppCodeWriter>(Path.Combine(nativeRuntimeRoot, "Exports.gen.cpp")) : outputSession.Open<StreamWriter>(Path.Combine(nativeRuntimeRoot, "Exports.gen.map")))
 {
     // Use a dummy LinkImportsTransformation to enumerate all symbols exported by PhysX's static libraries
     LinkImportsTransformation staticExportLookup = new();

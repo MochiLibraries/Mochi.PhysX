@@ -1,5 +1,5 @@
-../../Mochi.PhysX.Native/Exports.cpp
-../../Mochi.PhysX.Native/InlineExportHelper.cpp
+../../Mochi.PhysX.Native/Exports.gen.cpp
+../../Mochi.PhysX.Native/InlineExportHelper.gen.cpp
 CUctx_st.cs
 CUgraphicsResource_st.cs
 Diagnostics.log

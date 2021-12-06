@@ -1,5 +1,5 @@
-physx/include/common/PxProfileZone.h
-physx/include/common/windows/PxWindowsDelayLoadHook.h
-physx/include/extensions/PxCollectionExt.h
-physx/include/PxConfig.h
-physx/include/PxPhysicsSerialization.h
+physx/install/Mochi.PhysX.Windows.x64/include/common/PxProfileZone.h
+physx/install/Mochi.PhysX.Windows.x64/include/common/windows/PxWindowsDelayLoadHook.h
+physx/install/Mochi.PhysX.Windows.x64/include/extensions/PxCollectionExt.h
+physx/install/Mochi.PhysX.Windows.x64/include/PxConfig.h
+physx/install/Mochi.PhysX.Windows.x64/include/PxPhysicsSerialization.h

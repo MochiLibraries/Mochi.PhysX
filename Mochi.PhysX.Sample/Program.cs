@@ -17,7 +17,7 @@ namespace Mochi.PhysX.Sample
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine($"PhysX native runtime build information: '{BuildInfo}'...");
+            Console.WriteLine($"PhysX native runtime build information: '{MochiPhysX.BuildInfo}'...");
 
             //---------------------------------------------------------------------------------------------------------------------------------------
             Console.WriteLine("Initializing error callback");
@@ -189,7 +189,8 @@ namespace Mochi.PhysX.Sample
             }
 
             //---------------------------------------------------------------------------------------------------------------------------------------
-            Console.WriteLine("Simulating the world... (Press escape to stop.)");
+            const int noInputFrameCount = 100;
+            Console.WriteLine($"Simulating the world{(Console.IsInputRedirected ? $" for {noInputFrameCount} frames." : "... (Press escape to stop.)")}");
             Stopwatch sw = new Stopwatch();
             int frameNum = 0;
 
@@ -214,7 +215,12 @@ namespace Mochi.PhysX.Sample
                 if (errors != 0)
                 { Console.WriteLine($"fetchResults error: {errors}"); }
 
-                if (Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Escape)
+                if (Console.IsInputRedirected)
+                {
+                    if (frameNum > noInputFrameCount)
+                    { break; }
+                }
+                else if (Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Escape)
                 { break; }
             }
 

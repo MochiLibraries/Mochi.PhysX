@@ -1,0 +1,93 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RuntimeIdentifier Condition="'$(RuntimeIdentifier)' == ''">$(NETCoreSdkRuntimeIdentifier)</RuntimeIdentifier>
+
+    <!-- ==============================================================================================================
+    Paths to Mochi.PhysX.Native things
+    =============================================================================================================== -->
+    <MochiPhysXNativeFileName Condition="$(RuntimeIdentifier.StartsWith('win-'))">Mochi.PhysX.Native.dll</MochiPhysXNativeFileName>
+    <MochiPhysXNativePdbName Condition="$(RuntimeIdentifier.StartsWith('win-'))">Mochi.PhysX.Native.pdb</MochiPhysXNativePdbName>
+    <MochiPhysXNativeFileName Condition="$(RuntimeIdentifier.StartsWith('linux-'))">libMochi.PhysX.Native.so</MochiPhysXNativeFileName>
+    <MochiPhysXNativeFileName Condition="$(RuntimeIdentifier.StartsWith('osx-'))">Mochi.PhysX.Native.dll</MochiPhysXNativeFileName>
+
+    <!-- Default to the checked/release variant for the sample and for Mochi.PhysX's dependency. Packages will be built for each variant. -->
+    <MochiPhysXNativeBuildVariant Condition="'$(MochiPhysXNativeBuildVariant)' == '' and '$(Configuration)' == 'Debug'">checked</MochiPhysXNativeBuildVariant>
+    <MochiPhysXNativeBuildVariant Condition="'$(MochiPhysXNativeBuildVariant)' == ''">release</MochiPhysXNativeBuildVariant>
+    <MochiPhysXNativeDirectory>$(MSBuildThisFileDirectory)../bin/Mochi.PhysX.Native/$(RuntimeIdentifier)/$(MochiPhysXNativeBuildVariant)/</MochiPhysXNativeDirectory>
+
+    <MochiPhysXNativeFilePath Condition="'$(MochiPhysXNativeFileName)' != ''">$(MochiPhysXNativeDirectory)$(MochiPhysXNativeFileName)</MochiPhysXNativeFilePath>
+    <MochiPhysXNativePdbPath Condition="'$(MochiPhysXNativePdbName)' != ''">$(MochiPhysXNativeDirectory)$(MochiPhysXNativePdbName)</MochiPhysXNativePdbPath>
+
+    <MochiPhysXRuntimesPackagePathPrefix>runtimes/$(RuntimeIdentifier)/native/</MochiPhysXRuntimesPackagePathPrefix>
+    <MochiPhysXRuntimesPackagePathPrefix Condition="'$(MochiPhysXNativeBuildVariant)' != 'release'">$(MochiPhysXRuntimesPackagePathPrefix)$(MochiPhysXNativeBuildVariant)/</MochiPhysXRuntimesPackagePathPrefix>
+    <MochiPhysXNativeFilePackagePath Condition="'$(MochiPhysXNativeFileName)' != ''">$(MochiPhysXRuntimesPackagePathPrefix)$(MochiPhysXNativeFileName)</MochiPhysXNativeFilePackagePath>
+    <MochiPhysXNativePdbPackagePath Condition="'$(MochiPhysXNativePdbName)' != ''">$(MochiPhysXRuntimesPackagePathPrefix)$(MochiPhysXNativePdbName)</MochiPhysXNativePdbPackagePath>
+
+    <PhysXLicenseFilePath>$(MSBuildThisFileDirectory)../external/PhysX/LICENSE.md</PhysXLicenseFilePath>
+
+    <!-- ==============================================================================================================
+    Package Info
+    =============================================================================================================== -->
+    <IsPackable>true</IsPackable>
+    
+    <!--
+      The package ID includes both the runtime identifier *and* the variant
+      It was considered haivng the variant be part of the version, but having it be part of the package ID means that it's possible to reference multiple variants and select between them at runtime.
+      Additionally, NuGet Restore runs in a context that doesn't have things like the active configuration so it would be wonky to switch between variants at compile time.
+    -->
+    <PackageId>$(MSBuildProjectName).$(RuntimeIdentifier)</PackageId>
+    <PackageId Condition="'$(MochiPhysXNativeBuildVariant)' != 'release'">$(PackageId)-$(MochiPhysXNativeBuildVariant)</PackageId>
+
+    <Description>Native runtime support package for Mochi.PhysX on $(RuntimeIdentifier)</Description>
+    <Description Condition="'$(MochiPhysXNativeBuildVariant)' != 'release'">$(Description) ($(MochiPhysXNativeBuildVariant) variant)</Description>
+    
+    <!-- Apply NVIDIA license and copyright info since the meat of this package is just the native bits of PhysX -->
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <Authors>NVIDIA Corporation, David Maas, and Contributors</Authors>
+    <Copyright>Copyright (c) 2021 NVIDIA Corporation. All rights reserved.</Copyright>
+
+    <!-- This package is only for the native runtime, don't try to build/pack the .NET assembly or specify a framework dependency -->
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+    <!--
+    Ideally we would do this and use ReferenceOutputAssembly="false" in Mochi.PhysX.csproj but that doesn't play nice with the NuGet pack task.
+    https://github.com/NuGet/Home/issues/8133 would let us do this the way we want.
+    The assembly is renamed to avoid conflicting with the native DLL.
+    The PlatformTarget is fixed for the same reasons as in Mochi.PhysX.
+    <CopyBuildOutputToOutputDirectory>false</CopyBuildOutputToOutputDirectory>
+    -->
+    <AssemblyName>Mochi.PhysX.Native.DummyAssembly</AssemblyName>
+    <PlatformTarget Condition="'$(PlatformTarget)' == ''">$(Platform)</PlatformTarget>
+    <CopyOutputSymbolsToOutputDirectory>false</CopyOutputSymbolsToOutputDirectory>
+    
+    <!-- Symbol packages only work with portable PDBs, which are .NET-only -->
+    <IncludeSymbols>false</IncludeSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Remove the Mochi.PhysX license and replace it with the PhysX one -->
+    <None Remove="$(MSBuildThisFileDirectory)../LICENSE.txt" />
+    <None Include="$(PhysXLicenseFilePath)" Pack="true" PackagePath="" Visible="false" />
+
+    <!-- Copy native runtime to output directory and pack it -->
+    <None Include="$(MochiPhysXNativeFilePath)" Link="$(MochiPhysXNativeFileName)" Condition="'$(MochiPhysXNativeFilePath)' != '' and Exists('$(MochiPhysXNativeFilePath)')">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <PackagePath>$(MochiPhysXNativeFilePackagePath)</PackagePath>
+    </None>
+    <None Include="$(MochiPhysXNativePdbPath)" Link="$(MochiPhysXNativePdbName)" Condition="'$(MochiPhysXNativePdbPath)' != '' and Exists('$(MochiPhysXNativePdbPath)')">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <!-- Not including the PDBs for now. See https://github.com/MochiLibraries/Mochi.PhysX/issues/5 -->
+      <Pack>false</Pack>
+      <PackagePath>$(MochiPhysXNativePdbPackagePath)</PackagePath>
+    </None>
+  </ItemGroup>
+  <!-- Error if required assets are missing -->
+  <Target Name="_NativeRuntimeChecks" BeforeTargets="GetCopyToOutputDirectoryItems;Build;GenerateNuspec;Pack">
+    <Error Text="PhysX license file is missing, ensure Git submodules are up-to-date." Condition="!Exists('$(PhysXLicenseFilePath)')" />
+    <Error Text="Could not automatically determine the native runtime to use based on runtime identifier '$(RuntimeIdentifier)'" Condition="'$(MochiPhysXNativeFileName)' == ''" />
+    <Error Text="Could not locate native runtime for '$(RuntimeIdentifier)' at '$(MochiPhysXNativeFilePath)', did you run build-native.cmd/sh?" Condition="!Exists('$(MochiPhysXNativeFilePath)')" />
+    <Error Text="Could not locate native runtime PDB for '$(RuntimeIdentifier)' at '$(MochiPhysXNativePdbPath)', did you run build-native.cmd/sh?" Condition="'$(MochiPhysXNativePdbName)' != '' and !Exists('$(MochiPhysXNativePdbPath)')" />
+  </Target>
+</Project>

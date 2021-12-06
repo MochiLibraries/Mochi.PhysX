@@ -6,5 +6,50 @@
     <Features>strict</Features>
     <Nullable>enable</Nullable>
     <AnalysisLevel>5.0</AnalysisLevel>
+
+    <!-- Common NuGet Package Properties -->
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://github.com/MochiLibraries</PackageProjectUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Authors>David Maas and Contributors</Authors>
+    <Copyright>Copyright David Maas and Contributors</Copyright>
+    <Product>Mochi.PhysX</Product>
+
+    <Description>Automatically generated C# bindings for NVIDIA PhysX.</Description>
+
+    <!-- Projects should not be packable or publishable by default -->
+    <IsPackable>false</IsPackable>
+    <IsPublishable>false</IsPublishable>
+
+    <!-- Ignore warnings about stable packages referencing pre-release ones. -->
+    <NoWarn>$(NoWarn);NU5104</NoWarn>
+
+    <!-- Emit modern symbol packages -->
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <IncludeSymbols>true</IncludeSymbols>
+
+    <!-- Embed untracked sources in the PDB -->
+    <EmbedUntrackedSources Condition="'$(ContinuousIntegrationBuild)' == 'true'">true</EmbedUntrackedSources>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Enable Source Link -->
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
+
+    <!-- Package the license file -->
+    <None Include="$(MSBuildThisFileDirectory)../LICENSE.txt" Pack="true" PackagePath="" Visible="false" />
+  </ItemGroup>
+  <!-- ================================================================================================================
+  Configure NuGet package restore sources
+  ================================================================================================================= -->
+  <PropertyGroup>
+    <OfficialNuGetApiUrl>https://api.nuget.org/v3/index.json</OfficialNuGetApiUrl>
+    <RestoreSources>$(OfficialNuGetApiUrl)</RestoreSources>
+
+    <!-- Append CI-specific NuGet API if it's not the official NuGet API -->
+    <RestoreSources Condition="'$(CiNuGetApiUrl)' != '' and '$(CiNuGetApiUrl)' != '$(OfficialNuGetApiUrl)'">$(RestoreSources);$(CiNuGetApiUrl)</RestoreSources>
+
+    <!-- Allow consuming sibling CI packages if this build is not for packages which will be released publicly -->
+    <RestoreSources Condition="'$(CiIsForRelease)' != 'true'">$(RestoreSources);https://nuget-ci.mochilibraries.net/index.json</RestoreSources>
   </PropertyGroup>
 </Project>

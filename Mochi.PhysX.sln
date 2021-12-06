@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31815.197
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mochi.PhysX.Sample", "Mochi.PhysX.Sample\Mochi.PhysX.Sample.csproj", "{03D8A40E-DA4D-4BB0-B491-4F428BFD15DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mochi.PhysX.Sample", "Mochi.PhysX.Sample\Mochi.PhysX.Sample.csproj", "{03D8A40E-DA4D-4BB0-B491-4F428BFD15DC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mochi.PhysX", "Mochi.PhysX\Mochi.PhysX.csproj", "{09B21818-73AB-47A4-909D-15D3ECA69294}"
 EndProject
@@ -20,6 +20,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tooling", "tooling", "{7021CC28-21DE-4B99-87B1-D1A4FBB74D90}"
 	ProjectSection(SolutionItems) = preProject
 		tooling\Common.csproj.props = tooling\Common.csproj.props
+		tooling\Common.csproj.targets = tooling\Common.csproj.targets
 		tooling\Common.props = tooling\Common.props
 		tooling\Common.targets = tooling\Common.targets
 	EndProjectSection
@@ -33,6 +34,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biohazrd.CSharp", "external\Biohazrd\Biohazrd.CSharp\Biohazrd.CSharp.csproj", "{C42C433C-EF83-4FAA-AABE-7B3B783313EA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biohazrd.Utilities", "external\Biohazrd\Biohazrd.Utilities\Biohazrd.Utilities.csproj", "{E07422E3-877A-4B42-9EA3-D2B5A5406144}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mochi.PhysX.Native", "Mochi.PhysX.Native\Mochi.PhysX.Native.csproj", "{0FC3D1A6-20A4-43F1-81F8-3F3AA7CD76F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mochi.PhysX.Ref", "Mochi.PhysX.Ref\Mochi.PhysX.Ref.csproj", "{66D362DC-CFB4-4BD3-AFBB-C327754487F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,6 +77,14 @@ Global
 		{E07422E3-877A-4B42-9EA3-D2B5A5406144}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E07422E3-877A-4B42-9EA3-D2B5A5406144}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E07422E3-877A-4B42-9EA3-D2B5A5406144}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FC3D1A6-20A4-43F1-81F8-3F3AA7CD76F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FC3D1A6-20A4-43F1-81F8-3F3AA7CD76F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FC3D1A6-20A4-43F1-81F8-3F3AA7CD76F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FC3D1A6-20A4-43F1-81F8-3F3AA7CD76F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66D362DC-CFB4-4BD3-AFBB-C327754487F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66D362DC-CFB4-4BD3-AFBB-C327754487F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66D362DC-CFB4-4BD3-AFBB-C327754487F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66D362DC-CFB4-4BD3-AFBB-C327754487F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

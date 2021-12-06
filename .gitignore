@@ -1,5 +1,4 @@
 .vs/
-bin/
-obj/
-build/
-build-*/
+/bin/
+/obj/
+/packages/

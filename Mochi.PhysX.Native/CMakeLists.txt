@@ -59,11 +59,11 @@ endif()
 # Define the library
 add_library(Mochi.PhysX.Native SHARED
     "Mochi.PhysX.cpp"
-    "InlineExportHelper.cpp"
+    "InlineExportHelper.gen.cpp"
 )
 
 if(${CMAKE_SYSTEM_NAME} STREQUAL "Windows")
-    target_sources(Mochi.PhysX.Native PUBLIC "Exports.cpp")
+    target_sources(Mochi.PhysX.Native PUBLIC "Exports.gen.cpp")
 endif()
 
 file(GLOB PHYSX_LIBS_DEBUG "${PHYSX_BIN_DIRECTORY}/debug/${STATIC_LIBRARY_FILTER}")

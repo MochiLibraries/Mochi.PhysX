@@ -1,14 +1,26 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Library</OutputType>
     <TargetFramework>net5.0</TargetFramework>
+    <RuntimeIdentifier Condition="'$(RuntimeIdentifier)' == ''">$(NETCoreSdkRuntimeIdentifier)</RuntimeIdentifier>
+
+    <!--
+      //TODO:
+      This is a temporary workaround to force our output assembly to be AnyCPU even though it realistically isn't.
+      This avoids causing consumers to get a warning about this assembly being x64-only when their project is AnyCPU.
+      We don't want to make people change their projects to be x64-only because eventually we want to provide an
+      AnyCPU reference assembly with this one used at runtime.
+    -->
+    <PlatformTarget Condition="'$(PlatformTarget)' == ''">$(Platform)</PlatformTarget>
+
+    <!-- ==============================================================================================================
+    Package Info
+    =============================================================================================================== -->
+    <IsPackable>true</IsPackable>
+    <PackageId>$(MSBuildProjectName).$(RuntimeIdentifier)</PackageId>
+    <Description>$(Description) (Support package for $(RuntimeIdentifier))</Description>
   </PropertyGroup>
-
-  <!-- TODO: Move this to its own project and just include each one present -->
-  <ItemGroup Condition="'$(NETCoreSdkRuntimeIdentifier)' == 'win-x64'">
-    <None Include="..\bin\Mochi.PhysX.Native\win-x64\checked\Mochi.PhysX.Native.dll" CopyToOutputDirectory="PreserveNewest" />
-    <None Include="..\bin\Mochi.PhysX.Native\win-x64\checked\Mochi.PhysX.Native.pdb" CopyToOutputDirectory="PreserveNewest" />
+  <ItemGroup>
+    <ProjectReference Include="..\Mochi.PhysX.Native\Mochi.PhysX.Native.csproj" />
   </ItemGroup>
-
 </Project>
