@@ -1,7 +1,6 @@
-﻿// This is a quick and dirty proof-of-concept port of the PhysX Hello World snippet to InfectedPhysX
-// https://github.com/InfectedLibraries/PhysX/blob/909a7c4fe940154be8c1aca19d655137435dd2f5/physx/snippets/snippethelloworld/SnippetHelloWorld.cpp
-// Some quirks due to unimplemented features or bugs in Biohazrd are marked with "BIOQUIRK" comments.
-// This sample does not necessarily represent the final shape of how Biohazrd will expose C++ classes to C#.
+﻿// This is a port of the PhysX Hello World snippet to Mochi.PhysX
+// https://github.com/NVIDIAGameWorks/PhysX/blob/909a7c4fe940154be8c1aca19d655137435dd2f5/physx/snippets/snippethelloworld/SnippetHelloWorld.cpp
+// Biohazrd-specific quirks we intend to improve in the future are marked with "BIOQUIRK" comments.
 using Mochi.PhysX;
 using System;
 using System.Diagnostics;
@@ -22,9 +21,10 @@ namespace InfectedPhysX.Sample
             Console.WriteLine($"PhysX native runtime build information: '{BuildInfo}'...");
 
             //---------------------------------------------------------------------------------------------------------------------------------------
-            //BIOQUIRK: Can't use PxDefaultErrorCallback because it's in a static library.
             Console.WriteLine("Initializing error callback");
-            PxErrorCallback errorCallback = ErrorCallback.Create();
+            // Switch between these to use PhysX's default error callback or one implemented from C#
+            PxErrorCallback errorCallback = new PxDefaultErrorCallback().Base; //BIOQUIRK: Awkward, unsafe base conversion
+            //PxErrorCallback errorCallback = ErrorCallback.Create();
 
             //---------------------------------------------------------------------------------------------------------------------------------------
             //BIOQUIRK: It'd be nice to use the default C++ allocator here to see if there's a performance difference, but we need to be able to initialize a PxDefaultAllocator
@@ -53,7 +53,7 @@ namespace InfectedPhysX.Sample
             { transport = PxDefaultPvdSocketTransportCreate(hostP, 5425, 10); }
 
             Console.WriteLine("Connecting to Pvd...");
-            PxPvdInstrumentationFlags pxPvdInstrumentationFlags = PxPvdInstrumentationFlags.eALL; //BIOQUIRK
+            PxPvdInstrumentationFlags pxPvdInstrumentationFlags = PxPvdInstrumentationFlags.eALL; //BIOQUIRK: Having to pass these by reference is weird
             pvd->connect(transport, &pxPvdInstrumentationFlags);
 
             //---------------------------------------------------------------------------------------------------------------------------------------
