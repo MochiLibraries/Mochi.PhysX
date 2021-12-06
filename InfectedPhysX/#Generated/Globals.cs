@@ -607,5 +607,49 @@ namespace Mochi.PhysX
 
         [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxD6JointCreate_Pyramid@physx@@YAPEAVPxJoint@1@AEAVPxPhysics@1@PEAVPxRigidActor@1@AEBVPxVec3@1@122MMMM@Z", ExactSpelling = true)]
         public static extern PxJoint* PxD6JointCreate_Pyramid(PxPhysics* physics, PxRigidActor* actor0, PxVec3* localPos0, PxRigidActor* actor1, PxVec3* localPos1, PxVec3* axis, float minLimit1, float maxLimit1, float minLimit2, float maxLimit2);
+
+        public const uint INVALID_OBSTACLE_HANDLE = 4294967295;
+
+        public const int LOCAL_CONTACTS_SIZE = 1088;
+
+        public const uint PXC_CONTACT_NO_FACE_INDEX = 4294967295;
+
+        public const string PX_BINARY_SERIAL_VERSION = "77E92B17A4084033A0FDB51332D5A6BB";
+
+        public const float PX_MAX_BOUNDS_EXTENTS = 8.50705867E+37f;
+
+        public const double PX_MAX_EXTENDED = double.MaxValue;
+
+        public const int PX_MAX_NB_WHEELS = 20;
+
+        public const float PX_MAX_SWEEP_DISTANCE = 100000000f;
+
+        public const float PX_MESH_SCALE_MAX = 1000000f;
+
+        public const float PX_MESH_SCALE_MIN = 9.99999997E-07f;
+
+        public const float PX_MIN_HEIGHTFIELD_XZ_SCALE = 9.99999994E-09f;
+
+        public const float PX_MIN_HEIGHTFIELD_Y_SCALE = 1.52590218E-09f;
+
+        public const int PX_PHYSICS_VERSION = 67174912;
+
+        public const int PX_PHYSICS_VERSION_BUGFIX = 2;
+
+        public const int PX_PHYSICS_VERSION_MAJOR = 4;
+
+        public const int PX_PHYSICS_VERSION_MINOR = 1;
+
+        public const int PX_SERIAL_ALIGN = 16;
+
+        public const int PX_SERIAL_FILE_ALIGN = 128;
+
+        public const int PX_SERIAL_OBJECT_ID_INVALID = 0;
+
+        public const int PX_SERIAL_REF_KIND_MATERIAL_IDX = 1;
+
+        public const uint PX_SERIAL_REF_KIND_PTR_TYPE_BIT = 2147483648;
+
+        public const uint PX_SERIAL_REF_KIND_PXBASE = 2147483648;
     }
 }

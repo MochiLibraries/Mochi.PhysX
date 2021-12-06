@@ -102,7 +102,11 @@ foreach (string includeDirectory in includeDirectories)
 }
 
 // Create the library
+Console.WriteLine("==============================================================================");
+Console.WriteLine("Parsing PhysX headers...");
+Console.WriteLine("==============================================================================");
 TranslatedLibrary library;
+TranslatedLibraryConstantEvaluator constantEvaluator;
 {
     TranslatedLibraryBuilder libraryBuilder = new();
     libraryBuilder.AddCommandLineArgument("-D_DEBUG");
@@ -157,6 +161,7 @@ TranslatedLibrary library;
     }
 
     library = libraryBuilder.Create();
+    constantEvaluator = libraryBuilder.CreateConstantEvaluator();
 }
 
 // Start output session
@@ -202,10 +207,12 @@ library = new PhysXNamespaceFixupTransformation().Transform(library);
 library = new AddTrampolineMethodOptionsTransformation(MethodImplOptions.AggressiveInlining).Transform(library);
 library = new MoveLooseDeclarationsIntoTypesTransformation
 (
-    // PhysX has a lot of global functions which confuse this transformation.
-    // For example, PxJoint.h has PxSetJointGlobalFrame in the global namespace and involves the type physx::PxJoint.
+    // PhysX has a lot of global functions which confuse the default type placement logic used by this transformation transformation, so just put everything in `Globals`.
+    // For example, PxJoint.h has PxSetJointGlobalFrame in the global namespace and involves the type PxJoint in the physx namespace.
+    // (The default logic here will try to create a new PxJoint type in the global namespace to house PxSetJoinGlobalFrame.)
     (c, d) => "Globals"
 ).Transform(library);
+library = new PhysXMacrosToConstantsTransformation(constantEvaluator).Transform(library);
 library = new AutoNameUnnamedParametersTransformation().Transform(library);
 library = new StripUnreferencedLazyDeclarationsTransformation().Transform(library);
 library = new DeduplicateNamesTransformation().Transform(library);
@@ -308,7 +315,7 @@ Console.WriteLine("=============================================================
 
 ImmutableArray<TranslationDiagnostic> generationDiagnostics = CSharpLibraryGenerator.Generate
 (
-    CSharpGenerationOptions.Default with { DumpClangInfo = false },
+    CSharpGenerationOptions.Default,
     outputSession,
     library
 );

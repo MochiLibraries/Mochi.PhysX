@@ -35,7 +35,6 @@ namespace InfectedPhysX.Sample
 
             //---------------------------------------------------------------------------------------------------------------------------------------
             Console.WriteLine("Initializing foundation");
-            const uint PX_PHYSICS_VERSION = (4 << 24) + (1 << 16) + (2 << 8); //BIOQUIRK: Constant not translated
             PxFoundation* foundation = PxCreateFoundation(PX_PHYSICS_VERSION, &allocator, &errorCallback);
 
             if (foundation == null)
