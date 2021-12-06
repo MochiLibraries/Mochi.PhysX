@@ -1,17 +1,20 @@
-﻿using Mochi.PhysX;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace InfectedPhysX.Sample
+namespace Mochi.PhysX.Sample
 {
-    internal static unsafe class BasicAllocator
+    internal static unsafe class LoggingAllocator
     {
         [StructLayout(LayoutKind.Sequential)]
         private struct AllocationInformation
         {
             public void* ActualAllocation;
+            public ulong AllocationSize;
+            public byte* TypeName;
+            public byte* FilePath;
+            public int LineNumber;
         }
 
         public static volatile uint AllocationCount = 0;
@@ -19,6 +22,12 @@ namespace InfectedPhysX.Sample
         [UnmanagedCallersOnly(CallConvs = new[] { typeof(CallConvCdecl) })]
         private static void* PxAllocatorCallback_Allocate(PxAllocatorCallback* @this, ulong size, byte* typeName, byte* filePath, int lineNumber)
         {
+            Console.Write("Allocating ");
+            Console.Out.WriteAnsi(typeName);
+            Console.Write($" ({size} bytes) for ");
+            Console.Out.WriteAnsi(filePath);
+            Console.WriteLine($":{lineNumber}");
+
             AllocationCount++;
 
             // Allocate memory
@@ -38,6 +47,10 @@ namespace InfectedPhysX.Sample
             // Record the pointer to the actual allocation
             AllocationInformation* info = (AllocationInformation*)(physXMemory - sizeof(AllocationInformation));
             info->ActualAllocation = actualAllocation;
+            info->AllocationSize = size;
+            info->TypeName = typeName;
+            info->FilePath = filePath;
+            info->LineNumber = lineNumber;
 
             // Return the buffer
             return physXMemory;
@@ -47,6 +60,13 @@ namespace InfectedPhysX.Sample
         private static void PxAllocatorCallback_Deallocate(PxAllocatorCallback* @this, void* ptr)
         {
             AllocationInformation* info = (AllocationInformation*)((byte*)ptr - sizeof(AllocationInformation));
+
+            Console.Write("Deallocating ");
+            Console.Out.WriteAnsi(info->TypeName);
+            Console.Write($" ({info->AllocationSize} bytes) for ");
+            Console.Out.WriteAnsi(info->FilePath);
+            Console.WriteLine($":{info->LineNumber}");
+
             Marshal.FreeHGlobal((IntPtr)info->ActualAllocation);
         }
 

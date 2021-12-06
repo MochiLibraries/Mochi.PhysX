@@ -3,7 +3,7 @@ using Biohazrd.CSharp;
 using Biohazrd.OutputGeneration;
 using Biohazrd.Transformation.Common;
 using Biohazrd.Utilities;
-using InfectedPhysX.Generator;
+using Mochi.PhysX.Generator;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;

@@ -1,9 +1,8 @@
-﻿using Mochi.PhysX;
-using System;
+﻿using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace InfectedPhysX.Sample
+namespace Mochi.PhysX.Sample
 {
     internal static unsafe class ErrorCallback
     {

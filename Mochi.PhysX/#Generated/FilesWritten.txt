@@ -1,3 +1,5 @@
+../../Mochi.PhysX.Native/Exports.cpp
+../../Mochi.PhysX.Native/InlineExportHelper.cpp
 CUctx_st.cs
 CUgraphicsResource_st.cs
 Diagnostics.log
@@ -427,5 +429,3 @@ UnusedFiles.txt
 XmlMemoryAllocator.cs
 XmlReader.cs
 XmlWriter.cs
-../../Mochi.PhysX.Native/Exports.cpp
-../../Mochi.PhysX.Native/InlineExportHelper.cpp

@@ -3,7 +3,7 @@ using Biohazrd.Transformation;
 using ClangSharp;
 using ClangSharp.Interop;
 
-namespace InfectedPhysX.Generator
+namespace Mochi.PhysX.Generator
 {
     public sealed class PhysXRemovePaddingFieldsTransformation : TransformationBase
     {

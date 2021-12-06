@@ -1,10 +1,10 @@
-InfectedPhysX incorporates third-party libraries licensed as follows.
+Mochi.PhysX incorporates third-party libraries licensed as follows.
 
 <!-- TOC -->
 
-- [InfectedPhysX](#infectedphysx)
+- [Mochi.PhysX](#mochiphysx)
     - [NVIDIA PhysX SDK](#nvidia-physx-sdk)
-- [InfectedPhysX.Generator](#infectedphysxgenerator)
+- [Mochi.PhysX.Generator](#mochiphysxgenerator)
     - [Biohazrd](#biohazrd)
     - [ClangSharp](#clangsharp)
     - [ClangSharp.Pathogen](#clangsharppathogen)
@@ -14,7 +14,7 @@ InfectedPhysX incorporates third-party libraries licensed as follows.
 
 <!-- /TOC -->
 
-# InfectedPhysX
+# Mochi.PhysX
 
 ## NVIDIA PhysX SDK
 
@@ -44,7 +44,7 @@ OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# InfectedPhysX.Generator
+# Mochi.PhysX.Generator
 
 ## Biohazrd
 

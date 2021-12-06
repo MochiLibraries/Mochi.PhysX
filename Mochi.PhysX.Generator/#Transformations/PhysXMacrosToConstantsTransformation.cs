@@ -5,7 +5,7 @@ using Biohazrd.Transformation;
 using System.Collections.Immutable;
 using System.Linq;
 
-namespace InfectedPhysX.Generator
+namespace Mochi.PhysX.Generator
 {
     public sealed class PhysXMacrosToConstantsTransformation : CSharpTransformationBase
     {

@@ -1,11 +1,11 @@
-# Infected PhysX
+# Mochi.PhysX
 
-[![MIT Licensed](https://img.shields.io/github/license/infectedlibraries/infectedphysx?style=flat-square)](LICENSE.txt)
+[![MIT Licensed](https://img.shields.io/github/license/mochilibraries/mochi.physx?style=flat-square)](LICENSE.txt)
 [![Sponsor](https://img.shields.io/badge/sponsor-%E2%9D%A4-lightgrey?logo=github&style=flat-square)](https://github.com/sponsors/PathogenDavid)
 
-This repo contains C# bindings for [NVIDIA PhysX](https://github.com/InfectedLibraries/PhysX) as well as a [Biohazrd](https://github.com/InfectedLibraries/Biohazrd)-powered generator for generating them.
+This repo contains C# bindings for [NVIDIA PhysX](https://github.com/NVIDIAGameWorks/PhysX) as well as a [Biohazrd](https://github.com/MochiLibraries/Biohazrd)-powered generator for generating them.
 
-This project is not ready to be used, if you're looking for a PhysX binding for C# I'd suggest watching releases on this repository and consider [sponsoring development of this library](https://github.com/sponsors/PathogenDavid).
+The bindings are still young but should be usable on Windows with some quirks. If you're interested in using PhysX on .NET, please consider [sponsoring development of this library](https://github.com/sponsors/PathogenDavid).
 
 ## License
 
@@ -33,7 +33,7 @@ The sample does not currently have a graphical output, but will automatically co
 Tool | Recommended Version
 -----|--------------------
 [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) | 16.9.4
-[.NET Core SDK](http://dot.net/) | 5.0
+[.NET Core SDK](http://dot.net/) | 6.0
 [PhysX Visual Debugger](https://developer.nvidia.com/physx-visual-debugger) | Latest
 
 Visual Studio requires the "Desktop development with C++" and  ".NET desktop development" workloads to be installed.

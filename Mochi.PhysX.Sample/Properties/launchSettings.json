@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "InfectedPhysX.Sample": {
+    "Mochi.PhysX.Sample": {
       "commandName": "Project",
       "nativeDebugging": true
     }

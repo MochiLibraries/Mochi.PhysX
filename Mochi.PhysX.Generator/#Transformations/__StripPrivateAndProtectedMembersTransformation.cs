@@ -1,7 +1,7 @@
 ﻿using Biohazrd;
 using Biohazrd.Transformation;
 
-namespace InfectedPhysX.Generator
+namespace Mochi.PhysX.Generator
 {
     internal sealed class __StripPrivateAndProtectedMembersTransformation : TransformationBase
     {

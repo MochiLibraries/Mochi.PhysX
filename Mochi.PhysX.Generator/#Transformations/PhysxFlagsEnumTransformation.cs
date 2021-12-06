@@ -7,7 +7,7 @@ using System.Collections.Immutable;
 using System.Diagnostics;
 using ClangType = ClangSharp.Type;
 
-namespace InfectedPhysX.Generator
+namespace Mochi.PhysX.Generator
 {
     //TODO: Add sanity checks that the transformations called for during initialization actually happened.
     public sealed class PhysXFlagsEnumTransformation : TransformationBase

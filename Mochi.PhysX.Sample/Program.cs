@@ -1,7 +1,6 @@
 ﻿// This is a port of the PhysX Hello World snippet to Mochi.PhysX
 // https://github.com/NVIDIAGameWorks/PhysX/blob/909a7c4fe940154be8c1aca19d655137435dd2f5/physx/snippets/snippethelloworld/SnippetHelloWorld.cpp
 // Biohazrd-specific quirks we intend to improve in the future are marked with "BIOQUIRK" comments.
-using Mochi.PhysX;
 using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
@@ -9,10 +8,10 @@ using System.Text;
 using static Mochi.PhysX.Globals;
 
 // Switch between these to change the allocator implementation:
-//using Allocator = InfectedPhysX.Sample.LoggingAllocator;
-using Allocator = InfectedPhysX.Sample.BasicAllocator;
+//using Allocator = Mochi.PhysX.Sample.LoggingAllocator;
+using Allocator = Mochi.PhysX.Sample.BasicAllocator;
 
-namespace InfectedPhysX.Sample
+namespace Mochi.PhysX.Sample
 {
     public static unsafe class Program
     {
@@ -28,7 +27,7 @@ namespace InfectedPhysX.Sample
 
             //---------------------------------------------------------------------------------------------------------------------------------------
             //BIOQUIRK: It'd be nice to use the default C++ allocator here to see if there's a performance difference, but we need to be able to initialize a PxDefaultAllocator
-            // We can't because it needs the vTable initialized but it has no constructor. - https://github.com/InfectedLibraries/Biohazrd/issues/31
+            // We can't because it needs the vTable initialized but it has no constructor. - https://github.com/MochiLibraries/Biohazrd/issues/31
             // On the bright side, this is a nice demonstration of manually extending a C++ type in C#.
             Console.WriteLine("Initializing allocator callback");
             PxAllocatorCallback allocator = Allocator.Create();
@@ -82,7 +81,7 @@ namespace InfectedPhysX.Sample
                 // We can't actually use a function pointer here because C# considers this a managed function (since it could be a managed stub.)
                 //&PxDefaultSimulationFilterShader.PxDefaultSimulationFilterShader__
                 // As such, we manually use NativeLibrary.GetExport here.
-                // This code should be improved by https://github.com/InfectedLibraries/Biohazrd/issues/80
+                // This code should be improved by https://github.com/MochiLibraries/Biohazrd/issues/80
                 NativeLibrary.GetExport
                 (
                     NativeLibrary.Load("Mochi.PhysX.Native.dll"),

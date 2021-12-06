@@ -4,7 +4,7 @@ using Biohazrd.Transformation;
 using System;
 using System.Diagnostics;
 
-namespace InfectedPhysX.Generator
+namespace Mochi.PhysX.Generator
 {
     public sealed class PhysXNamespaceFixupTransformation : TransformationBase
     {

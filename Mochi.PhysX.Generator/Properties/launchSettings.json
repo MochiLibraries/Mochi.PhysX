@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Mochi.PhysX.Generator": {
+      "commandName": "Project",
+      "commandLineArgs": "\"$(ProjectDir)../external/PhysX/\" \"$(ProjectDir)../Mochi.PhysX/#Generated/\" \"$(ProjectDir)../Mochi.PhysX.Native/\""
+    }
+  }
+}

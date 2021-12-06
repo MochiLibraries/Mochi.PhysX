@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\InfectedPhysX\InfectedPhysX.csproj" />
+    <ProjectReference Include="..\Mochi.PhysX\Mochi.PhysX.csproj" />
   </ItemGroup>
 
 </Project>

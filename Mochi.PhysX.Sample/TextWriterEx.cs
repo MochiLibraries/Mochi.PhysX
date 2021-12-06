@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace InfectedPhysX.Sample
+namespace Mochi.PhysX.Sample
 {
     internal unsafe static class TextWriterEx
     {

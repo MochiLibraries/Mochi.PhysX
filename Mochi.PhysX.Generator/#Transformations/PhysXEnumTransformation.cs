@@ -1,7 +1,7 @@
 ﻿using Biohazrd;
 using Biohazrd.Transformation;
 
-namespace InfectedPhysX.Generator
+namespace Mochi.PhysX.Generator
 {
     /// <summary>Transforms a PhysX-style scoped enum into a modern scoped enum.</summary>
     /// <remarks>

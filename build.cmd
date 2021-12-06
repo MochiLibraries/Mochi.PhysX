@@ -51,4 +51,4 @@ msbuild INSTALL.vcxproj /p:Configuration=release /p:Platform=x64
 popd
 
 :: Run generator (will also build Mochi.PhysX.Native)
-dotnet run --configuration Release --project InfectedPhysX.Generator -- "external/PhysX/" "InfectedPhysX/#Generated/" "Mochi.PhysX.Native/"
+dotnet run --configuration Release --project Mochi.PhysX.Generator -- "external/PhysX/" "Mochi.PhysX/#Generated/" "Mochi.PhysX.Native/"
