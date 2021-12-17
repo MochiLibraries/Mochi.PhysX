@@ -366,17 +366,9 @@ namespace Mochi.PhysX
         [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxD6JointCreate@physx@@YAPEAVPxD6Joint@1@AEAVPxPhysics@1@PEAVPxRigidActor@1@AEBVPxTransform@1@12@Z", ExactSpelling = true)]
         public static extern PxD6Joint* PxD6JointCreate(PxPhysics* physics, PxRigidActor* actor0, PxTransform* localFrame0, PxRigidActor* actor1, PxTransform* localFrame1);
 
-        [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxDefaultSimulationFilterShader@physx@@YA?AV?$PxFlags@W4Enum@PxFilterFlag@physx@@G@1@IUPxFilterData@1@I0AEAV?$PxFlags@W4Enum@PxPairFlag@physx@@G@1@PEBXI@Z", ExactSpelling = true)]
-        private static extern PxFilterFlags* PxDefaultSimulationFilterShader_PInvoke(out PxFilterFlags __returnBuffer, uint attributes0, PxFilterData* filterData0, uint attributes1, PxFilterData* filterData1, PxPairFlags* pairFlags, void* constantBlock, uint constantBlockSize);
+        internal const string PxDefaultSimulationFilterShaderMangledName = "?PxDefaultSimulationFilterShader@physx@@YA?AV?$PxFlags@W4Enum@PxFilterFlag@physx@@G@1@IUPxFilterData@1@I0AEAV?$PxFlags@W4Enum@PxPairFlag@physx@@G@1@PEBXI@Z";
 
-        [DebuggerStepThrough, DebuggerHidden]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static PxFilterFlags PxDefaultSimulationFilterShader(uint attributes0, PxFilterData* filterData0, uint attributes1, PxFilterData* filterData1, PxPairFlags* pairFlags, void* constantBlock, uint constantBlockSize)
-        {
-            PxFilterFlags __returnBuffer;
-            PxDefaultSimulationFilterShader_PInvoke(out __returnBuffer, attributes0, filterData0, attributes1, filterData1, pairFlags, constantBlock, constantBlockSize);
-            return __returnBuffer;
-        }
+        internal const string PxDefaultSimulationFilterShaderDllFileName = "Mochi.PhysX.Native.dll";
 
         [DllImport("Mochi.PhysX.Native.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "?PxGetGroupCollisionFlag@physx@@YA_NGG@Z", ExactSpelling = true)]
         [return: MarshalAs(UnmanagedType.I1)]

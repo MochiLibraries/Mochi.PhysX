@@ -3,7 +3,6 @@
 // Biohazrd-specific quirks we intend to improve in the future are marked with "BIOQUIRK" comments.
 using System;
 using System.Diagnostics;
-using System.Runtime.InteropServices;
 using System.Text;
 using static Mochi.PhysX.Globals;
 
@@ -52,7 +51,7 @@ namespace Mochi.PhysX.Sample
             { transport = PxDefaultPvdSocketTransportCreate(hostP, 5425, 10); }
 
             Console.WriteLine("Connecting to Pvd...");
-            PxPvdInstrumentationFlags pxPvdInstrumentationFlags = PxPvdInstrumentationFlags.eALL; //BIOQUIRK: Having to pass these by reference is weird
+            PxPvdInstrumentationFlags pxPvdInstrumentationFlags = PxPvdInstrumentationFlags.eALL; //BIOQUIRK: Having to pass these by reference is weird (this is a weird C++ ABI detail leaking through.)
             pvd->connect(transport, &pxPvdInstrumentationFlags);
 
             //---------------------------------------------------------------------------------------------------------------------------------------
@@ -75,19 +74,7 @@ namespace Mochi.PhysX.Sample
             PxSceneDesc sceneDescription = new(physics->getTolerancesScale());
             sceneDescription.gravity = new PxVec3() { x = 0f, y = -9.81f, z = 0f };
             sceneDescription.cpuDispatcher = (PxCpuDispatcher*)dispatcher;
-            sceneDescription.filterShader =
-                (delegate* unmanaged[Cdecl]<PxFilterFlags*, uint, PxFilterData*, uint, PxFilterData*, PxPairFlags*, void*, uint, PxFilterFlags*>)
-                //BIOQUIRK: We're basically trying to get a pointer to this function in PhysX.
-                // We can't actually use a function pointer here because C# considers this a managed function (since it could be a managed stub.)
-                //&PxDefaultSimulationFilterShader.PxDefaultSimulationFilterShader__
-                // As such, we manually use NativeLibrary.GetExport here.
-                // This code should be improved by https://github.com/MochiLibraries/Biohazrd/issues/80
-                NativeLibrary.GetExport
-                (
-                    NativeLibrary.Load("Mochi.PhysX.Native.dll"),
-                    "?PxDefaultSimulationFilterShader@physx@@YA?AV?$PxFlags@W4Enum@PxFilterFlag@physx@@G@1@IUPxFilterData@1@I0AEAV?$PxFlags@W4Enum@PxPairFlag@physx@@G@1@PEBXI@Z"
-                )
-            ;
+            sceneDescription.filterShader = PxDefaultSimulationFilter;
             PxScene* scene = physics->createScene(&sceneDescription);
 
             //---------------------------------------------------------------------------------------------------------------------------------------

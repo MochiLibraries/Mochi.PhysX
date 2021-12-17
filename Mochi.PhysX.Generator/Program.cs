@@ -1,6 +1,8 @@
 ﻿using Biohazrd;
 using Biohazrd.CSharp;
+using Biohazrd.Expressions;
 using Biohazrd.OutputGeneration;
+using Biohazrd.Transformation;
 using Biohazrd.Transformation.Common;
 using Biohazrd.Utilities;
 using Mochi.PhysX.Generator;
@@ -297,6 +299,22 @@ if (nativeRuntimeBuild.ExitCode != 0)
     linkImports.AddLibrary(nativeRuntimeLibPath);
     library = linkImports.Transform(library);
 }
+
+// Workaround for https://github.com/MochiLibraries/Biohazrd/issues/80
+library = new SimpleTransformation()
+{
+    TransformFunction = (context, function) =>
+    {
+        if (function.Name is "PxDefaultSimulationFilterShader" && context.ParentDeclaration?.Name is "Globals")
+        {
+            TransformationResult result = new TranslatedConstant($"{function.Name}MangledName", new StringConstant(function.MangledName)) { Accessibility = AccessModifier.Internal };
+            result.Add(new TranslatedConstant($"{function.Name}DllFileName", new StringConstant(function.DllFileName)) { Accessibility = AccessModifier.Internal });
+            return result;
+        }
+
+        return function;
+    }
+}.Transform(library);
 
 // Perform validation
 Console.WriteLine("==============================================================================");
