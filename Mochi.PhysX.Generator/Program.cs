@@ -333,7 +333,13 @@ Console.WriteLine("=============================================================
 
 ImmutableArray<TranslationDiagnostic> generationDiagnostics = CSharpLibraryGenerator.Generate
 (
-    CSharpGenerationOptions.Default,
+    CSharpGenerationOptions.Default with
+    {
+        // For the time being we'll allow .NET 5 but .NET 6 is still recommended
+        TargetRuntime = TargetRuntime.Net5,
+        // PhysX greatly benefits from parameterless struct constructors so target C# 10
+        TargetLanguageVersion = TargetLanguageVersion.CSharp10
+    },
     outputSession,
     library
 );
