@@ -6,10 +6,6 @@ using System.Diagnostics;
 using System.Text;
 using static Mochi.PhysX.Globals;
 
-// Switch between these to change the allocator implementation:
-//using Allocator = Mochi.PhysX.Sample.LoggingAllocator;
-using Allocator = Mochi.PhysX.Sample.BasicAllocator;
-
 namespace Mochi.PhysX.Sample
 {
     public static unsafe class Program
@@ -25,11 +21,11 @@ namespace Mochi.PhysX.Sample
             //PxErrorCallback errorCallback = ErrorCallback.Create();
 
             //---------------------------------------------------------------------------------------------------------------------------------------
-            //BIOQUIRK: It'd be nice to use the default C++ allocator here to see if there's a performance difference, but we need to be able to initialize a PxDefaultAllocator
-            // We can't because it needs the vTable initialized but it has no constructor. - https://github.com/MochiLibraries/Biohazrd/issues/31
-            // On the bright side, this is a nice demonstration of manually extending a C++ type in C#.
             Console.WriteLine("Initializing allocator callback");
-            PxAllocatorCallback allocator = Allocator.Create();
+            // Switch between these to use PhysX's default allocator callback or one implemented from C#
+            PxAllocatorCallback allocator = new PxDefaultAllocator().Base; //BIOQUIRK: Awkward, unsafe base conversion
+            //PxAllocatorCallback allocator = BasicAllocator.Create();
+            //PxAllocatorCallback allocator = LoggingAllocator.Create();
 
             //---------------------------------------------------------------------------------------------------------------------------------------
             Console.WriteLine("Initializing foundation");
@@ -189,8 +185,13 @@ namespace Mochi.PhysX.Sample
             while (true)
             {
                 double msSinceLastTick = sw.Elapsed.TotalMilliseconds;
-                Console.Title = $"Simulating frame {frameNum} -- {msSinceLastTick:0.00} ms -- {1.0 / (msSinceLastTick / 1000.0):00.0} FPS -- {Allocator.AllocationCount} allocations";
-                Allocator.AllocationCount = 0;
+                string consoleTitle = $"Simulating frame {frameNum} -- {msSinceLastTick:0.00} ms -- {1.0 / (msSinceLastTick / 1000.0):00.0} FPS";
+                if (BasicAllocator.AllocationCount > 0) // This is only applicable when a allocator implemented in C# is in use, assume 0 allocations implies the PhysX one is being used
+                {
+                    consoleTitle += $" -- {BasicAllocator.AllocationCount} allocations";
+                    BasicAllocator.AllocationCount = 0;
+                }
+                Console.Title = consoleTitle;
                 frameNum++;
 
                 sw.Restart();

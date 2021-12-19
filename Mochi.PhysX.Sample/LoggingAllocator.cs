@@ -17,8 +17,6 @@ namespace Mochi.PhysX.Sample
             public int LineNumber;
         }
 
-        public static volatile uint AllocationCount = 0;
-
         [UnmanagedCallersOnly(CallConvs = new[] { typeof(CallConvCdecl) })]
         private static void* PxAllocatorCallback_Allocate(PxAllocatorCallback* @this, ulong size, byte* typeName, byte* filePath, int lineNumber)
         {
@@ -28,7 +26,7 @@ namespace Mochi.PhysX.Sample
             Console.Out.WriteAnsi(filePath);
             Console.WriteLine($":{lineNumber}");
 
-            AllocationCount++;
+            BasicAllocator.AllocationCount++;
 
             // Allocate memory
             // Over-provision it by sizeof(AllocationInformation) so we can store our extra info and 16 bytes for alignment
