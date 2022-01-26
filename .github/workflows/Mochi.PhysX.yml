@@ -155,10 +155,10 @@ jobs:
 
       - name: Extract PhysX Builds
         run: |
-          tar --keep-old-files -xf physx-${{matrix.rid}}-debug.tar.gz
-          tar --keep-old-files -xf physx-${{matrix.rid}}-checked.tar.gz
-          tar --keep-old-files -xf physx-${{matrix.rid}}-profile.tar.gz
-          tar --keep-old-files -xf physx-${{matrix.rid}}-release.tar.gz
+          tar --keep-old-files -xvf physx-${{matrix.rid}}-debug.tar.gz
+          tar --keep-old-files -xvf physx-${{matrix.rid}}-checked.tar.gz
+          tar --keep-old-files -xvf physx-${{matrix.rid}}-profile.tar.gz
+          tar --keep-old-files -xvf physx-${{matrix.rid}}-release.tar.gz
 
       # ----------------------------------------------------------------------- Configure build
       - name: Configure build
@@ -190,27 +190,24 @@ jobs:
         run: dotnet restore Mochi.PhysX --runtime ${{matrix.rid}}
 
       - name: Build Mochi.PhysX.${{matrix.rid}}
-        # MochiPhysXNativeBuildVariant here determines the native runtime variant which will be referenced by default
-        # (It must be the same as the pack below.)
-        run: dotnet build Mochi.PhysX --no-restore --configuration Release /p:RuntimeIdentifier=win-x64
+        run: dotnet build Mochi.PhysX --no-restore --configuration Release /p:RuntimeIdentifier=${{matrix.rid}}
 
       # ----------------------------------------------------------------------- Pack Mochi.PhysX
       - name: Pack Mochi.PhysX.${{matrix.rid}}
-        # See note about MochiPhysXNativeBuildVariant above
-        run: dotnet pack Mochi.PhysX --no-build --configuration Release /p:RuntimeIdentifier=win-x64
+        run: dotnet pack Mochi.PhysX --no-build --configuration Release /p:RuntimeIdentifier=${{matrix.rid}}
 
       # ----------------------------------------------------------------------- Pack Mochi.PhysX.Native variants
       - name: Restore Mochi.PhysX.Native
         run: dotnet restore Mochi.PhysX.Native --runtime ${{matrix.rid}}
 
       - name: Pack Mochi.PhysX.Native.${{matrix.rid}}-debug
-        run: dotnet pack Mochi.PhysX.Native --no-build --configuration Release /p:RuntimeIdentifier=win-x64 /p:MochiPhysXNativeBuildVariant=debug
+        run: dotnet pack Mochi.PhysX.Native --no-build --configuration Release /p:RuntimeIdentifier=${{matrix.rid}} /p:MochiPhysXNativeBuildVariant=debug
       - name: Pack Mochi.PhysX.Native.${{matrix.rid}}-checked
-        run: dotnet pack Mochi.PhysX.Native --no-build --configuration Release /p:RuntimeIdentifier=win-x64 /p:MochiPhysXNativeBuildVariant=checked
+        run: dotnet pack Mochi.PhysX.Native --no-build --configuration Release /p:RuntimeIdentifier=${{matrix.rid}} /p:MochiPhysXNativeBuildVariant=checked
       - name: Pack Mochi.PhysX.Native.${{matrix.rid}}-profile
-        run: dotnet pack Mochi.PhysX.Native --no-build --configuration Release /p:RuntimeIdentifier=win-x64 /p:MochiPhysXNativeBuildVariant=profile
+        run: dotnet pack Mochi.PhysX.Native --no-build --configuration Release /p:RuntimeIdentifier=${{matrix.rid}} /p:MochiPhysXNativeBuildVariant=profile
       - name: Pack Mochi.PhysX.Native.${{matrix.rid}}
-        run: dotnet pack Mochi.PhysX.Native --no-build --configuration Release /p:RuntimeIdentifier=win-x64 /p:MochiPhysXNativeBuildVariant=release
+        run: dotnet pack Mochi.PhysX.Native --no-build --configuration Release /p:RuntimeIdentifier=${{matrix.rid}} /p:MochiPhysXNativeBuildVariant=release
 
       # ----------------------------------------------------------------------- Pack Mochi.PhysX.Ref
       # (This package is currently just a dummy package which references Mochi.PhysX.win-x64. Eventually it will be a least common denominator reference-only package.)
@@ -220,7 +217,7 @@ jobs:
 
       - name: Pack Mochi.PhysX.Ref
         if: matrix.rid == 'win-x64'
-        run: dotnet pack Mochi.PhysX.Ref --no-build --configuration Release /p:RuntimeIdentifier=win-x64
+        run: dotnet pack Mochi.PhysX.Ref --no-build --configuration Release /p:RuntimeIdentifier=${{matrix.rid}}
 
       # ----------------------------------------------------------------------- Run the sample as a smoke test
       # We do this last so it can't indirectly affect the build process of any packages
@@ -288,8 +285,8 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: Packages
-      - name: Extract build packages
-        run: tar --keep-old-files -xf Mochi.PhysX-packages-*.tar.gz
+      - name: Extract built packages
+        run: for archive in Mochi.PhysX-packages-*.tar.gz; do tar --keep-old-files -xvf "$archive"; done
 
       # ----------------------------------------------------------------------- Push to GitHub Packages
       - name: Push to GitHub Packages
@@ -322,8 +319,8 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: Packages
-      - name: Extract build packages
-        run: tar --keep-old-files -xf Mochi.PhysX-packages-*.tar.gz
+      - name: Extract built packages
+        run: for archive in Mochi.PhysX-packages-*.tar.gz; do tar --keep-old-files -xvf "$archive"; done
 
       # ----------------------------------------------------------------------- Push to NuGet.org
       - name: Push to NuGet.org
