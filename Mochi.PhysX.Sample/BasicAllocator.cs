@@ -16,7 +16,7 @@ namespace Mochi.PhysX.Sample
         public static volatile uint AllocationCount = 0;
 
         [UnmanagedCallersOnly(CallConvs = new[] { typeof(CallConvCdecl) })]
-        private static void* PxAllocatorCallback_Allocate(PxAllocatorCallback* @this, ulong size, byte* typeName, byte* filePath, int lineNumber)
+        private static void* PxAllocatorCallback_Allocate(PxAllocatorCallback* @this, nuint size, byte* typeName, byte* filePath, int lineNumber)
         {
             AllocationCount++;
 

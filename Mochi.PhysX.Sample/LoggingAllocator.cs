@@ -18,7 +18,7 @@ namespace Mochi.PhysX.Sample
         }
 
         [UnmanagedCallersOnly(CallConvs = new[] { typeof(CallConvCdecl) })]
-        private static void* PxAllocatorCallback_Allocate(PxAllocatorCallback* @this, ulong size, byte* typeName, byte* filePath, int lineNumber)
+        private static void* PxAllocatorCallback_Allocate(PxAllocatorCallback* @this, nuint size, byte* typeName, byte* filePath, int lineNumber)
         {
             Console.Write("Allocating ");
             Console.Out.WriteAnsi(typeName);

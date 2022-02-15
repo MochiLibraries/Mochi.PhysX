@@ -202,7 +202,6 @@ library = new ConstOverloadRenameTransformation().Transform(library);
 library = new MakeEverythingPublicTransformation().Transform(library);
 library = new CSharpTypeReductionTransformation().Transform(library);
 
-library = new CSharpBuiltinTypeTransformation().Transform(library);
 library = new LiftAnonymousRecordFieldsTransformation().Transform(library);
 library = new WrapNonBlittableTypesWhereNecessaryTransformation().Transform(library);
 library = new PhysXNamespaceFixupTransformation().Transform(library);
