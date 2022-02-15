@@ -29,7 +29,10 @@ namespace Mochi.PhysX.Sample
 
             //---------------------------------------------------------------------------------------------------------------------------------------
             Console.WriteLine("Initializing foundation");
-            PxFoundation* foundation = PxCreateFoundation(PX_PHYSICS_VERSION, &allocator, &errorCallback);
+            //BIOQUIRK: PhysX owns both of these references, which means both the allocator and error callback must remain pinned for the lifetime of the foundation.
+            // (In our case they're stack allocated and implicitly pinned.)
+            // This seems somewhat unobvious since C# references don't normally care. Should we emit this function differently to convey the unsafe-ness here?
+            PxFoundation* foundation = PxCreateFoundation(PX_PHYSICS_VERSION, ref allocator, ref errorCallback);
 
             if (foundation == null)
             {
@@ -39,7 +42,9 @@ namespace Mochi.PhysX.Sample
 
             //---------------------------------------------------------------------------------------------------------------------------------------
             Console.WriteLine("Initializing Pvd...");
-            PxPvd* pvd = PxCreatePvd(foundation);
+            //BIOQUIRK: This pattern comes up a lot in PhysX. It does technically match how it is in C++ though, not sure if it's a problem.
+            // I experimentally enabled having C++ reference returns translate as C# reference returns, but that creates a weird situation when you need to store them.
+            PxPvd* pvd = PxCreatePvd(ref *foundation);
 
             PxPvdTransport* transport;
             byte[] host = Encoding.ASCII.GetBytes("127.0.0.1");
@@ -47,13 +52,11 @@ namespace Mochi.PhysX.Sample
             { transport = PxDefaultPvdSocketTransportCreate(hostP, 5425, 10); }
 
             Console.WriteLine("Connecting to Pvd...");
-            PxPvdInstrumentationFlags pxPvdInstrumentationFlags = PxPvdInstrumentationFlags.eALL; //BIOQUIRK: Having to pass these by reference is weird (this is a weird C++ ABI detail leaking through.)
-            pvd->connect(transport, &pxPvdInstrumentationFlags);
+            pvd->connect(ref *transport, PxPvdInstrumentationFlags.eALL);
 
             //---------------------------------------------------------------------------------------------------------------------------------------
             Console.WriteLine("Initializing physics");
-            PxTolerancesScale scale = new();
-            PxPhysics* physics = PxCreatePhysics(PX_PHYSICS_VERSION, foundation, &scale, trackOutstandingAllocations: true, pvd);
+            PxPhysics* physics = PxCreatePhysics(PX_PHYSICS_VERSION, ref *foundation, new PxTolerancesScale(), trackOutstandingAllocations: true, pvd);
 
             if (physics == null)
             {
@@ -67,11 +70,11 @@ namespace Mochi.PhysX.Sample
 
             //---------------------------------------------------------------------------------------------------------------------------------------
             Console.WriteLine("Creating scene");
-            PxSceneDesc sceneDescription = new(physics->getTolerancesScale());
+            PxSceneDesc sceneDescription = new(*physics->getTolerancesScale());
             sceneDescription.gravity = new PxVec3() { x = 0f, y = -9.81f, z = 0f };
             sceneDescription.cpuDispatcher = (PxCpuDispatcher*)dispatcher;
             sceneDescription.filterShader = PxDefaultSimulationFilter;
-            PxScene* scene = physics->createScene(&sceneDescription);
+            PxScene* scene = physics->createScene(sceneDescription);
 
             //---------------------------------------------------------------------------------------------------------------------------------------
             Console.WriteLine("Configuring scene Pvd client");
@@ -99,8 +102,8 @@ namespace Mochi.PhysX.Sample
                 },
                 d = 0f
             };
-            PxRigidStatic* groundPlane = PxCreatePlane(physics, &planeDescription, material);
-            scene->addActor((PxActor*)groundPlane, null);
+            PxRigidStatic* groundPlane = PxCreatePlane(ref *physics, planeDescription, ref *material);
+            scene->addActor(ref *(PxActor*)groundPlane, null);
 
             //---------------------------------------------------------------------------------------------------------------------------------------
             Console.WriteLine("Adding stacks");
@@ -108,7 +111,8 @@ namespace Mochi.PhysX.Sample
                 const float halfExtent = 2f;
                 PxBoxGeometry stackBoxGeometry = new PxBoxGeometry(halfExtent, halfExtent, halfExtent);
                 PxShapeFlags shapeFlags = PxShapeFlags.eVISUALIZATION | PxShapeFlags.eSCENE_QUERY_SHAPE | PxShapeFlags.eSIMULATION_SHAPE;
-                PxShape* shape = physics->createShape((PxGeometry*)&stackBoxGeometry, material, isExclusive: false, &shapeFlags);
+                //BIOQUIRK: shapeFlags should be able to be defaulted now but it isn't.
+                PxShape* shape = physics->createShape(*(PxGeometry*)&stackBoxGeometry, *material, isExclusive: false, shapeFlags);
                 float stackZ = 10f;
                 for (int stackNum = 0; stackNum < 5; stackNum++)
                 {
@@ -120,7 +124,7 @@ namespace Mochi.PhysX.Sample
                         y = 0f,
                         z = stackZ -= 10f
                     };
-                    PxTransform transform = new(&transformPosition);
+                    PxTransform transform = new(transformPosition);
 
                     for (int i = 0; i < size; i++)
                     {
@@ -132,13 +136,13 @@ namespace Mochi.PhysX.Sample
                                 y = ((float)(i * 2 + 1)) * halfExtent,
                                 z = 0f
                             };
-                            PxTransform localTransform = new(&position);
+                            PxTransform localTransform = new(position);
 
-                            PxTransform bodyTransform = transform.transform(&localTransform);
-                            PxRigidDynamic* body = physics->createRigidDynamic(&bodyTransform);
-                            body->Base.Base.attachShape(shape);
-                            PxRigidBodyExt.updateMassAndInertia((PxRigidBody*)body, 10f);
-                            scene->addActor((PxActor*)body);
+                            PxTransform bodyTransform = transform.transform(localTransform);
+                            PxRigidDynamic* body = physics->createRigidDynamic(bodyTransform);
+                            body->Base.Base.attachShape(ref *shape);
+                            PxRigidBodyExt.updateMassAndInertia(ref *(PxRigidBody*)body, 10f);
+                            scene->addActor(ref *(PxActor*)body);
                         }
                     }
                 }
@@ -154,7 +158,7 @@ namespace Mochi.PhysX.Sample
                     y = 40f,
                     z = 100f,
                 };
-                PxTransform transform = new(&position);
+                PxTransform transform = new(position);
                 PxSphereGeometry geometry = new(10f);
 
                 PxVec3 velocity = new PxVec3()
@@ -164,11 +168,11 @@ namespace Mochi.PhysX.Sample
                     z = -100f
                 };
 
-                PxTransform identity = new(default(PxIDENTITY));
-                PxRigidDynamic* dynamic = PxCreateDynamic(physics, &transform, (PxGeometry*)&geometry, material, 10f, &identity);
+                PxTransform identity = new(default(PxIDENTITY)); //BIOQUIRK: This could be a special generated property instead. Also missing default.
+                PxRigidDynamic* dynamic = PxCreateDynamic(ref *physics, transform, *(PxGeometry*)&geometry, ref *material, 10f, identity);
                 dynamic->Base.setAngularDamping(0.5f);
-                dynamic->Base.setLinearVelocity(&velocity);
-                scene->addActor((PxActor*)dynamic);
+                dynamic->Base.setLinearVelocity(velocity);
+                scene->addActor(ref *(PxActor*)dynamic);
             }
 
             //---------------------------------------------------------------------------------------------------------------------------------------

@@ -16,7 +16,7 @@ namespace Mochi.PhysX.Generator
             string? newNamespace;
 
             // Put Biohazrd infrastructure types in their own namespace
-            if (declaration is ConstantArrayTypeDeclaration or NativeBooleanDeclaration or NativeCharDeclaration)
+            if (declaration is ConstantArrayTypeDeclaration)
             {
                 Debug.Assert(declaration.Namespace is null);
                 newNamespace = $"{mochiNamespace}.Infrastructure";
