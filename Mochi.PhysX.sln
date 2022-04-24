@@ -48,6 +48,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnippetTriggers", "Snippets
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnippetCommon", "Snippets\SnippetCommon\SnippetCommon.csproj", "{8B691804-F954-4357-A393-441DF81BB52F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnippetHelloWorld", "Snippets\SnippetHelloWorld\SnippetHelloWorld.csproj", "{F1B60CBB-F560-4786-8C3F-61E1F4DDAD89}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -102,6 +104,10 @@ Global
 		{8B691804-F954-4357-A393-441DF81BB52F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B691804-F954-4357-A393-441DF81BB52F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B691804-F954-4357-A393-441DF81BB52F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1B60CBB-F560-4786-8C3F-61E1F4DDAD89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1B60CBB-F560-4786-8C3F-61E1F4DDAD89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1B60CBB-F560-4786-8C3F-61E1F4DDAD89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1B60CBB-F560-4786-8C3F-61E1F4DDAD89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -115,6 +121,7 @@ Global
 		{E07422E3-877A-4B42-9EA3-D2B5A5406144} = {FB1FC5DE-20B3-4D5F-A64D-FB2EF0FFF93A}
 		{3DBC7692-0834-40F8-B438-4655A4175A93} = {92E0F1EC-2FFE-4397-A0D9-5A3668965207}
 		{8B691804-F954-4357-A393-441DF81BB52F} = {92E0F1EC-2FFE-4397-A0D9-5A3668965207}
+		{F1B60CBB-F560-4786-8C3F-61E1F4DDAD89} = {92E0F1EC-2FFE-4397-A0D9-5A3668965207}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8BB51D64-3355-4B8F-A683-FAC225DF323C}
