@@ -13,6 +13,6 @@ unsafe partial class Globals
         internal static readonly IntPtr Export = NativeLibrary.GetExport(LibraryHandle, PxDefaultSimulationFilterShaderMangledName);
     }
 
-    public static delegate* unmanaged[Cdecl]<PxFilterFlags*, uint, PxFilterData*, uint, PxFilterData*, PxPairFlags*, void*, uint, PxFilterFlags*> PxDefaultSimulationFilter
+    public static delegate* unmanaged[Cdecl]<PxFilterFlags*, uint, PxFilterData*, uint, PxFilterData*, PxPairFlags*, void*, uint, PxFilterFlags*> PxDefaultSimulationFilterShader
         => (delegate* unmanaged[Cdecl]<PxFilterFlags*, uint, PxFilterData*, uint, PxFilterData*, PxPairFlags*, void*, uint, PxFilterFlags*>)PxDefaultSimulationFilterShaderCache.Export;
 }

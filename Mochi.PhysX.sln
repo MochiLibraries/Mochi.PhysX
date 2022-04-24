@@ -37,7 +37,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biohazrd.Utilities", "exter
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mochi.PhysX.Native", "Mochi.PhysX.Native\Mochi.PhysX.Native.csproj", "{0FC3D1A6-20A4-43F1-81F8-3F3AA7CD76F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mochi.PhysX.Ref", "Mochi.PhysX.Ref\Mochi.PhysX.Ref.csproj", "{66D362DC-CFB4-4BD3-AFBB-C327754487F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mochi.PhysX.Ref", "Mochi.PhysX.Ref\Mochi.PhysX.Ref.csproj", "{66D362DC-CFB4-4BD3-AFBB-C327754487F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Snippets", "Snippets", "{92E0F1EC-2FFE-4397-A0D9-5A3668965207}"
+	ProjectSection(SolutionItems) = preProject
+		Snippets\Directory.Build.props = Snippets\Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnippetTriggers", "Snippets\SnippetTriggers\SnippetTriggers.csproj", "{3DBC7692-0834-40F8-B438-4655A4175A93}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnippetCommon", "Snippets\SnippetCommon\SnippetCommon.csproj", "{8B691804-F954-4357-A393-441DF81BB52F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,6 +94,14 @@ Global
 		{66D362DC-CFB4-4BD3-AFBB-C327754487F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66D362DC-CFB4-4BD3-AFBB-C327754487F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66D362DC-CFB4-4BD3-AFBB-C327754487F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DBC7692-0834-40F8-B438-4655A4175A93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DBC7692-0834-40F8-B438-4655A4175A93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DBC7692-0834-40F8-B438-4655A4175A93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DBC7692-0834-40F8-B438-4655A4175A93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B691804-F954-4357-A393-441DF81BB52F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B691804-F954-4357-A393-441DF81BB52F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B691804-F954-4357-A393-441DF81BB52F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B691804-F954-4357-A393-441DF81BB52F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,6 +113,8 @@ Global
 		{D73795DE-6078-4AA3-B0DD-17AB0B4F49AC} = {FB1FC5DE-20B3-4D5F-A64D-FB2EF0FFF93A}
 		{C42C433C-EF83-4FAA-AABE-7B3B783313EA} = {FB1FC5DE-20B3-4D5F-A64D-FB2EF0FFF93A}
 		{E07422E3-877A-4B42-9EA3-D2B5A5406144} = {FB1FC5DE-20B3-4D5F-A64D-FB2EF0FFF93A}
+		{3DBC7692-0834-40F8-B438-4655A4175A93} = {92E0F1EC-2FFE-4397-A0D9-5A3668965207}
+		{8B691804-F954-4357-A393-441DF81BB52F} = {92E0F1EC-2FFE-4397-A0D9-5A3668965207}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8BB51D64-3355-4B8F-A683-FAC225DF323C}

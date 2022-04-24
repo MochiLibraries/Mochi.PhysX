@@ -1,0 +1,2 @@
+[*.{cs,csx}]
+csharp_prefer_braces = true:none

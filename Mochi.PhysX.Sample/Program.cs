@@ -73,7 +73,7 @@ namespace Mochi.PhysX.Sample
             PxSceneDesc sceneDescription = new(*physics->getTolerancesScale());
             sceneDescription.gravity = new PxVec3() { x = 0f, y = -9.81f, z = 0f };
             sceneDescription.cpuDispatcher = (PxCpuDispatcher*)dispatcher;
-            sceneDescription.filterShader = PxDefaultSimulationFilter;
+            sceneDescription.filterShader = PxDefaultSimulationFilterShader;
             PxScene* scene = physics->createScene(sceneDescription);
 
             //---------------------------------------------------------------------------------------------------------------------------------------

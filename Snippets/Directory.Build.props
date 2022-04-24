@@ -1,0 +1,9 @@
+<Project>
+  <Import Project="../Directory.Build.props" />
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);RENDER_SNIPPET</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Using Include="SnippetPVD" Static="true" />
+  </ItemGroup>
+</Project>
