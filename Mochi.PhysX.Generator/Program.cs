@@ -203,7 +203,9 @@ library = new MakeEverythingPublicTransformation().Transform(library);
 library = new CSharpTypeReductionTransformation().Transform(library);
 
 library = new LiftAnonymousRecordFieldsTransformation().Transform(library);
+library = new ResolveTypedefsTransformation().Transform(library);
 library = new PhysXNamespaceFixupTransformation().Transform(library);
+library = new PhysXCreateMarkerInterfacesTransformation().Transform(library);
 library = new AddTrampolineMethodOptionsTransformation(MethodImplOptions.AggressiveInlining).Transform(library);
 library = new MoveLooseDeclarationsIntoTypesTransformation
 (
@@ -218,6 +220,7 @@ library = new CreateTrampolinesTransformation()
 {
     TargetRuntime = TargetRuntime.Net5
 }.Transform(library);
+library = new EnableInheritanceViaGenericsTransformation().Transform(library);
 library = new StripUnreferencedLazyDeclarationsTransformation().Transform(library);
 library = new DeduplicateNamesTransformation().Transform(library);
 library = new OrganizeOutputFilesByNamespaceTransformation("Mochi.PhysX").Transform(library);

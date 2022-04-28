@@ -338,7 +338,8 @@ internal unsafe static class SnippetTriggers
 
     static Pinned<ContactReportCallback> gContactReportCallback = new ContactReportCallback();
 
-    static PxShape* createTriggerShape(in PxGeometry geom, bool isExclusive)
+    static PxShape* createTriggerShape<TGeometry>(in TGeometry geom, bool isExclusive)
+        where TGeometry : unmanaged, IPxGeometry
     {
         TriggerImpl impl = getImpl();
 
@@ -381,15 +382,13 @@ internal unsafe static class SnippetTriggers
         // Create trigger shape
         {
             PxVec3 halfExtent = new(10.0f, ccd ? 0.01f : 1.0f, 10.0f);
-            PxBoxGeometry __geometry = new(halfExtent);
-            ref PxGeometry _geometry = ref Unsafe.As<PxBoxGeometry, PxGeometry>(ref __geometry); //BIOQUIRK: Awkward base cast
-            PxShape* shape = createTriggerShape(_geometry, false);
+            PxShape* shape = createTriggerShape(new PxBoxGeometry(halfExtent), false);
 
             if (shape != null)
             {
                 PxRigidStatic* body = gPhysics->createRigidStatic(new PxTransform(0.0f, 10.0f, 0.0f, defaultQuaternion));
                 body->Base.attachShape(ref *shape); //BIOQUIRK: Awkward base access
-                gScene->addActor(ref *(PxActor*)body); //BIOQUIRK: Awkward base cast
+                gScene->addActor(ref *body);
                 shape->release();
             }
         }
@@ -398,16 +397,14 @@ internal unsafe static class SnippetTriggers
         {
             PxVec3 halfExtent = new(ccd ? 0.1f : 1.0f);
 
-            PxBoxGeometry __geometry = new(halfExtent);
-            ref PxGeometry _geometry = ref Unsafe.As<PxBoxGeometry, PxGeometry>(ref __geometry); //BIOQUIRK: Awkward base cast
             PxShapeFlags _flags = PxShapeFlags.eVISUALIZATION | PxShapeFlags.eSCENE_QUERY_SHAPE | PxShapeFlags.eSIMULATION_SHAPE; //BIOQUIRK: Missing default
-            PxShape* shape = gPhysics->createShape(_geometry, *gMaterial, false, _flags); //BIOQUIRK: Missing default
+            PxShape* shape = gPhysics->createShape(new PxBoxGeometry(halfExtent), *gMaterial, false, _flags); //BIOQUIRK: Missing default
 
             PxRigidDynamic* body = gPhysics->createRigidDynamic(new PxTransform(0.0f, ccd ? 30.0f : 20.0f, 0.0f, defaultQuaternion));
             body->Base.Base.attachShape(ref *shape); //BIOQUIRK: Awkward base access
 
-            PxRigidBodyExt.updateMassAndInertia(ref *(PxRigidBody*)body, 1.0f); //BIOQUIRK: Awkward cast
-            gScene->addActor(ref *(PxActor*)body); //BIOQUIRK: Awkward base cast
+            PxRigidBodyExt.updateMassAndInertia(ref *body, 1.0f);
+            gScene->addActor(ref *body);
             shape->release();
 
             if (ccd)
@@ -423,26 +420,22 @@ internal unsafe static class SnippetTriggers
     {
         static void createSphereActor(in PxVec3 pos, in PxVec3 linVel)
         {
-            PxSphereGeometry __geometry = new(1.0f);
-            ref PxGeometry _geometry = ref Unsafe.As<PxSphereGeometry, PxGeometry>(ref __geometry); //BIOQUIRK: Awkward base cast
             PxShapeFlags _flags = PxShapeFlags.eVISUALIZATION | PxShapeFlags.eSCENE_QUERY_SHAPE | PxShapeFlags.eSIMULATION_SHAPE; //BIOQUIRK: Missing default
-            PxShape* sphereShape = gPhysics->createShape(_geometry, *gMaterial, false, _flags);
+            PxShape* sphereShape = gPhysics->createShape(new PxSphereGeometry(1.0f), *gMaterial, false, _flags);
 
             PxRigidDynamic* body = gPhysics->createRigidDynamic(new PxTransform(pos));
             body->Base.Base.attachShape(ref *sphereShape); //BIOQUIRK: Awkward base access
 
-            PxSphereGeometry __geometry2 = new(4.0f);
-            ref PxGeometry _geometry2 = ref Unsafe.As<PxSphereGeometry, PxGeometry>(ref __geometry2); //BIOQUIRK: Awkward base cast
-            PxShape* triggerShape = createTriggerShape(_geometry2, true);
+            PxShape* triggerShape = createTriggerShape(new PxSphereGeometry(4.0f), true);
             body->Base.Base.attachShape(ref *triggerShape); //BIOQUIRK: Awkward base access
 
             bool isTriggershape = triggerShape->getFlags().HasFlag(PxShapeFlags.eTRIGGER_SHAPE);
             if (!isTriggershape)
                 triggerShape->setFlag(PxShapeFlags.eSIMULATION_SHAPE, false);
-            PxRigidBodyExt.updateMassAndInertia(ref *(PxRigidBody*)body, 1.0f); //BIOQUIRK: Awkward base cast
+            PxRigidBodyExt.updateMassAndInertia(ref *body, 1.0f);
             if (!isTriggershape)
                 triggerShape->setFlag(PxShapeFlags.eSIMULATION_SHAPE, true);
-            gScene->addActor(ref *(PxActor*)body); //BIOQUIRK: Awkward base cast
+            gScene->addActor(ref *body);
             sphereShape->release();
             triggerShape->release();
 
@@ -496,7 +489,7 @@ internal unsafe static class SnippetTriggers
             pvdClient->setScenePvdFlag(PxPvdSceneFlags.eTRANSMIT_CONTACTS, true);
 
         PxRigidStatic* groundPlane = PxCreatePlane(ref *gPhysics, new PxPlane(0, 1, 0, 0), ref *gMaterial);
-        gScene->addActor(ref *(PxActor*)groundPlane); //BIOQUIRK: Awkward base cast
+        gScene->addActor(ref *groundPlane);
 
         if (usesTriggerTrigger())
             createTriggerTriggerScene();
@@ -530,7 +523,7 @@ internal unsafe static class SnippetTriggers
     {
         Console.WriteLine("Press keys F1 to F9 to select a scenario.");
 
-        gFoundation = PxCreateFoundation(PX_PHYSICS_VERSION, ref gAllocator.Value.Base, ref gErrorCallback.Value.Base); //BIOQUIRK: Awkward base casts
+        gFoundation = PxCreateFoundation(PX_PHYSICS_VERSION, ref gAllocator.Value, ref gErrorCallback.Value);
         gPvd = PxCreatePvd(ref *gFoundation);
         PxPvdTransport* transport = PxDefaultPvdSocketTransportCreate(PVD_HOST, 5425, 10);
         gPvd->connect(ref *transport, PxPvdInstrumentationFlags.eALL);

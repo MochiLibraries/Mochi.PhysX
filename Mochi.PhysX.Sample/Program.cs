@@ -17,13 +17,13 @@ namespace Mochi.PhysX.Sample
             //---------------------------------------------------------------------------------------------------------------------------------------
             Console.WriteLine("Initializing error callback");
             // Switch between these to use PhysX's default error callback or one implemented from C#
-            PxErrorCallback errorCallback = new PxDefaultErrorCallback().Base; //BIOQUIRK: Awkward, unsafe base conversion
+            PxDefaultErrorCallback errorCallback = new();
             //PxErrorCallback errorCallback = ErrorCallback.Create();
 
             //---------------------------------------------------------------------------------------------------------------------------------------
             Console.WriteLine("Initializing allocator callback");
             // Switch between these to use PhysX's default allocator callback or one implemented from C#
-            PxAllocatorCallback allocator = new PxDefaultAllocator().Base; //BIOQUIRK: Awkward, unsafe base conversion
+            PxDefaultAllocator allocator = new();
             //PxAllocatorCallback allocator = BasicAllocator.Create();
             //PxAllocatorCallback allocator = LoggingAllocator.Create();
 
@@ -103,7 +103,7 @@ namespace Mochi.PhysX.Sample
                 d = 0f
             };
             PxRigidStatic* groundPlane = PxCreatePlane(ref *physics, planeDescription, ref *material);
-            scene->addActor(ref *(PxActor*)groundPlane, null);
+            scene->addActor(ref *groundPlane, null);
 
             //---------------------------------------------------------------------------------------------------------------------------------------
             Console.WriteLine("Adding stacks");
@@ -112,7 +112,7 @@ namespace Mochi.PhysX.Sample
                 PxBoxGeometry stackBoxGeometry = new PxBoxGeometry(halfExtent, halfExtent, halfExtent);
                 PxShapeFlags shapeFlags = PxShapeFlags.eVISUALIZATION | PxShapeFlags.eSCENE_QUERY_SHAPE | PxShapeFlags.eSIMULATION_SHAPE;
                 //BIOQUIRK: shapeFlags should be able to be defaulted now but it isn't.
-                PxShape* shape = physics->createShape(*(PxGeometry*)&stackBoxGeometry, *material, isExclusive: false, shapeFlags);
+                PxShape* shape = physics->createShape(stackBoxGeometry, *material, isExclusive: false, shapeFlags);
                 float stackZ = 10f;
                 for (int stackNum = 0; stackNum < 5; stackNum++)
                 {
@@ -141,8 +141,8 @@ namespace Mochi.PhysX.Sample
                             PxTransform bodyTransform = transform.transform(localTransform);
                             PxRigidDynamic* body = physics->createRigidDynamic(bodyTransform);
                             body->Base.Base.attachShape(ref *shape);
-                            PxRigidBodyExt.updateMassAndInertia(ref *(PxRigidBody*)body, 10f);
-                            scene->addActor(ref *(PxActor*)body);
+                            PxRigidBodyExt.updateMassAndInertia(ref *body, 10f);
+                            scene->addActor(ref *body);
                         }
                     }
                 }
@@ -169,10 +169,10 @@ namespace Mochi.PhysX.Sample
                 };
 
                 PxTransform identity = new(default(PxIDENTITY)); //BIOQUIRK: This could be a special generated property instead. Also missing default.
-                PxRigidDynamic* dynamic = PxCreateDynamic(ref *physics, transform, *(PxGeometry*)&geometry, ref *material, 10f, identity);
+                PxRigidDynamic* dynamic = PxCreateDynamic(ref *physics, transform, geometry, ref *material, 10f, identity);
                 dynamic->Base.setAngularDamping(0.5f);
                 dynamic->Base.setLinearVelocity(velocity);
-                scene->addActor(ref *(PxActor*)dynamic);
+                scene->addActor(ref *dynamic);
             }
 
             //---------------------------------------------------------------------------------------------------------------------------------------
