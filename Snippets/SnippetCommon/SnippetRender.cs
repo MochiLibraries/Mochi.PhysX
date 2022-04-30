@@ -360,7 +360,7 @@ public unsafe static class SnippetRender
             // Note that we can almost certianly get away with ignoring the string-based isKindOf fallback, I'm pretty sure it's a legacy artifact.
             //bool sleeping = actors[i]->is<PxRigidDynamic>() ? actors[i]->is<PxRigidDynamic>()->isSleeping() : false;
             bool sleeping;
-            if (actors[i]->Base.Base.getConcreteType() == (ushort)PxConcreteType.eRIGID_DYNAMIC)
+            if (actors[i]->getConcreteType() == (ushort)PxConcreteType.eRIGID_DYNAMIC)
             { sleeping = ((PxRigidDynamic*)actors[i])->isSleeping(); }
             else
             { sleeping = false; }

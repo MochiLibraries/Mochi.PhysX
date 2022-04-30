@@ -140,7 +140,7 @@ namespace Mochi.PhysX.Sample
 
                             PxTransform bodyTransform = transform.transform(localTransform);
                             PxRigidDynamic* body = physics->createRigidDynamic(bodyTransform);
-                            body->Base.Base.attachShape(ref *shape);
+                            body->attachShape(ref *shape);
                             PxRigidBodyExt.updateMassAndInertia(ref *body, 10f);
                             scene->addActor(ref *body);
                         }
@@ -170,8 +170,8 @@ namespace Mochi.PhysX.Sample
 
                 PxTransform identity = new(default(PxIDENTITY)); //BIOQUIRK: This could be a special generated property instead. Also missing default.
                 PxRigidDynamic* dynamic = PxCreateDynamic(ref *physics, transform, geometry, ref *material, 10f, identity);
-                dynamic->Base.setAngularDamping(0.5f);
-                dynamic->Base.setLinearVelocity(velocity);
+                dynamic->setAngularDamping(0.5f);
+                dynamic->setLinearVelocity(velocity);
                 scene->addActor(ref *dynamic);
             }
 

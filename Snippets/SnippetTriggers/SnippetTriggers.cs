@@ -387,7 +387,7 @@ internal unsafe static class SnippetTriggers
             if (shape != null)
             {
                 PxRigidStatic* body = gPhysics->createRigidStatic(new PxTransform(0.0f, 10.0f, 0.0f, defaultQuaternion));
-                body->Base.attachShape(ref *shape); //BIOQUIRK: Awkward base access
+                body->attachShape(ref *shape);
                 gScene->addActor(ref *body);
                 shape->release();
             }
@@ -401,7 +401,7 @@ internal unsafe static class SnippetTriggers
             PxShape* shape = gPhysics->createShape(new PxBoxGeometry(halfExtent), *gMaterial, false, _flags); //BIOQUIRK: Missing default
 
             PxRigidDynamic* body = gPhysics->createRigidDynamic(new PxTransform(0.0f, ccd ? 30.0f : 20.0f, 0.0f, defaultQuaternion));
-            body->Base.Base.attachShape(ref *shape); //BIOQUIRK: Awkward base access
+            body->attachShape(ref *shape);
 
             PxRigidBodyExt.updateMassAndInertia(ref *body, 1.0f);
             gScene->addActor(ref *body);
@@ -409,9 +409,8 @@ internal unsafe static class SnippetTriggers
 
             if (ccd)
             {
-                //BIOQUIRK: Awkward base accesses
-                body->Base.setRigidBodyFlag(PxRigidBodyFlags.eENABLE_CCD, true);
-                body->Base.setLinearVelocity(new PxVec3(0.0f, -140.0f, 0.0f));
+                body->setRigidBodyFlag(PxRigidBodyFlags.eENABLE_CCD, true);
+                body->setLinearVelocity(new PxVec3(0.0f, -140.0f, 0.0f));
             }
         }
     }
@@ -424,10 +423,10 @@ internal unsafe static class SnippetTriggers
             PxShape* sphereShape = gPhysics->createShape(new PxSphereGeometry(1.0f), *gMaterial, false, _flags);
 
             PxRigidDynamic* body = gPhysics->createRigidDynamic(new PxTransform(pos));
-            body->Base.Base.attachShape(ref *sphereShape); //BIOQUIRK: Awkward base access
+            body->attachShape(ref *sphereShape);
 
             PxShape* triggerShape = createTriggerShape(new PxSphereGeometry(4.0f), true);
-            body->Base.Base.attachShape(ref *triggerShape); //BIOQUIRK: Awkward base access
+            body->attachShape(ref *triggerShape);
 
             bool isTriggershape = triggerShape->getFlags().HasFlag(PxShapeFlags.eTRIGGER_SHAPE);
             if (!isTriggershape)
@@ -439,7 +438,7 @@ internal unsafe static class SnippetTriggers
             sphereShape->release();
             triggerShape->release();
 
-            body->Base.setLinearVelocity(linVel); //BIOQUIRK: Awkward base access
+            body->setLinearVelocity(linVel);
         }
 
         createSphereActor(new PxVec3(-5.0f, 1.0f, 0.0f), new PxVec3(1.0f, 0.0f, 0.0f));

@@ -34,8 +34,8 @@ internal unsafe static class SnippetHelloWorld
         where TGeometry : unmanaged, IPxGeometry
     {
         PxRigidDynamic* dynamic = PxCreateDynamic(ref *gPhysics, t, geometry, ref *gMaterial, 10.0f, new(PxIdentity)); //BIOQUIRK: Missing default
-        dynamic->Base.setAngularDamping(0.5f); //BIOQUIRK: Awkward base access
-        dynamic->Base.setLinearVelocity(velocity); //BIOQUIRK: Awkward base access
+        dynamic->setAngularDamping(0.5f);
+        dynamic->setLinearVelocity(velocity);
         gScene->addActor(ref *dynamic);
         return dynamic;
     }
@@ -49,7 +49,7 @@ internal unsafe static class SnippetHelloWorld
             {
                 PxTransform localTm = new(new PxVec3((float)(j * 2) - (float)(size - i), (float)(i * 2 + 1), 0).operator_Star(halfExtent)); //BIOQUIRK: Overloaded operator
                 PxRigidDynamic* body = gPhysics->createRigidDynamic(t.transform(localTm));
-                body->Base.Base.attachShape(ref *shape); //BIOQUIRK: Awkward base access
+                body->attachShape(ref *shape);
                 PxRigidBodyExt.updateMassAndInertia(ref *body, 10.0f);
                 gScene->addActor(ref *body);
             }

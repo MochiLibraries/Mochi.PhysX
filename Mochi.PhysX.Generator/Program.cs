@@ -189,8 +189,6 @@ Console.WriteLine("=============================================================
 BrokenDeclarationExtractor brokenDeclarationExtractor = new();
 library = brokenDeclarationExtractor.Transform(library);
 
-library = new __StripPrivateAndProtectedMembersTransformation().Transform(library); //TODO: Put this in Biohazrd
-
 library = new RemoveBadPhysXDeclarationsTransformation().Transform(library);
 library = new PhysXRemovePaddingFieldsTransformation().Transform(library);
 library = new PhysXEnumTransformation().Transform(library);
@@ -199,7 +197,6 @@ library = new PhysXFlagsEnumTransformation().Transform(library);
 library = new RemoveExplicitBitFieldPaddingFieldsTransformation().Transform(library);
 library = new AddBaseVTableAliasTransformation().Transform(library);
 library = new ConstOverloadRenameTransformation().Transform(library);
-library = new MakeEverythingPublicTransformation().Transform(library);
 library = new CSharpTypeReductionTransformation().Transform(library);
 
 library = new LiftAnonymousRecordFieldsTransformation().Transform(library);
@@ -216,12 +213,21 @@ library = new MoveLooseDeclarationsIntoTypesTransformation
 ).Transform(library);
 library = new PhysXMacrosToConstantsTransformation(constantEvaluator).Transform(library);
 library = new AutoNameUnnamedParametersTransformation().Transform(library);
+
+//TODO: Ideally this should come after EnableInheritanceViaGenericsTransformation to avoid redundant work, but the this pointer adapters will be wrong if we don't do this early.
+library = new LiftBaseMembersTransformation().Transform(library);
+
+// These have to come after LiftBaseMembersTransformation to avoid lifting base members which are protected for the derived type
+library = new __StripPrivateAndProtectedMembersTransformation().Transform(library); //TODO: Put this in Biohazrd
+library = new MakeEverythingPublicTransformation().Transform(library);
+
 library = new CreateTrampolinesTransformation()
 {
     TargetRuntime = TargetRuntime.Net5
 }.Transform(library);
 library = new EnableInheritanceViaGenericsTransformation().Transform(library);
-library = new StripUnreferencedLazyDeclarationsTransformation().Transform(library);
+
+library = new StripUnreferencedLazyDeclarationsTransformation().Transform(library); //TODO: For some reason this isn't stripping out all of the constant array helpers anymore.
 library = new DeduplicateNamesTransformation().Transform(library);
 library = new OrganizeOutputFilesByNamespaceTransformation("Mochi.PhysX").Transform(library);
 
