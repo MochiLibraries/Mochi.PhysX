@@ -257,20 +257,25 @@ using (TextWriter exportsList = OperatingSystem.IsWindows() ? outputSession.Open
         { exportsList.WriteLine($"    {symbol};"); }
     }
 
+    SortedSet<string> symbolsToExport = new(StringComparer.InvariantCulture);
+
     foreach (TranslatedDeclaration declaration in library.EnumerateRecursively())
     {
         switch (declaration)
         {
             case TranslatedFunction function:
                 if (staticExportLookup.ContainsSymbol(function.MangledName))
-                { Export(function.MangledName); }
+                { symbolsToExport.Add(function.MangledName); }
                 break;
             case TranslatedStaticField staticField:
                 if (staticExportLookup.ContainsSymbol(staticField.MangledName))
-                { Export(staticField.MangledName); }
+                { symbolsToExport.Add(staticField.MangledName); }
                 break;
         }
     }
+
+    foreach (string symbol in symbolsToExport)
+    { Export(symbol); }
 
     if (!OperatingSystem.IsWindows())
     { exportsList.WriteLine("};"); }
