@@ -33,9 +33,9 @@ using OpenTK.Windowing.GraphicsLibraryFramework;
 using SnippetCommon;
 using static Mochi.PhysX.Globals;
 using static SnippetCommon.FakeGlut;
-using static SnippetHelloWorld;
+using static SnippetDeformableMesh;
 
-internal unsafe static class SnippetHelloWorldRender
+internal unsafe static class SnippetDeformableMeshRender
 {
     static Snippets.Camera sCamera = null!;
 
@@ -68,6 +68,8 @@ internal unsafe static class SnippetHelloWorldRender
     {
         stepPhysics(true);
 
+        // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+
         SnippetRender.startRender(sCamera.getEye(), sCamera.getDir());
 
         PxScene* scene;
@@ -79,7 +81,7 @@ internal unsafe static class SnippetHelloWorldRender
             fixed (PxRigidActor** actors = new PxRigidActor*[nbActors])
             {
                 scene->getActors(PxActorTypeFlags.eRIGID_DYNAMIC | PxActorTypeFlags.eRIGID_STATIC, actors, nbActors);
-                SnippetRender.renderActors(actors, nbActors, true);
+                SnippetRender.renderActors(&actors[0], nbActors, true);
             }
         }
 
@@ -96,10 +98,10 @@ internal unsafe static class SnippetHelloWorldRender
     {
         sCamera = new Snippets.Camera(new(50.0f, 50.0f, 50.0f), new(-0.6f, -0.2f, -0.7f));
 
-        SnippetRender.setupDefaultWindow("PhysX Snippet HelloWorld");
+        SnippetRender.setupDefaultWindow("PhysX Snippet DeformableMesh");
         SnippetRender.setupDefaultRenderState();
 
-        //glutIdleFunc(idleCallback);
+        //glutIdleFunc(&idleCallback);
         glutDisplayFunc(&renderCallback);
         glutKeyboardFunc(&keyboardCallback);
         glutMouseFunc(&mouseCallback);

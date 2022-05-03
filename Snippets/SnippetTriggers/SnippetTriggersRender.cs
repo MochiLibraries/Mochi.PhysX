@@ -159,7 +159,7 @@ internal unsafe static class SnippetTriggersRender
             // (Allocating on the heap here is not a good idea performance-wise, we only do it this way to keep close to the original snippet.)
             fixed (PxRigidActor** actors = new PxRigidActor*[nbActors])
             {
-                scene->getActors(PxActorTypeFlags.eRIGID_DYNAMIC | PxActorTypeFlags.eRIGID_STATIC, (PxActor**)actors, nbActors);
+                scene->getActors(PxActorTypeFlags.eRIGID_DYNAMIC | PxActorTypeFlags.eRIGID_STATIC, actors, nbActors);
 
                 SnippetRender.renderActors(actors, nbActors, true, new(0.0f, 0.75f, 0.0f), &isTriggerShape);
             }

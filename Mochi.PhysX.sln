@@ -52,6 +52,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnippetHelloWorld", "Snippe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnippetArticulation", "Snippets\SnippetArticulation\SnippetArticulation.csproj", "{FDA7A1C9-FC52-4CBB-BD7C-E31C826950AA}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnippetDeformableMesh", "Snippets\SnippetDeformableMesh\SnippetDeformableMesh.csproj", "{F7045861-F398-4EFF-B784-9A40438556E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -114,6 +116,10 @@ Global
 		{FDA7A1C9-FC52-4CBB-BD7C-E31C826950AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDA7A1C9-FC52-4CBB-BD7C-E31C826950AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDA7A1C9-FC52-4CBB-BD7C-E31C826950AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7045861-F398-4EFF-B784-9A40438556E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7045861-F398-4EFF-B784-9A40438556E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7045861-F398-4EFF-B784-9A40438556E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7045861-F398-4EFF-B784-9A40438556E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -129,6 +135,7 @@ Global
 		{8B691804-F954-4357-A393-441DF81BB52F} = {92E0F1EC-2FFE-4397-A0D9-5A3668965207}
 		{F1B60CBB-F560-4786-8C3F-61E1F4DDAD89} = {92E0F1EC-2FFE-4397-A0D9-5A3668965207}
 		{FDA7A1C9-FC52-4CBB-BD7C-E31C826950AA} = {92E0F1EC-2FFE-4397-A0D9-5A3668965207}
+		{F7045861-F398-4EFF-B784-9A40438556E9} = {92E0F1EC-2FFE-4397-A0D9-5A3668965207}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8BB51D64-3355-4B8F-A683-FAC225DF323C}
