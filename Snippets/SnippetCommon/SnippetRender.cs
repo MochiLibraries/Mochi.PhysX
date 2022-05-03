@@ -1,4 +1,5 @@
 ﻿using Mochi.PhysX;
+using Mochi.PhysX.Infrastructure;
 using OpenTK.Graphics.OpenGL;
 using OpenTK.Mathematics;
 using OpenTK.Windowing.Common;
@@ -344,8 +345,10 @@ public unsafe static class SnippetRender
     public static void finishRender()
         => GLFW.SwapBuffers(SnippetWindow.WindowPtr);
 
-    public static void renderActors(PxRigidActor** actors, uint numActors, bool shadows, in Vector3 color, delegate*<PxShape*, bool> cb = null)
+    public static void renderActors<TActors>(TActors** actorsT, uint numActors, bool shadows, in Vector3 color, delegate*<PxShape*, bool> cb = null)
+        where TActors : unmanaged, IPxRigidActor
     {
+        PxRigidActor** actors = (PxRigidActor**)actorsT;
         Vector3 shadowDir = new(0.0f, -0.7071067f, -0.7071067f);
         Matrix4 shadowMat = new(1, 0, 0, 0, -shadowDir.X / shadowDir.Y, 0, -shadowDir.Z / shadowDir.Y, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 
@@ -404,6 +407,7 @@ public unsafe static class SnippetRender
         }
     }
 
-    public static void renderActors(PxRigidActor** actors, uint numActors, bool shadows = false, delegate*<PxShape*, bool> cb = null)
+    public static void renderActors<TActors>(TActors** actors, uint numActors, bool shadows = false, delegate*<PxShape*, bool> cb = null)
+        where TActors : unmanaged, IPxRigidActor
         => renderActors(actors, numActors, shadows, new(0.0f, 0.75f, 0.0f), cb);
 }
