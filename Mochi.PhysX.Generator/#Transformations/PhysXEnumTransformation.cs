@@ -1,5 +1,7 @@
 ﻿using Biohazrd;
 using Biohazrd.Transformation;
+using System.Collections.Immutable;
+using System.Linq;
 
 namespace Mochi.PhysX.Generator
 {
@@ -40,6 +42,25 @@ namespace Mochi.PhysX.Generator
                     Name = declaration.Name,
                     TranslateAsLooseConstants = false
                 };
+            }
+
+            // A handful of types (such as PxVehicleDifferential4WData) are more complicated and still have a nested name-irrelevant enum
+            // Handle those types by creating aliases to their enum constants
+            int i = -1;
+            foreach (TranslatedDeclaration member in declaration.Members)
+            {
+                i++;
+
+                if (member is TranslatedEnum { Name: "Enum", TranslateAsLooseConstants: false } nestedEnum)
+                {
+                    ImmutableList<TranslatedDeclaration>.Builder membersBuilder = declaration.Members.ToBuilder();
+                    membersBuilder.InsertRange(i + 1, nestedEnum.Values.Select(v => new EnumAliasDeclaration(v)));
+
+                    return declaration with
+                    {
+                        Members = membersBuilder.ToImmutable()
+                    };
+                }
             }
 
             return declaration;
