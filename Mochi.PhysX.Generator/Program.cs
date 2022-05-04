@@ -197,7 +197,7 @@ library = new PhysXFlagsEnumTransformation().Transform(library);
 library = new RemoveExplicitBitFieldPaddingFieldsTransformation().Transform(library);
 library = new AddBaseVTableAliasTransformation().Transform(library);
 library = new ConstOverloadRenameTransformation().Transform(library);
-library = new CSharpTypeReductionTransformation().Transform(library);
+library = new PhysXCSharpTypeReductionTransformation().Transform(library);
 
 library = new HandlePxBatchQueryResultTransformation().Transform(library);
 library = new LiftAnonymousRecordFieldsTransformation().Transform(library);
