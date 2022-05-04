@@ -199,6 +199,7 @@ library = new AddBaseVTableAliasTransformation().Transform(library);
 library = new ConstOverloadRenameTransformation().Transform(library);
 library = new CSharpTypeReductionTransformation().Transform(library);
 
+library = new HandlePxBatchQueryResultTransformation().Transform(library);
 library = new LiftAnonymousRecordFieldsTransformation().Transform(library);
 library = new ResolveTypedefsTransformation().Transform(library);
 library = new PhysXNamespaceFixupTransformation().Transform(library);
