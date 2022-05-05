@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Mochi.PhysX\Mochi.PhysX.csproj" />
+    <ProjectReference Include="..\SnippetCommon\SnippetCommon.csproj" />
+  </ItemGroup>
+</Project>

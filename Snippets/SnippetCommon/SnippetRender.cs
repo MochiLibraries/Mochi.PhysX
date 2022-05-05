@@ -316,10 +316,15 @@ public unsafe static class SnippetRender
         if (SnippetWindow is not null)
         { throw new InvalidOperationException("The window has already been created."); }
 
+        string buildInfo = MochiPhysX.BuildInfo;
+        const string prefix = "PhysX ";
+        if (buildInfo.StartsWith(prefix))
+        { buildInfo = buildInfo.Substring(prefix.Length); }
+
         NativeWindowSettings settings = new()
         {
             Size = new(512, 512),
-            Title = name,
+            Title = $"{name} ({buildInfo})",
             APIVersion = new(1, 1), // Yes the PhysX snippets are really written against OpenGL 1.1 :(
             Profile = ContextProfile.Any,
         };

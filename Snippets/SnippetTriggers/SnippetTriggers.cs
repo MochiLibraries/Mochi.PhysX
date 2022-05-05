@@ -30,7 +30,7 @@
 // ****************************************************************************
 // This snippet illustrates the use of built-in triggers, and how to emulate
 // them with regular shapes if you need CCD or trigger-trigger notifications.
-// 
+//
 // ****************************************************************************
 
 using Mochi.PhysX;
