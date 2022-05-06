@@ -15,27 +15,30 @@ This project is licensed under the MIT License. [See the license file for detail
 
 Additionally, this project has some third-party dependencies. [See the third-party notice listing for details](THIRD-PARTY-NOTICES.md).
 
-## Building PhysX and generating the bindings
+Some of the sample files are adapted from the PhysX SDK and as such are licensed differently, as noted by the license at the top of affected files.
+
+## Building
+
+### Prerequisites
+
+Currently only Windows x64 is supported.
+
+Tool | Recommended Version
+-----|--------------------
+[Visual Studio 2022](https://visualstudio.microsoft.com/vs/) | 17.1.6
+[.NET SDK](http://dot.net/) | 6.0
+
+Visual Studio requires the "Desktop development with C++" and  ".NET desktop development" workloads to be installed.
+
+### Building PhysX and generating the bindings
 
 1. Ensure Git submodules are up-to-date with `git submodule update --init --recursive`
 2. Build and run `build.cmd` from the repository root
 
-Note: You may see many errors and warnings during generation. This is because Biohazrd doesn't support everything in PhysX yet. These errors only indicate the corresponding APIs were skipped, so the output should still be fine as long as you don't need those APIs.
+Note: You may see many errors and warnings during generation. This is because Biohazrd doesn't support quite everything in PhysX yet. These errors only indicate the corresponding APIs were skipped, so the output should still be fine as long as you don't need those APIs.
 
 If you make any changes to the PhysX source code or change the branch it uses, you must re-generate the bindings using `build.cmd`.
 
-## Building the sample
+## Sample projects
 
-Building/running the sample is currently only supported on Windows x64 with Visual Studio 2019.
-
-The sample does not currently have a graphical output, but will automatically connect to [the PhysX Visual Debugger](https://developer.nvidia.com/physx-visual-debugger) if it's running.
-
-### Prerequisites
-
-Tool | Recommended Version
------|--------------------
-[Visual Studio 2019](https://visualstudio.microsoft.com/vs/) | 16.9.4
-[.NET Core SDK](http://dot.net/) | 6.0
-[PhysX Visual Debugger](https://developer.nvidia.com/physx-visual-debugger) | Latest
-
-Visual Studio requires the "Desktop development with C++" and  ".NET desktop development" workloads to be installed.
+The `Snippets` directory contains select snippets adapted from [the ones included with PhysX SDK](https://github.com/NVIDIAGameWorks/PhysX/tree/c3d5537bdebd6f5cd82fcaf87474b838fe6fd5fa/physx/snippets). See [the snippets readme](Snippets/README.md) for details.
