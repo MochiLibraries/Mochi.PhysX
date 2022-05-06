@@ -234,48 +234,18 @@ internal unsafe static class SnippetDeformableMesh
 
     public static void cleanupPhysics(bool interactive)
     {
-        if (gScene != null)
-        {
-            gScene->release();
-            gScene = null;
-        }
-
-        if (gDispatcher != null)
-        {
-            gDispatcher->release();
-            gDispatcher = null;
-        }
-
-        if (gPhysics != null)
-        {
-            gPhysics->release();
-            gPhysics = null;
-        }
-
-        if (gCooking != null)
-        {
-            gCooking->release();
-            gCooking = null;
-        }
-
+        PX_RELEASE(ref gScene);
+        PX_RELEASE(ref gDispatcher);
+        PX_RELEASE(ref gPhysics);
+        PX_RELEASE(ref gCooking);
         if (gPvd != null)
         {
             PxPvdTransport* transport = gPvd->getTransport();
             gPvd->release();
             gPvd = null;
-
-            if (transport != null)
-            {
-                transport->release();
-                transport = null;
-            }
+            PX_RELEASE(ref transport);
         }
-
-        if (gFoundation != null)
-        {
-            gFoundation->release();
-            gFoundation = null;
-        }
+        PX_RELEASE(ref gFoundation);
 
         Console.WriteLine("SnippetDeformableMesh done.");
     }

@@ -527,11 +527,7 @@ internal unsafe static class SnippetTriggers
 
     static void releaseScene()
     {
-        if (gScene != null)
-        {
-            gScene->release();
-            gScene = null;
-        }
+        PX_RELEASE(ref gScene);
     }
 
     public static void stepPhysics(bool interactive)
@@ -568,35 +564,16 @@ internal unsafe static class SnippetTriggers
     {
         releaseScene();
 
-        if (gDispatcher != null)
-        {
-            gDispatcher->release();
-            gDispatcher = null;
-        }
-
+        PX_RELEASE(ref gDispatcher);
         PxCloseExtensions();
-
-        if (gPhysics != null)
-        {
-            gPhysics->release();
-            gPhysics = null;
-        }
-
+        PX_RELEASE(ref gPhysics);
         if (gPvd != null)
         {
             PxPvdTransport* transport = gPvd->getTransport();
-            gPvd->release();
-            gPvd = null;
-
-            if (transport != null)
-                transport->release();
+            PX_RELEASE(ref gPvd);
+            PX_RELEASE(ref transport);
         }
-
-        if (gFoundation != null)
-        {
-            gFoundation->release();
-            gFoundation = null;
-        }
+        PX_RELEASE(ref gFoundation);
 
         Console.WriteLine("SnippetTriggers done.");
     }

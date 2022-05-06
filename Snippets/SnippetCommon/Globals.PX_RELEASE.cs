@@ -3,7 +3,7 @@ using Mochi.PhysX.Infrastructure;
 
 namespace SnippetCommon;
 
-// These are really only here for ease of porting the samples
+// These are really only here for ease of porting the snippets and making them better match their C++ counterparts.
 // We could auto-generate them, but I don't think this pattern necessarily makes sense for C#
 unsafe partial class Globals
 {
@@ -54,6 +54,15 @@ unsafe partial class Globals
     }
 
     public static void PX_RELEASE(ref PxPhysics* x)
+    {
+        if (x != null)
+        {
+            x->release();
+            x = null;
+        }
+    }
+
+    public static void PX_RELEASE(ref PxPvd* x)
     {
         if (x != null)
         {
