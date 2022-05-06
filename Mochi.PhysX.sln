@@ -70,6 +70,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnippetVehicleScale", "Snip
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnippetVehicleTank", "Snippets\SnippetVehicleTank\SnippetVehicleTank.csproj", "{11BAC052-7D25-4A21-A52B-3BC4BFCF7519}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnippetHelloGRB", "Snippets\SnippetHelloGRB\SnippetHelloGRB.csproj", "{7B3AF58D-FF6A-416F-9588-0DEAAC7F4719}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -168,6 +170,10 @@ Global
 		{11BAC052-7D25-4A21-A52B-3BC4BFCF7519}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11BAC052-7D25-4A21-A52B-3BC4BFCF7519}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11BAC052-7D25-4A21-A52B-3BC4BFCF7519}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B3AF58D-FF6A-416F-9588-0DEAAC7F4719}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B3AF58D-FF6A-416F-9588-0DEAAC7F4719}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B3AF58D-FF6A-416F-9588-0DEAAC7F4719}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B3AF58D-FF6A-416F-9588-0DEAAC7F4719}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -192,6 +198,7 @@ Global
 		{2C9DB174-A618-45A0-8DB4-5FD7F2D1C458} = {92E0F1EC-2FFE-4397-A0D9-5A3668965207}
 		{B0C13F3E-DF35-4D55-A602-1C47A3F065CD} = {92E0F1EC-2FFE-4397-A0D9-5A3668965207}
 		{11BAC052-7D25-4A21-A52B-3BC4BFCF7519} = {92E0F1EC-2FFE-4397-A0D9-5A3668965207}
+		{7B3AF58D-FF6A-416F-9588-0DEAAC7F4719} = {92E0F1EC-2FFE-4397-A0D9-5A3668965207}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8BB51D64-3355-4B8F-A683-FAC225DF323C}

@@ -1,4 +1,4 @@
-PhysX snippets adapted to Mochi.PhysX
+PhysX SDK snippets adapted to Mochi.PhysX
 =======================================================================================================================
 
 This directory contains select snippets adapted from [the ones included with PhysX SDK](https://github.com/NVIDIAGameWorks/PhysX/tree/c3d5537bdebd6f5cd82fcaf87474b838fe6fd5fa/physx/snippets).

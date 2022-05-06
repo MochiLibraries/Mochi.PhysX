@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    
+    <!-- TODO: There should be a NuGet package/project for this https://github.com/MochiLibraries/Mochi.PhysX/issues/10 -->
+    <RuntimeIdentifier Condition="'$(RuntimeIdentifier)' == ''">$(NETCoreSdkRuntimeIdentifier)</RuntimeIdentifier>
+    <MochiPhysXNativeBuildVariant Condition="'$(MochiPhysXNativeBuildVariant)' == '' and '$(Configuration)' == 'Debug'">checked</MochiPhysXNativeBuildVariant>
+    <MochiPhysXNativeBuildVariant Condition="'$(MochiPhysXNativeBuildVariant)' == ''">release</MochiPhysXNativeBuildVariant>
+    <PhysXBinRoot Condition="$(RuntimeIdentifier.StartsWith('win-'))">$(MSBuildThisFileDirectory)../../external/PhysX/physx/bin/win.x86_64.vc140.mt/$(MochiPhysXNativeBuildVariant)/</PhysXBinRoot>
+    <PhysXBinRoot Condition="$(RuntimeIdentifier.StartsWith('linux-'))">$(MSBuildThisFileDirectory)../../external/PhysX/physx/bin/linux.clang/$(MochiPhysXNativeBuildVariant)/</PhysXBinRoot>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Mochi.PhysX\Mochi.PhysX.csproj" />
+    <ProjectReference Include="..\SnippetCommon\SnippetCommon.csproj" />
+  </ItemGroup>
+  <ItemGroup Condition="$(RuntimeIdentifier.StartsWith('win-'))">
+    <None Include="$(PhysXBinRoot)PhysXDevice64.dll" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="$(PhysXBinRoot)PhysXGpu_64.dll" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup Condition="$(RuntimeIdentifier.StartsWith('linux-'))">
+    <None Include="$(PhysXBinRoot)libPhysXGpu_64.so" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

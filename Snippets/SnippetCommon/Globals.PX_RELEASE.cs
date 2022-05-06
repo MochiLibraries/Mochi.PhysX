@@ -35,6 +35,15 @@ unsafe partial class Globals
         }
     }
 
+    public static void PX_RELEASE(ref PxCudaContextManager* x)
+    {
+        if (x != null)
+        {
+            x->release();
+            x = null;
+        }
+    }
+
     public static void PX_RELEASE(ref PxDefaultCpuDispatcher* x)
     {
         if (x != null)
