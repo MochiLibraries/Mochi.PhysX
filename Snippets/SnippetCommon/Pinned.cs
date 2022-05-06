@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace SnippetCommon;
 
-public unsafe struct Pinned<T>
+public unsafe readonly struct Pinned<T>
     where T : unmanaged
 {
-    private T[] _Value;
+    private readonly T[] _Value;
 
     public ref T Value => ref _Value[0];
     public T* Pointer => (T*)Unsafe.AsPointer(ref Value);

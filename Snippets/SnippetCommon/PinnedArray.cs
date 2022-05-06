@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace SnippetCommon;
 
-public unsafe struct PinnedArray<T>
+public unsafe readonly struct PinnedArray<T>
     where T : unmanaged
 {
     public readonly T[] Array;
