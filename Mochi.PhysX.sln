@@ -72,6 +72,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnippetVehicleTank", "Snipp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnippetHelloGRB", "Snippets\SnippetHelloGRB\SnippetHelloGRB.csproj", "{7B3AF58D-FF6A-416F-9588-0DEAAC7F4719}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnippetBVHStructure", "Snippets\SnippetBVHStructure\SnippetBVHStructure.csproj", "{C160CB19-55D2-477F-AB90-7C103F67EA6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -174,6 +176,10 @@ Global
 		{7B3AF58D-FF6A-416F-9588-0DEAAC7F4719}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B3AF58D-FF6A-416F-9588-0DEAAC7F4719}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B3AF58D-FF6A-416F-9588-0DEAAC7F4719}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C160CB19-55D2-477F-AB90-7C103F67EA6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C160CB19-55D2-477F-AB90-7C103F67EA6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C160CB19-55D2-477F-AB90-7C103F67EA6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C160CB19-55D2-477F-AB90-7C103F67EA6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -199,6 +205,7 @@ Global
 		{B0C13F3E-DF35-4D55-A602-1C47A3F065CD} = {92E0F1EC-2FFE-4397-A0D9-5A3668965207}
 		{11BAC052-7D25-4A21-A52B-3BC4BFCF7519} = {92E0F1EC-2FFE-4397-A0D9-5A3668965207}
 		{7B3AF58D-FF6A-416F-9588-0DEAAC7F4719} = {92E0F1EC-2FFE-4397-A0D9-5A3668965207}
+		{C160CB19-55D2-477F-AB90-7C103F67EA6B} = {92E0F1EC-2FFE-4397-A0D9-5A3668965207}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8BB51D64-3355-4B8F-A683-FAC225DF323C}
