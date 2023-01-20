@@ -1,7 +1,7 @@
 # PhysX-flavored Mochi
 
 [![MIT Licensed](https://img.shields.io/github/license/mochilibraries/mochi.physx?style=flat-square)](LICENSE.txt)
-[![CI Status](https://img.shields.io/github/workflow/status/mochilibraries/mochi.physx/Mochi.PhysX/main?style=flat-square&label=CI)](https://github.com/MochiLibraries/Mochi.PhysX/actions?query=workflow%3AMochi.PhysX+branch%3Amain)
+[![CI Status](https://img.shields.io/github/actions/workflow/status/mochilibraries/mochi.physx/Mochi.PhysX.yml?branch=main&style=flat-square&label=CI)](https://github.com/MochiLibraries/Mochi.PhysX/actions?query=workflow%3AMochi.PhysX+branch%3Amain)
 [![NuGet Version](https://img.shields.io/nuget/v/Mochi.PhysX?style=flat-square)](https://www.nuget.org/packages/Mochi.PhysX/)
 [![Sponsor](https://img.shields.io/badge/sponsor-%E2%9D%A4-lightgrey?logo=github&style=flat-square)](https://github.com/sponsors/PathogenDavid)
 
