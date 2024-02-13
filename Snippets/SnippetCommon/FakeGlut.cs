@@ -1,5 +1,4 @@
-﻿#pragma warning disable IDE1005 // Delegate invocation can be simplified. -- False positive, https://github.com/dotnet/roslyn/issues/50976
-using OpenTK.Windowing.Common;
+﻿using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
 using OpenTK.Windowing.GraphicsLibraryFramework;
 using System;
